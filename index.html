@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title data-hu="Haros Electric Hungary – VBF Érintésvédelmi Felülvizsgálat" data-en="Haros Electric Hungary – Electrical Inspection &amp; Testing">Haros Electric Hungary – VBF Érintésvédelmi Felülvizsgálat</title>
 <meta name="description" content="VBF érintésvédelmi felülvizsgálat Budapest. Határozattal, szabványos dokumentációval. Haros Electric Hungary.">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -20,8 +25,8 @@
   --radius:10px;
 }
 html{scroll-behavior:smooth}
-body{font-family:var(--font);background:#10102e;color:var(--white);overflow-x:hidden}
-.navbar{position:fixed;top:0;left:0;right:0;z-index:500;height:var(--nav-h);background:rgba(14,14,40,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(139,92,246,.18);display:flex;align-items:center;justify-content:space-between;padding:0 48px;}
+html,body{width:100%;max-width:100%;overflow-x:hidden;overflow-y:auto;background:#10102e;-webkit-overflow-scrolling:touch;}body{font-family:var(--font);color:var(--white);}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:500;height:var(--nav-h);background:rgba(16,16,46,.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(139,92,246,.18);display:flex;align-items:center;justify-content:space-between;padding:0 48px;}
 .nav-links{display:flex;gap:32px;list-style:none}
 .nav-links a{text-decoration:none;color:rgba(255,255,255,.8);font-size:.87rem;font-weight:600;letter-spacing:.4px;padding:4px 0;border-bottom:2px solid transparent;transition:.2s;}
 .nav-links a:hover,.nav-links a.active{color:var(--accent2);border-color:var(--accent2)}
@@ -30,9 +35,10 @@ body{font-family:var(--font);background:#10102e;color:var(--white);overflow-x:hi
 .lang-btn:hover{background:rgba(139,92,246,.32)}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .hamburger span{display:block;width:24px;height:2px;background:var(--white);transition:.3s}
-.hero{position:relative;width:100%;padding-top:var(--nav-h)}
-.hero-img{width:100%;display:block;height:auto}
-.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(transparent,#10102e);pointer-events:none;}
+.hero{position:relative;width:100%;padding-top:var(--nav-h);padding-left:0;padding-right:0;margin:0;padding-bottom:0;line-height:0;background:transparent;overflow:visible}
+section[id]{scroll-margin-top:calc(var(--nav-h) + 12px)}
+.hero-img{display:block;width:100%;max-width:100%;height:auto;vertical-align:bottom}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;height:80px;background:linear-gradient(to bottom,rgba(16,16,46,.96) 0%,rgba(16,16,46,.55) 45%,rgba(16,16,46,0) 100%);pointer-events:none;z-index:2;}
 section{padding:80px 40px}
 .inner{max-width:1140px;margin:0 auto}
 .section-title{font-size:2rem;font-weight:900;text-align:center;margin-bottom:10px;letter-spacing:1px;}
@@ -40,11 +46,22 @@ section{padding:80px 40px}
 .accent-line{width:56px;height:3px;background:linear-gradient(90deg,var(--purple),var(--accent2));border-radius:3px;margin:10px auto 32px;}
 .services{background:linear-gradient(180deg,#161640 0%,#1a1a50 100%)}
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.svc-card{background:rgba(255,255,255,.07);border:1px solid rgba(139,92,246,.2);border-radius:var(--radius);padding:28px 24px;transition:transform .25s,box-shadow .25s,border-color .25s;position:relative;overflow:hidden;}
+.svc-card{background:rgba(255,255,255,.07);border:1px solid rgba(139,92,246,.2);border-radius:var(--radius);padding:28px 24px;transition:transform .25s,box-shadow .25s,border-color .25s;position:relative;overflow:visible;}
 .svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--purple),var(--accent2));opacity:0;transition:.25s;}
 .svc-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(124,58,237,.25);border-color:rgba(139,92,246,.45)}
 .svc-card:hover::before{opacity:1}
-.svc-icon{font-size:2rem;margin-bottom:14px}
+.svc-icon{
+font-size:2rem;
+margin:0 auto 14px;
+width:64px;
+height:64px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+background:rgba(124,58,237,.12);
+border:1px solid rgba(139,92,246,.25);
+}
 .svc-card h3{font-size:1rem;font-weight:700;color:var(--accent2);margin-bottom:10px}
 .svc-card p{font-size:.875rem;color:rgba(255,255,255,.78);line-height:1.65}
 .why{background:#1c1c50}
@@ -55,7 +72,7 @@ section{padding:80px 40px}
 .why-item p{font-size:.875rem;color:rgba(255,255,255,.78);line-height:1.65}
 .pricing{background:linear-gradient(180deg,#161640 0%,#1a1a50 100%)}
 .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.price-card{background:rgba(255,255,255,.07);border:1px solid rgba(139,92,246,.22);border-radius:var(--radius);padding:32px 28px;text-align:center;transition:.25s;position:relative;overflow:hidden;}
+.price-card{background:rgba(255,255,255,.07);border:1px solid rgba(139,92,246,.22);border-radius:var(--radius);padding:32px 28px;text-align:center;transition:.25s;position:relative;overflow:visible;}
 .price-card.featured{border-color:var(--purple);background:rgba(124,58,237,.1);transform:scale(1.04);box-shadow:0 0 48px rgba(124,58,237,.25);}
 .price-badge{display:inline-block;background:var(--purple);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:4px 14px;border-radius:20px;margin-bottom:16px;}
 .price-card h3{font-size:1.1rem;font-weight:800;margin-bottom:6px}
@@ -279,6 +296,106 @@ footer a{color:rgba(139,92,246,.7);text-decoration:none}
   .faq-a p { margin: 0; color: #a9b4c2; font-size: 0.92rem; line-height: 1.65; }
 
 
+
+@media(max-width:960px){
+  html,body{overflow-x:hidden;}
+  .price-grid{grid-template-columns:1fr !important;}
+  .price-card{
+    width:100%;
+    max-width:100%;
+    min-width:0;
+  }
+  .price-card.featured{
+    transform:none;
+  }
+  .price-amount,
+  .price-list,
+  .price-note,
+  .price-sub,
+  .price-card h3{
+    overflow-wrap:anywhere;
+    word-break:break-word;
+  }
+  .inner{
+    width:100%;
+    max-width:1140px;
+    overflow:visible;
+  }
+}
+
+
+/* ===== COMPLETE MOBILE OPTIMIZATION ===== */
+@media(max-width:960px){
+  html,body{
+    overflow-x:hidden !important;
+    width:100%;
+  }
+  *{
+    max-width:100%;
+  }
+  .inner{
+    width:100%;
+    max-width:100%;
+    padding-left:16px;
+    padding-right:16px;
+    overflow:visible;
+  }
+  section{
+    padding:56px 0;
+  }
+  .stats-bar{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+  .stat-item{
+    min-width:0;
+    border-right:none;
+    border-bottom:1px solid rgba(124,58,237,.2);
+  }
+  .cta-band{
+    flex-direction:column;
+    text-align:center;
+  }
+  .price-grid{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:20px;
+  }
+  .price-card,
+  .price-card.featured{
+    width:100%;
+    max-width:100%;
+    transform:none !important;
+    margin:0;
+  }
+  .price-custom>div{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+  }
+  .price-btn{
+    width:100%;
+  }
+  .contact-wrap,
+  .why-grid,
+  .svc-grid,
+  .gallery-grid{
+    grid-template-columns:1fr !important;
+  }
+  img{
+    max-width:100%;
+    height:auto;
+  }
+}
+
+.hero + *{margin-top:0!important}.warning-strip{margin-top:0!important}
+
+/* Scroll fixes */
+html,body{overscroll-behavior-y:auto;}
+.price-custom,.price-grid,.pricing,.inner,.contact-wrap,.gallery-grid,.svc-grid,.why-grid{
+overflow:visible!important;
+}
+
 </style>
 </head>
 <body>
@@ -297,7 +414,10 @@ footer a{color:rgba(139,92,246,.7);text-decoration:none}
 </nav>
 
 <section class="hero" id="hero">
-  <img src="Haros electric generált háttérkép 1.png" id="hero-banner-img" alt="Haros Electric Hungary – VBF Érintésvédelmi Felülvizsgálat" class="hero-img">
+  <img id="hero-banner-img" alt="Haros Electric Hungary – VBF Érintésvédelmi Felülvizsgálat" class="hero-img">
+  <script>
+    document.getElementById('hero-banner-img').src = (window.innerWidth<=768) ? 'hero-mobile-hu.jpg' : 'hero_hu_new.png';
+  </script>
 </section>
 <div class="warning-strip fade-in">
   <span class="warning-icon">⚠️</span>
@@ -357,7 +477,7 @@ footer a{color:rgba(139,92,246,.7);text-decoration:none}
 
 <div class="cta-band fade-in">
   <p data-hu="Ingatlan eladás, bérbeadás vagy biztosítás előtt áll? Kérjen időpontot a VBF felülvizsgálathoz!" data-en="Selling, renting or insuring your property? Book your VBF inspection today!">Ingatlan eladás, bérbeadás vagy biztosítás előtt áll? Kérjen időpontot a VBF felülvizsgálathoz!</p>
-  <a href="#contact" class="btn-cta" data-hu="Kapcsolatfelvétel" data-en="Get in Touch">Kapcsolatfelvétel</a>
+  <a href="#contact" class="btn-cta contact-btn" data-hu="Kapcsolatfelvétel" data-en="Get in Touch">Kapcsolatfelvétel</a>
 </div>
 
 <section id="how" class="how-section">
@@ -444,59 +564,79 @@ footer a{color:rgba(139,92,246,.7);text-decoration:none}
     <h2 class="section-title fade-in" data-hu="VBF Érintésvédelmi árak" data-en="Electrical Safety Inspection Pricing">VBF Érintésvédelmi árak</h2>
     <div class="accent-line fade-in"></div>
     <p class="section-sub fade-in" data-hu="Fix, átlátható árak a VBF érintésvédelmi felülvizsgálathoz — az ingatlan mérete alapján. Villámvédelmi felülvizsgálathoz egyedi árajánlatot adunk." data-en="Fixed, transparent pricing for VBF electrical safety inspections — based on property size. For lightning protection inspections, contact us for a tailored quote.">Fix, átlátható árak a VBF érintésvédelmi felülvizsgálathoz — az ingatlan mérete alapján. Villámvédelmi felülvizsgálathoz egyedi árajánlatot adunk.</p>
-    <div class="price-grid" style="grid-template-columns:repeat(4,1fr)">
+    <div class="price-grid">
       <div class="price-card fade-in">
         <h3 data-hu="Kis lakás" data-en="Small Apartment">Kis lakás</h3>
         <p class="price-sub" data-hu="VBF · 1–69 m²" data-en="VBF · 1–69 m²">VBF · 1–69 m²</p>
-        <div class="price-amount">63 500 Ft</div>
-        <p class="price-note" data-hu="Bruttó ár (ÁFÁ-val)" data-en="Gross price (incl. VAT)">Bruttó ár (ÁFÁ-val)</p>
+        <div class="price-amount">60 000 Ft</div>
+        <p class="price-note" data-hu="Végleges, fizetendő ár" data-en="Final price, all inclusive">Végleges, fizetendő ár</p>
         <ul class="price-list">
-          <li data-hu="Nettó: 50 000 Ft" data-en="Net: 50 000 Ft">Nettó: 50 000 Ft</li>
           <li data-hu="Érintésvédelmi mérések (MSZ HD 60364)" data-en="Safety measurements (MSZ HD 60364)">Érintésvédelmi mérések (MSZ HD 60364)</li>
           <li data-hu="Folytonosság + szigetelés vizsgálat" data-en="Continuity + insulation test">Folytonosság + szigetelés vizsgálat</li>
           <li data-hu="Határozat + dokumentáció 48h-n belül" data-en="Certificate + docs within 48h">Határozat + dokumentáció 48h-n belül</li>
         </ul>
-        <a href="#contact" class="price-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
+        <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
       </div>
       <div class="price-card fade-in">
         <h3 data-hu="Közepes lakás" data-en="Medium Apartment">Közepes lakás</h3>
         <p class="price-sub" data-hu="VBF · 70–89 m²" data-en="VBF · 70–89 m²">VBF · 70–89 m²</p>
-        <div class="price-amount">76 200 Ft</div>
-        <p class="price-note" data-hu="Bruttó ár (ÁFÁ-val)" data-en="Gross price (incl. VAT)">Bruttó ár (ÁFÁ-val)</p>
+        <div class="price-amount">70 000 Ft</div>
+        <p class="price-note" data-hu="Végleges, fizetendő ár" data-en="Final price, all inclusive">Végleges, fizetendő ár</p>
         <ul class="price-list">
-          <li data-hu="Nettó: 60 000 Ft" data-en="Net: 60 000 Ft">Nettó: 60 000 Ft</li>
           <li data-hu="Érintésvédelmi mérések (MSZ HD 60364)" data-en="Safety measurements (MSZ HD 60364)">Érintésvédelmi mérések (MSZ HD 60364)</li>
-          <li data-hu="Folytonosság + szigetelés + RCD vizsgálat" data-en="Continuity + insulation + RCD test">Folytonosság + szigetelés + RCD vizsgálat</li>
+          <li data-hu="Folytonosság + szigetelés + áramvédő kapcsoló vizsgálat" data-en="Continuity + insulation + RCD test">Folytonosság + szigetelés + áramvédő kapcsoló vizsgálat</li>
           <li data-hu="Határozat + dokumentáció 48h-n belül" data-en="Certificate + docs within 48h">Határozat + dokumentáció 48h-n belül</li>
         </ul>
-        <a href="#contact" class="price-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
+        <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
       </div>
       <div class="price-card featured fade-in">
         <div class="price-badge" data-hu="Legnépszerűbb" data-en="Most Popular">Legnépszerűbb</div>
         <h3 data-hu="Nagy lakás / Iroda" data-en="Large Apartment / Office">Nagy lakás / Iroda</h3>
         <p class="price-sub" data-hu="VBF · 90–99 m²" data-en="VBF · 90–99 m²">VBF · 90–99 m²</p>
-        <div class="price-amount">88 900 Ft</div>
-        <p class="price-note" data-hu="Bruttó ár (ÁFÁ-val)" data-en="Gross price (incl. VAT)">Bruttó ár (ÁFÁ-val)</p>
+        <div class="price-amount">80 000 Ft</div>
+        <p class="price-note" data-hu="Végleges, fizetendő ár" data-en="Final price, all inclusive">Végleges, fizetendő ár</p>
         <ul class="price-list">
-          <li data-hu="Nettó: 70 000 Ft" data-en="Net: 70 000 Ft">Nettó: 70 000 Ft</li>
           <li data-hu="Teljes körű érintésvédelmi felülvizsgálat" data-en="Full electrical safety inspection">Teljes körű érintésvédelmi felülvizsgálat</li>
-          <li data-hu="Loop impedancia + RCD + szigetelés mérés" data-en="Loop impedance + RCD + insulation test">Loop impedancia + RCD + szigetelés mérés</li>
+          <li data-hu="Hurokimpedancia + áramvédő kapcsoló + szigetelés mérés" data-en="Loop impedance + RCD + insulation test">Hurokimpedancia + áramvédő kapcsoló + szigetelés mérés</li>
           <li data-hu="Határozat + teljes dokumentáció 48h-n belül" data-en="Certificate + full documentation 48h">Határozat + teljes dokumentáció 48h-n belül</li>
         </ul>
-        <a href="#contact" class="price-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
+        <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
       </div>
       <div class="price-card fade-in">
-        <h3 data-hu="Ipari / Nagy iroda" data-en="Industrial / Large Office">Ipari / Nagy iroda</h3>
-        <p class="price-sub" data-hu="VBF · 100 m² felett" data-en="VBF · Above 100 m²">VBF · 100 m² felett</p>
-        <div class="price-amount" data-hu="152–190 500 Ft" data-en="152–190 500 Ft">152–190 500 Ft</div>
-        <p class="price-note" data-hu="Bruttó ár (nettó: 120–150 000 Ft)" data-en="Gross price (net: 120–150 000 Ft)">Bruttó ár (nettó: 120–150 000 Ft)</p>
+        <h3 data-hu="Nagyobb lakás / Iroda" data-en="Larger Apartment / Office">Nagyobb lakás / Iroda</h3>
+        <p class="price-sub" data-hu="VBF · 100–149 m²" data-en="VBF · 100–149 m²">VBF · 100–149 m²</p>
+        <div class="price-amount">105 000 Ft</div>
+        <p class="price-note" data-hu="Végleges, fizetendő ár" data-en="Final price, all inclusive">Végleges, fizetendő ár</p>
         <ul class="price-list">
           <li data-hu="Teljes körű érintésvédelmi felülvizsgálat" data-en="Full electrical safety inspection">Teljes körű érintésvédelmi felülvizsgálat</li>
-          <li data-hu="RCD teszt + földelés + kötésvizsgálat" data-en="RCD test + earthing + bonding test">RCD teszt + földelés + kötésvizsgálat</li>
-          <li data-hu="Loop impedancia + folytonosság mérés" data-en="Loop impedance + continuity measurement">Loop impedancia + folytonosság mérés</li>
+          <li data-hu="Áramvédő kapcsoló teszt + földelés + kötésvizsgálat" data-en="RCD test + earthing + bonding test">Áramvédő kapcsoló teszt + földelés + kötésvizsgálat</li>
           <li data-hu="Határozat + teljes dokumentáció 48h-n belül" data-en="Certificate + full documentation 48h">Határozat + teljes dokumentáció 48h-n belül</li>
         </ul>
-        <a href="#contact" class="price-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
+        <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
+      </div>
+      <div class="price-card fade-in">
+        <h3 data-hu="Nagy családi ház" data-en="Large House">Nagy családi ház</h3>
+        <p class="price-sub" data-hu="VBF · 150–199 m²" data-en="VBF · 150–199 m²">VBF · 150–199 m²</p>
+        <div class="price-amount">135 000 Ft</div>
+        <p class="price-note" data-hu="Végleges, fizetendő ár" data-en="Final price, all inclusive">Végleges, fizetendő ár</p>
+        <ul class="price-list">
+          <li data-hu="Teljes körű érintésvédelmi felülvizsgálat" data-en="Full electrical safety inspection">Teljes körű érintésvédelmi felülvizsgálat</li>
+          <li data-hu="Hurokimpedancia + folytonosság mérés" data-en="Loop impedance + continuity measurement">Hurokimpedancia + folytonosság mérés</li>
+          <li data-hu="Határozat + teljes dokumentáció 48h-n belül" data-en="Certificate + full documentation 48h">Határozat + teljes dokumentáció 48h-n belül</li>
+        </ul>
+        <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
+      </div>
+      <div class="price-card fade-in">
+        <h3 data-hu="Ipari / Nagy ingatlan" data-en="Industrial / Large Property">Ipari / Nagy ingatlan</h3>
+        <p class="price-sub" data-hu="VBF · 200 m² felett" data-en="VBF · Above 200 m²">VBF · 200 m² felett</p>
+        <div class="price-amount" data-hu="Egyedi árajánlat" data-en="Custom Quote">Egyedi árajánlat</div>
+        <p class="price-note" data-hu="Helyszíni felmérés alapján" data-en="Based on on-site survey">Helyszíni felmérés alapján</p>
+        <ul class="price-list">
+          <li data-hu="Teljes körű érintésvédelmi felülvizsgálat" data-en="Full electrical safety inspection">Teljes körű érintésvédelmi felülvizsgálat</li>
+          <li data-hu="Mérési pontok, elosztók száma alapján" data-en="Based on measurement points & distribution boards">Mérési pontok, elosztók száma alapján</li>
+          <li data-hu="Határozat + teljes dokumentáció 48h-n belül" data-en="Certificate + full documentation 48h">Határozat + teljes dokumentáció 48h-n belül</li>
+        </ul>
+        <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
       </div>
     </div>
     <div class="price-custom fade-in" style="margin-top:28px;padding:28px 32px;background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.25);border-radius:14px;">
@@ -505,16 +645,16 @@ footer a{color:rgba(139,92,246,.7);text-decoration:none}
           <h3 style="margin:0 0 6px;font-size:1.1rem;" data-hu="⚡ Villámvédelmi felülvizsgálat" data-en="⚡ Lightning Protection Inspection">⚡ Villámvédelmi felülvizsgálat</h3>
           <p style="margin:0;color:#a9b4c2;font-size:0.9rem;" data-hu="Az ár az épület típusától, kockázati kategóriától és méretétől függ. Kérjen egyedi árajánlatot!" data-en="Price depends on building type, risk category and size. Request a personalised quote!">Az ár az épület típusától, kockázati kategóriától és méretétől függ. Kérjen egyedi árajánlatot!</p>
         </div>
-        <a href="#contact" class="price-btn" style="width:auto;padding:12px 28px;display:inline-block;white-space:nowrap" data-hu="Villámvédelmi árajánlat" data-en="Lightning Protection Quote">Villámvédelmi árajánlat</a>
+        <a href="#contact" class="price-btn contact-btn" style="width:auto;padding:12px 28px;display:inline-block;white-space:nowrap" data-hu="Villámvédelmi árajánlat" data-en="Lightning Protection Quote">Villámvédelmi árajánlat</a>
       </div>
     </div>
-    <p class="price-custom fade-in" style="text-align:center;margin-top:16px;color:#a9b4c2;font-size:0.85rem;" data-hu="A VBF árak tájékoztató jellegűek. Az ingatlan állapotától és elérhetőségétől függően az ár változhat." data-en="VBF prices are indicative. Final price may vary based on property condition and accessibility.">A VBF árak tájékoztató jellegűek. Az ingatlan állapotától és elérhetőségétől függően az ár változhat.</p>
+    <p class="price-custom fade-in" style="text-align:center;margin-top:16px;color:#a9b4c2;font-size:0.85rem;" data-hu="A fenti díjak lakóingatlanokra vonatkozó, tájékoztató jellegű árak. A végleges díj a helyszíni felmérés alapján kerül meghatározásra, mivel az azonos alapterületű ingatlanok villamos hálózatának kialakítása jelentősen eltérhet. Ipari, kereskedelmi és egyéb nem lakáscélú ingatlanok esetén minden esetben egyedi árajánlat készül." data-en="The prices above apply to residential properties and are indicative. The final price is determined after an on-site survey, as electrical layouts vary significantly even for properties of the same size. Industrial, commercial and other non-residential properties always receive a custom quote.">A fenti díjak lakóingatlanokra vonatkozó, tájékoztató jellegű árak. A végleges díj a helyszíni felmérés alapján kerül meghatározásra, mivel az azonos alapterületű ingatlanok villamos hálózatának kialakítása jelentősen eltérhet. Ipari, kereskedelmi és egyéb nem lakáscélú ingatlanok esetén minden esetben egyedi árajánlat készül.</p>
   </div>
 </section>
 
 <div class="cta-band fade-in">
   <p data-hu="Nem biztos melyik csomag az Önnek való? Kérjen személyes árajánlatot!" data-en="Not sure which package is right for you? Request a personalised quote!">Nem biztos melyik csomag az Önnek való? Kérjen személyre szabott árajánlatot!</p>
-  <a href="#contact" class="btn-cta" data-hu="Ingyenes árajánlat kérése" data-en="Request Free Quote">Ingyenes árajánlat kérése</a>
+  <a href="#contact" class="btn-cta contact-btn" data-hu="Ingyenes árajánlat kérése" data-en="Request Free Quote">Ingyenes árajánlat kérése</a>
 </div>
 
 
@@ -553,11 +693,11 @@ footer a{color:rgba(139,92,246,.7);text-decoration:none}
       </div>
       <div class="faq-item fade-in">
         <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span data-hu="Ha megbukik az ingatlan, mi a következő lépés?" data-en="If the property fails the inspection, what happens next?">Ha megbukik az ingatlan, mi a következő lépés?</span>
+          <span data-hu="Mit jelent a 'megfelelő' vagy 'nem megfelelő' minősítés?" data-en="What does a 'compliant' or 'non-compliant' rating mean?">Mit jelent a 'megfelelő' vagy 'nem megfelelő' minősítés?</span>
           <span class="faq-arrow">▼</span>
         </button>
         <div class="faq-a">
-          <p data-hu="Meghibásodás esetén részletes hibajelentést adunk, és elvégezzük a szükséges villanyszerelési javítást is. Az újra-felülvizsgálat kedvezményes áron igénybe vehető." data-en="In case of faults, we provide a detailed report and can carry out the necessary electrical repairs. Re-inspection is available at a discounted rate.">Meghibásodás esetén részletes hibajelentést adunk, és elvégezzük a szükséges villanyszerelési javítást is. Az újra-felülvizsgálat kedvezményes áron igénybe vehető.</p>
+          <p data-hu="A VBF felülvizsgálat nem egy vizsga, ahol az ingatlan 'megbukhat' — hanem egy szakmai állapotfelmérés, amely objektív képet ad az elektromos rendszer jelenlegi állapotáról. A 'megfelelő' vagy 'nem megfelelő' minősítés hivatalos visszajelzés mind a vevőnek, mind az eladónak: megmutatja, milyen munkálatokra lehet szükség. Ez értékes információ a döntéshozatalhoz — nem ítélet az ingatlan felett." data-en="The VBF inspection is not an exam where a property can 'fail' — it is a professional condition assessment that provides an objective picture of the electrical system's current state. A 'compliant' or 'non-compliant' rating is official feedback for both buyer and seller: it shows what work may be needed. This is valuable information for decision-making — not a verdict on the property.">A VBF felülvizsgálat nem egy vizsga, ahol az ingatlan 'megbukhat' — hanem egy szakmai állapotfelmérés, amely objektív képet ad az elektromos rendszer jelenlegi állapotáról. A 'megfelelő' vagy 'nem megfelelő' minősítés hivatalos visszajelzés mind a vevőnek, mind az eladónak: megmutatja, milyen munkálatokra lehet szükség. Ez értékes információ a döntéshozatalhoz — nem ítélet az ingatlan felett.</p>
         </div>
       </div>
       <div class="faq-item fade-in">
@@ -639,8 +779,8 @@ footer a{color:rgba(139,92,246,.7);text-decoration:none}
           <div class="info-text"><strong>Email</strong><a href="mailto:haroselectric@gmail.com">haroselectric@gmail.com</a></div>
         </div>
         <div class="social-row">
-          <a href="https://www.facebook.com/profile.php?id=100064488827755" target="_blank" rel="noopener" class="social-btn">📘 Facebook</a>
-          <a href="https://www.linkedin.com/in/laszlo-haros-53323683/" target="_blank" rel="noopener" class="social-btn">💼 LinkedIn</a>
+          <a href="https://www.facebook.com/profile.php?id=100064488827755" target="_blank" rel="noopener noreferrer" class="social-btn">📘 Facebook</a>
+          <a href="https://www.linkedin.com/in/laszlo-haros-53323683/" target="_blank" rel="noopener noreferrer" class="social-btn">💼 LinkedIn</a>
         </div>
       </div>
       <div class="form-box">
@@ -696,12 +836,45 @@ footer a{color:rgba(139,92,246,.7);text-decoration:none}
 
 <script>
 let currentLang='hu';
+let heroArMode=null;
+
+function updateHeroBanner(){
+  const heroImg=document.getElementById('hero-banner-img');
+  if(!heroImg) return;
+  const mobile=window.innerWidth<=768;
+  const mode=mobile?'mobile':'desktop';
+  if(mode!==heroArMode){
+    heroArMode=mode;
+    heroImg.style.aspectRatio='';
+    heroImg.dataset.arLocked='';
+  }
+  if(mobile){
+    heroImg.src=currentLang==='hu'
+      ?'hero-mobile-hu.jpg'
+      :'hero-mobile-en.jpg';
+  }else{
+    heroImg.src=currentLang==='hu'
+      ?'hero_hu_new.png'
+      :'hero_en_new.png';
+  }
+}
+
+(function(){
+  const heroImg=document.getElementById('hero-banner-img');
+  if(!heroImg) return;
+  heroImg.addEventListener('load',function(){
+    if(!heroImg.dataset.arLocked && heroImg.naturalWidth && heroImg.naturalHeight){
+      heroImg.style.aspectRatio=heroImg.naturalWidth+' / '+heroImg.naturalHeight;
+      heroImg.dataset.arLocked='1';
+    }
+  });
+})();
+
 function toggleLang(){
   currentLang=currentLang==='hu'?'en':'hu';
   document.documentElement.setAttribute('data-lang',currentLang);
   document.getElementById('langBtn').textContent=currentLang==='hu'?'EN':'HU';
-  const heroImg=document.getElementById('hero-banner-img');
-  if(heroImg){heroImg.src=currentLang==='en'?'en-banner.png':'Haros electric generált háttérkép 1.png';}
+  updateHeroBanner();
   document.querySelectorAll('[data-hu]').forEach(el=>{
     const t=el.getAttribute('data-'+currentLang);
     if(t&&el.tagName!=='INPUT'&&el.tagName!=='SELECT'&&el.tagName!=='TEXTAREA'&&el.tagName!=='OPTION')el.innerHTML=t;
@@ -709,8 +882,50 @@ function toggleLang(){
   document.querySelector('title').textContent=document.querySelector('title').getAttribute('data-'+currentLang);
   document.querySelectorAll('select option').forEach(o=>{const t=o.getAttribute('data-'+currentLang);if(t)o.textContent=t;});
 }
-document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
-document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
+updateHeroBanner();
+window.addEventListener('resize', updateHeroBanner);
+
+document.querySelectorAll('.social-btn').forEach(a=>{
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    window.open(this.href,'_blank','noopener,noreferrer');
+  });
+});
+
+function smoothScrollTo(el){
+  if(!el) return;
+  const targetY=el.getBoundingClientRect().top+window.pageYOffset;
+  try{
+    window.scrollTo({top:targetY,behavior:'smooth'});
+  }catch(err){
+    window.scrollTo(0,targetY);
+  }
+}
+
+function bindTap(el,handler){
+  let touched=false;
+  el.addEventListener('touchend',function(e){
+    touched=true;
+    handler(e);
+    setTimeout(()=>{touched=false;},500);
+  },{passive:false});
+  el.addEventListener('click',function(e){
+    if(touched) return;
+    handler(e);
+  });
+}
+
+const navLinksEl=document.getElementById('navLinks');
+bindTap(document.getElementById('hamburger'),function(e){
+  navLinksEl.classList.toggle('open');
+});
+
+// Nav links: only close the mobile menu, let native #href anchor jump happen on its own
+document.querySelectorAll('.nav-links a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',function(e){
+    navLinksEl.classList.remove('open');
+  });
+});
 const secs=document.querySelectorAll('section[id]');
 const navObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('active'));const l=document.querySelector('.nav-links a[href="#'+e.target.id+'"]');if(l)l.classList.add('active');}});},{threshold:.35});
 secs.forEach(s=>navObs.observe(s));
@@ -725,4 +940,14 @@ function sendForm(e){
   const subject=encodeURIComponent('Árajánlat kérés – Haros Electric');
   const body=encodeURIComponent('Név: '+nev+'\nTelefon: '+tel+'\nEmail: '+email+'\nIngatlan típusa: '+tipus+'\nAlapterület: '+(meret||'–')+' m²\n\nLeírás:\n'+leiras);
   window.location.href='mailto:haroselectric@gmail.com?subject='+subject+'&body='+body;
-  document.getElementById('form-success').style.d
+  document.getElementById('form-success').style.display='block';
+  f.reset();
+}
+
+
+
+// CTA buttons are now plain #contact anchors — native browser jump handles them
+
+</script>
+</body>
+</html>
