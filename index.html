@@ -942,6 +942,12 @@ function toggleLang(){
   document.querySelector('title').textContent=document.querySelector('title').getAttribute('data-'+currentLang);
   document.querySelectorAll('select option').forEach(o=>{const t=o.getAttribute('data-'+currentLang);if(t)o.textContent=t;});
 }
+
+(function(){
+var params=new URLSearchParams(window.location.search);
+var langParam=(params.get('lang')||'').toLowerCase();
+if(langParam==='en' && currentLang!=='en'){ toggleLang(); }
+})();
 updateHeroBanner();
 window.addEventListener('resize', updateHeroBanner);
 
