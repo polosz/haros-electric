@@ -596,7 +596,7 @@ overflow:visible!important;
       <div class="price-card fade-in">
         <h3 data-hu="Közepes lakás" data-en="Medium Apartment">Közepes lakás</h3>
         <p class="price-sub" data-hu="VBF · 70–89 m²" data-en="VBF · 70–89 m²">VBF · 70–89 m²</p>
-        <div class="price-amount">70 000 Ft</div>
+        <div class="price-amount">75 000 Ft</div>
         <p class="price-note" data-hu="Tájékoztató ár" data-en="Indicative price">Tájékoztató ár</p>
         <ul class="price-list">
           <li data-hu="Érintésvédelmi mérések (MSZ HD 60364)" data-en="Safety measurements (MSZ HD 60364)">Érintésvédelmi mérések (MSZ HD 60364)</li>
@@ -609,7 +609,7 @@ overflow:visible!important;
         <div class="price-badge" data-hu="Legnépszerűbb" data-en="Most Popular">Legnépszerűbb</div>
         <h3 data-hu="Nagy lakás / Iroda" data-en="Large Apartment / Office">Nagy lakás / Iroda</h3>
         <p class="price-sub" data-hu="VBF · 90–99 m²" data-en="VBF · 90–99 m²">VBF · 90–99 m²</p>
-        <div class="price-amount">80 000 Ft</div>
+        <div class="price-amount">85 000 Ft</div>
         <p class="price-note" data-hu="Tájékoztató ár" data-en="Indicative price">Tájékoztató ár</p>
         <ul class="price-list">
           <li data-hu="Teljes körű érintésvédelmi felülvizsgálat" data-en="Full electrical safety inspection">Teljes körű érintésvédelmi felülvizsgálat</li>
@@ -633,7 +633,7 @@ overflow:visible!important;
       <div class="price-card fade-in">
         <h3 data-hu="Nagy családi ház" data-en="Large House">Nagy családi ház</h3>
         <p class="price-sub" data-hu="VBF · 150–199 m²" data-en="VBF · 150–199 m²">VBF · 150–199 m²</p>
-        <div class="price-amount">135 000 Ft</div>
+        <div class="price-amount">115 000 Ft</div>
         <p class="price-note" data-hu="Tájékoztató ár" data-en="Indicative price">Tájékoztató ár</p>
         <ul class="price-list">
           <li data-hu="Teljes körű érintésvédelmi felülvizsgálat" data-en="Full electrical safety inspection">Teljes körű érintésvédelmi felülvizsgálat</li>
@@ -942,12 +942,6 @@ function toggleLang(){
   document.querySelector('title').textContent=document.querySelector('title').getAttribute('data-'+currentLang);
   document.querySelectorAll('select option').forEach(o=>{const t=o.getAttribute('data-'+currentLang);if(t)o.textContent=t;});
 }
-
-(function(){
-var params=new URLSearchParams(window.location.search);
-var langParam=(params.get('lang')||'').toLowerCase();
-if(langParam==='en' && currentLang!=='en'){ toggleLang(); }
-})();
 updateHeroBanner();
 window.addEventListener('resize', updateHeroBanner);
 
