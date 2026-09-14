@@ -26,6 +26,15 @@
               }
         });
     </script>
+
+    <!-- GA4 event tracking: contact form submission -->
+    <script>
+        document.addEventListener('submit', function(e) {
+              if (e.target && e.target.id === 'contactForm') {
+                      gtag('event', 'form_submit_contact');
+              }
+        });
+    </script>
   
   <!-- Meta Pixel Code -->
 <script>
