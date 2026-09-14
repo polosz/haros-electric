@@ -13,6 +13,20 @@
     gtag('js', new Date());
     gtag('config', 'G-P6WGN8X6SC');
   </script>
+    <!-- GA4 event tracking: phone and email link clicks -->
+    <script>
+        document.addEventListener('click', function(e) {
+              var link = e.target.closest('a');
+              if (!link) return;
+                    var href = link.getAttribute('href') || '';
+              if (href.indexOf('tel:') === 0) {
+                      gtag('event', 'phone_click', { 'link_url': href });
+              } else if (href.indexOf('mailto:') === 0) {
+                      gtag('event', 'email_click', { 'link_url': href });
+              }
+        });
+    </script>
+  
   <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
