@@ -1029,7 +1029,7 @@ function sendForm(e){
   const tipus=f.tipus.options[f.tipus.selectedIndex].text;
   const meret=f.meret.value,leiras=f.leiras.value;
   const subject=encodeURIComponent(currentLang==='en'?'Quote Request – Haros Electric':'Árajánlat kérés – Haros Electric');
-  const body=encodeURIComponent('Név: '+nev+'\nTelefon: '+tel+'\nEmail: '+email+'\nIngatlan típusa: '+tipus+'\nAlapterület: '+(meret||'–')+' m²\n\nLeírás:\n'+leiras);
+    const body=encodeURIComponent(currentLang==='en'?('Name: '+nev+'\nPhone: '+tel+'\nEmail: '+email+'\nProperty type: '+tipus+'\nFloor area: '+(meret||'–')+' m²\n\nDescription:\n'+leiras):('Név: '+nev+'\nTelefon: '+tel+'\nEmail: '+email+'\nIngatlan típusa: '+tipus+'\nAlapterület: '+(meret||'–')+' m²\n\nLeírás:\n'+leiras));
   window.location.href='mailto:haroselectric@gmail.com?subject='+subject+'&body='+body;
   document.getElementById('form-success').style.display='block';
   f.reset();
