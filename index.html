@@ -444,7 +444,7 @@ html,body{overscroll-behavior-y:auto;}
 overflow:visible!important;
 }
 
-</style>
+.header-phone{display:inline-flex;align-items:center;gap:6px;margin-right:16px;padding:6px 12px;font-weight:600;font-size:15px;color:#a78bfa;text-decoration:none;white-space:nowrap;}.header-phone:hover{text-decoration:underline;}.hero-cta-group{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;padding:24px 20px 4px;}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 24px;border-radius:8px;font-weight:600;font-size:1rem;text-decoration:none;transition:opacity .15s ease;}.btn-primary-call{background:var(--purple);color:#fff;}.btn-primary-call:hover{opacity:.88;}.btn-secondary-quote{background:transparent;border:2px solid var(--purple);color:#fff;}.btn-secondary-quote:hover{background:rgba(124,58,237,.15);}.mobile-sticky-call{display:none;}@media(max-width:768px){.mobile-sticky-call{display:block;position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--purple);box-shadow:0 -2px 8px rgba(0,0,0,.25);}.mobile-sticky-call-link{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px 0;color:#fff;font-weight:700;font-size:1rem;text-decoration:none;}body{padding-bottom:56px;}}</style>
 </head>
 <body>
 
@@ -456,7 +456,7 @@ overflow:visible!important;
     <li><a href="#contact" data-hu="Kapcsolat" data-en="Contact">Kapcsolat</a></li>
   </ul>
   <div class="nav-right">
-    <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
+    <a href="tel:+36708029138" class="header-phone" aria-label="Hívás: +36 70 802 9138">📞 +36 70 802 9138</a> <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
     <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -493,7 +493,7 @@ overflow:visible!important;
   </div>
 </div>
 
-<section id="services" class="services">
+<div class="hero-cta-group fade-in"><a href="tel:+36708029138" class="btn btn-primary-call">📞 Hívjon most: +36 70 802 9138</a> <a href="#contact" class="btn btn-secondary-quote">Ingyenes árajánlatot kérek</a></div><section id="services" class="services">
   <div class="inner">
     <h2 class="section-title fade-in" data-hu="Szolgáltatásaink" data-en="Our Services">Szolgáltatásaink</h2>
     <div class="accent-line fade-in"></div>
@@ -1040,5 +1040,5 @@ function sendForm(e){
 // CTA buttons are now plain #contact anchors — native browser jump handles them
 
 </script>
-</body>
+<div class="mobile-sticky-call"><a href="tel:+36708029138" class="mobile-sticky-call-link">📞 Hívjon most</a></div></body>
 </html>
