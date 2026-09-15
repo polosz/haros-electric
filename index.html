@@ -855,7 +855,7 @@ overflow:visible!important;
         </div>
         <div class="info-item">
           <div class="info-icon">📍</div>
-          <div class="info-text"><strong data-hu="Székhely" data-en="Location">Székhely</strong>Budapest, Magyarország</div>
+          <div class="info-text"><strong data-hu="Székhely" data-en="Location">Székhely</strong><span data-hu="Budapest, Magyarország" data-en="Budapest, Hungary">Budapest, Magyarország</span></div>
         </div>
         <div class="info-item">
           <div class="info-icon">📞</div>
@@ -911,7 +911,7 @@ overflow:visible!important;
           </div>
           <div class="form-group">
             <label data-hu="Elvégzendő munka leírása" data-en="Description of Work">Elvégzendő munka leírása</label>
-            <textarea name="leiras" placeholder="Kérem írja le röviden, milyen munkát szeretne elvégeztetni, mikor lenne szüksége rá, van-e különleges igény..."></textarea>
+            <textarea name="leiras" placeholder="Kérem írja le röviden, milyen munkát szeretne elvégeztetni, mikor lenne szüksége rá, van-e különleges igény..." data-ph-hu="Kérem írja le röviden, milyen munkát szeretne elvégeztetni, mikor lenne szüksége rá, van-e különleges igény..." data-ph-en="Please briefly describe the work you need, when you'd need it, and any special requirements..."></textarea>
           </div>
           <button type="submit" class="btn-send" data-hu="📨  Ajánlatot kérek" data-en="📨  Request a Quote">📨  Ajánlatot kérek</button>
           <div id="form-success">✅ <span data-hu="Üzenetét megkaptuk! Hamarosan felvesszük Önnel a kapcsolatot." data-en="We received your message! We will contact you shortly.">Üzenetét megkaptuk! Hamarosan felvesszük Önnel a kapcsolatot.</span></div>
@@ -971,7 +971,7 @@ function toggleLang(){
     if(t&&el.tagName!=='INPUT'&&el.tagName!=='SELECT'&&el.tagName!=='TEXTAREA'&&el.tagName!=='OPTION')el.innerHTML=t;
   });
   document.querySelector('title').textContent=document.querySelector('title').getAttribute('data-'+currentLang);
-  document.querySelectorAll('select option').forEach(o=>{const t=o.getAttribute('data-'+currentLang);if(t)o.textContent=t;});
+  document.querySelectorAll('select option').forEach(o=>{const t=o.getAttribute('data-'+currentLang);if(t)o.textContent=t;});document.querySelectorAll('[data-ph-hu]').forEach(el=>{const t=el.getAttribute('data-ph-'+currentLang);if(t)el.placeholder=t;});
 }
 updateHeroBanner();
 window.addEventListener('resize', updateHeroBanner);
@@ -1028,7 +1028,7 @@ function sendForm(e){
   const nev=f.nev.value,tel=f.telefon.value,email=f.email.value;
   const tipus=f.tipus.options[f.tipus.selectedIndex].text;
   const meret=f.meret.value,leiras=f.leiras.value;
-  const subject=encodeURIComponent('Árajánlat kérés – Haros Electric');
+  const subject=encodeURIComponent(currentLang==='en'?'Quote Request – Haros Electric':'Árajánlat kérés – Haros Electric');
   const body=encodeURIComponent('Név: '+nev+'\nTelefon: '+tel+'\nEmail: '+email+'\nIngatlan típusa: '+tipus+'\nAlapterület: '+(meret||'–')+' m²\n\nLeírás:\n'+leiras);
   window.location.href='mailto:haroselectric@gmail.com?subject='+subject+'&body='+body;
   document.getElementById('form-success').style.display='block';
