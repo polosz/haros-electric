@@ -928,6 +928,7 @@ overflow:visible!important;
 <script>
 let currentLang='hu';
 let heroArMode=null;
+  window.addEventListener('DOMContentLoaded',function(){if(new URLSearchParams(location.search).get('lang')==='en'){toggleLang();}});
 
 function updateHeroBanner(){
   const heroImg=document.getElementById('hero-banner-img');
