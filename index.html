@@ -27,14 +27,7 @@
         });
     </script>
 
-    <!-- GA4 event tracking: contact form submission -->
-    <script>
-        document.addEventListener('submit', function(e) {
-              if (e.target && e.target.id === 'contactForm') {
-                      gtag('event', 'form_submit_contact');
-              }
-        });
-    </script>
+    <!-- GA4 event: form_submit_contact is sent from sendForm() only after a successful FormSubmit delivery -->
   
   <!-- Meta Pixel Code -->
 <script>
@@ -914,6 +907,7 @@ overflow:visible!important;
             <label data-hu="Elvégzendő munka leírása" data-en="Description of Work">Elvégzendő munka leírása</label>
             <textarea name="leiras" placeholder="Kérem írja le röviden, milyen munkát szeretne elvégeztetni, mikor lenne szüksége rá, van-e különleges igény..." data-ph-hu="Kérem írja le röviden, milyen munkát szeretne elvégeztetni, mikor lenne szüksége rá, van-e különleges igény..." data-ph-en="Please briefly describe the work you need, when you'd need it, and any special requirements..."></textarea>
           </div>
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
           <button type="submit" class="btn-send" data-hu="📨  Ajánlatot kérek" data-en="📨  Request a Quote">📨  Ajánlatot kérek</button>
           <div id="form-success">✅ <span data-hu="Üzenetét megkaptuk! Hamarosan felvesszük Önnel a kapcsolatot." data-en="We received your message! We will contact you shortly.">Üzenetét megkaptuk! Hamarosan felvesszük Önnel a kapcsolatot.</span></div>
         </form>
@@ -1026,16 +1020,51 @@ const fadeObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isInte
 document.querySelectorAll('.fade-in').forEach(el=>fadeObs.observe(el));
 function sendForm(e){
   e.preventDefault();
-  const f=e.target;
-  const nev=f.nev.value,tel=f.telefon.value,email=f.email.value;
-  const tipus=f.tipus.options[f.tipus.selectedIndex].text;
-  const meret=f.meret.value,leiras=f.leiras.value;
-  const subject=encodeURIComponent(currentLang==='en'?'Quote Request – Haros Electric':'Árajánlat kérés – Haros Electric');
-    const body=encodeURIComponent(currentLang==='en'?('Name: '+nev+'\nPhone: '+tel+'\nEmail: '+email+'\nProperty type: '+tipus+'\nFloor area: '+(meret||'–')+' m²\n\nDescription:\n'+leiras):('Név: '+nev+'\nTelefon: '+tel+'\nEmail: '+email+'\nIngatlan típusa: '+tipus+'\nAlapterület: '+(meret||'–')+' m²\n\nLeírás:\n'+leiras));
-  window.location.href='mailto:haroselectric@gmail.com?subject='+subject+'&body='+body;
-  document.getElementById('form-success').style.display='block';
-  f.reset();
+  const f = e.target;
+  const btn = f.querySelector('button[type="submit"]');
+  const en = currentLang === 'en';
+  const tipus = f.tipus.options[f.tipus.selectedIndex].text;
+  const data = {
+    _subject: en ? 'Quote Request – Haros Electric (website)' : 'Árajánlat kérés – Haros Electric (weboldal)',
+    _template: 'table',
+    _captcha: 'false',
+    _honey: f._honey ? f._honey.value : '',
+    'Név': f.nev.value,
+    'Telefon': f.telefon.value,
+    'Email': f.email.value,
+    'Ingatlan típusa': tipus,
+    'Alapterület (m²)': f.meret.value || '–',
+    'Leírás': f.leiras.value,
+    'Nyelv': en ? 'EN' : 'HU'
+  };
+  const btnText = btn ? btn.textContent : '';
+  if (btn) { btn.disabled = true; btn.textContent = en ? 'Sending…' : 'Küldés…'; }
+  document.getElementById('form-success').style.display = 'none';
+  fetch('https://formsubmit.co/ajax/haroselectric@gmail.com', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(data)
+  })
+  .then(function(r){ return r.json().then(function(j){ return { ok: r.ok, j: j }; }); })
+  .then(function(res){
+    if (res.ok && (res.j.success === true || res.j.success === 'true')) {
+      document.getElementById('form-success').style.display = 'block';
+      if (typeof gtag === 'function') { gtag('event', 'form_submit_contact'); }
+      f.reset();
+    } else {
+      throw new Error(res.j && res.j.message ? res.j.message : 'send failed');
+    }
+  })
+  .catch(function(){
+    alert(en
+      ? 'Sorry, the message could not be sent. Please call +36 70 802 9138 or email haroselectric@gmail.com.'
+      : 'Sajnos az üzenetet nem sikerült elküldeni. Kérjük, hívjon: +36 70 802 9138, vagy írjon: haroselectric@gmail.com');
+  })
+  .finally(function(){
+    if (btn) { btn.disabled = false; btn.textContent = btnText; }
+  });
 }
+
 
 
 
