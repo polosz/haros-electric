@@ -12,13 +12,6 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-P6WGN8X6SC');
-    gtag('config', 'AW-18425319272');
-  </script>
-  <!-- Google Ads: Calls from website visits (forwarding number swap) -->
-  <script>
-    gtag('config', 'AW-18425319272/KJUfCK6g2ZQdEOie8NFE', {
-      'phone_conversion_number': '+36 70 802 9138'
-    });
   </script>
     <!-- GA4 event tracking: phone and email link clicks -->
     <script>
@@ -34,7 +27,14 @@
         });
     </script>
 
-    <!-- GA4 event: form_submit_contact is sent from sendForm() only after a successful FormSubmit delivery -->
+    <!-- GA4 event tracking: contact form submission -->
+    <script>
+        document.addEventListener('submit', function(e) {
+              if (e.target && e.target.id === 'contactForm') {
+                      gtag('event', 'form_submit_contact');
+              }
+        });
+    </script>
   
   <!-- Meta Pixel Code -->
 <script>
@@ -79,8 +79,11 @@ html,body{width:100%;max-width:100%;overflow-x:hidden;overflow-y:auto;background
 .nav-links a{text-decoration:none;color:rgba(255,255,255,.8);font-size:.87rem;font-weight:600;letter-spacing:.4px;padding:4px 0;border-bottom:2px solid transparent;transition:.2s;}
 .nav-links a:hover,.nav-links a.active{color:var(--accent2);border-color:var(--accent2)}
 .nav-right{display:flex;align-items:center;gap:12px}
-.lang-btn{background:rgba(139,92,246,.18);border:1px solid rgba(139,92,246,.4);border-radius:20px;padding:5px 16px;cursor:pointer;color:var(--accent2);font-size:.78rem;font-weight:700;letter-spacing:1.5px;transition:.2s;font-family:var(--font);}
-.lang-btn:hover{background:rgba(139,92,246,.32)}
+.lang-switch{display:flex;align-items:center;gap:7px;}
+.lang-opt{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:20px;border:1px solid rgba(139,92,246,.4);background:rgba(139,92,246,.1);color:rgba(255,255,255,.6);font-size:.76rem;font-weight:700;letter-spacing:.5px;cursor:pointer;font-family:var(--font);transition:.2s;}
+.lang-opt:hover{background:rgba(139,92,246,.26);}
+.lang-opt.active{background:linear-gradient(90deg,var(--purple2),var(--accent));border-color:transparent;color:#fff;box-shadow:0 4px 14px rgba(124,58,237,.45);}
+.lang-flag{width:18px;height:13px;border-radius:2px;display:block;flex-shrink:0;box-shadow:0 0 0 1px rgba(255,255,255,.2);}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .hamburger span{display:block;width:24px;height:2px;background:var(--white);transition:.3s}
 .hero{position:relative;width:100%;padding-top:var(--nav-h);padding-left:0;padding-right:0;margin:0;padding-bottom:0;line-height:0;background:transparent;overflow:visible}
@@ -182,6 +185,8 @@ footer a{color:rgba(139,92,246,.7);text-decoration:none}
   .nav-links.open{display:flex}
   .nav-links li a{display:block;padding:16px 28px;border-bottom:1px solid rgba(255,255,255,.06)}
   .hamburger{display:flex}
+  .lang-opt{padding:5px 9px;font-size:0.68rem;gap:4px;}
+  .lang-flag{width:16px;height:12px;}
   .svc-grid{grid-template-columns:1fr}
   .gallery-grid{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
@@ -444,7 +449,7 @@ html,body{overscroll-behavior-y:auto;}
 overflow:visible!important;
 }
 
-.header-phone{display:inline-flex;align-items:center;gap:6px;margin-right:16px;padding:6px 12px;font-weight:600;font-size:15px;color:#a78bfa;text-decoration:none;white-space:nowrap;}.header-phone:hover{text-decoration:underline;}.hero-cta-group{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;padding:24px 20px 4px;}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 24px;border-radius:8px;font-weight:600;font-size:1rem;text-decoration:none;transition:opacity .15s ease;}.btn-primary-call{background:var(--purple);color:#fff;}.btn-primary-call:hover{opacity:.88;}.btn-secondary-quote{background:transparent;border:2px solid var(--purple);color:#fff;}.btn-secondary-quote:hover{background:rgba(124,58,237,.15);}.mobile-sticky-call{display:none;}@media(max-width:768px){.mobile-sticky-call{display:block;position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--purple);box-shadow:0 -2px 8px rgba(0,0,0,.25);}.mobile-sticky-call-link{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px 0;color:#fff;font-weight:700;font-size:1rem;text-decoration:none;}body{padding-bottom:56px;}}html[data-lang="hu"] .en-only{display:none}
+.header-phone{display:inline-flex;align-items:center;gap:6px;margin-right:16px;padding:6px 12px;font-weight:600;font-size:15px;color:#a78bfa;text-decoration:none;white-space:nowrap;}.header-phone:hover{text-decoration:underline;}.hero-cta-group{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;padding:24px 20px 4px;}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 24px;border-radius:8px;font-weight:600;font-size:1rem;text-decoration:none;transition:opacity .15s ease;}.btn-primary-call{background:var(--purple);color:#fff;}.btn-primary-call:hover{opacity:.88;}.btn-secondary-quote{background:transparent;border:2px solid var(--purple);color:#fff;}.btn-secondary-quote:hover{background:rgba(124,58,237,.15);}.mobile-sticky-call{display:none;}@media(max-width:768px){.mobile-sticky-call{display:block;position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--purple);box-shadow:0 -2px 8px rgba(0,0,0,.25);}.mobile-sticky-call-link{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px 0;color:#fff;font-weight:700;font-size:1rem;text-decoration:none;}body{padding-bottom:56px;}}@media(max-width:600px){.header-phone{display:none}}html[data-lang="hu"] .en-only{display:none}
 </style>
 </head>
 <body>
@@ -457,7 +462,14 @@ overflow:visible!important;
     <li><a href="#contact" data-hu="Kapcsolat" data-en="Contact">Kapcsolat</a></li>
   </ul>
   <div class="nav-right">
-    <a href="tel:+36708029138" class="header-phone" aria-label="Hívás: +36 70 802 9138">📞 +36 70 802 9138</a> <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
+    <a href="tel:+36708029138" class="header-phone" aria-label="Hívás: +36 70 802 9138">📞 +36 70 802 9138</a> <div class="lang-switch" id="langBtn" role="group" aria-label="Nyelv váltása / Switch language">
+      <button type="button" class="lang-opt lang-opt-hu active" onclick="setLang('hu')">
+        <svg class="lang-flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#fff"/><rect width="3" height="0.6667" fill="#CD2A3E"/><rect y="1.3333" width="3" height="0.6667" fill="#436F4D"/></svg>HU
+      </button>
+      <button type="button" class="lang-opt lang-opt-en" onclick="setLang('en')">
+        <svg class="lang-flag" viewBox="0 0 60 30" aria-hidden="true"><rect width="60" height="30" fill="#00247d"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#cf142b" stroke-width="2"/><path d="M30,0 V30 M0,15 H60" stroke="#fff" stroke-width="10"/><path d="M30,0 V30 M0,15 H60" stroke="#cf142b" stroke-width="6"/></svg>EN
+      </button>
+    </div>
     <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -914,7 +926,6 @@ overflow:visible!important;
             <label data-hu="Elvégzendő munka leírása" data-en="Description of Work">Elvégzendő munka leírása</label>
             <textarea name="leiras" placeholder="Kérem írja le röviden, milyen munkát szeretne elvégeztetni, mikor lenne szüksége rá, van-e különleges igény..." data-ph-hu="Kérem írja le röviden, milyen munkát szeretne elvégeztetni, mikor lenne szüksége rá, van-e különleges igény..." data-ph-en="Please briefly describe the work you need, when you'd need it, and any special requirements..."></textarea>
           </div>
-          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
           <button type="submit" class="btn-send" data-hu="📨  Ajánlatot kérek" data-en="📨  Request a Quote">📨  Ajánlatot kérek</button>
           <div id="form-success">✅ <span data-hu="Üzenetét megkaptuk! Hamarosan felvesszük Önnel a kapcsolatot." data-en="We received your message! We will contact you shortly.">Üzenetét megkaptuk! Hamarosan felvesszük Önnel a kapcsolatot.</span></div>
         </form>
@@ -964,10 +975,20 @@ function updateHeroBanner(){
   });
 })();
 
+function setLang(lang){
+  if(lang!==currentLang) toggleLang();
+}
+
 function toggleLang(){
   currentLang=currentLang==='hu'?'en':'hu';
   document.documentElement.setAttribute('data-lang',currentLang);
-  document.getElementById('langBtn').textContent=currentLang==='hu'?'EN':'HU';
+  var langBtn=document.getElementById('langBtn');
+  if(langBtn){
+    var huOpt=langBtn.querySelector('.lang-opt-hu');
+    var enOpt=langBtn.querySelector('.lang-opt-en');
+    if(huOpt) huOpt.classList.toggle('active',currentLang==='hu');
+    if(enOpt) enOpt.classList.toggle('active',currentLang==='en');
+  }
   updateHeroBanner();
   document.querySelectorAll('[data-hu]').forEach(el=>{
     const t=el.getAttribute('data-'+currentLang);
@@ -1027,51 +1048,16 @@ const fadeObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isInte
 document.querySelectorAll('.fade-in').forEach(el=>fadeObs.observe(el));
 function sendForm(e){
   e.preventDefault();
-  const f = e.target;
-  const btn = f.querySelector('button[type="submit"]');
-  const en = currentLang === 'en';
-  const tipus = f.tipus.options[f.tipus.selectedIndex].text;
-  const data = {
-    _subject: en ? 'Quote Request – Haros Electric (website)' : 'Árajánlat kérés – Haros Electric (weboldal)',
-    _template: 'table',
-    _captcha: 'false',
-    _honey: f._honey ? f._honey.value : '',
-    'Név': f.nev.value,
-    'Telefon': f.telefon.value,
-    'Email': f.email.value,
-    'Ingatlan típusa': tipus,
-    'Alapterület (m²)': f.meret.value || '–',
-    'Leírás': f.leiras.value,
-    'Nyelv': en ? 'EN' : 'HU'
-  };
-  const btnText = btn ? btn.textContent : '';
-  if (btn) { btn.disabled = true; btn.textContent = en ? 'Sending…' : 'Küldés…'; }
-  document.getElementById('form-success').style.display = 'none';
-  fetch('https://formsubmit.co/ajax/haroselectric@gmail.com', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-    body: JSON.stringify(data)
-  })
-  .then(function(r){ return r.json().then(function(j){ return { ok: r.ok, j: j }; }); })
-  .then(function(res){
-    if (res.ok && (res.j.success === true || res.j.success === 'true')) {
-      document.getElementById('form-success').style.display = 'block';
-      if (typeof gtag === 'function') { gtag('event', 'form_submit_contact'); }
-      f.reset();
-    } else {
-      throw new Error(res.j && res.j.message ? res.j.message : 'send failed');
-    }
-  })
-  .catch(function(){
-    alert(en
-      ? 'Sorry, the message could not be sent. Please call +36 70 802 9138 or email haroselectric@gmail.com.'
-      : 'Sajnos az üzenetet nem sikerült elküldeni. Kérjük, hívjon: +36 70 802 9138, vagy írjon: haroselectric@gmail.com');
-  })
-  .finally(function(){
-    if (btn) { btn.disabled = false; btn.textContent = btnText; }
-  });
+  const f=e.target;
+  const nev=f.nev.value,tel=f.telefon.value,email=f.email.value;
+  const tipus=f.tipus.options[f.tipus.selectedIndex].text;
+  const meret=f.meret.value,leiras=f.leiras.value;
+  const subject=encodeURIComponent(currentLang==='en'?'Quote Request – Haros Electric':'Árajánlat kérés – Haros Electric');
+    const body=encodeURIComponent(currentLang==='en'?('Name: '+nev+'\nPhone: '+tel+'\nEmail: '+email+'\nProperty type: '+tipus+'\nFloor area: '+(meret||'–')+' m²\n\nDescription:\n'+leiras):('Név: '+nev+'\nTelefon: '+tel+'\nEmail: '+email+'\nIngatlan típusa: '+tipus+'\nAlapterület: '+(meret||'–')+' m²\n\nLeírás:\n'+leiras));
+  window.location.href='mailto:haroselectric@gmail.com?subject='+subject+'&body='+body;
+  document.getElementById('form-success').style.display='block';
+  f.reset();
 }
-
 
 
 
