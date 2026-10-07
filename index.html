@@ -1,1024 +1,1082 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="hu" data-lang="hu">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-hu="Dance Life Entertainment | Rendezvényszervezés, DJ &amp; Hangtechnika bérlés" data-en="Dance Life Entertainment | Event Planning, DJ &amp; Sound Equipment Rental">Dance Life Entertainment | Rendezvényszervezés, DJ &amp; Hangtechnika bérlés</title>
-<meta name="description" content="Dance Life Entertainment – rendezvényszervezés, professzionális DJ szolgáltatás, hang- és fénytechnika bérlés. Tedd emlékezetessé az eseményed!">
-<link rel="icon" href="assets/logo.png">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title data-hu="Haros Electric Hungary – VBF Érintésvédelmi Felülvizsgálat" data-en="Haros Electric Hungary – Electrical Inspection &amp; Testing">Haros Electric Hungary – VBF Érintésvédelmi Felülvizsgálat</title>
+<meta name="description" content="VBF érintésvédelmi felülvizsgálat Budapest. Minősítő irattal, szabványos dokumentációval. Haros Electric Hungary.">
+<!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P6WGN8X6SC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-P6WGN8X6SC');
+    gtag('config', 'AW-18425319272');
+  </script>
+  <!-- Google Ads: Calls from website visits (forwarding number swap) -->
+  <script>
+    gtag('config', 'AW-18425319272/KJUfCK6g2ZQdEOie8NFE', {
+      'phone_conversion_number': '+36 70 802 9138'
+    });
+  </script>
+    <!-- GA4 event tracking: phone and email link clicks -->
+    <script>
+        document.addEventListener('click', function(e) {
+              var link = e.target.closest('a');
+              if (!link) return;
+                    var href = link.getAttribute('href') || '';
+              if (href.indexOf('tel:') === 0) {
+                      gtag('event', 'phone_click', { 'link_url': href });
+              } else if (href.indexOf('mailto:') === 0) {
+                      gtag('event', 'email_click', { 'link_url': href });
+              }
+        });
+    </script>
+
+    <!-- GA4 event: form_submit_contact is sent from sendForm() only after a successful FormSubmit delivery -->
+  
+  <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1612418367298697');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1612418367298697&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <style>
-  :root{
-    --bg: #0b0715;
-    --bg-alt: #120a24;
-    --card: #17102b;
-    --card-border: rgba(196,120,255,0.18);
-    --purple: #a53dff;
-    --purple-light: #d68cff;
-    --pink: #ff4fd8;
-    --text: #f2eefb;
-    --text-dim: #b6a9cf;
-    --glow: 0 0 24px rgba(165,61,255,0.55);
-    --radius: 18px;
-  }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:var(--bg);
-    color:var(--text);
-    font-family:'Montserrat',sans-serif;
-    line-height:1.6;
-    overflow-x:hidden;
-  }
-  h1,h2,h3,h4{font-family:'Poppins',sans-serif;}
-  a{color:inherit;text-decoration:none;}
-  img{max-width:100%;display:block;}
-  .container{max-width:1180px;margin:0 auto;padding:0 24px;}
-  .glow-text{
-    background:linear-gradient(90deg,var(--purple-light),var(--pink));
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-  }
-  .btn{
-    display:inline-flex;align-items:center;gap:10px;
-    padding:15px 34px;
-    border-radius:50px;
-    font-weight:600;
-    font-size:0.95rem;
-    letter-spacing:0.3px;
-    cursor:pointer;
-    border:none;
-    transition:transform .25s ease, box-shadow .25s ease;
-  }
-  .btn-primary{
-    background:linear-gradient(90deg,var(--purple),var(--pink));
-    color:#fff;
-    box-shadow:0 8px 30px rgba(165,61,255,0.45);
-  }
-  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(255,79,216,0.5);}
-  .btn-ghost{
-    background:transparent;
-    color:var(--text);
-    border:1.5px solid rgba(214,140,255,0.5);
-  }
-  .btn-ghost:hover{border-color:var(--purple-light);background:rgba(165,61,255,0.1);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --deep:#242442;
+  --dark:#231e42;
+  --purple:#7c3aed;
+  --purple2:#6d28d9;
+  --accent:#8b5cf6;
+  --accent2:#a78bfa;
+  --white:#fff;
+  --nav-h:64px;
+  --font:'Segoe UI',system-ui,Arial,sans-serif;
+  --radius:10px;
+}
+html{scroll-behavior:smooth}
+html,body{width:100%;max-width:100%;overflow-x:hidden;overflow-y:auto;background:#242442;-webkit-overflow-scrolling:touch;}body{font-family:var(--font);color:var(--white);}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:500;height:var(--nav-h);background:rgba(36,36,66,.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(139,92,246,.18);display:flex;align-items:center;justify-content:space-between;padding:0 48px;}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{text-decoration:none;color:rgba(255,255,255,.8);font-size:.87rem;font-weight:600;letter-spacing:.4px;padding:4px 0;border-bottom:2px solid transparent;transition:.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--accent2);border-color:var(--accent2)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.lang-btn{background:rgba(139,92,246,.18);border:1px solid rgba(139,92,246,.4);border-radius:20px;padding:5px 16px;cursor:pointer;color:var(--accent2);font-size:.78rem;font-weight:700;letter-spacing:1.5px;transition:.2s;font-family:var(--font);}
+.lang-btn:hover{background:rgba(139,92,246,.32)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--white);transition:.3s}
+.hero{position:relative;width:100%;padding-top:var(--nav-h);padding-left:0;padding-right:0;margin:0;padding-bottom:0;line-height:0;background:transparent;overflow:visible}
+section[id]{scroll-margin-top:calc(var(--nav-h) + 12px)}
+.hero-img{display:block;width:100%;max-width:100%;height:auto;vertical-align:bottom}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;height:80px;background:linear-gradient(to bottom,rgba(36,36,66,.96) 0%,rgba(36,36,66,.55) 45%,rgba(36,36,66,0) 100%);pointer-events:none;z-index:2;}
+section{padding:80px 40px}
+.inner{max-width:1140px;margin:0 auto}
+.section-title{font-size:2rem;font-weight:900;text-align:center;margin-bottom:10px;letter-spacing:1px;}
+.section-sub{text-align:center;color:rgba(255,255,255,.78);max-width:640px;margin:0 auto 48px;font-size:.97rem;line-height:1.7;}
+.accent-line{width:56px;height:3px;background:linear-gradient(90deg,var(--purple),var(--accent2));border-radius:3px;margin:10px auto 32px;}
+.services{background:linear-gradient(180deg,#2a2a54 0%,#2e2e64 100%)}
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.svc-card{background:rgba(255,255,255,.07);border:1px solid rgba(139,92,246,.2);border-radius:var(--radius);padding:28px 24px;transition:transform .25s,box-shadow .25s,border-color .25s;position:relative;overflow:visible;}
+.svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--purple),var(--accent2));opacity:0;transition:.25s;}
+.svc-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(124,58,237,.25);border-color:rgba(139,92,246,.45)}
+.svc-card:hover::before{opacity:1}
+.svc-icon{
+font-size:2rem;
+margin:0 auto 14px;
+width:64px;
+height:64px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+background:rgba(124,58,237,.12);
+border:1px solid rgba(139,92,246,.25);
+}
+.svc-card h3{font-size:1rem;font-weight:700;color:var(--accent2);margin-bottom:10px}
+.svc-card p{font-size:.875rem;color:rgba(255,255,255,.78);line-height:1.65}
+.why{background:#2a2a68}
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+.why-item{display:flex;gap:18px;align-items:flex-start}
+.why-icon{flex:0 0 52px;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;}
+.why-item h3{font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--white)}
+.why-item p{font-size:.875rem;color:rgba(255,255,255,.78);line-height:1.65}
+.pricing{background:linear-gradient(180deg,#2a2a54 0%,#2e2e64 100%)}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.price-card{background:rgba(255,255,255,.07);border:1px solid rgba(139,92,246,.22);border-radius:var(--radius);padding:32px 28px;text-align:center;transition:.25s;position:relative;overflow:visible;}
+.price-card.featured{border-color:var(--purple);background:rgba(124,58,237,.1);transform:scale(1.04);box-shadow:0 0 48px rgba(124,58,237,.25);}
+.price-badge{display:inline-block;background:var(--purple);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:4px 14px;border-radius:20px;margin-bottom:16px;}
+.price-card h3{font-size:1.1rem;font-weight:800;margin-bottom:6px}
+.price-sub{font-size:.82rem;color:rgba(255,255,255,.55);margin-bottom:20px}
+.price-amount{font-size:2rem;font-weight:900;color:var(--accent2);margin-bottom:6px}
+.price-note{font-size:.78rem;color:rgba(255,255,255,.45);margin-bottom:20px}
+.price-list{list-style:none;text-align:left;margin-bottom:24px}
+.price-list li{font-size:.85rem;color:rgba(255,255,255,.7);padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;gap:8px;align-items:flex-start;}
+.price-list li::before{content:'✓';color:var(--accent2);font-weight:700;flex-shrink:0}
+.price-btn{display:inline-block;width:100%;padding:12px;text-align:center;background:linear-gradient(135deg,var(--purple),var(--purple2));color:#fff;font-weight:700;font-size:.9rem;letter-spacing:.5px;border:none;border-radius:50px;cursor:pointer;text-decoration:none;transition:.2s;}
+.price-btn:hover{opacity:.88;transform:translateY(-1px)}
+.price-custom{margin-top:40px;text-align:center;background:rgba(255,255,255,.07);border:1px solid rgba(139,92,246,.2);border-radius:var(--radius);padding:28px;}
+.price-custom p{color:rgba(255,255,255,.7);margin-bottom:16px;font-size:.95rem}
+.gallery{background:#2a2a54}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+.gallery-grid img{width:100%;height:220px;object-fit:cover;border-radius:8px;display:block;transition:transform .3s,filter .3s,box-shadow .3s;cursor:pointer;filter:brightness(.88) saturate(1.1);}
+.gallery-grid img:hover{transform:scale(1.03);filter:brightness(1.05) saturate(1.3);box-shadow:0 8px 28px rgba(124,58,237,.4);}
+.contact{background:linear-gradient(180deg,#2a2a54 0%,#2e2e64 100%)}
+.contact-wrap{display:grid;grid-template-columns:1fr 1.6fr;gap:60px;align-items:start}
+.contact-info h2{font-size:1.6rem;font-weight:900;margin-bottom:20px}
+.contact-info .info-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:20px;}
+.info-icon{width:42px;height:42px;border-radius:50%;flex-shrink:0;background:rgba(139,92,246,.18);border:1px solid rgba(139,92,246,.3);display:flex;align-items:center;justify-content:center;font-size:1.1rem;}
+.info-text{font-size:.9rem;color:rgba(255,255,255,.75);line-height:1.5}
+.info-text a{color:var(--accent2);text-decoration:none}
+.info-text strong{display:block;color:var(--white);margin-bottom:2px;font-size:.82rem;letter-spacing:.5px;text-transform:uppercase}
+.social-row{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+.social-btn{display:flex;align-items:center;gap:8px;padding:9px 18px;border-radius:50px;text-decoration:none;font-size:.83rem;font-weight:700;letter-spacing:.5px;transition:.2s;background:rgba(139,92,246,.15);border:1px solid rgba(139,92,246,.3);color:var(--accent2);}
+.social-btn:hover{background:rgba(139,92,246,.3);transform:translateY(-2px)}
+.form-box{background:rgba(255,255,255,.07);border:1px solid rgba(139,92,246,.2);border-radius:var(--radius);padding:36px;}
+.form-box h3{font-size:1.2rem;font-weight:800;margin-bottom:6px}
+.form-desc{font-size:.87rem;color:rgba(255,255,255,.55);margin-bottom:24px;line-height:1.6}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-group{margin-bottom:14px}
+.form-group label{display:block;font-size:.78rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:6px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:11px 16px;background:rgba(255,255,255,.10);border:1px solid rgba(139,92,246,.3);border-radius:8px;color:var(--white);font-size:.9rem;font-family:var(--font);transition:.2s;outline:none;}
+.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,.32)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--purple);background:rgba(139,92,246,.1)}
+.form-group select option{background:#1a1a50;color:#fff}
+.form-group textarea{min-height:110px;resize:vertical}
+.btn-send{width:100%;padding:14px;background:linear-gradient(135deg,var(--purple),var(--purple2));color:#fff;font-weight:800;font-size:1rem;letter-spacing:1px;border:none;border-radius:50px;cursor:pointer;transition:.2s;margin-top:6px;text-transform:uppercase;}
+.btn-send:hover{opacity:.88;transform:translateY(-2px);box-shadow:0 8px 24px rgba(124,58,237,.45)}
+#form-success{display:none;margin-top:14px;padding:14px;background:rgba(100,200,100,.12);border:1px solid rgba(100,200,100,.3);border-radius:8px;color:#7fff7f;text-align:center;font-size:.9rem}
+footer{background:rgba(28,28,53,.85);border-top:1px solid rgba(139,92,246,.15);padding:28px 40px;text-align:center;color:rgba(255,255,255,.4);font-size:.82rem;}
+footer a{color:rgba(139,92,246,.7);text-decoration:none}
+.fade-in{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s}
+.fade-in.visible{opacity:1;transform:none}
+@media(max-width:960px){
+  .navbar{padding:0 24px}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .price-grid{grid-template-columns:1fr}
+  .price-card.featured{transform:none}
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  .contact-wrap{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  section{padding:60px 24px}
+}
+@media(max-width:600px){
+  .nav-links{display:none;position:fixed;top:var(--nav-h);left:0;right:0;background:rgba(30,30,58,.98);flex-direction:column;gap:0;padding:0;border-bottom:1px solid rgba(139,92,246,.2)}
+  .nav-links.open{display:flex}
+  .nav-links li a{display:block;padding:16px 28px;border-bottom:1px solid rgba(255,255,255,.06)}
+  .hamburger{display:flex}
+  .svc-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .section-title{font-size:1.5rem}
+}
 
-  /* NAV */
-  header{
-    position:fixed;top:0;left:0;right:0;z-index:100;
-    background:rgba(11,7,21,0.75);
-    backdrop-filter:blur(14px);
-    border-bottom:1px solid rgba(255,255,255,0.06);
+  /* ===== WARNING STRIP ===== */
+  .warning-strip {
+    background: linear-gradient(90deg, #7c1d1d, #9a2020);
+    color: #ffe4e4;
+    text-align: center;
+    padding: 14px 20px;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
   }
-  nav{
-    display:flex;align-items:center;justify-content:space-between;
-    padding:10px 24px;
-    max-width:1180px;margin:0 auto;
-  }
-  .logo-wrap{display:flex;align-items:center;gap:12px;}
-  .logo-wrap img{width:84px;height:84px;border-radius:50%;opacity:0.92;}
-  .logo-wrap span{font-weight:700;font-size:1.15rem;letter-spacing:0.5px;}
-  .nav-links{display:flex;gap:32px;align-items:center;margin-left:64px;}
-  .nav-links a{font-size:0.92rem;font-weight:500;color:var(--text-dim);transition:color .2s;}
-  .nav-links a:hover{color:var(--purple-light);}
-  .nav-socials{display:flex;gap:14px;align-items:center;}
-  .nav-socials a{
-    width:36px;height:36px;border-radius:50%;
-    display:flex;align-items:center;justify-content:center;
-    background:rgba(255,255,255,0.06);
-    border:1px solid rgba(255,255,255,0.1);
-    transition:all .2s;
-  }
-  .nav-socials a:hover{background:var(--purple);border-color:var(--purple);transform:translateY(-2px);}
-  .nav-socials svg{width:16px;height:16px;fill:var(--text);}
-  .burger{display:none;background:none;border:none;color:var(--text);font-size:1.6rem;cursor:pointer;}
-  .nav-right{display:flex;align-items:center;gap:14px;}
-  .lang-btn{
-    background:rgba(165,61,255,.18);
-    border:1px solid rgba(165,61,255,.45);
-    border-radius:20px;
-    padding:6px 18px;
-    cursor:pointer;
-    color:var(--purple-light);
-    font-size:.8rem;
-    font-weight:700;
-    letter-spacing:1.5px;
-    transition:.2s;
-    font-family:inherit;
-  }
-  .lang-btn:hover{background:rgba(165,61,255,.34);box-shadow:0 0 16px rgba(165,61,255,.4);}
+  .warning-icon { font-size: 1.3rem; }
 
-  /* HERO */
-  .hero{
-    position:relative;
-    min-height:100vh;
-    display:flex;align-items:center;
-    background:
-      linear-gradient(100deg, rgba(9,6,17,0.3) 0%, rgba(9,6,17,0.12) 30%, rgba(9,6,17,0.02) 58%, rgba(9,6,17,0.15) 100%),
-      linear-gradient(180deg, rgba(11,7,21,0.02) 0%, rgba(11,7,21,0.18) 70%, var(--bg) 100%),
-      url('assets/hero-cover-vivid.jpg') center center/cover no-repeat;
+  /* ===== STATS BAR ===== */
+  .stats-bar {
+    background: rgba(124,58,237,0.20);
+    border-top: 1px solid rgba(124,58,237,0.4);
+    border-bottom: 1px solid rgba(124,58,237,0.4);
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: wrap;
+    padding: 0;
   }
-  .hero-content{max-width:720px;padding-top:120px;}
-  .hero-media{display:none;}
-  .eyebrow{
-    display:inline-block;
-    padding:8px 18px;
-    border-radius:50px;
-    background:rgba(165,61,255,0.15);
-    border:1px solid rgba(214,140,255,0.35);
-    color:var(--purple-light);
-    font-size:0.82rem;
-    font-weight:600;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-    margin-bottom:22px;
+  .stat-item {
+    flex: 1;
+    min-width: 160px;
+    text-align: center;
+    padding: 28px 20px;
+    border-right: 1px solid rgba(124,58,237,0.2);
   }
-  .hero h1{
-    font-size:clamp(2.4rem,6vw,4.2rem);
-    font-weight:800;
-    line-height:1.08;
-    margin-bottom:22px;
-    text-shadow:0 4px 24px rgba(0,0,0,0.85), 0 0 60px rgba(165,61,255,0.5);
+  .stat-item:last-child { border-right: none; }
+  .stat-num {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--accent2);
+    line-height: 1;
+    margin-bottom: 6px;
   }
-  .hero p{
-    font-size:1.15rem;
-    color:var(--text-dim);
-    max-width:560px;
-    margin-bottom:36px;
-    text-shadow:0 2px 14px rgba(0,0,0,0.85);
-  }
-  .hero-cta{display:flex;gap:18px;flex-wrap:wrap;}
-  .scroll-cue{
-    position:absolute;bottom:36px;left:50%;transform:translateX(-50%);
-    display:flex;flex-direction:column;align-items:center;gap:8px;
-    color:var(--text-dim);font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;
-    animation:bounce 2.4s infinite;
-  }
-  @keyframes bounce{0%,100%{transform:translate(-50%,0);}50%{transform:translate(-50%,10px);}}
+  .stat-label { font-size: 0.85rem; color: #a9b4c2; }
 
-  section{padding:110px 0;position:relative;}
-  .section-head{max-width:640px;margin:0 auto 60px;text-align:center;}
-  .section-head .eyebrow{margin-bottom:16px;}
-  .section-head h2{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:700;margin-bottom:16px;}
-  .section-head p{color:var(--text-dim);font-size:1.05rem;}
+  /* ===== CTA BAND ===== */
+  .cta-band {
+    background: linear-gradient(90deg, rgba(124,58,237,0.18), rgba(167,139,250,0.1));
+    border-top: 1px solid rgba(124,58,237,0.4);
+    border-bottom: 1px solid rgba(124,58,237,0.4);
+    text-align: center;
+    padding: 36px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .cta-band p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #d0d8f0;
+  }
+  .btn-cta {
+    background: var(--purple);
+    color: #fff;
+    padding: 13px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: background 0.2s, transform 0.2s;
+    white-space: nowrap;
+  }
+  .btn-cta:hover { background: var(--accent2); color: #07071a; transform: translateY(-2px); }
 
-  /* ABOUT */
-  .about{background:var(--bg-alt);}
-  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
-  .about-media{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--glow);}
-  .about-media img{width:100%;height:100%;object-fit:cover;}
-  #about .about-media{max-width:300px;margin:0 auto;}
-  .about-text h3{font-size:1.8rem;margin-bottom:18px;font-weight:700;}
-  .about-text p{color:var(--text-dim);margin-bottom:16px;}
-  .stat-row{display:flex;gap:40px;margin-top:32px;}
-  .stat-row div strong{display:block;font-size:2rem;font-weight:800;background:linear-gradient(90deg,var(--purple-light),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent;}
-  .stat-row div span{color:var(--text-dim);font-size:0.85rem;}
+  /* ===== HOW IT WORKS (HOGYAN ZAJLIK) ===== */
+  .how-section { padding: 70px 0; }
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 32px;
+  }
+  @media(max-width:900px){ .steps-grid { grid-template-columns: repeat(2,1fr); } }
+  @media(max-width:520px){ .steps-grid { grid-template-columns: 1fr; } }
+  .step-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(124,58,237,0.25);
+    border-radius: 14px;
+    padding: 28px 20px;
+    text-align: center;
+    position: relative;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .step-card:hover { border-color: var(--purple); transform: translateY(-4px); }
+  .step-num {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--purple);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 800;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .step-icon { font-size: 2rem; margin: 8px 0 12px; }
+  .step-card h3 { font-size: 1rem; margin-bottom: 8px; color: var(--accent2); }
+  .step-card p { font-size: 0.88rem; color: #a9b4c2; line-height: 1.5; }
 
-  /* SERVICES */
-  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
-  .service-card{
-    background:linear-gradient(160deg, var(--card), rgba(23,16,43,0.4));
-    border:1px solid var(--card-border);
-    border-radius:var(--radius);
-    padding:38px 30px;
-    transition:transform .3s ease, border-color .3s ease;
+  /* ===== GYIK / FAQ ===== */
+  .gyik-section { padding: 70px 0; }
+  .faq-list { max-width: 780px; margin: 32px auto 0; }
+  .faq-item {
+    border: 1px solid rgba(124,58,237,0.25);
+    border-radius: 10px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: border-color 0.3s;
   }
-  .service-card:hover{transform:translateY(-8px);border-color:var(--purple);}
-  .service-icon{
-    width:58px;height:58px;border-radius:14px;
-    display:flex;align-items:center;justify-content:center;
-    background:linear-gradient(135deg,var(--purple),var(--pink));
-    margin-bottom:22px;
-    box-shadow:0 8px 24px rgba(165,61,255,0.4);
+  .faq-item.open { border-color: var(--purple); }
+  .faq-q {
+    width: 100%;
+    background: rgba(255,255,255,0.07);
+    border: none;
+    cursor: pointer;
+    padding: 18px 20px;
+    text-align: left;
+    color: #d0d8f0;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    font-family: inherit;
   }
-  .service-icon svg{width:28px;height:28px;fill:#fff;}
-  .service-card h3{font-size:1.25rem;margin-bottom:12px;font-weight:700;}
-  .service-card p{color:var(--text-dim);font-size:0.95rem;margin-bottom:18px;}
-  .service-card ul{list-style:none;display:flex;flex-direction:column;gap:8px;}
-  .service-card li{font-size:0.88rem;color:var(--text-dim);display:flex;gap:8px;align-items:flex-start;}
-  .service-card li::before{content:"✦";color:var(--purple-light);flex-shrink:0;}
+  .faq-q:hover { background: rgba(124,58,237,0.1); }
+  .faq-arrow { font-size: 0.75rem; color: var(--accent2); transition: transform 0.3s; flex-shrink: 0; }
+  .faq-item.open .faq-arrow { transform: rotate(180deg); }
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.3s;
+    padding: 0 20px;
+  }
+  .faq-item.open .faq-a { max-height: 300px; padding: 0 20px 18px; }
+  .faq-a p { margin: 0; color: #a9b4c2; font-size: 0.92rem; line-height: 1.65; }
 
-  /* DJ SAMPLES */
-  .dj-samples{display:flex;flex-direction:column;gap:14px;margin-top:28px;}
-  .sample-track{
-    display:flex;align-items:center;gap:16px;
-    background:rgba(255,255,255,0.03);
-    border:1px solid var(--card-border);
-    border-radius:14px;
-    padding:14px 18px;
-  }
-  .sample-play{
-    flex:0 0 auto;width:48px;height:48px;border-radius:50%;
-    background:linear-gradient(135deg,var(--purple),var(--pink));
-    border:none;cursor:pointer;
-    display:flex;align-items:center;justify-content:center;
-    box-shadow:0 8px 24px rgba(165,61,255,0.4);
-    transition:transform .2s ease;
-  }
-  .sample-play:hover{transform:scale(1.06);}
-  .sample-play svg{width:18px;height:18px;fill:#fff;}
-  .sample-body{flex:1 1 auto;min-width:0;}
-  .sample-body .sample-caption{font-size:0.8rem;color:var(--text-dim);font-weight:500;display:block;margin-bottom:2px;}
-  .sample-body .sample-label{font-weight:600;font-size:0.98rem;margin-bottom:8px;display:block;}
-  .dj-genres{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 2px;}
-  .dj-genre-tag{
-    display:inline-flex;align-items:center;
-    padding:6px 16px;border-radius:50px;
-    background:rgba(255,255,255,0.05);
-    border:1px solid rgba(214,140,255,0.3);
-    color:var(--purple-light);
-    font-size:0.8rem;font-weight:600;letter-spacing:0.3px;
-  }
-  .booking-cta{
-    display:flex;align-items:center;gap:16px;flex-wrap:wrap;
-    margin-top:28px;padding:20px 24px;
-    background:rgba(165,61,255,0.08);
-    border:1px solid rgba(214,140,255,0.3);
-    border-radius:14px;
-  }
-  .booking-cta .booking-label{font-weight:700;font-size:0.95rem;}
-  .sample-bar{
-    position:relative;height:6px;border-radius:3px;
-    background:rgba(255,255,255,0.08);cursor:pointer;
-    overflow:hidden;
-  }
-  .sample-bar-fill{
-    position:absolute;top:0;left:0;height:100%;width:0%;
-    background:linear-gradient(90deg,var(--purple-light),var(--pink));
-    border-radius:3px;
-  }
 
-  /* EQUIPMENT / RENTAL */
-  .rental{background:var(--bg-alt);}
-  .rental-wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
-  .rental-media{border-radius:var(--radius);overflow:hidden;box-shadow:var(--glow);}
-  .rental-media img{width:100%;}
-  .equip-list{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px;}
-  .equip-item{
-    background:rgba(255,255,255,0.03);
-    border:1px solid var(--card-border);
-    border-radius:12px;
-    padding:16px 18px;
-    font-size:0.92rem;
-    display:flex;align-items:center;gap:10px;
-  }
-  .equip-item::before{content:"🔊";font-size:1.1rem;}
-  .equip-item.light::before{content:"💡";}
-  .equip-item.dj::before{content:"🎧";}
-  .equip-item.stage::before{content:"🎤";}
 
-  /* GALLERY */
-  .gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    grid-auto-rows:220px;
-    gap:16px;
-  }
-  .gallery-grid a{border-radius:14px;overflow:hidden;position:relative;display:block;}
-  .gallery-grid img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
-  .gallery-grid a:hover img{transform:scale(1.08);}
-  .gallery-grid a::after{
-    content:"";position:absolute;inset:0;
-    background:linear-gradient(180deg,transparent 50%, rgba(0,0,0,0.55));
-    opacity:0;transition:opacity .3s;
-  }
-  .gallery-grid a:hover::after{opacity:1;}
-  .g-tall{grid-row:span 2;}
-
-  .party-strip{
-    display:flex;gap:14px;overflow-x:auto;padding-bottom:10px;
-    scroll-snap-type:x mandatory;
-  }
-  .party-strip a{
-    flex:0 0 auto;width:200px;height:270px;border-radius:14px;overflow:hidden;
-    scroll-snap-align:start;display:block;
-  }
-  .party-strip img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
-  .party-strip a:hover img{transform:scale(1.06);}
-  .party-strip::-webkit-scrollbar{height:6px;}
-  .party-strip::-webkit-scrollbar-thumb{background:rgba(165,61,255,0.4);border-radius:3px;}
-
-  .gallery-sub-head{display:flex;align-items:baseline;justify-content:space-between;margin:0 0 20px;}
-  .gallery-sub-head--party{margin-top:56px;}
-  .gallery-sub-head h3{font-family:'Poppins',sans-serif;font-size:1.3rem;font-weight:700;letter-spacing:0.2px;}
-  .gallery-sub-head h3::before{content:"";display:inline-block;width:26px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--purple),var(--pink));margin-right:12px;vertical-align:middle;}
-  .gallery-grid--dj{display:block;columns:3 220px;column-gap:16px;}
-  .gallery-grid--dj a{display:block;break-inside:avoid;margin-bottom:16px;background:none;}
-  .gallery-grid--dj img{width:100%;height:auto;display:block;object-fit:initial;}
-  .gallery-more{text-align:center;margin-top:36px;}
-
-  /* LIGHTBOX + FULL GALLERY MODAL */
-  .lb-overlay{
-    position:fixed;inset:0;z-index:200;
-    background:rgba(6,4,12,0.94);
-    backdrop-filter:blur(6px);
-    display:none;
-    opacity:0;transition:opacity .25s ease;
-  }
-  .lb-overlay.open{display:block;opacity:1;}
-  #lb-overlay{z-index:210;}
-  .lb-overlay .lb-close{
-    position:absolute;top:20px;right:24px;
-    width:44px;height:44px;border-radius:50%;
-    background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);
-    color:var(--text);font-size:1.3rem;cursor:pointer;
-    display:flex;align-items:center;justify-content:center;
-    z-index:2;
-  }
-  .lb-overlay .lb-close:hover{background:rgba(255,255,255,0.16);}
-
-  #lightbox{display:flex;align-items:center;justify-content:center;height:100%;padding:36px 96px;}
-  #lightbox figure{max-width:100%;max-height:100%;display:flex;flex-direction:column;align-items:center;}
-  #lightbox img{max-width:100%;max-height:88vh;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,0.6);}
-  #lightbox figcaption{display:none;}
-  .lb-nav{
-    position:absolute;top:50%;transform:translateY(-50%);
-    width:52px;height:52px;border-radius:50%;
-    background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);
-    color:var(--text);font-size:1.4rem;cursor:pointer;
-    display:flex;align-items:center;justify-content:center;
-  }
-  .lb-nav:hover{background:linear-gradient(90deg,var(--purple),var(--pink));border-color:transparent;}
-  .lb-prev{left:24px;} .lb-next{right:24px;}
-  .lb-counter{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:var(--text-dim);font-size:0.85rem;letter-spacing:0.5px;}
-
-  #full-gallery{height:100%;overflow-y:auto;padding:80px 24px 40px;}
-  #full-gallery .container{max-width:1180px;}
-  #full-gallery h3{text-align:center;font-family:'Poppins',sans-serif;font-size:1.4rem;margin-bottom:28px;}
-  .full-grid{
-    columns:4 220px;column-gap:16px;
-  }
-  .full-grid a{border-radius:14px;overflow:hidden;position:relative;display:block;break-inside:avoid;margin-bottom:16px;background:rgba(255,255,255,0.04);}
-  .full-grid img{width:100%;height:auto;display:block;object-fit:initial;transition:transform .5s ease;}
-  .full-grid a:hover img{transform:scale(1.08);}
-
-  @media (max-width:860px){
-    .full-grid{columns:2;column-gap:10px;}
-    .full-grid a{margin-bottom:10px;}
-    .gallery-grid--dj{columns:2;column-gap:10px;}
-    .gallery-grid--dj a{margin-bottom:10px;}
-    .lb-nav{width:42px;height:42px;font-size:1.1rem;}
-    .lb-prev{left:8px;} .lb-next{right:8px;}
-    #lightbox{padding:64px 20px;}
-    #lightbox img{max-height:80vh;}
-  }
-
-  /* CONTACT */
-  .contact{background:var(--bg-alt);}
-  .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;}
-  .contact-info h3{font-size:1.6rem;margin-bottom:18px;font-weight:700;}
-  .contact-info p{color:var(--text-dim);margin-bottom:28px;}
-  .contact-row{display:flex;align-items:center;gap:16px;margin-bottom:20px;}
-  .contact-row .ic{
-    width:46px;height:46px;border-radius:50%;
-    background:rgba(165,61,255,0.15);border:1px solid rgba(214,140,255,0.35);
-    display:flex;align-items:center;justify-content:center;flex-shrink:0;
-  }
-  .contact-row .ic svg{width:20px;height:20px;fill:var(--purple-light);}
-  .contact-row strong{display:block;font-size:0.98rem;}
-  .contact-row span{color:var(--text-dim);font-size:0.88rem;}
-  .contact-socials{display:flex;gap:14px;margin-top:30px;}
-  .contact-socials a{
-    width:46px;height:46px;border-radius:50%;
-    display:flex;align-items:center;justify-content:center;
-    background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);
-    transition:all .2s;
-  }
-  .contact-socials a:hover{background:linear-gradient(135deg,var(--purple),var(--pink));border-color:transparent;transform:translateY(-3px);}
-  .contact-socials svg{width:20px;height:20px;fill:var(--text);}
-
-  form{
-    background:var(--card);
-    border:1px solid var(--card-border);
-    border-radius:var(--radius);
-    padding:34px;
-    display:flex;flex-direction:column;gap:18px;
-  }
-  form label{font-size:0.85rem;color:var(--text-dim);margin-bottom:6px;display:block;}
-  form input, form select, form textarea{
+@media(max-width:960px){
+  html,body{overflow-x:hidden;}
+  .price-grid{grid-template-columns:1fr !important;}
+  .price-card{
     width:100%;
-    background:rgba(255,255,255,0.04);
-    border:1px solid rgba(255,255,255,0.12);
-    border-radius:10px;
-    padding:13px 16px;
-    color:var(--text);
-    font-family:inherit;
-    font-size:0.95rem;
+    max-width:100%;
+    min-width:0;
   }
-  form input:focus, form select:focus, form textarea:focus{outline:none;border-color:var(--purple);}
-  form textarea{resize:vertical;min-height:90px;}
-  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .price-card.featured{
+    transform:none;
+  }
+  .price-amount,
+  .price-list,
+  .price-note,
+  .price-sub,
+  .price-card h3{
+    overflow-wrap:anywhere;
+    word-break:break-word;
+  }
+  .inner{
+    width:100%;
+    max-width:1140px;
+    overflow:visible;
+  }
+}
 
-  footer{
-    padding:40px 0;
-    border-top:1px solid rgba(255,255,255,0.06);
+
+/* ===== COMPLETE MOBILE OPTIMIZATION ===== */
+@media(max-width:960px){
+  html,body{
+    overflow-x:hidden !important;
+    width:100%;
+  }
+  *{
+    max-width:100%;
+  }
+  .inner{
+    width:100%;
+    max-width:100%;
+    padding-left:16px;
+    padding-right:16px;
+    overflow:visible;
+  }
+  section{
+    padding:56px 0;
+  }
+  .stats-bar{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+  .stat-item{
+    min-width:0;
+    border-right:none;
+    border-bottom:1px solid rgba(124,58,237,.2);
+  }
+  .cta-band{
+    flex-direction:column;
     text-align:center;
-    color:var(--text-dim);
-    font-size:0.85rem;
   }
-  footer .f-socials{display:flex;justify-content:center;gap:16px;margin-bottom:18px;}
-  footer .f-socials a{
-    width:38px;height:38px;border-radius:50%;
-    display:flex;align-items:center;justify-content:center;
-    background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);
+  .price-grid{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:20px;
   }
-  footer .f-socials svg{width:16px;height:16px;fill:var(--text);}
+  .price-card,
+  .price-card.featured{
+    width:100%;
+    max-width:100%;
+    transform:none !important;
+    margin:0;
+  }
+  .price-custom>div{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+  }
+  .price-btn{
+    width:100%;
+  }
+  .contact-wrap,
+  .why-grid,
+  .svc-grid,
+  .gallery-grid{
+    grid-template-columns:1fr !important;
+  }
+  img{
+    max-width:100%;
+    height:auto;
+  }
+}
 
-  @media (max-width:860px){
-    .logo-wrap img{width:48px;height:48px;}
-    .logo-wrap span{font-size:0.92rem;}
-    .nav-right{gap:8px;}
-    .nav-socials{display:none;}
-    .lang-btn{padding:5px 13px;font-size:0.72rem;}
-    .nav-links{display:none;}
-    .nav-links.open{
-      display:flex;
-      flex-direction:column;
-      align-items:flex-start;
-      position:absolute;
-      top:100%;left:0;right:0;
-      margin:0;gap:0;
-      background:rgba(11,7,21,0.98);
-      backdrop-filter:blur(14px);
-      border-bottom:1px solid rgba(255,255,255,0.08);
-      padding:8px 24px 24px;
-      max-height:calc(100vh - 70px);
-      overflow-y:auto;
-    }
-    .nav-links.open a{
-      width:100%;
-      padding:14px 0;
-      border-bottom:1px solid rgba(255,255,255,0.06);
-      font-size:1rem;
-    }
-    .burger{display:block;}
-    .about-grid,.rental-wrap,.contact-wrap{grid-template-columns:1fr;}
-    .services-grid{grid-template-columns:1fr;}
-    .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px;}
-    .form-row{grid-template-columns:1fr;}
-    section{padding:70px 0;}
-    .hero{
-      display:block;
-      min-height:auto;
-      background:none;
-      padding:0;
-    }
-    .hero-media{
-      display:block;
-      height:52vh;
-      min-height:320px;
-      margin-top:105px;
-      background:
-        linear-gradient(180deg, rgba(9,6,17,0) 60%, var(--bg) 100%),
-        url('assets/hero-cover-mobile.jpg') center top/cover no-repeat;
-    }
-    .hero-content{
-      max-width:none;
-      padding-top:34px;
-    }
-    .eyebrow{margin-bottom:14px;}
-    .hero h1{margin-bottom:14px;text-shadow:none;}
-    .hero p{margin-bottom:22px;line-height:1.45;text-shadow:none;}
-    .scroll-cue{
-      position:static;
-      transform:none;
-      margin:4px 0 0;
-    }
-  }
+.hero + *{margin-top:0!important}.warning-strip{margin-top:0!important}
+
+/* Scroll fixes */
+html,body{overscroll-behavior-y:auto;}
+.price-custom,.price-grid,.pricing,.inner,.contact-wrap,.gallery-grid,.svc-grid,.why-grid{
+overflow:visible!important;
+}
+
+.header-phone{display:inline-flex;align-items:center;gap:6px;margin-right:16px;padding:6px 12px;font-weight:600;font-size:15px;color:#a78bfa;text-decoration:none;white-space:nowrap;}.header-phone:hover{text-decoration:underline;}.hero-cta-group{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;padding:24px 20px 4px;}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 24px;border-radius:8px;font-weight:600;font-size:1rem;text-decoration:none;transition:opacity .15s ease;}.btn-primary-call{background:var(--purple);color:#fff;}.btn-primary-call:hover{opacity:.88;}.btn-secondary-quote{background:transparent;border:2px solid var(--purple);color:#fff;}.btn-secondary-quote:hover{background:rgba(124,58,237,.15);}.mobile-sticky-call{display:none;}@media(max-width:768px){.mobile-sticky-call{display:block;position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--purple);box-shadow:0 -2px 8px rgba(0,0,0,.25);}.mobile-sticky-call-link{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px 0;color:#fff;font-weight:700;font-size:1rem;text-decoration:none;}body{padding-bottom:56px;}}html[data-lang="hu"] .en-only{display:none}
 </style>
 </head>
 <body>
 
-<header>
-  <nav>
-    <div class="logo-wrap">
-      <img src="assets/logo-nav.png" alt="Dance Life Entertainment logó">
-      <span>DANCE LIFE <span class="glow-text">ENTERTAINMENT</span></span>
-    </div>
-    <div class="nav-links">
-      <a href="#about" data-hu="Rólunk" data-en="About Us">Rólunk</a>
-      <a href="#services" data-hu="Szolgáltatások" data-en="Services">Szolgáltatások</a>
-      <a href="#team">DJ Háros</a>
-      <a href="#rental" data-hu="Technika bérlés" data-en="Equipment Rental">Technika bérlés</a>
-      <a href="#gallery" data-hu="Galéria" data-en="Gallery">Galéria</a>
-      <a href="#contact" data-hu="Kapcsolat" data-en="Contact">Kapcsolat</a>
-    </div>
-    <div class="nav-right">
-      <div class="nav-socials">
-        <a href="https://www.facebook.com/DanceLifeEntertainment" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg viewBox="0 0 24 24"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94Z"/></svg>
-        </a>
-      </div>
-      <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
-      <button class="burger" aria-label="Menü">☰</button>
-    </div>
-  </nav>
-</header>
-
-<section class="hero">
-  <div class="hero-media"></div>
-  <div class="container hero-content">
-    <span class="eyebrow" data-hu="Rendezvényszervezés &middot; DJ &middot; Hang- &amp; fénytechnika bérlés" data-en="Event Planning &middot; DJ &middot; Sound &amp; Lighting Equipment Rental">Rendezvényszervezés &middot; DJ &middot; Hang- &amp; fénytechnika bérlés</span>
-    <h1 data-hu="Tedd emlékezetessé az eseményed" data-en="Make Your Event Unforgettable">Tedd emlékezetessé az eseményed</h1>
-    <p data-hu="A Dance Life Entertainment professzionális rendezvényszervezést, élő DJ szolgáltatást, valamint minőségi hang- és fénytechnika bérlést kínál esküvőkre, céges rendezvényekre és privát bulikra." data-en="Dance Life Entertainment offers professional event planning, live DJ services, and quality sound and lighting equipment rental for weddings, corporate events, and private parties.">A Dance Life Entertainment professzionális rendezvényszervezést, élő DJ szolgáltatást, valamint minőségi hang- és fénytechnika bérlést kínál esküvőkre, céges rendezvényekre és privát bulikra.</p>
-    <div class="hero-cta">
-      <a href="#contact" class="btn btn-primary" data-hu="Kérj ajánlatot" data-en="Get a Quote">Kérj ajánlatot</a>
-      <a href="#services" class="btn btn-ghost" data-hu="Szolgáltatásaink" data-en="Our Services">Szolgáltatásaink</a>
-    </div>
+<nav class="navbar">
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#services" data-hu="Szolgáltatások" data-en="Services">Szolgáltatások</a></li>
+    <li><a href="#why" data-hu="Miért mi?" data-en="Why Us?">Miért mi?</a></li>
+    <li><a href="#pricing" data-hu="Árazás" data-en="Pricing">Árazás</a></li>
+    <li><a href="#contact" data-hu="Kapcsolat" data-en="Contact">Kapcsolat</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="tel:+36708029138" class="header-phone" aria-label="Hívás: +36 70 802 9138">📞 +36 70 802 9138</a> <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
-  <div class="scroll-cue" data-hu="Görgess lejjebb &#8595;" data-en="Scroll down &#8595;">Görgess lejjebb &#8595;</div>
-</section>
+</nav>
 
-<section class="about" id="about">
-  <div class="container about-grid">
-    <div class="about-media">
-      <img src="assets/dj-haros-founder.jpg" alt="DJ Háros - Dance Life Entertainment alapítója">
-    </div>
-    <div class="about-text">
-      <span class="eyebrow" data-hu="Rólunk" data-en="About Us">Rólunk</span>
-      <h3 data-hu="Zene, fény és szervezés &ndash; egy kézben" data-en="Music, Lighting &amp; Organization &ndash; All in One">Zene, fény és szervezés &ndash; egy kézben</h3>
-      <p data-hu="A Dance Life Entertainment mögött évek tapasztalata áll a rendezvényszervezés, a DJ-zés és az élő hangulatteremtés terén. Célunk, hogy minden esemény &ndash; legyen szó esküvőről, céges bulikról vagy szülinapról &ndash; egyedi és felejthetetlen legyen." data-en="Behind Dance Life Entertainment are years of experience in event planning, DJing, and creating a live atmosphere. Our goal is for every event &ndash; be it a wedding, a corporate party, or a birthday &ndash; to be unique and unforgettable.">A Dance Life Entertainment mögött évek tapasztalata áll a rendezvényszervezés, a DJ-zés és az élő hangulatteremtés terén. Célunk, hogy minden esemény &ndash; legyen szó esküvőről, céges bulikról vagy szülinapról &ndash; egyedi és felejthetetlen legyen.</p>
-      <p data-hu="Nem csak zenét szolgáltatunk: a teljes rendezvény technikai hátterét is biztosítjuk, a hangosítástól a fénytechnikáig, hogy Ti csak az ünneplésre koncentrálhassatok." data-en="We don&rsquo;t just provide the music: we also handle the entire technical side of your event, from sound to lighting, so you can focus on celebrating.">Nem csak zenét szolgáltatunk: a teljes rendezvény technikai hátterét is biztosítjuk, a hangosítástól a fénytechnikáig, hogy Ti csak az ünneplésre koncentrálhassatok.</p>
-    </div>
+<section class="hero" id="hero">
+  <img id="hero-banner-img" alt="Haros Electric Hungary – VBF Érintésvédelmi Felülvizsgálat" class="hero-img">
+  <script>
+    document.getElementById('hero-banner-img').src = (window.innerWidth<=768) ? 'hero-mobile-hu.jpg' : 'hero_hu_new.png';
+  </script>
+</section>
+<div class="warning-strip fade-in">
+  <span class="warning-icon">⚠️</span>
+  <span data-hu="Ingatlan adásvételekor és bérbeadáskor KÖTELEZŐ a VBF – 40/2017 NGM rendelet alapján" data-en="VBF inspection is MANDATORY for property sale &amp; rental – NGM decree 40/2017">Ingatlan adásvételekor és bérbeadáskor KÖTELEZŐ a VBF – 40/2017 NGM rendelet alapján</span>
+</div>
+
+
+
+<div class="stats-bar">
+  <div class="stat-item fade-in">
+    <div class="stat-num">100+</div>
+    <div class="stat-label" data-hu="Elvégzett felülvizsgálat" data-en="Completed inspections">Elvégzett felülvizsgálat</div>
   </div>
-</section>
+  <div class="stat-item fade-in">
+    <div class="stat-num">48h</div>
+    <div class="stat-label" data-hu="Dokumentáció átadása" data-en="Documentation delivery">Dokumentáció átadása</div>
+  </div>
+  <div class="stat-item fade-in">
+    <div class="stat-num">15+</div>
+    <div class="stat-label" data-hu="Év tapasztalat" data-en="Years of experience">Év tapasztalat</div>
+  </div>
+  <div class="stat-item fade-in">
+    <div class="stat-num">🗺️</div>
+    <div class="stat-label" data-hu="Budapest és környéke" data-en="Budapest and surroundings">Budapest és környéke</div>
+  </div>
+</div>
 
-<section id="services">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow" data-hu="Amit kínálunk" data-en="What We Offer">Amit kínálunk</span>
-      <h2 data-hu="Szolgáltatásaink" data-en="Our Services">Szolgáltatásaink</h2>
-      <p data-hu="Rendezvényszervezéstől a DJ-zésen át a technika bérléséig &ndash; mindent egy helyről." data-en="From event planning to DJing to equipment rental &ndash; everything in one place.">Rendezvényszervezéstől a DJ-zésen át a technika bérléséig &ndash; mindent egy helyről.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 16H5V10h14Zm0-12H5V6h14Z"/></svg></div>
-        <h3 data-hu="Rendezvényszervezés" data-en="Event Planning">Rendezvényszervezés</h3>
-        <p data-hu="Esküvők, céges rendezvények, szülinapi &amp; privát bulik teljes körű megszervezése, egyeztetéstől a lebonyolításig." data-en="Full-service planning for weddings, corporate events, birthdays &amp; private parties, from the first consultation through to the big day.">Esküvők, céges rendezvények, szülinapi &amp; privát bulik teljes körű megszervezése, egyeztetéstől a lebonyolításig.</p>
-        <ul>
-          <li data-hu="Helyszín &amp; időzítés egyeztetése" data-en="Venue &amp; timing coordination">Helyszín &amp; időzítés egyeztetése</li>
-          <li data-hu="Program- és technikai terv" data-en="Program &amp; technical planning">Program- és technikai terv</li>
-          <li data-hu="Helyszíni koordináció" data-en="On-site coordination">Helyszíni koordináció</li>
-        </ul>
+<div class="hero-cta-group fade-in"><a href="tel:+36708029138" class="btn btn-primary-call" data-hu="📞 Hívjon most: +36 70 802 9138" data-en="📞 Call now: +36 70 802 9138">📞 Hívjon most: +36 70 802 9138</a> <a href="#contact" class="btn btn-secondary-quote" data-hu="Ingyenes árajánlatot kérek" data-en="Request Free Quote">Ingyenes árajánlatot kérek</a></div><section id="services" class="services">
+  <div class="inner">
+    <h2 class="section-title fade-in" data-hu="Szolgáltatásaink" data-en="Our Services">Szolgáltatásaink</h2>
+    <div class="accent-line fade-in"></div>
+    <p class="section-sub fade-in" data-hu="Szakszerű felülvizsgálatok, amelyek megfelelnek a hatályos jogszabályoknak és szabványoknak — gyorsan, dokumentáltan." data-en="Professional inspections compliant with current regulations and standards — fast, documented and certified.">Szakszerű felülvizsgálatok, amelyek megfelelnek a hatályos jogszabályoknak és szabványoknak — gyorsan, dokumentáltan.</p>
+    <div class="svc-grid">
+      <div class="svc-card fade-in">
+        <div class="svc-icon">🛡️</div>
+        <h3 data-hu="VBF Érintésvédelmi felülvizsgálat" data-en="Electrical Safety Inspection (VBF)">VBF Érintésvédelmi felülvizsgálat</h3>
+        <p data-hu="Lakások, házak, irodák és ipari ingatlanok érintésvédelmi mérése az MSZ HD 60364 szabvány szerint. Adásvételhez, bérbeadáshoz és biztosítóhoz elfogadott minősítő irattal." data-en="Electrical safety measurement for homes, offices and industrial properties per MSZ HD 60364. Official certificate accepted for sale, rental and insurance.">Lakások, házak, irodák és ipari ingatlanok érintésvédelmi mérése MSZ HD 60364 szabvány szerint. Adásvételhez és biztosítóhoz elfogadott minősítő irattal.</p>
       </div>
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3Z"/></svg></div>
-        <h3 data-hu="DJ szolgáltatás" data-en="DJ Service">DJ szolgáltatás</h3>
-        <p data-hu="Élő, hangulatfelelős DJ szolgáltatás minden korosztálynak &ndash; a nyitótánctól a hajnalig tartó bulizásig." data-en="Live DJ service that sets the mood for every age group &ndash; from the first dance to dancing until dawn.">Élő, hangulatfelelős DJ szolgáltatás minden korosztálynak &ndash; a nyitótánctól a hajnalig tartó bulizásig.</p>
-        <ul>
-          <li data-hu="Egyedi zenei válogatás" data-en="Custom music selection">Egyedi zenei válogatás</li>
-          <li data-hu="Élő hangulatirányítás" data-en="Live mood control">Élő hangulatirányítás</li>
-          <li data-hu="Saját, professzionális DJ szett" data-en="Own professional DJ setup">Saját, professzionális DJ szett</li>
-        </ul>
+      <div class="svc-card fade-in">
+        <div class="svc-icon">⚡</div>
+        <h3 data-hu="Villámvédelmi felülvizsgálat" data-en="Lightning Protection Inspection">Villámvédelmi felülvizsgálat</h3>
+        <p data-hu="Villámvédelmi rendszerek időszakos felülvizsgálata. Épületek, ipari létesítmények és kockázati kategóriák szerint kötelező vizsgálatok elvégzése minősítő irattal." data-en="Periodic inspection of lightning protection systems. Mandatory inspections for buildings and industrial facilities by risk category, with official certificate.">Villámvédelmi rendszerek időszakos felülvizsgálata. Kötelező vizsgálatok épületekre és ipari létesítményekre, minősítő irattal dokumentálva.</p>
       </div>
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9Zm13.5 3a4.5 4.5 0 0 0-2.5-4.03v8.06A4.5 4.5 0 0 0 16.5 12Z"/></svg></div>
-        <h3 data-hu="Hang- &amp; fénytechnika bérlés" data-en="Sound &amp; Lighting Equipment Rental">Hang- &amp; fénytechnika bérlés</h3>
-        <p data-hu="Professzionális hangfal- és fénytechnika bérbeadás &ndash; kis házibulitól a nagy szabadtéri rendezvényig." data-en="Professional sound and lighting equipment rental &ndash; from small house parties to large outdoor events.">Professzionális hangfal- és fénytechnika bérbeadás &ndash; kis házibulitól a nagy szabadtéri rendezvényig.</p>
-        <ul>
-          <li data-hu="Hangfalak, keverők, mikrofonok" data-en="Speakers, mixers, microphones">Hangfalak, keverők, mikrofonok</li>
-          <li data-hu="Show- és díszvilágítás" data-en="Show &amp; decorative lighting">Show- és díszvilágítás</li>
-          <li data-hu="Kiszállítás &amp; helyszíni telepítés" data-en="Delivery &amp; on-site setup">Kiszállítás &amp; helyszíni telepítés</li>
-        </ul>
+      <div class="svc-card fade-in">
+        <div class="svc-icon">📄</div>
+        <h3 data-hu="Minősítő irat és dokumentáció 48h-n belül" data-en="Certificate &amp; Documentation within 48h">Minősítő irat és dokumentáció 48h-n belül</h3>
+        <p data-hu="A felülvizsgálat elvégzése után 48 órán belül megkapja a teljes dokumentációt — mérési jegyzőkönyvet és minősítő iratot, amely adásvételhez és bérbeadáshoz is felhasználható." data-en="Full documentation within 48 hours of inspection — measurement report and official certificate, suitable for property sale and rental.">A vizsgálat után 48 órán belül kapja meg a teljes mérési dokumentációt és a minősítő iratot. Ingatlanközvetítők, ügyvédek és biztosítók számára is felhasználható.</p>
+      </div>
+      <div class="svc-card fade-in">
+        <div class="svc-icon">🔧</div>
+        <h3 data-hu="Kisebb hibaelhárítás a helyszínen" data-en="Minor On-Site Repairs">Kisebb hibaelhárítás a helyszínen</h3>
+        <p data-hu="Ha a felülvizsgálat során kisebb hiba derül ki (pl. hiányos földelés, laza csatlakozás), azt helyszínen javítjuk, hogy az ingatlan azonnal megkapja a minősítő iratot." data-en="If a minor fault is found during inspection (e.g. incomplete earthing, loose connection), we repair it on the spot so the property can receive its certificate immediately.">Ha kisebb hiba derül ki a vizsgálat során, azt helyszínen javítjuk — így az ingatlan azonnal megkaphatja az érvényes minősítő iratot.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="team">
-  <div class="container about-grid">
-    <div class="about-media">
-      <img src="assets/dj-haros-action1.jpg" alt="DJ Háros a pultnál">
-    </div>
-    <div class="about-text">
-      <span class="eyebrow" data-hu="Szervező &amp; DJ egy személyben" data-en="Organizer &amp; DJ in One">Szervező &amp; DJ egy személyben</span>
-      <h3>DJ Háros</h3>
-      <div class="dj-genres">
-        <span class="dj-genre-tag" data-hu="Szalsza DJ" data-en="Salsa DJ">Szalsza DJ</span>
-        <span class="dj-genre-tag" data-hu="Bachata DJ" data-en="Bachata DJ">Bachata DJ</span>
+<div class="cta-band fade-in">
+  <p data-hu="Ingatlan eladás, bérbeadás vagy biztosítás előtt áll? Kérjen időpontot a VBF felülvizsgálathoz!" data-en="Selling, renting or insuring your property? Book your VBF inspection today!">Ingatlan eladás, bérbeadás vagy biztosítás előtt áll? Kérjen időpontot a VBF felülvizsgálathoz!</p>
+  <a href="#contact" class="btn-cta contact-btn" data-hu="Kapcsolatfelvétel" data-en="Get in Touch">Kapcsolatfelvétel</a>
+</div>
+
+<section id="how" class="how-section">
+  <div class="inner">
+    <h2 class="section-title fade-in" data-hu="Hogyan zajlik a felülvizsgálat?" data-en="How does the inspection work?">Hogyan zajlik a felülvizsgálat?</h2>
+    <div class="accent-line fade-in"></div>
+    <div class="steps-grid">
+      <div class="step-card fade-in">
+        <div class="step-num">1</div>
+        <div class="step-icon">📞</div>
+        <h3 data-hu="Kapcsolatfelvétel" data-en="Contact us">Kapcsolatfelvétel</h3>
+        <p data-hu="Hívjon minket vagy töltse ki az online kapcsolatfelvételi űrlapot. 24 órán belül visszahívjuk." data-en="Call us or fill in the online contact form. We'll call back within 24 hours.">Hívjon minket vagy töltse ki az online kapcsolatfelvételi űrlapot. 24 órán belül visszahívjuk.</p>
       </div>
-      <p data-hu="A Dance Life Entertainment mögött egyetlen ember áll: én vezetem a rendezvényszervezést az első egyeztetéstől a lebonyolításig, és én magam állok a pult mögé DJ-ként minden eseményen &ndash; így garantált, hogy a zenei hangulat pontosan azt az elképzelést követi, amit közösen kialakítunk." data-en="There&rsquo;s just one person behind Dance Life Entertainment: I personally run the event planning from the first consultation through to the big day, and I&rsquo;m also the one behind the decks as DJ at every event &ndash; so the musical vibe is guaranteed to match exactly what we plan together.">A Dance Life Entertainment mögött egyetlen ember áll: én vezetem a rendezvényszervezést az első egyeztetéstől a lebonyolításig, és én magam állok a pult mögé DJ-ként minden eseményen &ndash; így garantált, hogy a zenei hangulat pontosan azt az elképzelést követi, amit közösen kialakítunk.</p>
-      <p data-hu="Nincs közvetítő, nincs meglepetés: akivel egyeztetsz, ő fogja levezényelni és meg is zenésíteni az eseményed." data-en="No middleman, no surprises: whoever you talk to is the one who will run the show and provide the music at your event.">Nincs közvetítő, nincs meglepetés: akivel egyeztetsz, ő fogja levezényelni és meg is zenésíteni az eseményed.</p>
-      <div class="dj-samples">
-        <div class="sample-track">
-          <button type="button" class="sample-play" data-audio="assets/mix-szalsza.mp3" aria-label="Haros mix-Salsa lejátszása">
-            <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7Z"/></svg>
-            <svg class="icon-pause" viewBox="0 0 24 24" style="display:none;"><path d="M7 5h4v14H7Zm6 0h4v14h-4Z"/></svg>
-          </button>
-          <div class="sample-body">
-            <span class="sample-caption" data-hu="Hallgasd meg a Salsa mixemet" data-en="Listen to my Salsa mix">Hallgasd meg a Salsa mixemet</span>
-            <span class="sample-label">Haros mix-Salsa</span>
-            <div class="sample-bar"><div class="sample-bar-fill"></div></div>
+      <div class="step-card fade-in">
+        <div class="step-num">2</div>
+        <div class="step-icon">📅</div>
+        <h3 data-hu="Időpont egyeztetés" data-en="Schedule appointment">Időpont egyeztetés</h3>
+        <p data-hu="Rugalmas időpontok munkanapokon és hétvégén egyaránt. Önnek megfelelő időpontban érkezünk." data-en="Flexible appointments on weekdays and weekends. We arrive at a time that suits you.">Rugalmas időpontok munkanapokon és hétvégén. Önnek megfelelő időpontban érkezünk.</p>
+      </div>
+      <div class="step-card fade-in">
+        <div class="step-num">3</div>
+        <div class="step-icon">🔌</div>
+        <h3 data-hu="Helyszíni mérés" data-en="On-site inspection">Helyszíni mérés</h3>
+        <p data-hu="Elvégezzük az MSZ HD 60364 szabvány szerinti teljes körű érintésvédelmi mérést az ingatlanban." data-en="We carry out a comprehensive inspection according to MSZ HD 60364 standard.">Elvégezzük a teljes körű VBF és villámvédelmi felülvizsgálatot MSZ HD 60364 szabvány szerint.</p>
+      </div>
+      <div class="step-card fade-in">
+        <div class="step-num">4</div>
+        <div class="step-icon">📄</div>
+        <h3 data-hu="Dokumentáció 48h-n belül" data-en="Documentation within 48h">Dokumentáció 48h-n belül</h3>
+        <p data-hu="Minősítő iratot és teljes dokumentációt küldünk 48 órán belül — adásvételhez és bérbeadáshoz felhasználható formában." data-en="We send the official certificate and full documentation within 48 hours — suitable for sale and rental purposes.">Minősítő iratot és teljes dokumentációt küldünk 48 órán belül.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="why" class="why">
+  <div class="inner">
+    <h2 class="section-title fade-in" data-hu="Miért válasszon minket?" data-en="Why Choose Us?">Miért válasszon minket?</h2>
+    <div class="accent-line fade-in"></div>
+    <div class="why-grid">
+      <div class="why-item fade-in">
+        <div class="why-icon">🏆</div>
+        <div>
+          <h3 data-hu="15+ éves tapasztalat" data-en="15+ Years of Experience">15+ éves tapasztalat</h3>
+          <p data-hu="A hosszú évek alatt megszerzett gyakorlati tudás gyors és hatékony megoldást garantál minden szituációban." data-en="Practical knowledge accumulated over many years guarantees fast and effective solutions in every situation.">A hosszú évek alatt megszerzett gyakorlati tudás gyors és hatékony megoldást garantál minden szituációban.</p>
+        </div>
+      </div>
+      <div class="why-item fade-in">
+        <div class="why-icon">📋</div>
+        <div>
+          <h3 data-hu="Minősítő irattal, dokumentálva" data-en="Officially Certified">Minősítő irattal, dokumentálva</h3>
+          <p data-hu="Minden felülvizsgálat minősítő irattal és szabványos dokumentációval zárul — adásvételhez, bérbeadáshoz és biztosítóhoz." data-en="Every inspection concludes with an official qualification certificate and standard documentation — suitable for sale, rental and insurance purposes.">Minden felülvizsgálat minősítő irattal és szabványos dokumentációval zárul.</p>
+        </div>
+      </div>
+      <div class="why-item fade-in">
+        <div class="why-icon">🌍</div>
+        <div>
+          <h3 data-hu="Nemzetközi tapasztalat" data-en="International Experience">Nemzetközi tapasztalat</h3>
+          <p data-hu="Széleskörű ismeretek különböző országok szabványairól. Angol nyelvű kommunikáció és dokumentálás is elérhető." data-en="Broad knowledge of international standards. English-language communication and documentation also available.">Széleskörű ismeretek különböző országok szabványairól. Angol nyelvű kommunikáció és dokumentálás is elérhető.</p>
+        </div>
+      </div>
+      <div class="why-item fade-in">
+        <div class="why-icon">💬</div>
+        <div>
+          <h3 data-hu="Kiemelkedő ügyfélszolgálat" data-en="Outstanding Customer Service">Kiemelkedő ügyfélszolgálat</h3>
+          <p data-hu="Mindig az ügyfél igényeit helyezzük előtérbe. Magas szintű kommunikáció és támogatás a folyamat minden lépésében." data-en="We always put the client's needs first. High-level communication and support at every step of the process.">Mindig az ügyfél igényeit helyezzük előtérbe. Magas szintű kommunikáció és támogatás minden lépésben.</p>
+        </div>
+      </div>
+      <div class="why-item fade-in">
+        <div class="why-icon">📐</div>
+        <div>
+          <h3 data-hu="MSZ HD 60364 szabvány szerint" data-en="According to MSZ HD 60364 standard">MSZ HD 60364 szabvány szerint</h3>
+          <p data-hu="Minden vizsgálatot az MSZ HD 60364 európai villamos szabvány előírásai szerint végzünk. Dokumentációnk adásvételhez, bérbeadáshoz és biztosítóhoz is felhasználható." data-en="All inspections are carried out in accordance with the MSZ HD 60364 European electrical standard. Our documentation is suitable for property sale, rental and insurance purposes.">Minden vizsgálatot az MSZ HD 60364 európai villamos szabvány előírásai szerint végzünk. Dokumentációnk adásvételhez, bérbeadáshoz és biztosítóhoz is felhasználható.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="pricing">
+  <div class="inner">
+    <h2 class="section-title fade-in" data-hu="VBF Érintésvédelmi árak" data-en="Electrical Safety Inspection Pricing">VBF Érintésvédelmi árak</h2>
+    <div class="accent-line fade-in"></div>
+    <p class="section-sub fade-in" data-hu="Átlátható tájékoztató árak a VBF érintésvédelmi felülvizsgálathoz — az ingatlan mérete alapján. Villámvédelmi felülvizsgálathoz egyedi árajánlatot adunk." data-en="Transparent indicative pricing for VBF electrical safety inspections — based on property size. For lightning protection inspections, contact us for a tailored quote.">Átlátható tájékoztató árak a VBF érintésvédelmi felülvizsgálathoz — az ingatlan mérete alapján. Villámvédelmi felülvizsgálathoz egyedi árajánlatot adunk.</p>
+    <div class="price-grid">
+      <div class="price-card fade-in">
+        <h3 data-hu="Kis lakás" data-en="Small Apartment">Kis lakás</h3>
+        <p class="price-sub" data-hu="VBF · 1–69 m²" data-en="VBF · 1–69 m²">VBF · 1–69 m²</p>
+        <div class="price-amount">60 000 Ft</div>
+        <p class="price-note" data-hu="Tájékoztató ár" data-en="Indicative price">Tájékoztató ár</p>
+        <ul class="price-list">
+          <li data-hu="Érintésvédelmi mérések (MSZ HD 60364)" data-en="Safety measurements (MSZ HD 60364)">Érintésvédelmi mérések (MSZ HD 60364)</li>
+          <li data-hu="Folytonosság + szigetelés vizsgálat" data-en="Continuity + insulation test">Folytonosság + szigetelés vizsgálat</li>
+          <li data-hu="Minősítő irat + dokumentáció 48h-n belül" data-en="Certificate + docs within 48h">Minősítő irat + dokumentáció 48h-n belül</li>
+        </ul>
+        <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
+      </div>
+      <div class="price-card fade-in">
+        <h3 data-hu="Közepes lakás" data-en="Medium Apartment">Közepes lakás</h3>
+        <p class="price-sub" data-hu="VBF · 70–89 m²" data-en="VBF · 70–89 m²">VBF · 70–89 m²</p>
+        <div class="price-amount">75 000 Ft</div>
+        <p class="price-note" data-hu="Tájékoztató ár" data-en="Indicative price">Tájékoztató ár</p>
+        <ul class="price-list">
+          <li data-hu="Érintésvédelmi mérések (MSZ HD 60364)" data-en="Safety measurements (MSZ HD 60364)">Érintésvédelmi mérések (MSZ HD 60364)</li>
+          <li data-hu="Folytonosság + szigetelés + áramvédő kapcsoló vizsgálat" data-en="Continuity + insulation + RCD test">Folytonosság + szigetelés + áramvédő kapcsoló vizsgálat</li>
+          <li data-hu="Minősítő irat + dokumentáció 48h-n belül" data-en="Certificate + docs within 48h">Minősítő irat + dokumentáció 48h-n belül</li>
+        </ul>
+        <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
+      </div>
+      <div class="price-card featured fade-in">
+        <div class="price-badge" data-hu="Legnépszerűbb" data-en="Most Popular">Legnépszerűbb</div>
+        <h3 data-hu="Nagy lakás / Iroda" data-en="Large Apartment / Office">Nagy lakás / Iroda</h3>
+        <p class="price-sub" data-hu="VBF · 90–99 m²" data-en="VBF · 90–99 m²">VBF · 90–99 m²</p>
+        <div class="price-amount">85 000 Ft</div>
+        <p class="price-note" data-hu="Tájékoztató ár" data-en="Indicative price">Tájékoztató ár</p>
+        <ul class="price-list">
+          <li data-hu="Teljes körű érintésvédelmi felülvizsgálat" data-en="Full electrical safety inspection">Teljes körű érintésvédelmi felülvizsgálat</li>
+          <li data-hu="Hurokimpedancia + áramvédő kapcsoló + szigetelés mérés" data-en="Loop impedance + RCD + insulation test">Hurokimpedancia + áramvédő kapcsoló + szigetelés mérés</li>
+          <li data-hu="Minősítő irat + teljes dokumentáció 48h-n belül" data-en="Certificate + full documentation 48h">Minősítő irat + teljes dokumentáció 48h-n belül</li>
+        </ul>
+        <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
+      </div>
+      <div class="price-card fade-in">
+        <h3 data-hu="Nagyobb lakás / Iroda" data-en="Larger Apartment / Office">Nagyobb lakás / Iroda</h3>
+        <p class="price-sub" data-hu="VBF · 100–149 m²" data-en="VBF · 100–149 m²">VBF · 100–149 m²</p>
+        <div class="price-amount">105 000 Ft</div>
+        <p class="price-note" data-hu="Tájékoztató ár" data-en="Indicative price">Tájékoztató ár</p>
+        <ul class="price-list">
+          <li data-hu="Teljes körű érintésvédelmi felülvizsgálat" data-en="Full electrical safety inspection">Teljes körű érintésvédelmi felülvizsgálat</li>
+          <li data-hu="Áramvédő kapcsoló teszt + földelés + kötésvizsgálat" data-en="RCD test + earthing + bonding test">Áramvédő kapcsoló teszt + földelés + kötésvizsgálat</li>
+          <li data-hu="Minősítő irat + teljes dokumentáció 48h-n belül" data-en="Certificate + full documentation 48h">Minősítő irat + teljes dokumentáció 48h-n belül</li>
+        </ul>
+        <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
+      </div>
+      <div class="price-card fade-in">
+        <h3 data-hu="Nagy családi ház" data-en="Large House">Nagy családi ház</h3>
+        <p class="price-sub" data-hu="VBF · 150–199 m²" data-en="VBF · 150–199 m²">VBF · 150–199 m²</p>
+        <div class="price-amount">115 000 Ft</div>
+        <p class="price-note" data-hu="Tájékoztató ár" data-en="Indicative price">Tájékoztató ár</p>
+        <ul class="price-list">
+          <li data-hu="Teljes körű érintésvédelmi felülvizsgálat" data-en="Full electrical safety inspection">Teljes körű érintésvédelmi felülvizsgálat</li>
+          <li data-hu="Hurokimpedancia + folytonosság mérés" data-en="Loop impedance + continuity measurement">Hurokimpedancia + folytonosság mérés</li>
+          <li data-hu="Minősítő irat + teljes dokumentáció 48h-n belül" data-en="Certificate + full documentation 48h">Minősítő irat + teljes dokumentáció 48h-n belül</li>
+        </ul>
+        <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
+      </div>
+      <div class="price-card fade-in">
+        <h3 data-hu="Ipari / Nagy ingatlan" data-en="Industrial / Large Property">Ipari / Nagy ingatlan</h3>
+        <p class="price-sub" data-hu="VBF · 200 m² felett" data-en="VBF · Above 200 m²">VBF · 200 m² felett</p>
+        <div class="price-amount" data-hu="Egyedi árajánlat" data-en="Custom Quote">Egyedi árajánlat</div>
+        <p class="price-note" data-hu="Helyszíni felmérés alapján" data-en="Based on on-site survey">Helyszíni felmérés alapján</p>
+        <ul class="price-list">
+          <li data-hu="Teljes körű érintésvédelmi felülvizsgálat" data-en="Full electrical safety inspection">Teljes körű érintésvédelmi felülvizsgálat</li>
+          <li data-hu="Mérési pontok, elosztók száma alapján" data-en="Based on measurement points & distribution boards">Mérési pontok, elosztók száma alapján</li>
+          <li data-hu="Minősítő irat + teljes dokumentáció 48h-n belül" data-en="Certificate + full documentation 48h">Minősítő irat + teljes dokumentáció 48h-n belül</li>
+        </ul>
+        <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
+      </div>
+    </div>
+    <div class="price-custom fade-in" style="margin-top:28px;padding:28px 32px;background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.25);border-radius:14px;">
+      <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:space-between;">
+        <div>
+          <h3 style="margin:0 0 6px;font-size:1.1rem;" data-hu="⚡ Villámvédelmi felülvizsgálat" data-en="⚡ Lightning Protection Inspection">⚡ Villámvédelmi felülvizsgálat</h3>
+          <p style="margin:0;color:#a9b4c2;font-size:0.9rem;" data-hu="Az ár az épület típusától, kockázati kategóriától és méretétől függ. Kérjen egyedi árajánlatot!" data-en="Price depends on building type, risk category and size. Request a personalised quote!">Az ár az épület típusától, kockázati kategóriától és méretétől függ. Kérjen egyedi árajánlatot!</p>
+        </div>
+        <a href="#contact" class="price-btn contact-btn" style="width:auto;padding:12px 28px;display:inline-block;white-space:nowrap" data-hu="Villámvédelmi árajánlat" data-en="Lightning Protection Quote">Villámvédelmi árajánlat</a>
+      </div>
+    </div>
+    <p class="price-custom fade-in" style="text-align:center;margin-top:16px;color:#a9b4c2;font-size:0.85rem;" data-hu="A fenti díjak lakóingatlanokra vonatkozó, tájékoztató jellegű árak. A végleges díj a helyszíni felmérés alapján kerül meghatározásra, mivel az azonos alapterületű ingatlanok villamos hálózatának kialakítása jelentősen eltérhet. Ipari, kereskedelmi és egyéb nem lakáscélú ingatlanok esetén minden esetben egyedi árajánlat készül." data-en="The prices above apply to residential properties and are indicative. The final price is determined after an on-site survey, as electrical layouts vary significantly even for properties of the same size. Industrial, commercial and other non-residential properties always receive a custom quote.">A fenti díjak lakóingatlanokra vonatkozó, tájékoztató jellegű árak. A végleges díj a helyszíni felmérés alapján kerül meghatározásra, mivel az azonos alapterületű ingatlanok villamos hálózatának kialakítása jelentősen eltérhet. Ipari, kereskedelmi és egyéb nem lakáscélú ingatlanok esetén minden esetben egyedi árajánlat készül.</p>
+  </div>
+</section>
+
+<div class="cta-band fade-in">
+  <p data-hu="Nem biztos melyik csomag az Önnek való? Kérjen személyes árajánlatot!" data-en="Not sure which package is right for you? Request a personalised quote!">Nem biztos melyik csomag az Önnek való? Kérjen személyre szabott árajánlatot!</p>
+  <a href="#contact" class="btn-cta contact-btn" data-hu="Ingyenes árajánlat kérése" data-en="Request Free Quote">Ingyenes árajánlat kérése</a>
+</div>
+
+
+
+<section id="reviews" style="padding:70px 0;background:linear-gradient(180deg,#2a2a54 0%,#2e2e64 100%);">
+  <div class="inner">
+    <h2 class="section-title fade-in" data-hu="Ügyfeleink véleménye" data-en="What Our Clients Say">Ügyfeleink véleménye</h2>
+    <div class="accent-line fade-in"></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:900px;margin:0 auto;">
+      <div class="fade-in" style="background:rgba(255,255,255,0.07);border:1px solid rgba(139,92,246,0.25);border-radius:14px;padding:28px 24px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+          <span style="font-size:1.1rem;font-weight:700;color:#fff;">Gönczi Julianna</span>
+          <span style="margin-left:auto;color:#a78bfa;font-size:0.82rem;font-weight:600;">Google ⭐⭐⭐⭐⭐</span>
+        </div>
+        <p style="color:rgba(255,255,255,0.78);font-size:0.92rem;line-height:1.65;margin:0;">"Telefont azonnal felvette és rugalmas volt az időpont egyeztetésben, ez külön fontos volt számomra mert elég szoros az időbeosztásom. A megadott időpontban ott volt, és elvégezte precízen a munkát."</p>
+      </div>
+      <div class="fade-in" style="background:rgba(255,255,255,0.07);border:1px solid rgba(139,92,246,0.25);border-radius:14px;padding:28px 24px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+          <span style="font-size:1.1rem;font-weight:700;color:#fff;">Zátrok Mónika</span>
+          <span style="margin-left:auto;color:#a78bfa;font-size:0.82rem;font-weight:600;">Google ⭐⭐⭐⭐⭐</span>
+        </div>
+        <p style="color:rgba(255,255,255,0.78);font-size:0.92rem;line-height:1.65;margin:0;">"Érintésvédelmi vizsgálatokhoz ajánlom ezt a céget!"</p>
+      </div>
+      <div class="fade-in" style="background:rgba(255,255,255,0.07);border:1px solid rgba(139,92,246,0.25);border-radius:14px;padding:28px 24px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+          <span style="font-size:1.1rem;font-weight:700;color:#fff;">Tábori Ármin</span>
+          <span style="margin-left:auto;color:#a78bfa;font-size:0.82rem;font-weight:600;">Google ⭐⭐⭐⭐⭐</span>
+        </div>
+        <p style="color:rgba(255,255,255,0.78);font-size:0.92rem;line-height:1.65;margin:0;">"Adásvételhez volt szükségünk érintésvédelmi felülvizsgálatra. Flottul ment az időpontegyeztetés, minden a megbeszéltek szerint zajlott. Pontosan érkezett, alapos munkát végzett, és az összes felmerülő kérdésünkre készségesen válaszolt. A bizonyítványt gyorsan elkészítette. Nagyon korrekt ár, profi hozzáállás. Bátran ajánlom!"</p>
+      </div>
+      <div class="fade-in" style="background:rgba(255,255,255,0.07);border:1px solid rgba(139,92,246,0.25);border-radius:14px;padding:28px 24px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+          <span style="font-size:1.1rem;font-weight:700;color:#fff;">Szarka Mónika</span>
+          <span style="margin-left:auto;color:#a78bfa;font-size:0.82rem;font-weight:600;">Google ⭐⭐⭐⭐⭐</span>
+        </div>
+        <p style="color:rgba(255,255,255,0.78);font-size:0.92rem;line-height:1.65;margin:0;">"A szolgáltatás minősége megfelelő volt, a VBF munkát a megbeszélt időben elvégezték. Csak ajánlani tudom őket, aki megbízható és profi szolgáltatást keres."</p>
+      </div>
+      <div class="fade-in" style="background:rgba(255,255,255,0.07);border:1px solid rgba(139,92,246,0.25);border-radius:14px;padding:28px 24px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+          <span style="font-size:1.1rem;font-weight:700;color:#fff;">Polónyi Szabolcs</span>
+          <span style="margin-left:auto;color:#a78bfa;font-size:0.82rem;font-weight:600;">Google ⭐⭐⭐⭐⭐</span>
+        </div>
+        <p style="color:rgba(255,255,255,0.78);font-size:0.92rem;line-height:1.65;margin:0;">"Csak ajánlani tudom! Pontosan érkezett, végig nagyon korrekt és segítőkész volt. A felülvizsgálat során mindent alaposan átnézett, minden kérdésemre türelmesen válaszolt. Látszott rajta, hogy nagy szakmai tapasztalata van, és nem csak letudni akarta a munkát. A jegyzőkönyvet 2 nap alatt megkaptam, az egész ügyintézés gördülékenyen ment. Jó érzés volt olyan szakembert hívni, akiben tényleg meg lehet bízni."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gyik" class="gyik-section">
+  <div class="inner">
+    <h2 class="section-title fade-in" data-hu="Gyakori kérdések" data-en="Frequently Asked Questions">Gyakori kérdések</h2>
+    <div class="accent-line fade-in"></div>
+    <div class="faq-list">
+      <div class="faq-item fade-in">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span data-hu="Mikor kötelező az érintésvédelmi felülvizsgálat?" data-en="When is an electrical safety inspection mandatory?">Mikor kötelező az érintésvédelmi felülvizsgálat?</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p data-hu="Lakás adásvételekor és bérbeadásakor a 40/2017. (XII. 4.) NGM rendelet alapján kötelező, ha nincs 6 évnél nem régebbi felülvizsgálati dokumentáció. A pontos kötelezettséget az ingatlan villamos hálózata alapján, a helyszínen is ellenőrizzük." data-en="Under NGM decree 40/2017, it is mandatory when selling or renting out a home if there is no inspection report from the last 6 years. We also check the exact requirements on site, based on the electrical installation.">Lakás adásvételekor és bérbeadásakor a 40/2017. (XII. 4.) NGM rendelet alapján kötelező, ha nincs 6 évnél nem régebbi felülvizsgálati dokumentáció. A pontos kötelezettséget az ingatlan villamos hálózata alapján, a helyszínen is ellenőrizzük.</p>
+        </div>
+      </div>
+      <div class="faq-item fade-in">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span data-hu="Mennyi ideig tart a helyszíni vizsgálat?" data-en="How long does the on-site inspection take?">Mennyi ideig tart a helyszíni vizsgálat?</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p data-hu="Egy átlagos lakás esetén (60-90 m²) a helyszíni mérés 1,5–2 órát vesz igénybe. Nagyobb ingatlanoknál ez természetesen hosszabb lehet." data-en="For an average apartment (60-90 m²), the on-site measurement takes 1.5–2 hours. For larger properties this may be longer.">Egy átlagos lakás esetén (60-90 m²) a helyszíni mérés 1,5–2 órát vesz igénybe. Nagyobb ingatlanoknál ez hosszabb lehet.</p>
+        </div>
+      </div>
+      <div class="faq-item fade-in">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span data-hu="Milyen iratot kapok a vizsgálat után?" data-en="What documents do I receive after the inspection?">Milyen iratot kapok a vizsgálat után?</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p data-hu="A vizsgálat elvégzéséről minősítő iratot és mérési jegyzőkönyvet állítunk ki, amely adásvételhez, bérbeadáshoz és biztosítóhoz is felhasználható. A dokumentáció 48 órán belül megérkezik." data-en="We issue an official certificate and measurement report, suitable for property sale, rental and insurance purposes. Documentation arrives within 48 hours.">Minősítő iratot és mérési jegyzőkönyvet állítunk ki, amely adásvételhez, bérbeadáshoz és biztosítóhoz is felhasználható. A dokumentáció 48 órán belül megérkezik.</p>
+        </div>
+      </div>
+      <div class="faq-item fade-in">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span data-hu="Mit jelent a 'megfelelő' vagy 'nem megfelelő' minősítés?" data-en="What does a 'compliant' or 'non-compliant' rating mean?">Mit jelent a 'megfelelő' vagy 'nem megfelelő' minősítés?</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p data-hu="A VBF felülvizsgálat nem egy vizsga, ahol az ingatlan 'megbukhat' — hanem egy szakmai állapotfelmérés, amely objektív képet ad az elektromos rendszer jelenlegi állapotáról. A 'megfelelő' vagy 'nem megfelelő' minősítés hivatalos visszajelzés mind a vevőnek, mind az eladónak: megmutatja, milyen munkálatokra lehet szükség. Ez értékes információ a döntéshozatalhoz — nem ítélet az ingatlan felett." data-en="The VBF inspection is not an exam where a property can 'fail' — it is a professional condition assessment that provides an objective picture of the electrical system's current state. A 'compliant' or 'non-compliant' rating is official feedback for both buyer and seller: it shows what work may be needed. This is valuable information for decision-making — not a verdict on the property.">A VBF felülvizsgálat nem egy vizsga, ahol az ingatlan 'megbukhat' — hanem egy szakmai állapotfelmérés, amely objektív képet ad az elektromos rendszer jelenlegi állapotáról. A 'megfelelő' vagy 'nem megfelelő' minősítés hivatalos visszajelzés mind a vevőnek, mind az eladónak: megmutatja, milyen munkálatokra lehet szükség. Ez értékes információ a döntéshozatalhoz — nem ítélet az ingatlan felett.</p>
+        </div>
+      </div>
+      <div class="faq-item fade-in">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span data-hu="Mire van szükség a vizsgálathoz?" data-en="What is needed for the inspection?">Mire van szükség a vizsgálathoz?</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p data-hu="Csak a belépési engedély az ingatlanba. Szerelőtáblának elérhetőnek kell lennie. Minden szükséges mérőeszközt mi hozunk magunkkal." data-en="Only access to the property is needed. The distribution board must be accessible. We bring all necessary measuring equipment.">Csak belépési engedély az ingatlanba. A szerelőtáblának elérhetőnek kell lennie. Minden szükséges mérőeszközt mi hozunk.</p>
+        </div>
+      </div>
+      <div class="faq-item fade-in">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span data-hu="Vállalnak munkát Budapest határain kívül is?" data-en="Do you work outside Budapest?">Vállalnak munkát Budapest határain kívül is?</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p data-hu="Igen, Budapest és agglomerációja teljes területén dolgozunk, beleértve Pest megye nagy részét. Pontosabb területi lefedettségről kérésre tájékoztatunk." data-en="Yes, we work throughout Budapest and its agglomeration, including most of Pest County. For exact coverage please contact us.">Igen, Budapest és agglomerációja teljes területén dolgozunk, beleértve Pest megye nagy részét.</p>
+        </div>
+      </div>
+      <div class="faq-item fade-in">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span data-hu="Mennyibe kerül a felülvizsgálat 100 m² feletti ingatlanoknál?" data-en="How much does the inspection cost for properties over 100 m²?">Mennyibe kerül a felülvizsgálat 100 m² feletti ingatlanoknál?</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p data-hu="100–149 m² között 105 000 Ft, 150–199 m² között 115 000 Ft az irányár. 200 m² felett a díj egyedi megítélés alapján kerül meghatározásra, mivel a vizsgálandó körök száma, az elosztók elhelyezkedése és a mérési pontok mennyisége ingatlanonként jelentősen eltérhet — minden esetben előzetes egyeztetés szükséges." data-en="Between 100–149 m² the indicative price is 105,000 HUF, between 150–199 m² it is 115,000 HUF. Above 200 m², the fee is determined individually, as the number of circuits, distribution board locations and measurement points vary significantly by property — prior consultation is required in every case.">100–149 m² között 105 000 Ft, 150–199 m² között 115 000 Ft az irányár. 200 m² felett a díj egyedi megítélés alapján kerül meghatározásra, mivel a vizsgálandó körök száma, az elosztók elhelyezkedése és a mérési pontok mennyisége ingatlanonként jelentősen eltérhet — minden esetben előzetes egyeztetés szükséges.</p>
+        </div>
+      </div>
+      <div class="faq-item fade-in">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span data-hu="Mi van, ha a villamos rendszer teljes felújításra szorul?" data-en="What if the electrical system needs a complete renovation?">Mi van, ha a villamos rendszer teljes felújításra szorul?</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p data-hu="Ha a helyszínen egyértelműen megállapítható, hogy a rendszer teljes felújításra szorul, a felülvizsgálat díja nettó 50 000 Ft. Ilyenkor a teljes méréssorozat helyett egyszerűsített jegyzőkönyv készül, mivel a rendszer megfelelőssége előzetesen kizárható." data-en="If it can be clearly established on-site that the system needs a complete renovation, the inspection fee is net 50,000 HUF. In this case, instead of the full measurement series, a simplified report is issued, as the system's compliance can be ruled out in advance.">Ha a helyszínen egyértelműen megállapítható, hogy a rendszer teljes felújításra szorul, a felülvizsgálat díja nettó 50 000 Ft — ilyenkor egyszerűsített jegyzőkönyv készül a teljes méréssorozat helyett.</p>
+        </div>
+      </div>
+      <div class="faq-item fade-in">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span data-hu="Ipari vagy kereskedelmi ingatlanra is adnak árajánlatot?" data-en="Do you provide quotes for industrial or commercial properties?">Ipari vagy kereskedelmi ingatlanra is adnak árajánlatot?</span>
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p data-hu="Igen. Ipari, kereskedelmi vagy egyéb nem lakáscélú ingatlanoknál — különösen több száz négyzetméteres terület esetén — a felülvizsgálat terjedelme egyedi elbírálást igényel, ezért ezekre a helyszín és az igények felmérése után külön árajánlatot adunk." data-en="Yes. For industrial, commercial or other non-residential properties — especially areas of several hundred square meters — the scope of inspection requires individual assessment, so we provide a separate quote after assessing the site and your needs.">Ipari, kereskedelmi vagy egyéb nem lakáscélú ingatlanoknál a felülvizsgálat terjedelme egyedi elbírálást igényel — a helyszín felmérése után külön árajánlatot adunk.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="contact" class="contact">
+  <div class="inner">
+    <h2 class="section-title fade-in" data-hu="Kapcsolat &amp; Árajánlat" data-en="Contact &amp; Quote">Kapcsolat &amp; Árajánlat</h2>
+    <div class="accent-line fade-in"></div>
+    <div class="contact-wrap fade-in">
+      <div class="contact-info">
+        <h2 data-hu="Vegye fel velünk a kapcsolatot!" data-en="Get in touch with us!">Vegye fel velünk a kapcsolatot!</h2>
+        <br>
+        <div class="info-item">
+          <div class="info-icon">👤</div>
+          <div class="info-text"><strong data-hu="Ügyvezető" data-en="Manager">Ügyvezető</strong>Háros László</div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <div class="info-text"><strong data-hu="Székhely" data-en="Location">Székhely</strong><span data-hu="Budapest, Magyarország" data-en="Budapest, Hungary">Budapest, Magyarország</span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">📞</div>
+          <div class="info-text">
+            <strong data-hu="Telefon" data-en="Phone">Telefon</strong>
+            <a href="tel:+36708029138">+36 70 802 9138</a><span class="en-only"><br>
+            <a href="tel:+447533477739">+44 7533 477739</a></span>
           </div>
         </div>
-        <div class="sample-track">
-          <button type="button" class="sample-play" data-audio="assets/mix-bachata.mp3" aria-label="Haros mix-Bachata lejátszása">
-            <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7Z"/></svg>
-            <svg class="icon-pause" viewBox="0 0 24 24" style="display:none;"><path d="M7 5h4v14H7Zm6 0h4v14h-4Z"/></svg>
-          </button>
-          <div class="sample-body">
-            <span class="sample-caption" data-hu="Hallgasd meg a Bachata mixemet" data-en="Listen to my Bachata mix">Hallgasd meg a Bachata mixemet</span>
-            <span class="sample-label">Haros mix-Bachata</span>
-            <div class="sample-bar"><div class="sample-bar-fill"></div></div>
+        <div class="info-item">
+          <div class="info-icon">✉️</div>
+          <div class="info-text"><strong>Email</strong><a href="mailto:haroselectric@gmail.com">haroselectric@gmail.com</a></div>
+        </div>
+        <div class="social-row">
+          <a href="https://www.facebook.com/profile.php?id=100064488827755" target="_blank" rel="noopener noreferrer" class="social-btn">📘 Facebook</a>
+          <a href="https://www.linkedin.com/in/laszlo-haros-53323683/" target="_blank" rel="noopener noreferrer" class="social-btn">💼 LinkedIn</a>
+        </div>
+      </div>
+      <div class="form-box">
+        <h3 data-hu="Küldjön árajánlat-kérést!" data-en="Send a Quote Request!">Küldjön árajánlat-kérést!</h3>
+        <p class="form-desc" data-hu="Töltse ki az alábbi adatlapot és hamarosan felvesszük Önnel a kapcsolatot a pontos árajánlattal." data-en="Fill in the form below and we will contact you soon with an exact quote.">Töltse ki az alábbi adatlapot és hamarosan felvesszük Önnel a kapcsolatot a pontos árajánlattal.</p>
+        <form id="contactForm" onsubmit="sendForm(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label data-hu="Neve" data-en="Your Name">Neve</label>
+              <input type="text" name="nev" placeholder="pl. Kovács János" required>
+            </div>
+            <div class="form-group">
+              <label data-hu="Telefonszám" data-en="Phone Number">Telefonszám</label>
+              <input type="tel" name="telefon" placeholder="+36 30 000 0000" required>
+            </div>
           </div>
-        </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="pelda@email.com" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label data-hu="Ingatlan típusa" data-en="Property Type">Ingatlan típusa</label>
+              <select name="tipus" required>
+                <option value="" data-hu="Válasszon..." data-en="Select...">Válasszon...</option>
+                <option value="lakas" data-hu="Lakás" data-en="Apartment">Lakás</option>
+                <option value="haz" data-hu="Ház" data-en="House">Ház</option>
+                <option value="iroda" data-hu="Iroda" data-en="Office">Iroda</option>
+                <option value="uzlet" data-hu="Üzlet / Kereskedelmi" data-en="Commercial">Üzlet / Kereskedelmi</option>
+                <option value="ipari" data-hu="Ipari létesítmény" data-en="Industrial Facility">Ipari létesítmény</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label data-hu="Alapterület (m²)" data-en="Floor Area (m²)">Alapterület (m²)</label>
+              <input type="number" name="meret" placeholder="pl. 80" min="1">
+            </div>
+          </div>
+          <div class="form-group">
+            <label data-hu="Elvégzendő munka leírása" data-en="Description of Work">Elvégzendő munka leírása</label>
+            <textarea name="leiras" placeholder="Kérem írja le röviden, milyen munkát szeretne elvégeztetni, mikor lenne szüksége rá, van-e különleges igény..." data-ph-hu="Kérem írja le röviden, milyen munkát szeretne elvégeztetni, mikor lenne szüksége rá, van-e különleges igény..." data-ph-en="Please briefly describe the work you need, when you'd need it, and any special requirements..."></textarea>
+          </div>
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          <button type="submit" class="btn-send" data-hu="📨  Ajánlatot kérek" data-en="📨  Request a Quote">📨  Ajánlatot kérek</button>
+          <div id="form-success">✅ <span data-hu="Üzenetét megkaptuk! Hamarosan felvesszük Önnel a kapcsolatot." data-en="We received your message! We will contact you shortly.">Üzenetét megkaptuk! Hamarosan felvesszük Önnel a kapcsolatot.</span></div>
+        </form>
       </div>
-      <div class="booking-cta">
-        <span class="booking-label" data-hu="Fellépési megkeresés" data-en="Booking inquiries">Fellépési megkeresés</span>
-        <a class="btn btn-primary" href="mailto:haroselectric@gmail.com?subject=Fell%C3%A9p%C3%A9si%20megkeres%C3%A9s%20-%20DJ%20H%C3%A1ros" data-hu="Írj emailt" data-en="Send an email">Írj emailt</a>
-      </div>
     </div>
-  </div>
-</section>
-
-<section class="rental" id="rental">
-  <div class="container rental-wrap">
-    <div class="rental-media">
-      <img src="assets/dj-setup.jpg" alt="Bérelhető hang- és DJ technika">
-    </div>
-    <div>
-      <span class="eyebrow" data-hu="Technika bérlés" data-en="Equipment Rental">Technika bérlés</span>
-      <h2 style="font-size:2rem;font-weight:700;margin-bottom:16px;" data-hu="Bérelhető hang- és fénytechnika" data-en="Sound &amp; Lighting Equipment for Rent">Bérelhető hang- és fénytechnika</h2>
-      <p style="color:var(--text-dim);" data-hu="Saját, karbantartott eszközparkunkat rendezvényedhez bérbe is adjuk &ndash; akár a teljes technikai kiszolgálással, akár csak az eszközökkel." data-en="We also rent out our own, well-maintained equipment for your event &ndash; with full technical support or just the gear itself.">Saját, karbantartott eszközparkunkat rendezvényedhez bérbe is adjuk &ndash; akár a teljes technikai kiszolgálással, akár csak az eszközökkel.</p>
-      <div class="equip-list">
-        <div class="equip-item" data-hu="Hangfalak &amp; erősítők" data-en="Speakers &amp; amplifiers">Hangfalak &amp; erősítők</div>
-        <div class="equip-item dj" data-hu="DJ pult &amp; keverő" data-en="DJ deck &amp; mixer">DJ pult &amp; keverő</div>
-        <div class="equip-item light" data-hu="Show- &amp; díszfények" data-en="Show &amp; decorative lights">Show- &amp; díszfények</div>
-        <div class="equip-item stage" data-hu="Mikrofonok" data-en="Microphones">Mikrofonok</div>
-      </div>
-      <div style="margin-top:32px;">
-        <a href="#contact" class="btn btn-primary" data-hu="Kérek árajánlatot" data-en="Request a Quote">Kérek árajánlatot</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="gallery">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow" data-hu="Hangulat" data-en="Atmosphere">Hangulat</span>
-      <h2 data-hu="Galéria" data-en="Gallery">Galéria</h2>
-      <p data-hu="Pillanatok korábbi rendezvényeinkről." data-en="Moments from our past events.">Pillanatok korábbi rendezvényeinkről.</p>
-    </div>
-
-    <div class="gallery-sub-head">
-      <h3>DJ Háros</h3>
-    </div>
-    <div class="gallery-grid gallery-grid--dj">
-      <a href="#" class="lb-item" data-group="dj" data-idx="123"><img src="assets/dj-haros-action1.jpg" alt="DJ Háros a pultnál" loading="lazy"></a>
-      <a href="#" class="lb-item" data-group="dj" data-idx="124"><img src="assets/dj-haros-action2.jpg" alt="DJ Háros élő buliban" loading="lazy"></a>
-      <a href="#" class="lb-item" data-group="dj" data-idx="125"><img src="assets/dj-haros-purple.jpg" alt="DJ Háros a pultnál" loading="lazy"></a>
-      <a href="#" class="lb-item" data-group="dj" data-idx="126"><img src="assets/dj-haros-friend.jpg" alt="DJ Háros és vendégei" loading="lazy"></a>
-      <a href="#" class="lb-item" data-group="dj" data-idx="127"><img src="assets/dj-haros-founder.jpg" alt="DJ Háros - Dance Life Entertainment alapítója" loading="lazy"></a>
-      <a href="#" class="lb-item" data-group="dj" data-idx="128"><img src="assets/dj-haros-promo.jpg" alt="DJ Háros - Dance Life Entertainment promóciós grafika" loading="lazy"></a>
-      <a href="#" class="lb-item" data-group="dj" data-idx="129"><img src="assets/dj-haros-booth.jpg" alt="DJ Háros a pultnál egy baráttal" loading="lazy"></a>
-    </div>
-
-    <div class="gallery-sub-head gallery-sub-head--party">
-      <h3 data-hu="Hangulat &amp; bulik" data-en="Atmosphere &amp; Parties">Hangulat &amp; bulik</h3>
-    </div>
-    <div class="gallery-grid">
-      <a href="#" class="lb-item g-tall" data-group="party" data-idx="252"><img src="assets/party-laci-1.jpg" alt="DJ Háros a pult mögött, táncoló vendégekkel a háttérben" loading="lazy"></a>
-      <a href="#" class="lb-item g-tall" data-group="party" data-idx="128"><img src="assets/party-laci-7.jpg" alt="Vendégek a Dance Life Entertainment molinó előtt" loading="lazy"></a>
-            <a href="#" class="lb-item" data-group="party" data-idx="129"><img src="assets/party-laci-9.jpg" alt="Táncoló pár neon feliratos háttérben" loading="lazy"></a>
-      <a href="#" class="lb-item" data-group="party" data-idx="130"><img src="assets/party-laci-10.jpg" alt="Táncospár" loading="lazy"></a>
-      <a href="#" class="lb-item" data-group="party" data-idx="131"><img src="assets/party-laci-11.jpg" alt="Táncospár" loading="lazy"></a>
-      <a href="#" class="lb-item g-tall" data-group="party" data-idx="132"><img src="assets/party-laci-12.jpg" alt="Ölelkező táncospár a DJ pultnál" loading="lazy"></a>
-      <a href="#" class="lb-item" data-group="party" data-idx="133"><img src="assets/party-laci-13.jpg" alt="Táncospár" loading="lazy"></a>
-      <a href="#" class="lb-item" data-group="party" data-idx="134"><img src="assets/party-laci-14.jpg" alt="Táncospár" loading="lazy"></a>
-      <a href="#" class="lb-item" data-group="party" data-idx="135"><img src="assets/party-laci-15.jpg" alt="Ölelkező vendégek" loading="lazy"></a>
-      <a href="#" class="lb-item g-tall" data-group="party" data-idx="136"><img src="assets/party-laci-16.jpg" alt="Táncoló pár zöld fényben" loading="lazy"></a>
-      <a href="#" class="lb-item" data-group="party" data-idx="137"><img src="assets/party-laci-17.jpg" alt="Táncospár" loading="lazy"></a>
-      <a href="#" class="lb-item" data-group="party" data-idx="138"><img src="assets/party-laci-18.jpg" alt="Táncospár lila fényben" loading="lazy"></a>
-      <a href="#" class="lb-item" data-group="party" data-idx="139"><img src="assets/party-laci-19.jpg" alt="Barátnők beszélgetve" loading="lazy"></a>
-      <a href="#" class="lb-item" data-group="party" data-idx="140"><img src="assets/party-laci-20.jpg" alt="DJ Háros és az ütemzenész" loading="lazy"></a>
-      <a href="#" class="lb-item" data-group="party" data-idx="141"><img src="assets/party-laci-21.jpg" alt="Barátnők együtt" loading="lazy"></a>
-      <a href="#" class="lb-item g-tall" data-group="party" data-idx="142"><img src="assets/party-laci-22.jpg" alt="Táncospár a bárpultnál" loading="lazy"></a>
-      <a href="#" class="lb-item g-tall" data-group="party" data-idx="143"><img src="assets/party-laci-23.jpg" alt="Táncospár" loading="lazy"></a>
-      <a href="#" class="lb-item g-tall" data-group="party" data-idx="144"><img src="assets/party-laci-24.jpg" alt="Táncospár" loading="lazy"></a>
-      <a href="#" class="lb-item" data-group="party" data-idx="145"><img src="assets/party-laci-25.jpg" alt="Táncospár" loading="lazy"></a>
-      <a href="#" class="lb-item" data-group="party" data-idx="146"><img src="assets/party-laci-26.jpg" alt="Vendégek a Dance Life Entertainment molinó előtt" loading="lazy"></a>
-      <a href="#" class="lb-item" data-group="party" data-idx="147"><img src="assets/party-laci-27.jpg" alt="Ütemzenész és a vendégek" loading="lazy"></a>
-      <a href="#" class="lb-item" data-group="party" data-idx="148"><img src="assets/party-laci-28.jpg" alt="Táncoló pár feketében" loading="lazy"></a>
-      <a href="#" class="lb-item" data-group="party" data-idx="149"><img src="assets/party-laci-29.jpg" alt="Táncospár" loading="lazy"></a>
-      <a href="#" class="lb-item g-tall" data-group="party" data-idx="150"><img src="assets/party-laci-30.jpg" alt="Crystal Edition Salsa & Bachata rendezvény plakát" loading="lazy"></a>
-      <a href="#" class="lb-item g-tall" data-group="party" data-idx="151"><img src="assets/party-laci-31.jpg" alt="Vidám hangulat a táncparketten" loading="lazy"></a>
-      <a href="#" class="lb-item" data-group="party" data-idx="152"><img src="assets/party-laci-32.jpg" alt="Beszélgető vendégek" loading="lazy"></a>
-      <a href="#" class="lb-item" data-group="party" data-idx="153"><img src="assets/party-laci-33.jpg" alt="Táncospár" loading="lazy"></a>
-      
-      <a href="#" class="lb-item" data-group="party" data-idx="176"><img src="assets/party-67.jpg" alt="Idősebb táncospár kézfogással" loading="lazy"></a>
-      <a href="#" class="lb-item" data-group="party" data-idx="178"><img src="assets/party-80.jpg" alt="Táncospár finoman" loading="lazy"></a>
-      
-      <a href="#" class="lb-item" data-group="party" data-idx="192"><img src="assets/party-106.jpg" alt="Táncoló pár" loading="lazy"></a>
-      <a href="#" class="lb-item" data-group="party" data-idx="198"><img src="assets/party-119.jpg" alt="Táncospár" loading="lazy"></a>
-      
-            <a href="#" class="lb-item g-tall" data-group="party" data-idx="253"><img src="assets/party-laci-5.jpg" alt="DJ Háros egy rendezvényen" loading="lazy"></a>
-                              <a href="#" class="lb-item g-tall" data-group="party" data-idx="225"><img src="assets/party-211.jpg" alt="Vendégek a bulin" loading="lazy"></a>
-      <a href="#" class="lb-item g-tall" data-group="party" data-idx="232"><img src="assets/party-224.jpg" alt="Táncospár mosolyogva" loading="lazy"></a>
-      <a href="#" class="lb-item g-tall" data-group="party" data-idx="238"><img src="assets/party-237.jpg" alt="Táncoló pár színes fényben" loading="lazy"></a>
-      <a href="#" class="lb-item" data-group="party" data-idx="245"><img src="assets/party-250.jpg" alt="Jó hangulat a táncparketten" loading="lazy"></a>
-    </div>
-
-    <div class="gallery-more">
-      <button type="button" class="btn btn-ghost" id="show-all-party">Mind a 254 fotó megtekintése</button>
-    </div>
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <div class="container contact-wrap">
-    <div class="contact-info">
-      <span class="eyebrow" data-hu="Kapcsolat" data-en="Contact">Kapcsolat</span>
-      <h3 data-hu="Foglald le a következő eseményed" data-en="Book Your Next Event">Foglald le a következő eseményed</h3>
-      <p data-hu="Írj vagy hívj minket, és néhány napon belül személyre szabott ajánlatot küldünk!" data-en="Message or call us, and we&rsquo;ll send you a personalized offer within a few days!">Írj vagy hívj minket, és néhány napon belül személyre szabott ajánlatot küldünk!</p>
-      <div class="contact-row">
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.36 11.36 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.57 1 1 0 0 1-.25 1.02Z"/></svg></div>
-        <div><strong>(70) 802 9138</strong><span data-hu="Hívás vagy Messenger" data-en="Call or Messenger">Hívás vagy Messenger</span></div>
-      </div>
-      <div class="contact-row">
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2C7.58 2 4 5.58 4 10c0 5.25 7 12 8 12s8-6.75 8-12c0-4.42-3.58-8-8-8Zm0 11a3 3 0 1 1 3-3 3 3 0 0 1-3 3Z"/></svg></div>
-        <div><strong>1076 Budapest, Garay tér</strong><span data-hu="Rendezvények országosan" data-en="Events nationwide">Rendezvények országosan</span></div>
-      </div>
-      <a class="contact-row" href="https://www.facebook.com/DanceLifeEntertainment" target="_blank" rel="noopener">
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94Z"/></svg></div>
-        <div><strong>Dance Life Entertainment</strong><span data-hu="Facebook oldalunk" data-en="Our Facebook page">Facebook oldalunk</span></div>
-      </a>
-    </div>
-    <form onsubmit="event.preventDefault(); window.location.href='https://www.facebook.com/DanceLifeEntertainment';">
-      <div class="form-row">
-        <div>
-          <label data-hu="Név" data-en="Name">Név</label>
-          <input type="text" placeholder="Teljes neved" data-ph-hu="Teljes neved" data-ph-en="Your full name" required>
-        </div>
-        <div>
-          <label data-hu="Telefonszám" data-en="Phone Number">Telefonszám</label>
-          <input type="tel" placeholder="+36 ..." required>
-        </div>
-      </div>
-      <div>
-        <label data-hu="Esemény típusa" data-en="Event Type">Esemény típusa</label>
-        <select>
-          <option data-hu="Esküvő" data-en="Wedding">Esküvő</option>
-          <option data-hu="Céges rendezvény" data-en="Corporate Event">Céges rendezvény</option>
-          <option data-hu="Szülinap / privát buli" data-en="Birthday / Private Party">Szülinap / privát buli</option>
-          <option data-hu="Csak technika bérlés" data-en="Equipment Rental Only">Csak technika bérlés</option>
-          <option data-hu="Egyéb" data-en="Other">Egyéb</option>
-        </select>
-      </div>
-      <div>
-        <label data-hu="Üzenet" data-en="Message">Üzenet</label>
-        <textarea placeholder="Meséld el az elképzelésed, dátumot, helyszínt..." data-ph-hu="Meséld el az elképzelésed, dátumot, helyszínt..." data-ph-en="Tell us about your idea, date, location..."></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary" style="justify-content:center;" data-hu="Üzenet küldése" data-en="Send Message">Üzenet küldése</button>
-    </form>
   </div>
 </section>
 
 <footer>
-  <div class="container">
-    <div class="f-socials">
-      <a href="https://www.facebook.com/DanceLifeEntertainment" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94Z"/></svg></a>
-    </div>
-    <p>&copy; <span id="year"></span> Dance Life Entertainment &middot; <span data-hu="Minden jog fenntartva." data-en="All rights reserved.">Minden jog fenntartva.</span></p>
-  </div>
+  <p>© 2026 <strong>Haros Electric Hungary</strong> · Háros László · Budapest · <a href="mailto:haroselectric@gmail.com">haroselectric@gmail.com</a></p>
 </footer>
 
-<div class="lb-overlay" id="lb-overlay">
-  <button type="button" class="lb-close" aria-label="Bezárás">&times;</button>
-  <div id="lightbox">
-    <button type="button" class="lb-nav lb-prev" aria-label="Előző kép">&#8249;</button>
-    <figure>
-      <img src="" alt="">
-      <figcaption></figcaption>
-    </figure>
-    <button type="button" class="lb-nav lb-next" aria-label="Következő kép">&#8250;</button>
-    <span class="lb-counter"></span>
-  </div>
-</div>
-
-<div class="lb-overlay" id="fg-overlay">
-  <button type="button" class="lb-close" aria-label="Bezárás">&times;</button>
-  <div id="full-gallery">
-    <div class="container">
-      <h3 data-hu="Hangulat &amp; bulik &ndash; összes fotó" data-en="Atmosphere &amp; Parties &ndash; All Photos">Hangulat &amp; bulik &ndash; összes fotó</h3>
-      <div class="full-grid"></div>
-    </div>
-  </div>
-</div>
-
 <script>
-document.getElementById('year').textContent = new Date().getFullYear();
+let currentLang='hu';
+let heroArMode=null;
+  window.addEventListener('DOMContentLoaded',function(){if(new URLSearchParams(location.search).get('lang')==='en'){toggleLang();}});
 
-var currentLang = 'hu';
-
-function toggleLang(){
-  currentLang = currentLang === 'hu' ? 'en' : 'hu';
-  document.documentElement.setAttribute('data-lang', currentLang);
-  var btn = document.getElementById('langBtn');
-  if (btn) btn.textContent = currentLang === 'hu' ? 'EN' : 'HU';
-  document.querySelectorAll('[data-hu]').forEach(function(o){
-    var t = o.getAttribute('data-' + currentLang);
-    if (t) o.textContent = t;
-  });
-  document.querySelectorAll('[data-ph-hu]').forEach(function(el){
-    var t = el.getAttribute('data-ph-' + currentLang);
-    if (t) el.placeholder = t;
-  });
-  if (window.updateGalleryButtonText) window.updateGalleryButtonText();
+function updateHeroBanner(){
+  const heroImg=document.getElementById('hero-banner-img');
+  if(!heroImg) return;
+  const mobile=window.innerWidth<=768;
+  const mode=mobile?'mobile':'desktop';
+  if(mode!==heroArMode){
+    heroArMode=mode;
+    heroImg.style.aspectRatio='';
+    heroImg.dataset.arLocked='';
+  }
+  if(mobile){
+    heroImg.src=currentLang==='hu'
+      ?'hero-mobile-hu.jpg'
+      :'hero-mobile-en.jpg';
+  }else{
+    heroImg.src=currentLang==='hu'
+      ?'hero_hu_new.png'
+      :'hero_en_new.png';
+  }
 }
 
-window.addEventListener('DOMContentLoaded', function(){
-  if (new URLSearchParams(location.search).get('lang') === 'en') toggleLang();
+(function(){
+  const heroImg=document.getElementById('hero-banner-img');
+  if(!heroImg) return;
+  heroImg.addEventListener('load',function(){
+    if(!heroImg.dataset.arLocked && heroImg.naturalWidth && heroImg.naturalHeight){
+      heroImg.style.aspectRatio=heroImg.naturalWidth+' / '+heroImg.naturalHeight;
+      heroImg.dataset.arLocked='1';
+    }
+  });
+})();
+
+function toggleLang(){
+  currentLang=currentLang==='hu'?'en':'hu';
+  document.documentElement.setAttribute('data-lang',currentLang);
+  document.getElementById('langBtn').textContent=currentLang==='hu'?'EN':'HU';
+  updateHeroBanner();
+  document.querySelectorAll('[data-hu]').forEach(el=>{
+    const t=el.getAttribute('data-'+currentLang);
+    if(t&&el.tagName!=='INPUT'&&el.tagName!=='SELECT'&&el.tagName!=='TEXTAREA'&&el.tagName!=='OPTION')el.innerHTML=t;
+  });
+  document.querySelector('title').textContent=document.querySelector('title').getAttribute('data-'+currentLang);
+  document.querySelectorAll('select option').forEach(o=>{const t=o.getAttribute('data-'+currentLang);if(t)o.textContent=t;});document.querySelectorAll('[data-ph-hu]').forEach(el=>{const t=el.getAttribute('data-ph-'+currentLang);if(t)el.placeholder=t;});
+}
+updateHeroBanner();
+window.addEventListener('resize', updateHeroBanner);
+
+document.querySelectorAll('.social-btn').forEach(a=>{
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    window.open(this.href,'_blank','noopener,noreferrer');
+  });
 });
 
-(function(){
-  var burgerBtn = document.querySelector('.burger');
-  var navLinks = document.querySelector('.nav-links');
-  if (!burgerBtn || !navLinks) return;
-  function closeMenu(){
-    navLinks.classList.remove('open');
-    burgerBtn.textContent = '☰';
-    burgerBtn.setAttribute('aria-expanded', 'false');
+function smoothScrollTo(el){
+  if(!el) return;
+  const targetY=el.getBoundingClientRect().top+window.pageYOffset;
+  try{
+    window.scrollTo({top:targetY,behavior:'smooth'});
+  }catch(err){
+    window.scrollTo(0,targetY);
   }
-  function toggleMenu(){
-    var isOpen = navLinks.classList.toggle('open');
-    burgerBtn.textContent = isOpen ? '✕' : '☰';
-    burgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  }
-  burgerBtn.setAttribute('aria-expanded', 'false');
-  burgerBtn.addEventListener('click', function(e){
-    e.stopPropagation();
-    toggleMenu();
-  });
-  navLinks.querySelectorAll('a').forEach(function(link){
-    link.addEventListener('click', closeMenu);
-  });
-  document.addEventListener('click', function(e){
-    if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && !burgerBtn.contains(e.target)) {
-      closeMenu();
-    }
-  });
-  window.addEventListener('resize', function(){
-    if (window.innerWidth > 860) closeMenu();
-  });
-})();
+}
 
-/* GALLERY: lightbox + full photo modal */
-(function(){
-  var DJ_PHOTOS = [{src:"assets/dj-haros-action1.jpg",alt:"DJ Háros a pultnál"},{src:"assets/dj-haros-action2.jpg",alt:"DJ Háros élő buliban"},{src:"assets/dj-haros-purple.jpg",alt:"DJ Háros a pultnál"},{src:"assets/dj-haros-friend.jpg",alt:"DJ Háros és vendégei"},{src:"assets/dj-haros-founder.jpg",alt:"DJ Háros - Dance Life Entertainment alapítója"},{src:"assets/dj-haros-promo.jpg",alt:"DJ Háros - Dance Life Entertainment promóciós grafika"},{src:"assets/dj-haros-booth.jpg",alt:"DJ Háros a pultnál egy baráttal"}];
-  var PARTY_PHOTOS = [{src:"assets/party-403.jpg",alt:"Táncoló pár"},{src:"assets/party-404.jpg",alt:"Táncoló pár"},{src:"assets/party-405.jpg",alt:"Táncoló pár"},{src:"assets/party-406.jpg",alt:"Baráti társaság"},{src:"assets/party-407.jpg",alt:"Vendégek a Dance Life Entertainment molinó előtt"},{src:"assets/party-408.jpg",alt:"Pár a Dance Life Entertainment molinó előtt"},{src:"assets/party-388.jpg",alt:"Táncoló hölgy a táncparketten"},{src:"assets/party-389.jpg",alt:"Mosolygós vendégek a DJ pultnál"},{src:"assets/party-390.jpg",alt:"Táncoló pár"},{src:"assets/party-391.jpg",alt:"Táncoló hölgy pörgés közben"},{src:"assets/party-392.jpg",alt:"Táncoló pár"},{src:"assets/party-393.jpg",alt:"Táncoló pár piros ruhában"},{src:"assets/party-394.jpg",alt:"Táncoló pár"},{src:"assets/party-395.jpg",alt:"Táncoló pár"},{src:"assets/party-396.jpg",alt:"Mosolygós vendégek"},{src:"assets/party-397.jpg",alt:"Táncospár forgás közben"},{src:"assets/party-398.jpg",alt:"Baráti társaság"},{src:"assets/party-399.jpg",alt:"Ütemzenész"},{src:"assets/party-400.jpg",alt:"Vendégek a Dance Life Entertainment molinó előtt"},{src:"assets/party-401.jpg",alt:"Táncospár"},{src:"assets/party-402.jpg",alt:"Vonalas Salsa & Bachata Party rendezvény plakát"},{src:"assets/party-377.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-378.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-379.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-380.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-381.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-383.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-386.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-265.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-266.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-267.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-268.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-269.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-270.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-271.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-272.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-273.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-274.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-275.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-276.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-278.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-279.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-280.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-281.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-282.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-283.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-284.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-285.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-286.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-287.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-288.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-289.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-290.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-291.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-293.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-294.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-295.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-296.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-298.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-299.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-300.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-301.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-303.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-304.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-305.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-306.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-308.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-309.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-310.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-311.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-312.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-313.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-314.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-315.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-316.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-317.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-318.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-319.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-320.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-321.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-323.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-324.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-325.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-326.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-327.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-328.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-329.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-330.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-331.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-332.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-333.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-334.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-335.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-336.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-337.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-338.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-339.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-340.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-341.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-342.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-343.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-344.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-345.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-350.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-353.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-354.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-355.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-356.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-357.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-358.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-360.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-361.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-362.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-363.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-364.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-365.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-366.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-367.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-368.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-369.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-370.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-371.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-372.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-373.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-374.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-375.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-376.jpg",alt:"Vendégek a Dance Life Entertainment rendezvényen"},{src:"assets/party-264.jpg",alt:"Táncospár mosolyogva a táncparketten"},{src:"assets/party-laci-7.jpg",alt:"Vendégek a Dance Life Entertainment molinó előtt"},{src:"assets/party-laci-9.jpg",alt:"Táncoló pár neon feliratos háttérben"},{src:"assets/party-laci-10.jpg",alt:"Táncospár"},{src:"assets/party-laci-11.jpg",alt:"Táncospár"},{src:"assets/party-laci-12.jpg",alt:"Ölelkező táncospár a DJ pultnál"},{src:"assets/party-laci-13.jpg",alt:"Táncospár"},{src:"assets/party-laci-14.jpg",alt:"Táncospár"},{src:"assets/party-laci-15.jpg",alt:"Ölelkező vendégek"},{src:"assets/party-laci-16.jpg",alt:"Táncoló pár zöld fényben"},{src:"assets/party-laci-17.jpg",alt:"Táncospár"},{src:"assets/party-laci-18.jpg",alt:"Táncospár lila fényben"},{src:"assets/party-laci-19.jpg",alt:"Barátnők beszélgetve"},{src:"assets/party-laci-20.jpg",alt:"DJ Háros és az ütemzenész"},{src:"assets/party-laci-21.jpg",alt:"Barátnők együtt"},{src:"assets/party-laci-22.jpg",alt:"Táncospár a bárpultnál"},{src:"assets/party-laci-23.jpg",alt:"Táncospár"},{src:"assets/party-laci-24.jpg",alt:"Táncospár"},{src:"assets/party-laci-25.jpg",alt:"Táncospár"},{src:"assets/party-laci-26.jpg",alt:"Vendégek a Dance Life Entertainment molinó előtt"},{src:"assets/party-laci-27.jpg",alt:"Ütemzenész és a vendégek"},{src:"assets/party-laci-28.jpg",alt:"Táncoló pár feketében"},{src:"assets/party-laci-29.jpg",alt:"Táncospár"},{src:"assets/party-laci-30.jpg",alt:"Crystal Edition Salsa & Bachata rendezvény plakát"},{src:"assets/party-laci-31.jpg",alt:"Vidám hangulat a táncparketten"},{src:"assets/party-laci-32.jpg",alt:"Beszélgető vendégek"},{src:"assets/party-laci-33.jpg",alt:"Táncospár"},{src:"assets/party-29.jpg",alt:"Táncoló pár"},{src:"assets/party-30.jpg",alt:"Táncoló pár mosolyogva"},{src:"assets/party-32.jpg",alt:"Táncoló pár"},{src:"assets/party-34.jpg",alt:"Táncoló pár pörgés közben"},{src:"assets/party-36.jpg",alt:"Táncoló pár mintás felsőben"},{src:"assets/party-37.jpg",alt:"Vendégek a Dance Life Entertainment molinó előtt"},{src:"assets/party-39.jpg",alt:"Táncoló pár nevetve"},{src:"assets/party-42.jpg",alt:"Pár a Dance Life Entertainment neon felirat előtt"},{src:"assets/party-43.jpg",alt:"Táncoló pár piros fényben"},{src:"assets/party-44.jpg",alt:"Táncoló pár piros pólóban"},{src:"assets/party-45.jpg",alt:"Táncoló pár virágmintás felsőben"},{src:"assets/party-46.jpg",alt:"Táncoló pár"},{src:"assets/party-48.jpg",alt:"Mosolygós vendégek"},{src:"assets/party-49.jpg",alt:"Táncoló pár közelről"},{src:"assets/party-52.jpg",alt:"Táncoló pár piros ruhában"},{src:"assets/party-55.jpg",alt:"Nyújtó gyakorlat csoportban"},{src:"assets/party-56.jpg",alt:"Vendégek a bárpultnál"},{src:"assets/party-57.jpg",alt:"Táncoló pár bordó ruhában"},{src:"assets/party-59.jpg",alt:"Vidám vendégek"},{src:"assets/party-62.jpg",alt:"Táncospár lendületben"},{src:"assets/party-63.jpg",alt:"Táncoló pár feketében"},{src:"assets/party-65.jpg",alt:"Táncoló hölgy közelről"},{src:"assets/party-67.jpg",alt:"Idősebb táncospár kézfogással"},{src:"assets/party-75.jpg",alt:"Táncoló pár feketében párban"},{src:"assets/party-80.jpg",alt:"Táncospár finoman"},{src:"assets/party-83.jpg",alt:"Táncoló pár lendületesen"},{src:"assets/party-85.jpg",alt:"Táncospár ölelésben"},{src:"assets/party-89.jpg",alt:"Táncoló pár"},{src:"assets/party-91.jpg",alt:"Beszélgető vendégek"},{src:"assets/party-94.jpg",alt:"Táncoló pár piros ruhában"},{src:"assets/party-95.jpg",alt:"Táncospár zöld fényben"},{src:"assets/party-96.jpg",alt:"Táncoló pár"},{src:"assets/party-97.jpg",alt:"Táncospár"},{src:"assets/party-98.jpg",alt:"Táncoló pár"},{src:"assets/party-99.jpg",alt:"Táncospár"},{src:"assets/party-101.jpg",alt:"Táncospár"},{src:"assets/party-102.jpg",alt:"Táncoló pár"},{src:"assets/party-105.jpg",alt:"Táncospár"},{src:"assets/party-106.jpg",alt:"Táncoló pár"},{src:"assets/party-107.jpg",alt:"Táncospár"},{src:"assets/party-110.jpg",alt:"Táncoló pár"},{src:"assets/party-112.jpg",alt:"Táncoló pár"},{src:"assets/party-113.jpg",alt:"Táncospár"},{src:"assets/party-118.jpg",alt:"Táncoló pár"},{src:"assets/party-119.jpg",alt:"Táncospár"},{src:"assets/party-122.jpg",alt:"Táncoló pár"},{src:"assets/party-124.jpg",alt:"Táncoló pár"},{src:"assets/party-126.jpg",alt:"Táncoló pár"},{src:"assets/party-127.jpg",alt:"Táncospár"},{src:"assets/party-128.jpg",alt:"Táncoló pár"},{src:"assets/party-130.jpg",alt:"Táncoló pár"},{src:"assets/party-137.jpg",alt:"Táncospár"},{src:"assets/party-147.jpg",alt:"Táncospár"},{src:"assets/party-148.jpg",alt:"Táncoló pár"},{src:"assets/party-157.jpg",alt:"Ölelkező vendégek"},{src:"assets/party-163.jpg",alt:"Táncoló pár"},{src:"assets/party-165.jpg",alt:"Ölelkező táncospár"},{src:"assets/party-169.jpg",alt:"Táncoló pár"},{src:"assets/party-171.jpg",alt:"Vendégek a bulin"},{src:"assets/party-173.jpg",alt:"Táncospár"},{src:"assets/party-175.jpg",alt:"Jó hangulat a táncparketten"},{src:"assets/party-176.jpg",alt:"Táncospár"},{src:"assets/party-182.jpg",alt:"Vendégek a rendezvényen"},{src:"assets/party-183.jpg",alt:"Táncospár"},{src:"assets/party-188.jpg",alt:"Táncoló pár"},{src:"assets/party-194.jpg",alt:"Táncoló pár"},{src:"assets/party-195.jpg",alt:"Ölelkező táncospár"},{src:"assets/party-199.jpg",alt:"Táncoló pár közelről"},{src:"assets/party-204.jpg",alt:"Ölelkező táncospár"},{src:"assets/party-208.jpg",alt:"Vendégek a rendezvényen"},{src:"assets/party-209.jpg",alt:"Vendégek a rendezvényen"},{src:"assets/party-211.jpg",alt:"Vendégek a bulin"},{src:"assets/party-212.jpg",alt:"Táncospár mosolyogva"},{src:"assets/party-215.jpg",alt:"Táncospár"},{src:"assets/party-216.jpg",alt:"Vendégek a rendezvényen"},{src:"assets/party-217.jpg",alt:"Táncoló pár"},{src:"assets/party-218.jpg",alt:"Vendégek a rendezvényen"},{src:"assets/party-219.jpg",alt:"Vendégek a bulin"},{src:"assets/party-224.jpg",alt:"Táncospár mosolyogva"},{src:"assets/party-228.jpg",alt:"Táncospár mosolyogva"},{src:"assets/party-229.jpg",alt:"Beszélgető vendégek"},{src:"assets/party-231.jpg",alt:"Táncoló pár közelről"},{src:"assets/party-235.jpg",alt:"Beszélgető vendégek"},{src:"assets/party-236.jpg",alt:"Ölelkező táncospár"},{src:"assets/party-237.jpg",alt:"Táncoló pár színes fényben"},{src:"assets/party-238.jpg",alt:"Táncospár mosolyogva"},{src:"assets/party-239.jpg",alt:"Táncoló pár színes fényben"},{src:"assets/party-241.jpg",alt:"Vendégek a rendezvényen"},{src:"assets/party-243.jpg",alt:"Táncospár"},{src:"assets/party-246.jpg",alt:"Táncoló pár közelről"},{src:"assets/party-249.jpg",alt:"Táncoló pár színes fényben"},{src:"assets/party-250.jpg",alt:"Jó hangulat a táncparketten"},{src:"assets/party-252.jpg",alt:"Táncospár forgás közben"},{src:"assets/party-254.jpg",alt:"Ölelkező táncospár"},{src:"assets/party-255.jpg",alt:"Vendégek a rendezvényen"},{src:"assets/party-256.jpg",alt:"Táncospár mosolyogva"},{src:"assets/party-262.jpg",alt:"Táncoló pár színes fényben"},{src:"assets/party-263.jpg",alt:"Táncospár"},{src:"assets/party-laci-1.jpg",alt:"DJ Háros a pult mögött, táncoló vendégekkel a háttérben"},{src:"assets/party-laci-5.jpg",alt:"DJ Háros egy rendezvényen"}];
+function bindTap(el,handler){
+  let touched=false;
+  el.addEventListener('touchend',function(e){
+    touched=true;
+    handler(e);
+    setTimeout(()=>{touched=false;},500);
+  },{passive:false});
+  el.addEventListener('click',function(e){
+    if(touched) return;
+    handler(e);
+  });
+}
 
-  window.updateGalleryButtonText = function(){
-    var btn = document.getElementById('show-all-party');
-    if (!btn) return;
-    btn.textContent = currentLang === 'hu'
-      ? ('Mind a ' + PARTY_PHOTOS.length + ' fot\u00f3 megtekint\u00e9se')
-      : ('View all ' + PARTY_PHOTOS.length + ' photos');
+const navLinksEl=document.getElementById('navLinks');
+bindTap(document.getElementById('hamburger'),function(e){
+  navLinksEl.classList.toggle('open');
+});
+
+// Nav links: only close the mobile menu, let native #href anchor jump happen on its own
+document.querySelectorAll('.nav-links a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',function(e){
+    navLinksEl.classList.remove('open');
+  });
+});
+const secs=document.querySelectorAll('section[id]');
+const navObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('active'));const l=document.querySelector('.nav-links a[href="#'+e.target.id+'"]');if(l)l.classList.add('active');}});},{threshold:.35});
+secs.forEach(s=>navObs.observe(s));
+const fadeObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');fadeObs.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.fade-in').forEach(el=>fadeObs.observe(el));
+function sendForm(e){
+  e.preventDefault();
+  const f = e.target;
+  const btn = f.querySelector('button[type="submit"]');
+  const en = currentLang === 'en';
+  const tipus = f.tipus.options[f.tipus.selectedIndex].text;
+  const data = {
+    _subject: en ? 'Quote Request – Haros Electric (website)' : 'Árajánlat kérés – Haros Electric (weboldal)',
+    _template: 'table',
+    _captcha: 'false',
+    _honey: f._honey ? f._honey.value : '',
+    'Név': f.nev.value,
+    'Telefon': f.telefon.value,
+    'Email': f.email.value,
+    'Ingatlan típusa': tipus,
+    'Alapterület (m²)': f.meret.value || '–',
+    'Leírás': f.leiras.value,
+    'Nyelv': en ? 'EN' : 'HU'
   };
-  window.updateGalleryButtonText();
-
-  var lbOverlay = document.getElementById('lb-overlay');
-  var lbImg = document.querySelector('#lightbox img');
-  var lbCaption = document.querySelector('#lightbox figcaption');
-  var lbCounter = document.querySelector('.lb-counter');
-  var lbClose = lbOverlay.querySelector('.lb-close');
-  var lbPrev = lbOverlay.querySelector('.lb-prev');
-  var lbNext = lbOverlay.querySelector('.lb-next');
-
-  var fgOverlay = document.getElementById('fg-overlay');
-  var fullGrid = document.querySelector('.full-grid');
-  var fgClose = fgOverlay.querySelector('.lb-close');
-
-  var currentSet = [];
-  var currentIndex = 0;
-
-  function showImage(i){
-    if (!currentSet.length) return;
-    currentIndex = (i + currentSet.length) % currentSet.length;
-    var item = currentSet[currentIndex];
-    lbImg.src = item.src;
-    lbImg.alt = item.alt;
-    lbCaption.textContent = item.alt;
-    lbCounter.textContent = (currentIndex + 1) + ' / ' + currentSet.length;
-  }
-
-  function openLightbox(set, startIndex){
-    currentSet = set;
-    showImage(startIndex);
-    lbOverlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeLightbox(){
-    lbOverlay.classList.remove('open');
-    if (!fgOverlay.classList.contains('open')) document.body.style.overflow = '';
-  }
-
-  function openFullGallery(){
-    if (!fullGrid.dataset.built) {
-      var frag = document.createDocumentFragment();
-      PARTY_PHOTOS.forEach(function(item, idx){
-        var a = document.createElement('a');
-        a.href = '#';
-        a.setAttribute('data-idx', idx);
-        var img = document.createElement('img');
-        img.src = item.src;
-        img.alt = item.alt;
-        img.loading = 'lazy';
-        a.appendChild(img);
-        a.addEventListener('click', function(e){
-          e.preventDefault();
-          openLightbox(PARTY_PHOTOS, idx);
-        });
-        frag.appendChild(a);
-      });
-      fullGrid.appendChild(frag);
-      fullGrid.dataset.built = '1';
+  const btnText = btn ? btn.textContent : '';
+  if (btn) { btn.disabled = true; btn.textContent = en ? 'Sending…' : 'Küldés…'; }
+  document.getElementById('form-success').style.display = 'none';
+  fetch('https://formsubmit.co/ajax/haroselectric@gmail.com', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(data)
+  })
+  .then(function(r){ return r.json().then(function(j){ return { ok: r.ok, j: j }; }); })
+  .then(function(res){
+    if (res.ok && (res.j.success === true || res.j.success === 'true')) {
+      document.getElementById('form-success').style.display = 'block';
+      if (typeof gtag === 'function') { gtag('event', 'form_submit_contact'); }
+      f.reset();
+    } else {
+      throw new Error(res.j && res.j.message ? res.j.message : 'send failed');
     }
-    fgOverlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeFullGallery(){
-    fgOverlay.classList.remove('open');
-    if (!lbOverlay.classList.contains('open')) document.body.style.overflow = '';
-  }
-
-  document.querySelectorAll('[data-group="dj"]').forEach(function(a){
-    a.addEventListener('click', function(e){
-      e.preventDefault();
-      openLightbox(DJ_PHOTOS, parseInt(a.getAttribute('data-idx'), 10));
-    });
+  })
+  .catch(function(){
+    alert(en
+      ? 'Sorry, the message could not be sent. Please call +36 70 802 9138 or email haroselectric@gmail.com.'
+      : 'Sajnos az üzenetet nem sikerült elküldeni. Kérjük, hívjon: +36 70 802 9138, vagy írjon: haroselectric@gmail.com');
+  })
+  .finally(function(){
+    if (btn) { btn.disabled = false; btn.textContent = btnText; }
   });
-  document.querySelectorAll('[data-group="party"]').forEach(function(a){
-    a.addEventListener('click', function(e){
-      e.preventDefault();
-      openLightbox(PARTY_PHOTOS, parseInt(a.getAttribute('data-idx'), 10));
-    });
-  });
+}
 
-  var showAllBtn = document.getElementById('show-all-party');
-  if (showAllBtn) showAllBtn.addEventListener('click', openFullGallery);
 
-  lbClose.addEventListener('click', closeLightbox);
-  fgClose.addEventListener('click', closeFullGallery);
-  lbPrev.addEventListener('click', function(){ showImage(currentIndex - 1); });
-  lbNext.addEventListener('click', function(){ showImage(currentIndex + 1); });
 
-  lbOverlay.addEventListener('click', function(e){ if (e.target === lbOverlay) closeLightbox(); });
-  fgOverlay.addEventListener('click', function(e){ if (e.target === fgOverlay) closeFullGallery(); });
 
-  document.addEventListener('keydown', function(e){
-    if (lbOverlay.classList.contains('open')) {
-      if (e.key === 'Escape') closeLightbox();
-      else if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
-      else if (e.key === 'ArrowRight') showImage(currentIndex + 1);
-    } else if (fgOverlay.classList.contains('open') && e.key === 'Escape') {
-      closeFullGallery();
-    }
-  });
+// CTA buttons are now plain #contact anchors — native browser jump handles them
 
-  // DJ sample player(s)
-  var activeAudio = null;
-  document.querySelectorAll('.sample-track').forEach(function(track){
-    var btn = track.querySelector('.sample-play');
-    var iconPlay = track.querySelector('.icon-play');
-    var iconPause = track.querySelector('.icon-pause');
-    var bar = track.querySelector('.sample-bar');
-    var fill = track.querySelector('.sample-bar-fill');
-    var audio = new Audio(btn.getAttribute('data-audio'));
-    audio.preload = 'none';
-
-    function setPlaying(isPlaying){
-      iconPlay.style.display = isPlaying ? 'none' : '';
-      iconPause.style.display = isPlaying ? '' : 'none';
-    }
-
-    btn.addEventListener('click', function(){
-      if (activeAudio && activeAudio !== audio) {
-        activeAudio.pause();
-      }
-      if (audio.paused) {
-        audio.play();
-        activeAudio = audio;
-      } else {
-        audio.pause();
-      }
-    });
-
-    audio.addEventListener('play', function(){ setPlaying(true); });
-    audio.addEventListener('pause', function(){ setPlaying(false); });
-    audio.addEventListener('ended', function(){ setPlaying(false); fill.style.width = '0%'; });
-    audio.addEventListener('timeupdate', function(){
-      if (audio.duration) fill.style.width = ((audio.currentTime / audio.duration) * 100) + '%';
-    });
-
-    bar.addEventListener('click', function(e){
-      var rect = bar.getBoundingClientRect();
-      var ratio = (e.clientX - rect.left) / rect.width;
-      if (audio.duration) audio.currentTime = ratio * audio.duration;
-    });
-  });
-})();
 </script>
-</body>
+<div class="mobile-sticky-call"><a href="tel:+36708029138" class="mobile-sticky-call-link" data-hu="📞 Hívjon most" data-en="📞 Call now">📞 Hívjon most</a></div></body>
 </html>
