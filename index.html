@@ -29,11 +29,7 @@
 
     <!-- GA4 event tracking: contact form submission -->
     <script>
-        document.addEventListener('submit', function(e) {
-              if (e.target && e.target.id === 'contactForm') {
-                      gtag('event', 'form_submit_contact');
-              }
-        });
+        /* form_submit_contact most csak sikeres kuldes utan fut le (lasd sendForm) */
     </script>
   
   <!-- Meta Pixel Code -->
@@ -928,6 +924,7 @@ overflow:visible!important;
           </div>
           <button type="submit" class="btn-send" data-hu="📨  Ajánlatot kérek" data-en="📨  Request a Quote">📨  Ajánlatot kérek</button>
           <div id="form-success">✅ <span data-hu="Üzenetét megkaptuk! Hamarosan felvesszük Önnel a kapcsolatot." data-en="We received your message! We will contact you shortly.">Üzenetét megkaptuk! Hamarosan felvesszük Önnel a kapcsolatot.</span></div>
+          <div id="form-error" style="display:none;margin-top:16px;padding:14px 16px;border-radius:10px;background:rgba(220,60,60,.15);border:1px solid rgba(220,60,60,.5);color:#ffb4b4;font-size:.95rem;line-height:1.5">⚠️ <span data-hu="Sajnos nem sikerült elküldeni az üzenetet. Kérjük, hívjon a +36 70 802 9138 telefonszámon, vagy írjon a haroselectric@gmail.com címre." data-en="Sorry, we could not send your message. Please call +36 70 802 9138 or email haroselectric@gmail.com.">Sajnos nem sikerült elküldeni az üzenetet. Kérjük, hívjon a +36 70 802 9138 telefonszámon, vagy írjon a haroselectric@gmail.com címre.</span></div>
         </form>
       </div>
     </div>
@@ -1046,17 +1043,42 @@ const navObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isInter
 secs.forEach(s=>navObs.observe(s));
 const fadeObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');fadeObs.unobserve(e.target);}});},{threshold:.12});
 document.querySelectorAll('.fade-in').forEach(el=>fadeObs.observe(el));
-function sendForm(e){
+async function sendForm(e){
   e.preventDefault();
   const f=e.target;
-  const nev=f.nev.value,tel=f.telefon.value,email=f.email.value;
+  const btn=f.querySelector('button[type="submit"]');
+  const ok=document.getElementById('form-success');
+  const err=document.getElementById('form-error');
+  ok.style.display='none'; err.style.display='none';
+  const origBtn=btn.innerHTML;
+  btn.disabled=true;
+  btn.textContent=(currentLang==='en')?'Sending...':'Küldés...';
   const tipus=f.tipus.options[f.tipus.selectedIndex].text;
-  const meret=f.meret.value,leiras=f.leiras.value;
-  const subject=encodeURIComponent(currentLang==='en'?'Quote Request – Haros Electric':'Árajánlat kérés – Haros Electric');
-    const body=encodeURIComponent(currentLang==='en'?('Name: '+nev+'\nPhone: '+tel+'\nEmail: '+email+'\nProperty type: '+tipus+'\nFloor area: '+(meret||'–')+' m²\n\nDescription:\n'+leiras):('Név: '+nev+'\nTelefon: '+tel+'\nEmail: '+email+'\nIngatlan típusa: '+tipus+'\nAlapterület: '+(meret||'–')+' m²\n\nLeírás:\n'+leiras));
-  window.location.href='mailto:haroselectric@gmail.com?subject='+subject+'&body='+body;
-  document.getElementById('form-success').style.display='block';
-  f.reset();
+  const data={
+    name:f.nev.value,
+    phone:f.telefon.value,
+    email:f.email.value,
+    ingatlan_tipusa:tipus,
+    alapterulet_m2:f.meret.value||'-',
+    leiras:f.leiras.value,
+    _subject:'Árajánlat kérés – Haros Electric',
+    _template:'table',
+    _captcha:'false'
+  };
+  try{
+    const r=await fetch('https://formsubmit.co/ajax/haroselectric@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)});
+    const j=await r.json();
+    if(r.ok && (j.success===true || j.success==='true')){
+      ok.style.display='block';
+      f.reset();
+      if(typeof gtag==='function'){ gtag('event','form_submit_contact'); }
+    } else { throw new Error('send failed'); }
+  }catch(x){
+    err.style.display='block';
+  }finally{
+    btn.disabled=false;
+    btn.innerHTML=origBtn;
+  }
 }
 
 
