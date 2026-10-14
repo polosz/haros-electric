@@ -482,6 +482,7 @@ overflow:visible!important;
 
 <section class="hero" id="hero">
   <img id="hero-banner-img" alt="Haros Electric Hungary – VBF Érintésvédelmi Felülvizsgálat" class="hero-img">
+  <a href="#contact" class="hero-quote-m" data-hu="Ingyenes árajánlatot kérek" data-en="Request a free quote">Ingyenes árajánlatot kérek</a>
   <script>
     document.getElementById('hero-banner-img').src = (window.innerWidth<=768) ? 'hero-mobile-hu-v2.jpg' : 'hero_hu_v2.jpg';
   </script>
@@ -506,6 +507,22 @@ overflow:visible!important;
 .aud-card strong{display:block;font-size:1.1rem;margin-bottom:6px;color:#fff}
 .aud-card span{font-size:.9rem;color:rgba(255,255,255,.75);line-height:1.5}
 @media(max-width:700px){.audience h1{font-size:1.5rem}.aud-paths{grid-template-columns:1fr}.audience{padding-top:30px}}
+</style>
+<style>
+.phone-line{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;margin-top:6px;}
+.phone-flag{width:20px;height:14px;border-radius:2px;flex-shrink:0;box-shadow:0 0 0 1px rgba(255,255,255,.25);}
+.phone-label{font-size:.8rem;color:rgba(255,255,255,.6);}
+.phone-line a{font-weight:700;}
+@media(max-width:768px){
+ body{padding-bottom:calc(76px + env(safe-area-inset-bottom));}
+ .mobile-sticky-call{padding-bottom:env(safe-area-inset-bottom);}
+ html{scroll-padding-bottom:80px;}
+ .form-box{margin-bottom:12px;}
+ .hero-img{height:calc(100vw * 1.777 - 36px);object-fit:cover;object-position:top;}
+ .hero-quote-m{display:flex;position:absolute;left:20px;right:20px;bottom:12px;z-index:5;align-items:center;justify-content:center;padding:14px 20px;border-radius:10px;background:var(--purple);color:#fff;font-weight:800;font-size:1.02rem;line-height:1.2;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.45);}
+}
+.hero-quote-m{display:none;}
+@media(max-width:768px){.hero-quote-m{display:flex;}}
 </style>
 <div class="hero-cta-group fade-in"><a href="tel:+36708029138" class="btn btn-primary-call" data-hu="📞 Hívjon most: +36 70 802 9138" data-en="📞 Call now: +36 70 802 9138">📞 Hívjon most: +36 70 802 9138</a> <a href="#contact" class="btn btn-secondary-quote" data-hu="Ingyenes árajánlatot kérek" data-en="Request Free Quote">Ingyenes árajánlatot kérek</a></div>
 
@@ -636,7 +653,7 @@ overflow:visible!important;
         <div class="why-icon">📋</div>
         <div>
           <h3 data-hu="Minősítő irattal, dokumentálva" data-en="Officially Certified">Minősítő irattal, dokumentálva</h3>
-          <p data-hu="Minden felülvizsgálat minősítő irattal és szabványos dokumentációval zárul — adásvételhez, bérbeadáshoz és biztosítóhoz." data-en="Every inspection concludes with an qualification certificate and standard documentation — suitable for sale, rental and insurance purposes.">Minden felülvizsgálat minősítő irattal és szabványos dokumentációval zárul.</p>
+          <p data-hu="Minden felülvizsgálat minősítő irattal és szabványos dokumentációval zárul — adásvételhez, bérbeadáshoz és biztosítóhoz." data-en="Every inspection concludes with a qualification certificate and a VBF inspection report — suitable for sale, rental and insurance purposes.">Minden felülvizsgálat minősítő irattal és szabványos dokumentációval zárul.</p>
         </div>
       </div>
       <div class="why-item fade-in">
@@ -739,13 +756,13 @@ overflow:visible!important;
   <div class="inner">
     <h2 class="section-title fade-in" data-hu="VBF Érintésvédelmi árak" data-en="Electrical Safety Inspection Pricing">VBF Érintésvédelmi árak</h2>
     <div class="accent-line fade-in"></div>
-    <p class="section-sub fade-in" data-hu="Átlátható tájékoztató árak a VBF érintésvédelmi felülvizsgálathoz — az ingatlan mérete alapján. Az ár végösszeg: számlával együtt, kiszállással Budapesten és Pest megyében, további költség nélkül. Villámvédelmi felülvizsgálathoz egyedi árajánlatot adunk." data-en="Transparent indicative pricing for VBF electrical safety inspections — based on property size. The price is final, invoice included, with call-out in Budapest and Pest county at no extra charge. For lightning protection inspections, contact us for a tailored quote.">Átlátható tájékoztató árak a VBF érintésvédelmi felülvizsgálathoz — az ingatlan mérete alapján. Az ár végösszeg: számlával együtt, kiszállással Budapesten és Pest megyében, további költség nélkül. Villámvédelmi felülvizsgálathoz egyedi árajánlatot adunk.</p>
+    <p class="section-sub fade-in" data-hu="Átlátható, fix árak a VBF érintésvédelmi felülvizsgálathoz — az ingatlan mérete alapján. Az árak fix végösszegek (számlával együtt), kiszállással Budapesten és Pest megyében. Villámvédelmi felülvizsgálathoz egyedi árajánlatot adunk." data-en="Transparent fixed pricing for VBF electrical safety inspections — based on property size. Prices are fixed totals (invoice included), with call-out in Budapest and Pest county. For lightning protection inspections, contact us for a tailored quote.">Átlátható, fix árak a VBF érintésvédelmi felülvizsgálathoz — az ingatlan mérete alapján. Az árak fix végösszegek (számlával együtt), kiszállással Budapesten és Pest megyében. Villámvédelmi felülvizsgálathoz egyedi árajánlatot adunk.</p>
     <div class="price-grid">
       <div class="price-card fade-in">
         <h3 data-hu="Kis lakás" data-en="Small Apartment">Kis lakás</h3>
         <p class="price-sub" data-hu="VBF · 1–69 m²" data-en="VBF · 1–69 m²">VBF · 1–69 m²</p>
         <div class="price-amount">60 000 Ft</div>
-        <p class="price-note" data-hu="Tájékoztató ár" data-en="Indicative price">Tájékoztató ár</p>
+        <p class="price-note" data-hu="Fix ár" data-en="Fixed price">Fix ár</p>
         <ul class="price-list">
           <li data-hu="Érintésvédelmi mérések (MSZ HD 60364)" data-en="Safety measurements (MSZ HD 60364)">Érintésvédelmi mérések (MSZ HD 60364)</li>
           <li data-hu="Folytonosság + szigetelés vizsgálat" data-en="Continuity + insulation test">Folytonosság + szigetelés vizsgálat</li>
@@ -758,7 +775,7 @@ overflow:visible!important;
         <h3 data-hu="Közepes lakás" data-en="Medium Apartment">Közepes lakás</h3>
         <p class="price-sub" data-hu="VBF · 70–89 m²" data-en="VBF · 70–89 m²">VBF · 70–89 m²</p>
         <div class="price-amount">75 000 Ft</div>
-        <p class="price-note" data-hu="Tájékoztató ár" data-en="Indicative price">Tájékoztató ár</p>
+        <p class="price-note" data-hu="Fix ár" data-en="Fixed price">Fix ár</p>
         <ul class="price-list">
           <li data-hu="Érintésvédelmi mérések (MSZ HD 60364)" data-en="Safety measurements (MSZ HD 60364)">Érintésvédelmi mérések (MSZ HD 60364)</li>
           <li data-hu="Folytonosság + szigetelés + áramvédő kapcsoló vizsgálat" data-en="Continuity + insulation + RCD test">Folytonosság + szigetelés + áramvédő kapcsoló vizsgálat</li>
@@ -772,7 +789,7 @@ overflow:visible!important;
         <h3 data-hu="Nagy lakás / Iroda" data-en="Large Apartment / Office">Nagy lakás / Iroda</h3>
         <p class="price-sub" data-hu="VBF · 90–99 m²" data-en="VBF · 90–99 m²">VBF · 90–99 m²</p>
         <div class="price-amount">80 000 Ft</div>
-        <p class="price-note" data-hu="Tájékoztató ár" data-en="Indicative price">Tájékoztató ár</p>
+        <p class="price-note" data-hu="Fix ár" data-en="Fixed price">Fix ár</p>
         <ul class="price-list">
           <li data-hu="Teljes körű érintésvédelmi felülvizsgálat" data-en="Full electrical safety inspection">Teljes körű érintésvédelmi felülvizsgálat</li>
           <li data-hu="Hurokimpedancia + áramvédő kapcsoló + szigetelés mérés" data-en="Loop impedance + RCD + insulation test">Hurokimpedancia + áramvédő kapcsoló + szigetelés mérés</li>
@@ -785,7 +802,7 @@ overflow:visible!important;
         <h3 data-hu="Nagyobb lakás / Iroda" data-en="Larger Apartment / Office">Nagyobb lakás / Iroda</h3>
         <p class="price-sub" data-hu="VBF · 100–149 m²" data-en="VBF · 100–149 m²">VBF · 100–149 m²</p>
         <div class="price-amount">90 000 Ft</div>
-        <p class="price-note" data-hu="Tájékoztató ár" data-en="Indicative price">Tájékoztató ár</p>
+        <p class="price-note" data-hu="Fix ár" data-en="Fixed price">Fix ár</p>
         <ul class="price-list">
           <li data-hu="Teljes körű érintésvédelmi felülvizsgálat" data-en="Full electrical safety inspection">Teljes körű érintésvédelmi felülvizsgálat</li>
           <li data-hu="Áramvédő kapcsoló teszt + földelés + kötésvizsgálat" data-en="RCD test + earthing + bonding test">Áramvédő kapcsoló teszt + földelés + kötésvizsgálat</li>
@@ -798,7 +815,7 @@ overflow:visible!important;
         <h3 data-hu="Nagy családi ház" data-en="Large House">Nagy családi ház</h3>
         <p class="price-sub" data-hu="VBF · 150–199 m²" data-en="VBF · 150–199 m²">VBF · 150–199 m²</p>
         <div class="price-amount">115 000 Ft</div>
-        <p class="price-note" data-hu="Tájékoztató ár" data-en="Indicative price">Tájékoztató ár</p>
+        <p class="price-note" data-hu="Fix ár" data-en="Fixed price">Fix ár</p>
         <ul class="price-list">
           <li data-hu="Teljes körű érintésvédelmi felülvizsgálat" data-en="Full electrical safety inspection">Teljes körű érintésvédelmi felülvizsgálat</li>
           <li data-hu="Hurokimpedancia + folytonosság mérés" data-en="Loop impedance + continuity measurement">Hurokimpedancia + folytonosság mérés</li>
@@ -838,7 +855,7 @@ overflow:visible!important;
         <a href="#contact" class="price-btn contact-btn" style="width:auto;padding:12px 28px;display:inline-block;white-space:nowrap" data-hu="Villámvédelmi árajánlat" data-en="Lightning Protection Quote">Villámvédelmi árajánlat</a>
       </div>
     </div>
-    <p class="price-custom fade-in" style="text-align:center;margin-top:16px;color:#b8b2d8;font-size:0.85rem;" data-hu="A fenti díjak lakóingatlanokra vonatkozó, tájékoztató jellegű árak. A végleges díj a helyszíni felmérés alapján kerül meghatározásra, mivel az azonos alapterületű ingatlanok villamos hálózatának kialakítása jelentősen eltérhet. Ipari, kereskedelmi és egyéb nem lakáscélú ingatlanok esetén minden esetben egyedi árajánlat készül." data-en="The prices above apply to residential properties and are indicative. The final price is determined after an on-site survey, as electrical layouts vary significantly even for properties of the same size. Industrial, commercial and other non-residential properties always receive a custom quote.">A fenti díjak lakóingatlanokra vonatkozó, tájékoztató jellegű árak. A végleges díj a helyszíni felmérés alapján kerül meghatározásra, mivel az azonos alapterületű ingatlanok villamos hálózatának kialakítása jelentősen eltérhet. Ipari, kereskedelmi és egyéb nem lakáscélú ingatlanok esetén minden esetben egyedi árajánlat készül.</p>
+    <p class="price-custom fade-in" style="text-align:center;margin-top:16px;color:#b8b2d8;font-size:0.85rem;" data-hu="Az árak fix díjak egy önálló lakás vagy családi ház szokásos VBF-vizsgálatára. Tartalmazzák a helyszíni mérést, a minősítő iratot és a Budapest, illetve Pest megye területén végzett kiszállást. Egyedi díj akkor merülhet fel, ha például egy megadott alapterület több külön vizsgálandó lakást vagy elosztót foglal magában, illetve az ingatlanban a méretéhez képest kiemelkedően sok mérési pont van. Ilyenkor a pontos díjat a munka megkezdése előtt egyeztetjük. Többletdíj csak az Ön előzetes jóváhagyásával kerül felszámításra. Ipari, kereskedelmi és egyéb nem lakáscélú ingatlanok esetén minden esetben egyedi árajánlat készül." data-en="The prices are fixed fees for a standard VBF inspection of a single apartment or family house. They include the on-site measurements, the qualification certificate and call-out within Budapest and Pest county. A custom fee may apply if, for example, the stated floor area includes several separate apartments or distribution boards to inspect, or the property has an unusually high number of measurement points for its size. In that case the exact fee is agreed before the work starts. Any additional charge is applied only with your prior approval. Industrial, commercial and other non-residential properties always receive a custom quote.">Az árak fix díjak egy önálló lakás vagy családi ház szokásos VBF-vizsgálatára. Tartalmazzák a helyszíni mérést, a minősítő iratot és a Budapest, illetve Pest megye területén végzett kiszállást. Egyedi díj akkor merülhet fel, ha például egy megadott alapterület több külön vizsgálandó lakást vagy elosztót foglal magában, illetve az ingatlanban a méretéhez képest kiemelkedően sok mérési pont van. Ilyenkor a pontos díjat a munka megkezdése előtt egyeztetjük. Többletdíj csak az Ön előzetes jóváhagyásával kerül felszámításra. Ipari, kereskedelmi és egyéb nem lakáscélú ingatlanok esetén minden esetben egyedi árajánlat készül.</p>
   </div>
 </section>
 
@@ -859,7 +876,7 @@ overflow:visible!important;
         <br>
         <div class="info-item">
           <div class="info-icon">👤</div>
-          <div class="info-text"><strong data-hu="Ügyvezető" data-en="Manager">Ügyvezető</strong>Háros László</div>
+          <div class="info-text"><strong data-hu="Ügyvezető" data-en="Business owner">Ügyvezető</strong>Háros László</div>
         </div>
         <div class="info-item">
           <div class="info-icon">📍</div>
@@ -869,8 +886,7 @@ overflow:visible!important;
           <div class="info-icon">📞</div>
           <div class="info-text">
             <strong data-hu="Telefon" data-en="Phone">Telefon</strong>
-            <a href="tel:+36708029138">+36 70 802 9138</a><span class="en-only"><br>
-            <a href="tel:+447533477739">+44 7533 477739</a></span>
+            <span class="phone-line"><svg class="phone-flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#fff"/><rect width="3" height="0.6667" fill="#CD2A3E"/><rect y="1.3333" width="3" height="0.6667" fill="#436F4D"/></svg><span class="phone-label" data-hu="Magyarországi érdeklődés" data-en="Hungarian enquiries">Magyarországi érdeklődés</span><a href="tel:+36708029138">+36 70 802 9138</a></span><span class="phone-line en-only"><svg class="phone-flag" viewBox="0 0 60 30" aria-hidden="true"><rect width="60" height="30" fill="#00247d"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#cf142b" stroke-width="2"/><path d="M30,0 V30 M0,15 H60" stroke="#fff" stroke-width="10"/><path d="M30,0 V30 M0,15 H60" stroke="#cf142b" stroke-width="6"/></svg><span class="phone-label">English / international enquiries</span><a href="tel:+447533477739">+44 7533 477739</a></span>
           </div>
         </div>
         <div class="info-item">
@@ -889,16 +905,16 @@ overflow:visible!important;
           <div class="form-row">
             <div class="form-group">
               <label data-hu="Neve" data-en="Your Name">Neve</label>
-              <input type="text" name="nev" placeholder="pl. Kovács János" required>
+              <input type="text" name="nev" placeholder="pl. Kovács János" data-ph-hu="pl. Kovács János" data-ph-en="e.g. John Smith" required>
             </div>
             <div class="form-group">
-              <label data-hu="Telefonszám" data-en="Phone Number">Telefonszám</label>
-              <input type="tel" name="telefon" placeholder="+36 30 000 0000" required>
+              <label data-hu="Telefonszám" data-en="Phone number (with country code)">Telefonszám</label>
+              <input type="tel" name="telefon" inputmode="tel" autocomplete="tel" placeholder="+36 30 000 0000" data-ph-hu="+36 30 000 0000" data-ph-en="+44 20 1234 5678" required>
             </div>
           </div>
           <div class="form-group">
             <label>Email</label>
-            <input type="email" name="email" placeholder="pelda@email.com" required>
+            <input type="email" name="email" placeholder="pelda@email.com" data-ph-hu="pelda@email.com" data-ph-en="name@example.com" required>
           </div>
           <div class="form-group">
             <label data-hu="Ügyfél típusa" data-en="Client type">Ügyfél típusa</label>
@@ -926,12 +942,12 @@ overflow:visible!important;
             </div>
             <div class="form-group">
               <label data-hu="Alapterület (m²)" data-en="Floor Area (m²)">Alapterület (m²)</label>
-              <input type="number" name="meret" placeholder="pl. 80" min="1">
+              <input type="number" name="meret" placeholder="pl. 80" data-ph-hu="pl. 80" data-ph-en="e.g. 80" min="1">
             </div>
           </div>
           <div class="form-group" id="teruletGroup" style="display:none">
             <label data-hu="Létesítmény mérete, elosztók / telephelyek száma, vizsgálandó terület" data-en="Facility size, number of distribution boards / sites, area to inspect">Létesítmény mérete, elosztók / telephelyek száma, vizsgálandó terület</label>
-            <input type="text" name="terulet" placeholder="pl. 1 200 m², 3 elosztó, 1 telephely">
+            <input type="text" name="terulet" placeholder="pl. 1 200 m², 3 elosztó, 1 telephely" data-ph-hu="pl. 1 200 m², 3 elosztó, 1 telephely" data-ph-en="e.g. 1,200 m², 3 distribution boards, 1 site">
           </div>
           <div class="form-group">
             <label data-hu="Honnan hallott rólunk?" data-en="How did you hear about us?">Honnan hallott rólunk? (nem kötelező)</label>
@@ -987,7 +1003,7 @@ overflow:visible!important;
           <span class="faq-arrow">▼</span>
         </button>
         <div class="faq-a">
-          <p data-hu="A vizsgálat elvégzéséről minősítő iratot és mérési jegyzőkönyvet állítunk ki, amely adásvételhez, bérbeadáshoz és biztosítóhoz is felhasználható. A dokumentációt 48 órán belül megküldjük." data-en="We issue an qualification certificate and measurement report, suitable for property sale, rental and insurance purposes. Documentation is sent within 48 hours.">Minősítő iratot és mérési jegyzőkönyvet állítunk ki, amely adásvételhez, bérbeadáshoz és biztosítóhoz is felhasználható. A dokumentációt 48 órán belül megküldjük.</p>
+          <p data-hu="A vizsgálat elvégzéséről minősítő iratot és mérési jegyzőkönyvet állítunk ki, amely adásvételhez, bérbeadáshoz és biztosítóhoz is felhasználható. A dokumentációt 48 órán belül megküldjük." data-en="We issue a qualification certificate and a VBF inspection report, suitable for property sale, rental and insurance purposes. Documentation is sent within 48 hours.">Minősítő iratot és mérési jegyzőkönyvet állítunk ki, amely adásvételhez, bérbeadáshoz és biztosítóhoz is felhasználható. A dokumentációt 48 órán belül megküldjük.</p>
         </div>
       </div>
       <div class="faq-item fade-in">
@@ -1023,7 +1039,7 @@ overflow:visible!important;
           <span class="faq-arrow">▼</span>
         </button>
         <div class="faq-a">
-          <p data-hu="100–149 m² között 90 000 Ft, 150–199 m² között 115 000 Ft az irányár. 200 m² felett a díj egyedi megítélés alapján kerül meghatározásra, mivel a vizsgálandó körök száma, az elosztók elhelyezkedése és a mérési pontok mennyisége ingatlanonként jelentősen eltérhet — minden esetben előzetes egyeztetés szükséges." data-en="Between 100–149 m² the indicative price is 90,000 HUF, between 150–199 m² it is 115,000 HUF. Above 200 m², the fee is determined individually, as the number of circuits, distribution board locations and measurement points vary significantly by property — prior consultation is required in every case.">100–149 m² között 90 000 Ft, 150–199 m² között 115 000 Ft az irányár. 200 m² felett a díj egyedi megítélés alapján kerül meghatározásra, mivel a vizsgálandó körök száma, az elosztók elhelyezkedése és a mérési pontok mennyisége ingatlanonként jelentősen eltérhet — minden esetben előzetes egyeztetés szükséges.</p>
+          <p data-hu="100–149 m² között 90 000 Ft, 150–199 m² között 115 000 Ft az ár. 200 m² felett a díj egyedi megítélés alapján kerül meghatározásra, mivel a vizsgálandó körök száma, az elosztók elhelyezkedése és a mérési pontok mennyisége ingatlanonként jelentősen eltérhet — minden esetben előzetes egyeztetés szükséges." data-en="Between 100–149 m² the price is 90,000 HUF, between 150–199 m² it is 115,000 HUF. Above 200 m², the fee is determined individually, as the number of circuits, distribution board locations and measurement points vary significantly by property — prior consultation is required in every case.">100–149 m² között 90 000 Ft, 150–199 m² között 115 000 Ft az ár. 200 m² felett a díj egyedi megítélés alapján kerül meghatározásra, mivel a vizsgálandó körök száma, az elosztók elhelyezkedése és a mérési pontok mennyisége ingatlanonként jelentősen eltérhet — minden esetben előzetes egyeztetés szükséges.</p>
         </div>
       </div>
       <div class="faq-item fade-in">
