@@ -509,6 +509,24 @@ overflow:visible!important;
 @media(max-width:700px){.audience h1{font-size:1.5rem}.aud-paths{grid-template-columns:1fr}.audience{padding-top:30px}}
 </style>
 <style>
+.price-includes{padding:22px 24px!important;background:rgba(124,58,237,.14);border:2px solid #a78bfa;border-radius:14px;padding:22px 24px;margin:0 0 28px;display:flex;flex-direction:column;gap:12px;text-align:left}
+.price-includes h3{margin:0;font-size:1.15rem;font-weight:800;color:#fff}
+.price-includes .pi-lead{margin:0;color:rgba(255,255,255,.78)}
+.pi-checks{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.pi-checks li{display:flex;gap:10px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:10px;padding:12px 14px;font-weight:600;color:#fff}
+.pi-checks small{display:block;font-weight:400;color:rgba(255,255,255,.7);font-size:.82rem}
+.tick{flex:none;width:22px;height:22px;border-radius:50%;background:#6ee7b7;color:#12382a;display:grid;place-items:center;font-weight:800;font-size:.8rem}
+.price-exceptions{padding:0!important;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);border:2px solid rgba(139,92,246,.5);border-radius:14px;overflow:hidden;background:rgba(255,255,255,.06);margin:28px 0 8px;text-align:left}
+.price-exceptions .pe-left{padding:22px 24px;display:flex;flex-direction:column;gap:10px}
+.price-exceptions h3{margin:0;font-size:1.15rem;font-weight:800;color:#fff}
+.price-exceptions ul{margin:0;padding-left:1.1em;color:rgba(255,255,255,.75);display:flex;flex-direction:column;gap:6px}
+.price-exceptions .pe-note{margin:0;color:rgba(255,255,255,.75)}
+.price-exceptions .pe-right{background:rgba(124,58,237,.22);padding:22px 24px;display:flex;align-items:center}
+.promise{display:inline-flex;gap:10px;align-items:flex-start;font-weight:700;font-size:1.02rem;color:#fff}
+.promise .tick{background:#fcd34d;color:#4a3a00}
+@media(max-width:700px){.price-exceptions{grid-template-columns:1fr}}
+</style>
+<style>
 .phone-line{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;margin-top:6px;}
 .phone-flag{width:20px;height:14px;border-radius:2px;flex-shrink:0;box-shadow:0 0 0 1px rgba(255,255,255,.25);}
 .phone-label{font-size:.8rem;color:rgba(255,255,255,.6);}
@@ -756,18 +774,18 @@ overflow:visible!important;
   <div class="inner">
     <h2 class="section-title fade-in" data-hu="VBF Érintésvédelmi árak" data-en="Electrical Safety Inspection Pricing">VBF Érintésvédelmi árak</h2>
     <div class="accent-line fade-in"></div>
-    <p class="section-sub fade-in" data-hu="Átlátható, fix árak a VBF érintésvédelmi felülvizsgálathoz — az ingatlan mérete alapján. Az árak fix végösszegek (számlával együtt), kiszállással Budapesten és Pest megyében. Villámvédelmi felülvizsgálathoz egyedi árajánlatot adunk." data-en="Transparent fixed pricing for VBF electrical safety inspections — based on property size. Prices are fixed totals (invoice included), with call-out in Budapest and Pest county. For lightning protection inspections, contact us for a tailored quote.">Átlátható, fix árak a VBF érintésvédelmi felülvizsgálathoz — az ingatlan mérete alapján. Az árak fix végösszegek (számlával együtt), kiszállással Budapesten és Pest megyében. Villámvédelmi felülvizsgálathoz egyedi árajánlatot adunk.</p>
+    <p class="section-sub fade-in" data-hu="Átlátható, fix árak a VBF érintésvédelmi felülvizsgálathoz — az ingatlan mérete alapján. Villámvédelmi felülvizsgálathoz egyedi árajánlatot adunk." data-en="Transparent fixed pricing for VBF electrical safety inspections — based on property size. For lightning protection inspections, contact us for a tailored quote.">Átlátható, fix árak a VBF érintésvédelmi felülvizsgálathoz — az ingatlan mérete alapján. Villámvédelmi felülvizsgálathoz egyedi árajánlatot adunk.</p>
+    <section class="price-includes fade-in" aria-label="Mit tartalmaz az ár"><h3 data-hu="Az ár fix, és ezt tartalmazza" data-en="The price is fixed and includes">Az ár fix, és ezt tartalmazza</h3><p class="pi-lead" data-hu="Fix díj egy önálló lakás vagy családi ház szokásos VBF-vizsgálatára." data-en="A fixed fee for a standard VBF inspection of a single apartment or family house.">Fix díj egy önálló lakás vagy családi ház szokásos VBF-vizsgálatára.</p><ul class="pi-checks"><li><span class="tick">✓</span><span><span data-hu="Helyszíni mérés" data-en="On-site measurements">Helyszíni mérés</span><small data-hu="fotódokumentációval" data-en="with photo documentation">fotódokumentációval</small></span></li><li><span class="tick">✓</span><span><span data-hu="Minősítő irat és jegyzőkönyv" data-en="Qualification certificate and inspection report">Minősítő irat és jegyzőkönyv</span><small data-hu="48 órán belül" data-en="within 48 hours">48 órán belül</small></span></li><li><span class="tick">✓</span><span><span data-hu="Kiszállás" data-en="Call-out">Kiszállás</span><small data-hu="Budapesten és Pest megyében, külön díj nélkül" data-en="in Budapest and Pest county, no extra charge">Budapesten és Pest megyében, külön díj nélkül</small></span></li><li><span class="tick">✓</span><span><span data-hu="Számlával együtt" data-en="Invoice included">Számlával együtt</span><small data-hu="az ár a végösszeg" data-en="the price is the final total">az ár a végösszeg</small></span></li></ul></section>
     <div class="price-grid">
       <div class="price-card fade-in">
         <h3 data-hu="Kis lakás" data-en="Small Apartment">Kis lakás</h3>
         <p class="price-sub" data-hu="VBF · 1–69 m²" data-en="VBF · 1–69 m²">VBF · 1–69 m²</p>
         <div class="price-amount">60 000 Ft</div>
-        <p class="price-note" data-hu="Fix ár" data-en="Fixed price">Fix ár</p>
+        <p class="price-note" data-hu="Fix ár, kiszállással" data-en="Fixed price, call-out included">Fix ár, kiszállással</p>
         <ul class="price-list">
           <li data-hu="Érintésvédelmi mérések (MSZ HD 60364)" data-en="Safety measurements (MSZ HD 60364)">Érintésvédelmi mérések (MSZ HD 60364)</li>
           <li data-hu="Folytonosság + szigetelés vizsgálat" data-en="Continuity + insulation test">Folytonosság + szigetelés vizsgálat</li>
           <li data-hu="Minősítő irat + dokumentáció fotókkal, 48 órán belül" data-en="Certificate + documentation with photos, within 48h">Minősítő irat + dokumentáció fotókkal, 48 órán belül</li>
-          <li data-hu="Kiszállás Budapesten és Pest megyében díjmentes" data-en="Free call-out in Budapest and Pest county">Kiszállás Budapesten és Pest megyében díjmentes</li>
         </ul>
         <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
       </div>
@@ -775,12 +793,11 @@ overflow:visible!important;
         <h3 data-hu="Közepes lakás" data-en="Medium Apartment">Közepes lakás</h3>
         <p class="price-sub" data-hu="VBF · 70–89 m²" data-en="VBF · 70–89 m²">VBF · 70–89 m²</p>
         <div class="price-amount">75 000 Ft</div>
-        <p class="price-note" data-hu="Fix ár" data-en="Fixed price">Fix ár</p>
+        <p class="price-note" data-hu="Fix ár, kiszállással" data-en="Fixed price, call-out included">Fix ár, kiszállással</p>
         <ul class="price-list">
           <li data-hu="Érintésvédelmi mérések (MSZ HD 60364)" data-en="Safety measurements (MSZ HD 60364)">Érintésvédelmi mérések (MSZ HD 60364)</li>
           <li data-hu="Folytonosság + szigetelés + áramvédő kapcsoló vizsgálat" data-en="Continuity + insulation + RCD test">Folytonosság + szigetelés + áramvédő kapcsoló vizsgálat</li>
           <li data-hu="Minősítő irat + dokumentáció fotókkal, 48 órán belül" data-en="Certificate + documentation with photos, within 48h">Minősítő irat + dokumentáció fotókkal, 48 órán belül</li>
-          <li data-hu="Kiszállás Budapesten és Pest megyében díjmentes" data-en="Free call-out in Budapest and Pest county">Kiszállás Budapesten és Pest megyében díjmentes</li>
         </ul>
         <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
       </div>
@@ -789,12 +806,11 @@ overflow:visible!important;
         <h3 data-hu="Nagy lakás / Iroda" data-en="Large Apartment / Office">Nagy lakás / Iroda</h3>
         <p class="price-sub" data-hu="VBF · 90–99 m²" data-en="VBF · 90–99 m²">VBF · 90–99 m²</p>
         <div class="price-amount">80 000 Ft</div>
-        <p class="price-note" data-hu="Fix ár" data-en="Fixed price">Fix ár</p>
+        <p class="price-note" data-hu="Fix ár, kiszállással" data-en="Fixed price, call-out included">Fix ár, kiszállással</p>
         <ul class="price-list">
           <li data-hu="Teljes körű érintésvédelmi felülvizsgálat" data-en="Full electrical safety inspection">Teljes körű érintésvédelmi felülvizsgálat</li>
           <li data-hu="Hurokimpedancia + áramvédő kapcsoló + szigetelés mérés" data-en="Loop impedance + RCD + insulation test">Hurokimpedancia + áramvédő kapcsoló + szigetelés mérés</li>
           <li data-hu="Minősítő irat + teljes dokumentáció fotókkal, 48 órán belül" data-en="Certificate + full documentation with photos, within 48 hours">Minősítő irat + teljes dokumentáció fotókkal, 48 órán belül</li>
-          <li data-hu="Kiszállás Budapesten és Pest megyében díjmentes" data-en="Free call-out in Budapest and Pest county">Kiszállás Budapesten és Pest megyében díjmentes</li>
         </ul>
         <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
       </div>
@@ -802,12 +818,11 @@ overflow:visible!important;
         <h3 data-hu="Nagyobb lakás / Iroda" data-en="Larger Apartment / Office">Nagyobb lakás / Iroda</h3>
         <p class="price-sub" data-hu="VBF · 100–149 m²" data-en="VBF · 100–149 m²">VBF · 100–149 m²</p>
         <div class="price-amount">90 000 Ft</div>
-        <p class="price-note" data-hu="Fix ár" data-en="Fixed price">Fix ár</p>
+        <p class="price-note" data-hu="Fix ár, kiszállással" data-en="Fixed price, call-out included">Fix ár, kiszállással</p>
         <ul class="price-list">
           <li data-hu="Teljes körű érintésvédelmi felülvizsgálat" data-en="Full electrical safety inspection">Teljes körű érintésvédelmi felülvizsgálat</li>
           <li data-hu="Áramvédő kapcsoló teszt + földelés + kötésvizsgálat" data-en="RCD test + earthing + bonding test">Áramvédő kapcsoló teszt + földelés + kötésvizsgálat</li>
           <li data-hu="Minősítő irat + teljes dokumentáció fotókkal, 48 órán belül" data-en="Certificate + full documentation with photos, within 48 hours">Minősítő irat + teljes dokumentáció fotókkal, 48 órán belül</li>
-          <li data-hu="Kiszállás Budapesten és Pest megyében díjmentes" data-en="Free call-out in Budapest and Pest county">Kiszállás Budapesten és Pest megyében díjmentes</li>
         </ul>
         <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
       </div>
@@ -815,12 +830,11 @@ overflow:visible!important;
         <h3 data-hu="Nagy családi ház" data-en="Large House">Nagy családi ház</h3>
         <p class="price-sub" data-hu="VBF · 150–199 m²" data-en="VBF · 150–199 m²">VBF · 150–199 m²</p>
         <div class="price-amount">115 000 Ft</div>
-        <p class="price-note" data-hu="Fix ár" data-en="Fixed price">Fix ár</p>
+        <p class="price-note" data-hu="Fix ár, kiszállással" data-en="Fixed price, call-out included">Fix ár, kiszállással</p>
         <ul class="price-list">
           <li data-hu="Teljes körű érintésvédelmi felülvizsgálat" data-en="Full electrical safety inspection">Teljes körű érintésvédelmi felülvizsgálat</li>
           <li data-hu="Hurokimpedancia + folytonosság mérés" data-en="Loop impedance + continuity measurement">Hurokimpedancia + folytonosság mérés</li>
           <li data-hu="Minősítő irat + teljes dokumentáció fotókkal, 48 órán belül" data-en="Certificate + full documentation with photos, within 48 hours">Minősítő irat + teljes dokumentáció fotókkal, 48 órán belül</li>
-          <li data-hu="Kiszállás Budapesten és Pest megyében díjmentes" data-en="Free call-out in Budapest and Pest county">Kiszállás Budapesten és Pest megyében díjmentes</li>
         </ul>
         <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
       </div>
@@ -837,6 +851,7 @@ overflow:visible!important;
         <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
       </div>
     </div>
+    <section class="price-exceptions fade-in" aria-label="Mikor lehet más az ár"><div class="pe-left"><h3 data-hu="Mikor lehet más az ár?" data-en="When can the price differ?">Mikor lehet más az ár?</h3><ul><li data-hu="Ha a megadott alapterület több külön vizsgálandó lakást vagy elosztót foglal magában." data-en="If the stated floor area includes several separate apartments or distribution boards to inspect.">Ha a megadott alapterület több külön vizsgálandó lakást vagy elosztót foglal magában.</li><li data-hu="Ha az ingatlanban a méretéhez képest kiemelkedően sok a mérési pont." data-en="If the property has an unusually high number of measurement points for its size.">Ha az ingatlanban a méretéhez képest kiemelkedően sok a mérési pont.</li></ul><p class="pe-note" data-hu="Ilyenkor a pontos díjat a munka megkezdése előtt egyeztetjük." data-en="In that case the exact fee is agreed before the work starts.">Ilyenkor a pontos díjat a munka megkezdése előtt egyeztetjük.</p></div><div class="pe-right"><span class="promise"><span class="tick">!</span><span data-hu="Többletdíj csak az Ön előzetes jóváhagyásával kerül felszámításra." data-en="Any additional charge is applied only with your prior approval.">Többletdíj csak az Ön előzetes jóváhagyásával kerül felszámításra.</span></span></div></section>
     <div class="price-custom fade-in" style="margin-top:28px;padding:28px 32px;background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.25);border-radius:14px;">
       <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:space-between;">
         <div style="flex:1;min-width:260px">
@@ -855,7 +870,7 @@ overflow:visible!important;
         <a href="#contact" class="price-btn contact-btn" style="width:auto;padding:12px 28px;display:inline-block;white-space:nowrap" data-hu="Villámvédelmi árajánlat" data-en="Lightning Protection Quote">Villámvédelmi árajánlat</a>
       </div>
     </div>
-    <p class="price-custom fade-in" style="text-align:center;margin-top:16px;color:#b8b2d8;font-size:0.85rem;" data-hu="Az árak fix díjak egy önálló lakás vagy családi ház szokásos VBF-vizsgálatára. Tartalmazzák a helyszíni mérést, a minősítő iratot és a Budapest, illetve Pest megye területén végzett kiszállást. Egyedi díj akkor merülhet fel, ha például egy megadott alapterület több külön vizsgálandó lakást vagy elosztót foglal magában, illetve az ingatlanban a méretéhez képest kiemelkedően sok mérési pont van. Ilyenkor a pontos díjat a munka megkezdése előtt egyeztetjük. Többletdíj csak az Ön előzetes jóváhagyásával kerül felszámításra. Ipari, kereskedelmi és egyéb nem lakáscélú ingatlanok esetén minden esetben egyedi árajánlat készül." data-en="The prices are fixed fees for a standard VBF inspection of a single apartment or family house. They include the on-site measurements, the qualification certificate and call-out within Budapest and Pest county. A custom fee may apply if, for example, the stated floor area includes several separate apartments or distribution boards to inspect, or the property has an unusually high number of measurement points for its size. In that case the exact fee is agreed before the work starts. Any additional charge is applied only with your prior approval. Industrial, commercial and other non-residential properties always receive a custom quote.">Az árak fix díjak egy önálló lakás vagy családi ház szokásos VBF-vizsgálatára. Tartalmazzák a helyszíni mérést, a minősítő iratot és a Budapest, illetve Pest megye területén végzett kiszállást. Egyedi díj akkor merülhet fel, ha például egy megadott alapterület több külön vizsgálandó lakást vagy elosztót foglal magában, illetve az ingatlanban a méretéhez képest kiemelkedően sok mérési pont van. Ilyenkor a pontos díjat a munka megkezdése előtt egyeztetjük. Többletdíj csak az Ön előzetes jóváhagyásával kerül felszámításra. Ipari, kereskedelmi és egyéb nem lakáscélú ingatlanok esetén minden esetben egyedi árajánlat készül.</p>
+    <p class="price-custom fade-in" style="text-align:center;margin-top:16px;color:#b8b2d8;font-size:0.9rem;" data-hu="Ipari, kereskedelmi és egyéb nem lakáscélú ingatlanok esetén minden esetben egyedi árajánlat készül." data-en="Industrial, commercial and other non-residential properties always receive a custom quote.">Ipari, kereskedelmi és egyéb nem lakáscélú ingatlanok esetén minden esetben egyedi árajánlat készül.</p>
   </div>
 </section>
 
