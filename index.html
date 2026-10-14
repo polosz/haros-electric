@@ -3,22 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-hu="Haros Electric Hungary – VBF Érintésvédelmi Felülvizsgálat" data-en="Haros Electric Hungary – Electrical Inspection &amp; Testing">Haros Electric Hungary – VBF Érintésvédelmi Felülvizsgálat</title>
-<meta name="description" content="VBF érintésvédelmi felülvizsgálat Budapest. Határozattal, szabványos dokumentációval. Haros Electric Hungary.">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P6WGN8X6SC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-P6WGN8X6SC');
+<title data-hu="VBF felülvizsgálat Budapest – érintésvédelmi mérés jegyzőkönyvvel | Haros Electric" data-en="Haros Electric Hungary – Electrical Inspection &amp; Testing">VBF felülvizsgálat Budapest – érintésvédelmi mérés jegyzőkönyvvel | Haros Electric</title>
+<meta name="description" content="VBF és érintésvédelmi felülvizsgálat Budapesten, hivatalos minősítő irattal ingatlan eladáshoz, bérbeadáshoz. Átlátható árak, gyors időpont. Hívjon: +36 70 802 9138.">
+<link rel="canonical" href="https://haroselectric.hu/">
+<meta property="og:title" content="VBF felülvizsgálat Budapest – Haros Electric Hungary">
+<meta property="og:description" content="VBF és érintésvédelmi felülvizsgálat Budapesten, hivatalos minősítő irattal. Átlátható árak, gyors időpont.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://haroselectric.hu/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Electrician","name":"Haros Electric Hungary","url":"https://haroselectric.hu/","telephone":"+36708029138","email":"haroselectric@gmail.com","description":"VBF (villamos biztonsági felülvizsgálat) és érintésvédelmi felülvizsgálat Budapesten és Pest megyében, lakásokban, házakban, társasházakban és irodákban.","address":{"@type":"PostalAddress","streetAddress":"Garay tér","postalCode":"1076","addressLocality":"Budapest","addressCountry":"HU"},"areaServed":["Budapest","Pest megye"],"sameAs":["https://www.facebook.com/profile.php?id=100064488827755","https://www.linkedin.com/in/laszlo-haros-53323683"]}
 </script>
+<!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P6WGN8X6SC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-P6WGN8X6SC');
+  </script>
     <!-- GA4 event tracking: phone and email link clicks -->
     <script>
         document.addEventListener('click', function(e) {
               var link = e.target.closest('a');
               if (!link) return;
-              var href = link.getAttribute('href') || '';
+                    var href = link.getAttribute('href') || '';
               if (href.indexOf('tel:') === 0) {
                       gtag('event', 'phone_click', { 'link_url': href });
               } else if (href.indexOf('mailto:') === 0) {
@@ -26,15 +34,13 @@
               }
         });
     </script>
+
     <!-- GA4 event tracking: contact form submission -->
     <script>
-        document.addEventListener('submit', function(e) {
-              if (e.target && e.target.id === 'contactForm') {
-                      gtag('event', 'form_submit_contact');
-              }
-        });
+        /* form_submit_contact most csak sikeres kuldes utan fut le (lasd sendForm) */
     </script>
-<!-- Meta Pixel Code -->
+  
+  <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -71,15 +77,17 @@ src="https://www.facebook.com/tr?id=1612418367298697&ev=PageView&noscript=1"
   --radius:10px;
 }
 html{scroll-behavior:smooth}
-html,body{width:100%;max-width:100%;overflow-x:hidden;overflow-y:auto;background:#242442;-webkit-overflow-scrolling:touch;}
-body{font-family:var(--font);color:var(--white);}
+html,body{width:100%;max-width:100%;overflow-x:hidden;overflow-y:auto;background:#242442;-webkit-overflow-scrolling:touch;}body{font-family:var(--font);color:var(--white);}
 .navbar{position:fixed;top:0;left:0;right:0;z-index:500;height:var(--nav-h);background:rgba(36,36,66,.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(139,92,246,.18);display:flex;align-items:center;justify-content:space-between;padding:0 48px;}
 .nav-links{display:flex;gap:32px;list-style:none}
 .nav-links a{text-decoration:none;color:rgba(255,255,255,.8);font-size:.87rem;font-weight:600;letter-spacing:.4px;padding:4px 0;border-bottom:2px solid transparent;transition:.2s;}
 .nav-links a:hover,.nav-links a.active{color:var(--accent2);border-color:var(--accent2)}
 .nav-right{display:flex;align-items:center;gap:12px}
-.lang-btn{background:rgba(139,92,246,.18);border:1px solid rgba(139,92,246,.4);border-radius:20px;padding:5px 16px;cursor:pointer;color:var(--accent2);font-size:.78rem;font-weight:700;letter-spacing:1.5px;transition:.2s;font-family:var(--font);}
-.lang-btn:hover{background:rgba(139,92,246,.32)}
+.lang-switch{display:flex;align-items:center;gap:7px;}
+.lang-opt{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:20px;border:1px solid rgba(139,92,246,.4);background:rgba(139,92,246,.1);color:rgba(255,255,255,.6);font-size:.76rem;font-weight:700;letter-spacing:.5px;cursor:pointer;font-family:var(--font);transition:.2s;}
+.lang-opt:hover{background:rgba(139,92,246,.26);}
+.lang-opt.active{background:linear-gradient(90deg,var(--purple2),var(--accent));border-color:transparent;color:#fff;box-shadow:0 4px 14px rgba(124,58,237,.45);}
+.lang-flag{width:18px;height:13px;border-radius:2px;display:block;flex-shrink:0;box-shadow:0 0 0 1px rgba(255,255,255,.2);}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .hamburger span{display:block;width:24px;height:2px;background:var(--white);transition:.3s}
 .hero{position:relative;width:100%;padding-top:var(--nav-h);padding-left:0;padding-right:0;margin:0;padding-bottom:0;line-height:0;background:transparent;overflow:visible}
@@ -97,7 +105,18 @@ section{padding:80px 40px}
 .svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--purple),var(--accent2));opacity:0;transition:.25s;}
 .svc-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(124,58,237,.25);border-color:rgba(139,92,246,.45)}
 .svc-card:hover::before{opacity:1}
-.svc-icon{font-size:2rem;margin:0 auto 14px;width:64px;height:64px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(124,58,237,.12);border:1px solid rgba(139,92,246,.25);}
+.svc-icon{
+font-size:2rem;
+margin:0 auto 14px;
+width:64px;
+height:64px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+background:rgba(124,58,237,.12);
+border:1px solid rgba(139,92,246,.25);
+}
 .svc-card h3{font-size:1rem;font-weight:700;color:var(--accent2);margin-bottom:10px}
 .svc-card p{font-size:.875rem;color:rgba(255,255,255,.78);line-height:1.65}
 .why{background:#2a2a68}
@@ -122,6 +141,10 @@ section{padding:80px 40px}
 .price-btn:hover{opacity:.88;transform:translateY(-1px)}
 .price-custom{margin-top:40px;text-align:center;background:rgba(255,255,255,.07);border:1px solid rgba(139,92,246,.2);border-radius:var(--radius);padding:28px;}
 .price-custom p{color:rgba(255,255,255,.7);margin-bottom:16px;font-size:.95rem}
+.gallery{background:#2a2a54}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+.gallery-grid img{width:100%;height:220px;object-fit:cover;border-radius:8px;display:block;transition:transform .3s,filter .3s,box-shadow .3s;cursor:pointer;filter:brightness(.88) saturate(1.1);}
+.gallery-grid img:hover{transform:scale(1.03);filter:brightness(1.05) saturate(1.3);box-shadow:0 8px 28px rgba(124,58,237,.4);}
 .contact{background:linear-gradient(180deg,#2a2a54 0%,#2e2e64 100%)}
 .contact-wrap{display:grid;grid-template-columns:1fr 1.6fr;gap:60px;align-items:start}
 .contact-info h2{font-size:1.6rem;font-weight:900;margin-bottom:20px}
@@ -156,6 +179,7 @@ footer a{color:rgba(139,92,246,.7);text-decoration:none}
   .svc-grid{grid-template-columns:1fr 1fr}
   .price-grid{grid-template-columns:1fr}
   .price-card.featured{transform:none}
+  .gallery-grid{grid-template-columns:1fr 1fr}
   .contact-wrap{grid-template-columns:1fr}
   .why-grid{grid-template-columns:1fr}
   section{padding:60px 24px}
@@ -165,94 +189,271 @@ footer a{color:rgba(139,92,246,.7);text-decoration:none}
   .nav-links.open{display:flex}
   .nav-links li a{display:block;padding:16px 28px;border-bottom:1px solid rgba(255,255,255,.06)}
   .hamburger{display:flex}
+  .lang-opt{padding:5px 9px;font-size:0.68rem;gap:4px;}
+  .lang-flag{width:16px;height:12px;}
   .svc-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
   .section-title{font-size:1.5rem}
 }
 
-/* ===== WARNING STRIP ===== */
-.warning-strip{background:linear-gradient(90deg,#7c1d1d,#9a2020);color:#ffe4e4;text-align:center;padding:14px 20px;font-weight:600;font-size:1rem;letter-spacing:.02em;display:flex;align-items:center;justify-content:center;gap:10px;}
-.warning-icon{font-size:1.3rem;}
+  /* ===== WARNING STRIP ===== */
+  .warning-strip {
+    background: linear-gradient(90deg, #7c1d1d, #9a2020);
+    color: #ffe4e4;
+    text-align: center;
+    padding: 14px 20px;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .warning-icon { font-size: 1.3rem; }
 
-/* ===== STATS BAR ===== */
-.stats-bar{background:rgba(124,58,237,0.20);border-top:1px solid rgba(124,58,237,0.4);border-bottom:1px solid rgba(124,58,237,0.4);display:flex;justify-content:center;gap:0;flex-wrap:wrap;padding:0;}
-.stat-item{flex:1;min-width:160px;text-align:center;padding:28px 20px;border-right:1px solid rgba(124,58,237,0.2);}
-.stat-item:last-child{border-right:none;}
-.stat-num{font-size:2.4rem;font-weight:800;color:var(--accent2);line-height:1;margin-bottom:6px;}
-.stat-label{font-size:0.85rem;color:#a9b4c2;}
+  /* ===== STATS BAR ===== */
+  .stats-bar {
+    background: rgba(124,58,237,0.20);
+    border-top: 1px solid rgba(124,58,237,0.4);
+    border-bottom: 1px solid rgba(124,58,237,0.4);
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  .stat-item {
+    flex: 1;
+    min-width: 160px;
+    text-align: center;
+    padding: 28px 20px;
+    border-right: 1px solid rgba(124,58,237,0.2);
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-num {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--accent2);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-label { font-size: 0.85rem; color: #a9b4c2; }
 
-/* ===== CTA BAND ===== */
-.cta-band{background:linear-gradient(90deg,rgba(124,58,237,0.18),rgba(167,139,250,0.1));border-top:1px solid rgba(124,58,237,0.4);border-bottom:1px solid rgba(124,58,237,0.4);text-align:center;padding:36px 20px;display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;}
-.cta-band p{margin:0;font-size:1.1rem;font-weight:500;color:#d0d8f0;}
-.btn-cta{background:var(--purple);color:#fff;padding:13px 30px;border-radius:8px;text-decoration:none;font-weight:700;font-size:1rem;transition:background .2s,transform .2s;white-space:nowrap;}
-.btn-cta:hover{background:var(--accent2);color:#07071a;transform:translateY(-2px);}
+  /* ===== CTA BAND ===== */
+  .cta-band {
+    background: linear-gradient(90deg, rgba(124,58,237,0.18), rgba(167,139,250,0.1));
+    border-top: 1px solid rgba(124,58,237,0.4);
+    border-bottom: 1px solid rgba(124,58,237,0.4);
+    text-align: center;
+    padding: 36px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .cta-band p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #d0d8f0;
+  }
+  .btn-cta {
+    background: var(--purple);
+    color: #fff;
+    padding: 13px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: background 0.2s, transform 0.2s;
+    white-space: nowrap;
+  }
+  .btn-cta:hover { background: var(--accent2); color: #07071a; transform: translateY(-2px); }
 
-/* ===== HOW IT WORKS ===== */
-.how-section{padding:70px 0;}
-.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:32px;}
-@media(max-width:900px){.steps-grid{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:520px){.steps-grid{grid-template-columns:1fr;}}
-.step-card{background:rgba(255,255,255,0.08);border:1px solid rgba(124,58,237,0.25);border-radius:14px;padding:28px 20px;text-align:center;position:relative;transition:border-color .3s,transform .3s;}
-.step-card:hover{border-color:var(--purple);transform:translateY(-4px);}
-.step-num{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--purple);color:#fff;font-size:.85rem;font-weight:800;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
-.step-icon{font-size:2rem;margin:8px 0 12px;}
-.step-card h3{font-size:1rem;margin-bottom:8px;color:var(--accent2);}
-.step-card p{font-size:.88rem;color:#a9b4c2;line-height:1.5;}
+  /* ===== HOW IT WORKS (HOGYAN ZAJLIK) ===== */
+  .how-section { padding: 70px 0; }
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 32px;
+  }
+  @media(max-width:900px){ .steps-grid { grid-template-columns: repeat(2,1fr); } }
+  @media(max-width:520px){ .steps-grid { grid-template-columns: 1fr; } }
+  .step-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(124,58,237,0.25);
+    border-radius: 14px;
+    padding: 28px 20px;
+    text-align: center;
+    position: relative;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .step-card:hover { border-color: var(--purple); transform: translateY(-4px); }
+  .step-num {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--purple);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 800;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .step-icon { font-size: 2rem; margin: 8px 0 12px; }
+  .step-card h3 { font-size: 1rem; margin-bottom: 8px; color: var(--accent2); }
+  .step-card p { font-size: 0.88rem; color: #a9b4c2; line-height: 1.5; }
 
-/* ===== GYIK / FAQ ===== */
-.gyik-section{padding:70px 0;}
-.faq-list{max-width:780px;margin:32px auto 0;}
-.faq-item{border:1px solid rgba(124,58,237,0.25);border-radius:10px;margin-bottom:12px;overflow:hidden;transition:border-color .3s;}
-.faq-item.open{border-color:var(--purple);}
-.faq-q{width:100%;background:rgba(255,255,255,0.07);border:none;cursor:pointer;padding:18px 20px;text-align:left;color:#d0d8f0;font-size:1rem;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:inherit;}
-.faq-q:hover{background:rgba(124,58,237,0.1);}
-.faq-arrow{font-size:.75rem;color:var(--accent2);transition:transform .3s;flex-shrink:0;}
-.faq-item.open .faq-arrow{transform:rotate(180deg);}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .3s;padding:0 20px;}
-.faq-item.open .faq-a{max-height:300px;padding:0 20px 18px;}
-.faq-a p{margin:0;color:#a9b4c2;font-size:.92rem;line-height:1.65;}
+  /* ===== GYIK / FAQ ===== */
+  .gyik-section { padding: 70px 0; }
+  .faq-list { max-width: 780px; margin: 32px auto 0; }
+  .faq-item {
+    border: 1px solid rgba(124,58,237,0.25);
+    border-radius: 10px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: border-color 0.3s;
+  }
+  .faq-item.open { border-color: var(--purple); }
+  .faq-q {
+    width: 100%;
+    background: rgba(255,255,255,0.07);
+    border: none;
+    cursor: pointer;
+    padding: 18px 20px;
+    text-align: left;
+    color: #d0d8f0;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    font-family: inherit;
+  }
+  .faq-q:hover { background: rgba(124,58,237,0.1); }
+  .faq-arrow { font-size: 0.75rem; color: var(--accent2); transition: transform 0.3s; flex-shrink: 0; }
+  .faq-item.open .faq-arrow { transform: rotate(180deg); }
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.3s;
+    padding: 0 20px;
+  }
+  .faq-item.open .faq-a { max-height: 300px; padding: 0 20px 18px; }
+  .faq-a p { margin: 0; color: #a9b4c2; font-size: 0.92rem; line-height: 1.65; }
 
-/* ===== MOBILE FIXES ===== */
+
+
 @media(max-width:960px){
-  html,body{overflow-x:hidden !important;width:100%;}
-  *{max-width:100%;}
-  .inner{width:100%;max-width:100%;padding-left:16px;padding-right:16px;overflow:visible;}
-  section{padding:56px 0;}
-  .stats-bar{display:grid;grid-template-columns:1fr 1fr;}
-  .stat-item{min-width:0;border-right:none;border-bottom:1px solid rgba(124,58,237,.2);}
-  .cta-band{flex-direction:column;text-align:center;}
-  .price-grid{display:grid !important;grid-template-columns:1fr !important;gap:20px;}
-  .price-card,.price-card.featured{width:100%;max-width:100%;transform:none !important;margin:0;}
-  .price-custom>div{flex-direction:column;align-items:center;text-align:center;}
-  .price-btn{width:100%;}
-  .contact-wrap,.why-grid,.svc-grid{grid-template-columns:1fr !important;}
-  img{max-width:100%;height:auto;}
+  html,body{overflow-x:hidden;}
+  .price-grid{grid-template-columns:1fr !important;}
+  .price-card{
+    width:100%;
+    max-width:100%;
+    min-width:0;
+  }
+  .price-card.featured{
+    transform:none;
+  }
+  .price-amount,
+  .price-list,
+  .price-note,
+  .price-sub,
+  .price-card h3{
+    overflow-wrap:anywhere;
+    word-break:break-word;
+  }
+  .inner{
+    width:100%;
+    max-width:1140px;
+    overflow:visible;
+  }
 }
 
-.hero + *{margin-top:0!important}
-.warning-strip{margin-top:0!important}
+
+/* ===== COMPLETE MOBILE OPTIMIZATION ===== */
+@media(max-width:960px){
+  html,body{
+    overflow-x:hidden !important;
+    width:100%;
+  }
+  *{
+    max-width:100%;
+  }
+  .inner{
+    width:100%;
+    max-width:100%;
+    padding-left:16px;
+    padding-right:16px;
+    overflow:visible;
+  }
+  section{
+    padding:56px 0;
+  }
+  .stats-bar{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+  .stat-item{
+    min-width:0;
+    border-right:none;
+    border-bottom:1px solid rgba(124,58,237,.2);
+  }
+  .cta-band{
+    flex-direction:column;
+    text-align:center;
+  }
+  .price-grid{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:20px;
+  }
+  .price-card,
+  .price-card.featured{
+    width:100%;
+    max-width:100%;
+    transform:none !important;
+    margin:0;
+  }
+  .price-custom>div{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+  }
+  .price-btn{
+    width:100%;
+  }
+  .contact-wrap,
+  .why-grid,
+  .svc-grid,
+  .gallery-grid{
+    grid-template-columns:1fr !important;
+  }
+  img{
+    max-width:100%;
+    height:auto;
+  }
+}
+
+.hero + *{margin-top:0!important}.warning-strip{margin-top:0!important}
+
+/* Scroll fixes */
 html,body{overscroll-behavior-y:auto;}
-.price-custom,.price-grid,.pricing,.inner,.contact-wrap,.svc-grid,.why-grid{overflow:visible!important;}
-
-/* ===== NEW: NAV PHONE LINK ===== */
-.nav-phone{color:var(--accent2);text-decoration:none;font-size:.82rem;font-weight:700;white-space:nowrap;padding:5px 12px;border:1px solid rgba(139,92,246,.4);border-radius:20px;background:rgba(139,92,246,.1);transition:.2s;}
-.nav-phone:hover{background:rgba(139,92,246,.25);}
-@media(max-width:768px){.nav-phone{display:none;}}
-
-/* ===== NEW: HERO CTA BLOCK ===== */
-.hero-cta-block{display:flex;gap:14px;justify-content:center;padding:24px 20px;flex-wrap:wrap;background:rgba(36,36,66,.85);border-bottom:1px solid rgba(124,58,237,.25);}
-.btn-hero-primary{background:var(--purple);color:#fff;padding:14px 28px;border-radius:50px;text-decoration:none;font-weight:700;font-size:.95rem;letter-spacing:.3px;transition:.2s;white-space:nowrap;}
-.btn-hero-primary:hover{background:var(--accent);transform:translateY(-2px);box-shadow:0 8px 24px rgba(124,58,237,.4);}
-.btn-hero-secondary{background:transparent;color:var(--accent2);padding:13px 28px;border-radius:50px;text-decoration:none;font-weight:700;font-size:.95rem;border:2px solid var(--accent2);transition:.2s;white-space:nowrap;}
-.btn-hero-secondary:hover{background:rgba(139,92,246,.15);transform:translateY(-2px);}
-
-/* ===== NEW: MOBILE STICKY PHONE BAR ===== */
-.mobile-sticky-phone{display:none;position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--purple);align-items:center;justify-content:center;}
-.mobile-sticky-phone a{color:#fff;text-decoration:none;font-weight:700;font-size:1rem;padding:16px 20px;display:block;width:100%;text-align:center;letter-spacing:.5px;}
-@media(max-width:768px){
-  body{padding-bottom:56px;}
-  .mobile-sticky-phone{display:flex;}
+.price-custom,.price-grid,.pricing,.inner,.contact-wrap,.gallery-grid,.svc-grid,.why-grid{
+overflow:visible!important;
 }
+
+.header-phone{display:inline-flex;align-items:center;gap:6px;margin-right:16px;padding:6px 12px;font-weight:600;font-size:15px;color:#a78bfa;text-decoration:none;white-space:nowrap;}.header-phone:hover{text-decoration:underline;}.hero-cta-group{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;padding:24px 20px 4px;}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 24px;border-radius:8px;font-weight:600;font-size:1rem;text-decoration:none;transition:opacity .15s ease;}.btn-primary-call{background:var(--purple);color:#fff;}.btn-primary-call:hover{opacity:.88;}.btn-secondary-quote{background:transparent;border:2px solid var(--purple);color:#fff;}.btn-secondary-quote:hover{background:rgba(124,58,237,.15);}.mobile-sticky-call{display:none;}@media(max-width:768px){.mobile-sticky-call{display:block;position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--purple);box-shadow:0 -2px 8px rgba(0,0,0,.25);}.mobile-sticky-call-link{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px 0;color:#fff;font-weight:700;font-size:1rem;text-decoration:none;}body{padding-bottom:56px;}}@media(max-width:600px){.header-phone{display:none}}html[data-lang="hu"] .en-only{display:none}
 </style>
 </head>
 <body>
@@ -265,23 +466,30 @@ html,body{overscroll-behavior-y:auto;}
     <li><a href="#contact" data-hu="Kapcsolat" data-en="Contact">Kapcsolat</a></li>
   </ul>
   <div class="nav-right">
-    <a href="tel:+36708029138" class="nav-phone" data-hu="📞 +36 70 802 9138" data-en="📞 +36 70 802 9138">📞 +36 70 802 9138</a>
-    <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
+    <a href="tel:+36708029138" class="header-phone" aria-label="Hívás: +36 70 802 9138">📞 +36 70 802 9138</a> <div class="lang-switch" id="langBtn" role="group" aria-label="Nyelv váltása / Switch language">
+      <button type="button" class="lang-opt lang-opt-hu active" onclick="setLang('hu')">
+        <svg class="lang-flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#fff"/><rect width="3" height="0.6667" fill="#CD2A3E"/><rect y="1.3333" width="3" height="0.6667" fill="#436F4D"/></svg>HU
+      </button>
+      <button type="button" class="lang-opt lang-opt-en" onclick="setLang('en')">
+        <svg class="lang-flag" viewBox="0 0 60 30" aria-hidden="true"><rect width="60" height="30" fill="#00247d"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#cf142b" stroke-width="2"/><path d="M30,0 V30 M0,15 H60" stroke="#fff" stroke-width="10"/><path d="M30,0 V30 M0,15 H60" stroke="#cf142b" stroke-width="6"/></svg>EN
+      </button>
+    </div>
     <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
 <section class="hero" id="hero">
-  <img id="hero-banner-img" alt="Haros Electric Hungary – VBF Érintésvédelmi Felülvizsgálat" class="hero-img" src="hero-mobile-hu.jpg">
+  <img id="hero-banner-img" alt="Haros Electric Hungary – VBF Érintésvédelmi Felülvizsgálat" class="hero-img">
   <script>
     document.getElementById('hero-banner-img').src = (window.innerWidth<=768) ? 'hero-mobile-hu.jpg' : 'hero_hu_new.png';
   </script>
 </section>
-
 <div class="warning-strip fade-in">
   <span class="warning-icon">⚠️</span>
   <span data-hu="Ingatlan adásvételekor és bérbeadáskor KÖTELEZŐ a VBF – 40/2017 NGM rendelet alapján" data-en="VBF inspection is MANDATORY for property sale &amp; rental – NGM decree 40/2017">Ingatlan adásvételekor és bérbeadáskor KÖTELEZŐ a VBF – 40/2017 NGM rendelet alapján</span>
 </div>
+
+
 
 <div class="stats-bar">
   <div class="stat-item fade-in">
@@ -302,37 +510,31 @@ html,body{overscroll-behavior-y:auto;}
   </div>
 </div>
 
-<!-- MODIFICATION 2: Hero CTA Block -->
-<div class="hero-cta-block">
-  <a href="tel:+36708029138" class="btn-hero-primary" data-hu="📞 Hívjon most: +36 70 802 9138" data-en="📞 Call now: +36 70 802 9138">📞 Hívjon most: +36 70 802 9138</a>
-  <a href="#contact" class="btn-hero-secondary contact-btn" data-hu="Ingyenes árajánlatot kérek" data-en="Request Free Quote">Ingyenes árajánlatot kérek</a>
-</div>
-
-<section id="services" class="services">
+<div class="hero-cta-group fade-in"><a href="tel:+36708029138" class="btn btn-primary-call" data-hu="📞 Hívjon most: +36 70 802 9138" data-en="📞 Call now: +36 70 802 9138">📞 Hívjon most: +36 70 802 9138</a> <a href="#contact" class="btn btn-secondary-quote" data-hu="Ingyenes árajánlatot kérek" data-en="Request Free Quote">Ingyenes árajánlatot kérek</a></div><section id="services" class="services">
   <div class="inner">
     <h2 class="section-title fade-in" data-hu="Szolgáltatásaink" data-en="Our Services">Szolgáltatásaink</h2>
     <div class="accent-line fade-in"></div>
-    <p class="section-sub fade-in" data-hu="Hatósági felülvizsgálatok, amelyek megfelelnek a hatályos jogszabályoknak és szabványoknak — gyorsan, dokumentáltan." data-en="Official inspections compliant with current regulations and standards — fast, documented and certified.">Hatósági felülvizsgálatok, amelyek megfelelnek a hatályos jogszabályoknak és szabványoknak — gyorsan, dokumentáltan.</p>
+    <p class="section-sub fade-in" data-hu="Szakszerű felülvizsgálatok, amelyek megfelelnek a hatályos jogszabályoknak és szabványoknak — gyorsan, dokumentáltan." data-en="Professional inspections compliant with current regulations and standards — fast, documented and certified.">Szakszerű felülvizsgálatok, amelyek megfelelnek a hatályos jogszabályoknak és szabványoknak — gyorsan, dokumentáltan.</p>
     <div class="svc-grid">
       <div class="svc-card fade-in">
         <div class="svc-icon">🛡️</div>
         <h3 data-hu="VBF Érintésvédelmi felülvizsgálat" data-en="Electrical Safety Inspection (VBF)">VBF Érintésvédelmi felülvizsgálat</h3>
-        <p data-hu="Lakások, házak, irodák és ipari ingatlanok érintésvédelmi mérése az MSZ HD 60364 szabvány szerint. Adásvételhez, bérbeadáshoz és biztosítóhoz elfogadott határozattal." data-en="Electrical safety measurement for homes, offices and industrial properties per MSZ HD 60364. Official certificate accepted for sale, rental and insurance.">Lakások, házak, irodák és ipari ingatlanok érintésvédelmi mérése MSZ HD 60364 szabvány szerint. Adásvételhez és biztosítóhoz elfogadott határozattal.</p>
+        <p data-hu="Lakások, házak, irodák és ipari ingatlanok érintésvédelmi mérése az MSZ HD 60364 szabvány szerint. Adásvételhez, bérbeadáshoz és biztosítóhoz elfogadott minősítő irattal." data-en="Electrical safety measurement for homes, offices and industrial properties per MSZ HD 60364. Official certificate accepted for sale, rental and insurance.">Lakások, házak, irodák és ipari ingatlanok érintésvédelmi mérése MSZ HD 60364 szabvány szerint. Adásvételhez és biztosítóhoz elfogadott minősítő irattal.</p>
       </div>
       <div class="svc-card fade-in">
         <div class="svc-icon">⚡</div>
         <h3 data-hu="Villámvédelmi felülvizsgálat" data-en="Lightning Protection Inspection">Villámvédelmi felülvizsgálat</h3>
-        <p data-hu="Villámvédelmi rendszerek hatósági felülvizsgálata. Épületek, ipari létesítmények és kockázati kategóriák szerint kötelező vizsgálatok elvégzése határozattal." data-en="Official inspection of lightning protection systems. Mandatory inspections for buildings and industrial facilities by risk category, with official certificate.">Villámvédelmi rendszerek hatósági felülvizsgálata. Kötelező vizsgálatok épületekre és ipari létesítményekre, határozattal dokumentálva.</p>
+        <p data-hu="Villámvédelmi rendszerek időszakos felülvizsgálata. Épületek, ipari létesítmények és kockázati kategóriák szerint kötelező vizsgálatok elvégzése minősítő irattal." data-en="Periodic inspection of lightning protection systems. Mandatory inspections for buildings and industrial facilities by risk category, with official certificate.">Villámvédelmi rendszerek időszakos felülvizsgálata. Kötelező vizsgálatok épületekre és ipari létesítményekre, minősítő irattal dokumentálva.</p>
       </div>
       <div class="svc-card fade-in">
         <div class="svc-icon">📄</div>
-        <h3 data-hu="Határozat és dokumentáció 48h-n belül" data-en="Certificate &amp; Documentation within 48h">Határozat és dokumentáció 48h-n belül</h3>
-        <p data-hu="A felülvizsgálat elvégzése után 48 órán belül megkapja a teljes dokumentációt — mérési jegyzőkönyvet és hivatalos határozatot, amelyet minden hatóság elfogad." data-en="Full documentation within 48 hours of inspection — measurement report and official certificate accepted by all authorities.">A vizsgálat után 48 órán belül kapja meg a teljes mérési dokumentációt és a határozatot. Hatóságok, biztosítók és ingatlanközvetítők elfogadják.</p>
+        <h3 data-hu="Minősítő irat és dokumentáció 48h-n belül" data-en="Certificate &amp; Documentation within 48h">Minősítő irat és dokumentáció 48h-n belül</h3>
+        <p data-hu="A felülvizsgálat elvégzése után 48 órán belül megkapja a teljes dokumentációt — mérési jegyzőkönyvet és minősítő iratot, amely adásvételhez és bérbeadáshoz is felhasználható." data-en="Full documentation within 48 hours of inspection — measurement report and official certificate, suitable for property sale and rental.">A vizsgálat után 48 órán belül kapja meg a teljes mérési dokumentációt és a minősítő iratot. Ingatlanközvetítők, ügyvédek és biztosítók számára is felhasználható.</p>
       </div>
       <div class="svc-card fade-in">
         <div class="svc-icon">🔧</div>
         <h3 data-hu="Kisebb hibaelhárítás a helyszínen" data-en="Minor On-Site Repairs">Kisebb hibaelhárítás a helyszínen</h3>
-        <p data-hu="Ha a felülvizsgálat során kisebb hiba derül ki (pl. hiányos földelés, laza csatlakozás), azt helyszínen javítjuk, hogy az ingatlan azonnal megkapja a határozatot." data-en="If a minor fault is found during inspection (e.g. incomplete earthing, loose connection), we repair it on the spot so the property can receive its certificate immediately.">Ha kisebb hiba derül ki a vizsgálat során, azt helyszínen javítjuk — így az ingatlan azonnal megkaphatja az érvényes határozatot.</p>
+        <p data-hu="Ha a felülvizsgálat során kisebb hiba derül ki (pl. hiányos földelés, laza csatlakozás), azt helyszínen javítjuk, hogy az ingatlan azonnal megkapja a minősítő iratot." data-en="If a minor fault is found during inspection (e.g. incomplete earthing, loose connection), we repair it on the spot so the property can receive its certificate immediately.">Ha kisebb hiba derül ki a vizsgálat során, azt helyszínen javítjuk — így az ingatlan azonnal megkaphatja az érvényes minősítő iratot.</p>
       </div>
     </div>
   </div>
@@ -364,17 +566,34 @@ html,body{overscroll-behavior-y:auto;}
         <div class="step-num">3</div>
         <div class="step-icon">🔌</div>
         <h3 data-hu="Helyszíni mérés" data-en="On-site inspection">Helyszíni mérés</h3>
-        <p data-hu="Szakértőink elvégzik az MSZ HD 60364 szabvány szerinti teljes körű érintésvédelmi mérést az ingatlanban." data-en="Our experts carry out a comprehensive inspection according to MSZ HD 60364 standard.">Szakértőink elvégzik a teljes körű VBF és villámvédelmi felülvizsgálatot MSZ HD 60364 szabvány szerint.</p>
+        <p data-hu="Elvégezzük az MSZ HD 60364 szabvány szerinti teljes körű érintésvédelmi mérést az ingatlanban." data-en="We carry out a comprehensive inspection according to MSZ HD 60364 standard.">Elvégezzük a teljes körű VBF és villámvédelmi felülvizsgálatot MSZ HD 60364 szabvány szerint.</p>
       </div>
       <div class="step-card fade-in">
         <div class="step-num">4</div>
         <div class="step-icon">📄</div>
         <h3 data-hu="Dokumentáció 48h-n belül" data-en="Documentation within 48h">Dokumentáció 48h-n belül</h3>
-        <p data-hu="Hivatalos határozatot és teljes dokumentációt küldünk 48 órán belül — hatóságok és biztosítók által elfogadva." data-en="We send the official certificate and full documentation within 48 hours — accepted by authorities and insurers.">Hivatalos határozatot és teljes dokumentációt küldünk 48 órán belül.</p>
+        <p data-hu="Minősítő iratot és teljes dokumentációt küldünk 48 órán belül — adásvételhez és bérbeadáshoz felhasználható formában." data-en="We send the official certificate and full documentation within 48 hours — suitable for sale and rental purposes.">Minősítő iratot és teljes dokumentációt küldünk 48 órán belül.</p>
       </div>
     </div>
   </div>
 </section>
+
+
+<section id="muszer" style="padding:70px 0;background:#2a2a54">
+  <div class="inner">
+    <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center" class="muszer-grid">
+      <div class="fade-in"><img src="metrel-rcd-vizsgalat.jpg" alt="Metrel EurotestXD MI 3155 műszer RCD (FI-relé) vizsgálat közben" width="1200" height="899" loading="lazy" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(139,92,246,.35);box-shadow:0 12px 36px rgba(0,0,0,.35);display:block"></div>
+      <div class="fade-in">
+        <h2 class="section-title" style="text-align:left" data-hu="Korszerű műszerrel, helyszíni mérés" data-en="Modern instruments, on-site testing">Korszerű műszerrel, helyszíni mérés</h2>
+        <div class="accent-line" style="margin-left:0"></div>
+        <p style="color:rgba(255,255,255,.8);font-size:.97rem;line-height:1.7;margin-bottom:14px" data-hu="A méréseket Metrel MI 3155 EurotestXD műszerrel végezzük. A képen egy RCD (FI-relé) vizsgálat látható munka közben: a műszer az áram-védőkapcsoló működését méri." data-en="We carry out measurements with a Metrel MI 3155 EurotestXD instrument. The photo shows an RCD test in progress: the instrument measures the operation of the residual current device.">A méréseket Metrel MI 3155 EurotestXD műszerrel végezzük. A képen egy RCD (FI-relé) vizsgálat látható munka közben: a műszer az áram-védőkapcsoló működését méri.</p>
+        <p style="color:rgba(255,255,255,.8);font-size:.97rem;line-height:1.7;margin-bottom:20px" data-hu="Ingatlan eladása előtt áll? Nézze meg, mit és hogyan ellenőrzünk." data-en="Selling a property? See what we check and how (Hungarian page).">Ingatlan eladása előtt áll? Nézze meg, mit és hogyan ellenőrzünk.</p>
+        <a href="/vbf-ingatlan-eladas-elott.html" class="price-btn" style="width:auto;padding:12px 28px" data-hu="VBF ingatlan eladás előtt →" data-en="VBF before selling a property →">VBF ingatlan eladás előtt →</a>
+      </div>
+    </div>
+  </div>
+</section>
+<style>@media(max-width:800px){.muszer-grid{grid-template-columns:1fr!important}}</style>
 
 <section id="why" class="why">
   <div class="inner">
@@ -391,8 +610,8 @@ html,body{overscroll-behavior-y:auto;}
       <div class="why-item fade-in">
         <div class="why-icon">📋</div>
         <div>
-          <h3 data-hu="Határozattal, dokumentálva" data-en="Officially Certified">Határozattal, dokumentálva</h3>
-          <p data-hu="Minden felülvizsgálat hivatalos határozattal és szabványos dokumentációval zárul — elfogadott hatóságok és biztosítók számára." data-en="Every inspection concludes with an official decision and standard documentation — accepted by authorities and insurers.">Minden felülvizsgálat hivatalos határozattal és szabványos dokumentációval zárul.</p>
+          <h3 data-hu="Minősítő irattal, dokumentálva" data-en="Officially Certified">Minősítő irattal, dokumentálva</h3>
+          <p data-hu="Minden felülvizsgálat minősítő irattal és szabványos dokumentációval zárul — adásvételhez, bérbeadáshoz és biztosítóhoz." data-en="Every inspection concludes with an official qualification certificate and standard documentation — suitable for sale, rental and insurance purposes.">Minden felülvizsgálat minősítő irattal és szabványos dokumentációval zárul.</p>
         </div>
       </div>
       <div class="why-item fade-in">
@@ -413,7 +632,7 @@ html,body{overscroll-behavior-y:auto;}
         <div class="why-icon">📐</div>
         <div>
           <h3 data-hu="MSZ HD 60364 szabvány szerint" data-en="According to MSZ HD 60364 standard">MSZ HD 60364 szabvány szerint</h3>
-          <p data-hu="Minden vizsgálatot az MSZ HD 60364 európai villamos szabvány előírásai szerint végzünk. Dokumentációnkat hatóságok, biztosítók és ingatlanközvetítők egyaránt elfogadják." data-en="All inspections are carried out in accordance with the MSZ HD 60364 European electrical standard. Our documentation is accepted by authorities, insurers and real estate agents.">Minden vizsgálatot az MSZ HD 60364 európai villamos szabvány előírásai szerint végzünk. Dokumentációnkat hatóságok és biztosítók egyaránt elfogadják.</p>
+          <p data-hu="Minden vizsgálatot az MSZ HD 60364 európai villamos szabvány előírásai szerint végzünk. Dokumentációnk adásvételhez, bérbeadáshoz és biztosítóhoz is felhasználható." data-en="All inspections are carried out in accordance with the MSZ HD 60364 European electrical standard. Our documentation is suitable for property sale, rental and insurance purposes.">Minden vizsgálatot az MSZ HD 60364 európai villamos szabvány előírásai szerint végzünk. Dokumentációnk adásvételhez, bérbeadáshoz és biztosítóhoz is felhasználható.</p>
         </div>
       </div>
     </div>
@@ -434,7 +653,7 @@ html,body{overscroll-behavior-y:auto;}
         <ul class="price-list">
           <li data-hu="Érintésvédelmi mérések (MSZ HD 60364)" data-en="Safety measurements (MSZ HD 60364)">Érintésvédelmi mérések (MSZ HD 60364)</li>
           <li data-hu="Folytonosság + szigetelés vizsgálat" data-en="Continuity + insulation test">Folytonosság + szigetelés vizsgálat</li>
-          <li data-hu="Határozat + dokumentáció 48h-n belül" data-en="Certificate + docs within 48h">Határozat + dokumentáció 48h-n belül</li>
+          <li data-hu="Minősítő irat + dokumentáció 48h-n belül" data-en="Certificate + docs within 48h">Minősítő irat + dokumentáció 48h-n belül</li>
         </ul>
         <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
       </div>
@@ -446,7 +665,7 @@ html,body{overscroll-behavior-y:auto;}
         <ul class="price-list">
           <li data-hu="Érintésvédelmi mérések (MSZ HD 60364)" data-en="Safety measurements (MSZ HD 60364)">Érintésvédelmi mérések (MSZ HD 60364)</li>
           <li data-hu="Folytonosság + szigetelés + áramvédő kapcsoló vizsgálat" data-en="Continuity + insulation + RCD test">Folytonosság + szigetelés + áramvédő kapcsoló vizsgálat</li>
-          <li data-hu="Határozat + dokumentáció 48h-n belül" data-en="Certificate + docs within 48h">Határozat + dokumentáció 48h-n belül</li>
+          <li data-hu="Minősítő irat + dokumentáció 48h-n belül" data-en="Certificate + docs within 48h">Minősítő irat + dokumentáció 48h-n belül</li>
         </ul>
         <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
       </div>
@@ -459,7 +678,7 @@ html,body{overscroll-behavior-y:auto;}
         <ul class="price-list">
           <li data-hu="Teljes körű érintésvédelmi felülvizsgálat" data-en="Full electrical safety inspection">Teljes körű érintésvédelmi felülvizsgálat</li>
           <li data-hu="Hurokimpedancia + áramvédő kapcsoló + szigetelés mérés" data-en="Loop impedance + RCD + insulation test">Hurokimpedancia + áramvédő kapcsoló + szigetelés mérés</li>
-          <li data-hu="Határozat + teljes dokumentáció 48h-n belül" data-en="Certificate + full documentation 48h">Határozat + teljes dokumentáció 48h-n belül</li>
+          <li data-hu="Minősítő irat + teljes dokumentáció 48h-n belül" data-en="Certificate + full documentation 48h">Minősítő irat + teljes dokumentáció 48h-n belül</li>
         </ul>
         <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
       </div>
@@ -471,7 +690,7 @@ html,body{overscroll-behavior-y:auto;}
         <ul class="price-list">
           <li data-hu="Teljes körű érintésvédelmi felülvizsgálat" data-en="Full electrical safety inspection">Teljes körű érintésvédelmi felülvizsgálat</li>
           <li data-hu="Áramvédő kapcsoló teszt + földelés + kötésvizsgálat" data-en="RCD test + earthing + bonding test">Áramvédő kapcsoló teszt + földelés + kötésvizsgálat</li>
-          <li data-hu="Határozat + teljes dokumentáció 48h-n belül" data-en="Certificate + full documentation 48h">Határozat + teljes dokumentáció 48h-n belül</li>
+          <li data-hu="Minősítő irat + teljes dokumentáció 48h-n belül" data-en="Certificate + full documentation 48h">Minősítő irat + teljes dokumentáció 48h-n belül</li>
         </ul>
         <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
       </div>
@@ -483,7 +702,7 @@ html,body{overscroll-behavior-y:auto;}
         <ul class="price-list">
           <li data-hu="Teljes körű érintésvédelmi felülvizsgálat" data-en="Full electrical safety inspection">Teljes körű érintésvédelmi felülvizsgálat</li>
           <li data-hu="Hurokimpedancia + folytonosság mérés" data-en="Loop impedance + continuity measurement">Hurokimpedancia + folytonosság mérés</li>
-          <li data-hu="Határozat + teljes dokumentáció 48h-n belül" data-en="Certificate + full documentation 48h">Határozat + teljes dokumentáció 48h-n belül</li>
+          <li data-hu="Minősítő irat + teljes dokumentáció 48h-n belül" data-en="Certificate + full documentation 48h">Minősítő irat + teljes dokumentáció 48h-n belül</li>
         </ul>
         <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
       </div>
@@ -494,8 +713,8 @@ html,body{overscroll-behavior-y:auto;}
         <p class="price-note" data-hu="Helyszíni felmérés alapján" data-en="Based on on-site survey">Helyszíni felmérés alapján</p>
         <ul class="price-list">
           <li data-hu="Teljes körű érintésvédelmi felülvizsgálat" data-en="Full electrical safety inspection">Teljes körű érintésvédelmi felülvizsgálat</li>
-          <li data-hu="Mérési pontok, elosztók száma alapján" data-en="Based on measurement points &amp; distribution boards">Mérési pontok, elosztók száma alapján</li>
-          <li data-hu="Határozat + teljes dokumentáció 48h-n belül" data-en="Certificate + full documentation 48h">Határozat + teljes dokumentáció 48h-n belül</li>
+          <li data-hu="Mérési pontok, elosztók száma alapján" data-en="Based on measurement points & distribution boards">Mérési pontok, elosztók száma alapján</li>
+          <li data-hu="Minősítő irat + teljes dokumentáció 48h-n belül" data-en="Certificate + full documentation 48h">Minősítő irat + teljes dokumentáció 48h-n belül</li>
         </ul>
         <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
       </div>
@@ -517,6 +736,90 @@ html,body{overscroll-behavior-y:auto;}
   <p data-hu="Nem biztos melyik csomag az Önnek való? Kérjen személyes árajánlatot!" data-en="Not sure which package is right for you? Request a personalised quote!">Nem biztos melyik csomag az Önnek való? Kérjen személyre szabott árajánlatot!</p>
   <a href="#contact" class="btn-cta contact-btn" data-hu="Ingyenes árajánlat kérése" data-en="Request Free Quote">Ingyenes árajánlat kérése</a>
 </div>
+
+
+
+<section id="contact" class="contact">
+  <div class="inner">
+    <h2 class="section-title fade-in" data-hu="Kapcsolat &amp; Árajánlat" data-en="Contact &amp; Quote">Kapcsolat &amp; Árajánlat</h2>
+    <div class="accent-line fade-in"></div>
+    <div class="contact-wrap fade-in">
+      <div class="contact-info">
+        <h2 data-hu="Vegye fel velünk a kapcsolatot!" data-en="Get in touch with us!">Vegye fel velünk a kapcsolatot!</h2>
+        <br>
+        <div class="info-item">
+          <div class="info-icon">👤</div>
+          <div class="info-text"><strong data-hu="Ügyvezető" data-en="Manager">Ügyvezető</strong>Háros László</div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <div class="info-text"><strong data-hu="Székhely" data-en="Location">Székhely</strong><span data-hu="Budapest, Magyarország" data-en="Budapest, Hungary">Budapest, Magyarország</span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">📞</div>
+          <div class="info-text">
+            <strong data-hu="Telefon" data-en="Phone">Telefon</strong>
+            <a href="tel:+36708029138">+36 70 802 9138</a><span class="en-only"><br>
+            <a href="tel:+447533477739">+44 7533 477739</a></span>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">✉️</div>
+          <div class="info-text"><strong>Email</strong><a href="mailto:haroselectric@gmail.com">haroselectric@gmail.com</a></div>
+        </div>
+        <div class="social-row">
+          <a href="https://www.facebook.com/profile.php?id=100064488827755" target="_blank" rel="noopener noreferrer" class="social-btn">📘 Facebook</a>
+          <a href="https://www.linkedin.com/in/laszlo-haros-53323683/" target="_blank" rel="noopener noreferrer" class="social-btn">💼 LinkedIn</a>
+        </div>
+      </div>
+      <div class="form-box">
+        <h3 data-hu="Küldjön árajánlat-kérést!" data-en="Send a Quote Request!">Küldjön árajánlat-kérést!</h3>
+        <p class="form-desc" data-hu="Töltse ki az alábbi adatlapot és hamarosan felvesszük Önnel a kapcsolatot a pontos árajánlattal." data-en="Fill in the form below and we will contact you soon with an exact quote.">Töltse ki az alábbi adatlapot és hamarosan felvesszük Önnel a kapcsolatot a pontos árajánlattal.</p>
+        <form id="contactForm" onsubmit="sendForm(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label data-hu="Neve" data-en="Your Name">Neve</label>
+              <input type="text" name="nev" placeholder="pl. Kovács János" required>
+            </div>
+            <div class="form-group">
+              <label data-hu="Telefonszám" data-en="Phone Number">Telefonszám</label>
+              <input type="tel" name="telefon" placeholder="+36 30 000 0000" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="pelda@email.com" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label data-hu="Ingatlan típusa" data-en="Property Type">Ingatlan típusa</label>
+              <select name="tipus" required>
+                <option value="" data-hu="Válasszon..." data-en="Select...">Válasszon...</option>
+                <option value="lakas" data-hu="Lakás" data-en="Apartment">Lakás</option>
+                <option value="haz" data-hu="Ház" data-en="House">Ház</option>
+                <option value="iroda" data-hu="Iroda" data-en="Office">Iroda</option>
+                <option value="uzlet" data-hu="Üzlet / Kereskedelmi" data-en="Commercial">Üzlet / Kereskedelmi</option>
+                <option value="ipari" data-hu="Ipari létesítmény" data-en="Industrial Facility">Ipari létesítmény</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label data-hu="Alapterület (m²)" data-en="Floor Area (m²)">Alapterület (m²)</label>
+              <input type="number" name="meret" placeholder="pl. 80" min="1">
+            </div>
+          </div>
+          <div class="form-group">
+            <label data-hu="Elvégzendő munka leírása" data-en="Description of Work">Elvégzendő munka leírása</label>
+            <textarea name="leiras" placeholder="Kérem írja le röviden, milyen munkát szeretne elvégeztetni, mikor lenne szüksége rá, van-e különleges igény..." data-ph-hu="Kérem írja le röviden, milyen munkát szeretne elvégeztetni, mikor lenne szüksége rá, van-e különleges igény..." data-ph-en="Please briefly describe the work you need, when you'd need it, and any special requirements..."></textarea>
+          </div>
+          <button type="submit" class="btn-send" data-hu="📨  Ajánlatot kérek" data-en="📨  Request a Quote">📨  Ajánlatot kérek</button>
+          <p style="margin-top:12px;font-size:.85rem;opacity:.75;line-height:1.5" data-hu="Az adatait kizárólag az árajánlat elkészítéséhez és a kapcsolatfelvételhez használjuk, harmadik félnek nem adjuk át." data-en="We use your details only to prepare the quote and contact you, and never share them with third parties.">Az adatait kizárólag az árajánlat elkészítéséhez és a kapcsolatfelvételhez használjuk, harmadik félnek nem adjuk át.</p>
+          <div id="form-success">✅ <span data-hu="Üzenetét megkaptuk! Hamarosan felvesszük Önnel a kapcsolatot." data-en="We received your message! We will contact you shortly.">Üzenetét megkaptuk! Hamarosan felvesszük Önnel a kapcsolatot.</span></div>
+          <div id="form-error" style="display:none;margin-top:16px;padding:14px 16px;border-radius:10px;background:rgba(220,60,60,.15);border:1px solid rgba(220,60,60,.5);color:#ffb4b4;font-size:.95rem;line-height:1.5">⚠️ <span data-hu="Sajnos nem sikerült elküldeni az üzenetet. Kérjük, hívjon a +36 70 802 9138 telefonszámon, vagy írjon a haroselectric@gmail.com címre." data-en="Sorry, we could not send your message. Please call +36 70 802 9138 or email haroselectric@gmail.com.">Sajnos nem sikerült elküldeni az üzenetet. Kérjük, hívjon a +36 70 802 9138 telefonszámon, vagy írjon a haroselectric@gmail.com címre.</span></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="reviews" style="padding:70px 0;background:linear-gradient(180deg,#2a2a54 0%,#2e2e64 100%);">
   <div class="inner">
@@ -578,7 +881,7 @@ html,body{overscroll-behavior-y:auto;}
           <span class="faq-arrow">▼</span>
         </button>
         <div class="faq-a">
-          <p data-hu="Ingatlan adásvételekor a 40/2017 NGM rendelet alapján kötelező. Emellett bérleti szerződésnél és biztosítási kárigénynél is szükséges. A rendelet szerint lakásoknál 6 évente, munkahelyeken 3 évente kötelező elvégeztetni." data-en="It is mandatory when selling property under NGM decree 40/2017. It is also required for rental agreements and insurance claims. Under the decree, inspections are mandatory every 6 years for residential properties and every 3 years for workplaces.">Ingatlan adásvételekor a 40/2017 NGM rendelet alapján kötelező. Emellett bérleti szerződésnél és biztosítási kárigénynél is szükséges. A rendelet szerint lakásoknál 6 évente, munkahelyeken 3 évente kötelező elvégeztetni.</p>
+          <p data-hu="Lakás adásvételekor és bérbeadásakor a 40/2017. (XII. 4.) NGM rendelet alapján kötelező, ha nincs 6 évnél nem régebbi felülvizsgálati dokumentáció. A pontos kötelezettséget az ingatlan villamos hálózata alapján, a helyszínen is ellenőrizzük." data-en="Under NGM decree 40/2017, it is mandatory when selling or renting out a home if there is no inspection report from the last 6 years. We also check the exact requirements on site, based on the electrical installation.">Lakás adásvételekor és bérbeadásakor a 40/2017. (XII. 4.) NGM rendelet alapján kötelező, ha nincs 6 évnél nem régebbi felülvizsgálati dokumentáció. A pontos kötelezettséget az ingatlan villamos hálózata alapján, a helyszínen is ellenőrizzük.</p>
         </div>
       </div>
       <div class="faq-item fade-in">
@@ -596,7 +899,7 @@ html,body{overscroll-behavior-y:auto;}
           <span class="faq-arrow">▼</span>
         </button>
         <div class="faq-a">
-          <p data-hu="A vizsgálat elvégzéséről hivatalos határozatot és mérési jegyzőkönyvet állítunk ki, amelyet hatóságok, biztosítók és ingatlanközvetítők egyaránt elfogadnak. A dokumentáció 48 órán belül megérkezik." data-en="We issue an official certificate and measurement report, accepted by authorities, insurers and estate agents. Documentation arrives within 48 hours.">Hivatalos határozatot és mérési jegyzőkönyvet állítunk ki, amelyet hatóságok és biztosítók elfogadnak. A dokumentáció 48 órán belül megérkezik.</p>
+          <p data-hu="A vizsgálat elvégzéséről minősítő iratot és mérési jegyzőkönyvet állítunk ki, amely adásvételhez, bérbeadáshoz és biztosítóhoz is felhasználható. A dokumentáció 48 órán belül megérkezik." data-en="We issue an official certificate and measurement report, suitable for property sale, rental and insurance purposes. Documentation arrives within 48 hours.">Minősítő iratot és mérési jegyzőkönyvet állítunk ki, amely adásvételhez, bérbeadáshoz és biztosítóhoz is felhasználható. A dokumentáció 48 órán belül megérkezik.</p>
         </div>
       </div>
       <div class="faq-item fade-in">
@@ -657,93 +960,15 @@ html,body{overscroll-behavior-y:auto;}
   </div>
 </section>
 
-<section id="contact" class="contact">
-  <div class="inner">
-    <h2 class="section-title fade-in" data-hu="Kapcsolat &amp; Árajánlat" data-en="Contact &amp; Quote">Kapcsolat &amp; Árajánlat</h2>
-    <div class="accent-line fade-in"></div>
-    <div class="contact-wrap fade-in">
-      <div class="contact-info">
-        <h2 data-hu="Vegye fel velünk a kapcsolatot!" data-en="Get in touch with us!">Vegye fel velünk a kapcsolatot!</h2>
-        <br>
-        <div class="info-item">
-          <div class="info-icon">👤</div>
-          <div class="info-text"><strong data-hu="Ügyvezető" data-en="Manager">Ügyvezető</strong>Háros László</div>
-        </div>
-        <div class="info-item">
-          <div class="info-icon">📍</div>
-          <div class="info-text"><strong data-hu="Székhely" data-en="Location">Székhely</strong>Budapest, Magyarország</div>
-        </div>
-        <div class="info-item">
-          <div class="info-icon">📞</div>
-          <div class="info-text">
-            <strong data-hu="Telefon" data-en="Phone">Telefon</strong>
-            <a href="tel:+36708029138">+36 70 802 9138</a><br>
-            <a href="tel:+447533477739">+44 7533 477739</a>
-          </div>
-        </div>
-        <div class="info-item">
-          <div class="info-icon">✉️</div>
-          <div class="info-text"><strong>Email</strong><a href="mailto:haroselectric@gmail.com">haroselectric@gmail.com</a></div>
-        </div>
-        <div class="social-row">
-          <a href="https://www.facebook.com/profile.php?id=100064488827755" target="_blank" rel="noopener noreferrer" class="social-btn">📘 Facebook</a>
-          <a href="https://www.linkedin.com/in/laszlo-haros-53323683/" target="_blank" rel="noopener noreferrer" class="social-btn">💼 LinkedIn</a>
-        </div>
-      </div>
-      <div class="form-box">
-        <h3 data-hu="Küldjön árajánlat-kérést!" data-en="Send a Quote Request!">Küldjön árajánlat-kérést!</h3>
-        <p class="form-desc" data-hu="Töltse ki az alábbi adatlapot és hamarosan felvesszük Önnel a kapcsolatot a pontos árajánlattal." data-en="Fill in the form below and we will contact you soon with an exact quote.">Töltse ki az alábbi adatlapot és hamarosan felvesszük Önnel a kapcsolatot a pontos árajánlattal.</p>
-        <form id="contactForm" onsubmit="sendForm(event)">
-          <div class="form-row">
-            <div class="form-group">
-              <label data-hu="Neve" data-en="Your Name">Neve</label>
-              <input type="text" name="nev" placeholder="pl. Kovács János" required>
-            </div>
-            <div class="form-group">
-              <label data-hu="Telefonszám" data-en="Phone Number">Telefonszám</label>
-              <input type="tel" name="telefon" placeholder="+36 30 000 0000" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Email</label>
-            <input type="email" name="email" placeholder="pelda@email.com" required>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label data-hu="Ingatlan típusa" data-en="Property Type">Ingatlan típusa</label>
-              <select name="tipus" required>
-                <option value="" data-hu="Válasszon..." data-en="Select...">Válasszon...</option>
-                <option value="lakas" data-hu="Lakás" data-en="Apartment">Lakás</option>
-                <option value="haz" data-hu="Ház" data-en="House">Ház</option>
-                <option value="iroda" data-hu="Iroda" data-en="Office">Iroda</option>
-                <option value="uzlet" data-hu="Üzlet / Kereskedelmi" data-en="Commercial">Üzlet / Kereskedelmi</option>
-                <option value="ipari" data-hu="Ipari létesítmény" data-en="Industrial Facility">Ipari létesítmény</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label data-hu="Alapterület (m²)" data-en="Floor Area (m²)">Alapterület (m²)</label>
-              <input type="number" name="meret" placeholder="pl. 80" min="1">
-            </div>
-          </div>
-          <div class="form-group">
-            <label data-hu="Elvégzendő munka leírása" data-en="Description of Work">Elvégzendő munka leírása</label>
-            <textarea name="leiras" placeholder="Kérem írja le röviden, milyen munkát szeretne elvégeztetni, mikor lenne szüksége rá, van-e különleges igény..."></textarea>
-          </div>
-          <button type="submit" class="btn-send" data-hu="📨  Ajánlatot kérek" data-en="📨  Request a Quote">📨  Ajánlatot kérek</button>
-          <div id="form-success">✅ <span data-hu="Üzenetét megkaptuk! Hamarosan felvesszük Önnel a kapcsolatot." data-en="We received your message! We will contact you shortly.">Üzenetét megkaptuk! Hamarosan felvesszük Önnel a kapcsolatot.</span></div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
 
 <footer>
-  <p>© 2026 <strong>Haros Electric Hungary</strong> · Háros László · Budapest · <a href="mailto:haroselectric@gmail.com">haroselectric@gmail.com</a></p>
+  <p>© 2026 <strong>Haros Electric Hungary</strong> · Háros László · Budapest · <a href="mailto:haroselectric@gmail.com">haroselectric@gmail.com</a> · <a href="/vbf-ingatlan-eladas-elott.html">VBF ingatlan eladás előtt</a></p>
 </footer>
 
 <script>
 let currentLang='hu';
 let heroArMode=null;
+  window.addEventListener('DOMContentLoaded',function(){if(new URLSearchParams(location.search).get('lang')==='en'){toggleLang();}});
 
 function updateHeroBanner(){
   const heroImg=document.getElementById('hero-banner-img');
@@ -756,9 +981,13 @@ function updateHeroBanner(){
     heroImg.dataset.arLocked='';
   }
   if(mobile){
-    heroImg.src=currentLang==='hu'?'hero-mobile-hu.jpg':'hero-mobile-en.jpg';
+    heroImg.src=currentLang==='hu'
+      ?'hero-mobile-hu.jpg'
+      :'hero-mobile-en.jpg';
   }else{
-    heroImg.src=currentLang==='hu'?'hero_hu_new.png':'hero_en_new.png';
+    heroImg.src=currentLang==='hu'
+      ?'hero_hu_new.png'
+      :'hero_en_new.png';
   }
 }
 
@@ -773,17 +1002,27 @@ function updateHeroBanner(){
   });
 })();
 
+function setLang(lang){
+  if(lang!==currentLang) toggleLang();
+}
+
 function toggleLang(){
   currentLang=currentLang==='hu'?'en':'hu';
   document.documentElement.setAttribute('data-lang',currentLang);
-  document.getElementById('langBtn').textContent=currentLang==='hu'?'EN':'HU';
+  var langBtn=document.getElementById('langBtn');
+  if(langBtn){
+    var huOpt=langBtn.querySelector('.lang-opt-hu');
+    var enOpt=langBtn.querySelector('.lang-opt-en');
+    if(huOpt) huOpt.classList.toggle('active',currentLang==='hu');
+    if(enOpt) enOpt.classList.toggle('active',currentLang==='en');
+  }
   updateHeroBanner();
   document.querySelectorAll('[data-hu]').forEach(el=>{
     const t=el.getAttribute('data-'+currentLang);
     if(t&&el.tagName!=='INPUT'&&el.tagName!=='SELECT'&&el.tagName!=='TEXTAREA'&&el.tagName!=='OPTION')el.innerHTML=t;
   });
   document.querySelector('title').textContent=document.querySelector('title').getAttribute('data-'+currentLang);
-  document.querySelectorAll('select option').forEach(o=>{const t=o.getAttribute('data-'+currentLang);if(t)o.textContent=t;});
+  document.querySelectorAll('select option').forEach(o=>{const t=o.getAttribute('data-'+currentLang);if(t)o.textContent=t;});document.querySelectorAll('[data-ph-hu]').forEach(el=>{const t=el.getAttribute('data-ph-'+currentLang);if(t)el.placeholder=t;});
 }
 updateHeroBanner();
 window.addEventListener('resize', updateHeroBanner);
@@ -795,42 +1034,87 @@ document.querySelectorAll('.social-btn').forEach(a=>{
   });
 });
 
+function smoothScrollTo(el){
+  if(!el) return;
+  const targetY=el.getBoundingClientRect().top+window.pageYOffset;
+  try{
+    window.scrollTo({top:targetY,behavior:'smooth'});
+  }catch(err){
+    window.scrollTo(0,targetY);
+  }
+}
+
+function bindTap(el,handler){
+  let touched=false;
+  el.addEventListener('touchend',function(e){
+    touched=true;
+    handler(e);
+    setTimeout(()=>{touched=false;},500);
+  },{passive:false});
+  el.addEventListener('click',function(e){
+    if(touched) return;
+    handler(e);
+  });
+}
+
 const navLinksEl=document.getElementById('navLinks');
-document.getElementById('hamburger').addEventListener('click',function(){
+bindTap(document.getElementById('hamburger'),function(e){
   navLinksEl.classList.toggle('open');
 });
 
+// Nav links: only close the mobile menu, let native #href anchor jump happen on its own
 document.querySelectorAll('.nav-links a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',function(){
+  a.addEventListener('click',function(e){
     navLinksEl.classList.remove('open');
   });
 });
-
 const secs=document.querySelectorAll('section[id]');
 const navObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('active'));const l=document.querySelector('.nav-links a[href="#'+e.target.id+'"]');if(l)l.classList.add('active');}});},{threshold:.35});
 secs.forEach(s=>navObs.observe(s));
-
 const fadeObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');fadeObs.unobserve(e.target);}});},{threshold:.12});
 document.querySelectorAll('.fade-in').forEach(el=>fadeObs.observe(el));
-
-function sendForm(e){
+async function sendForm(e){
   e.preventDefault();
   const f=e.target;
-  const nev=f.nev.value,tel=f.telefon.value,email=f.email.value;
+  const btn=f.querySelector('button[type="submit"]');
+  const ok=document.getElementById('form-success');
+  const err=document.getElementById('form-error');
+  ok.style.display='none'; err.style.display='none';
+  const origBtn=btn.innerHTML;
+  btn.disabled=true;
+  btn.textContent=(currentLang==='en')?'Sending...':'Küldés...';
   const tipus=f.tipus.options[f.tipus.selectedIndex].text;
-  const meret=f.meret.value,leiras=f.leiras.value;
-  const subject=encodeURIComponent('Árajánlat kérés – Haros Electric');
-  const body=encodeURIComponent('Név: '+nev+'\nTelefon: '+tel+'\nEmail: '+email+'\nIngatlan típusa: '+tipus+'\nAlapterület: '+(meret||'–')+' m²\n\nLeírás:\n'+leiras);
-  window.location.href='mailto:haroselectric@gmail.com?subject='+subject+'&body='+body;
-  document.getElementById('form-success').style.display='block';
-  f.reset();
+  const data={
+    name:f.nev.value,
+    phone:f.telefon.value,
+    email:f.email.value,
+    ingatlan_tipusa:tipus,
+    alapterulet_m2:f.meret.value||'-',
+    leiras:f.leiras.value,
+    _subject:'Árajánlat kérés – Haros Electric',
+    _template:'table',
+    _captcha:'false'
+  };
+  try{
+    const r=await fetch('https://formsubmit.co/ajax/haroselectric@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)});
+    const j=await r.json();
+    if(r.ok && (j.success===true || j.success==='true')){
+      ok.style.display='block';
+      f.reset();
+      if(typeof gtag==='function'){ gtag('event','form_submit_contact'); }
+    } else { throw new Error('send failed'); }
+  }catch(x){
+    err.style.display='block';
+  }finally{
+    btn.disabled=false;
+    btn.innerHTML=origBtn;
+  }
 }
+
+
+
+// CTA buttons are now plain #contact anchors — native browser jump handles them
+
 </script>
-
-<!-- MODIFICATION 3: Mobile sticky phone bar -->
-<div class="mobile-sticky-phone">
-  <a href="tel:+36708029138" data-hu="📞 Hívjon most" data-en="📞 Call now">📞 Hívjon most</a>
-</div>
-
-</body>
+<div class="mobile-sticky-call"><a href="tel:+36708029138" class="mobile-sticky-call-link" data-hu="📞 Hívjon most" data-en="📞 Call now">📞 Hívjon most</a></div></body>
 </html>
