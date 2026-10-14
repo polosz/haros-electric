@@ -65,8 +65,8 @@ src="https://www.facebook.com/tr?id=1612418367298697&ev=PageView&noscript=1"
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --deep:#242442;
-  --dark:#231e42;
+  --deep:#2b2054;
+  --dark:#281d4e;
   --purple:#7c3aed;
   --purple2:#6d28d9;
   --accent:#8b5cf6;
@@ -77,8 +77,8 @@ src="https://www.facebook.com/tr?id=1612418367298697&ev=PageView&noscript=1"
   --radius:10px;
 }
 html{scroll-behavior:smooth}
-html,body{width:100%;max-width:100%;overflow-x:hidden;overflow-y:auto;background:#242442;-webkit-overflow-scrolling:touch;}body{font-family:var(--font);color:var(--white);}
-.navbar{position:fixed;top:0;left:0;right:0;z-index:500;height:var(--nav-h);background:rgba(36,36,66,.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(139,92,246,.18);display:flex;align-items:center;justify-content:space-between;padding:0 48px;}
+html,body{width:100%;max-width:100%;overflow-x:hidden;overflow-y:auto;background:#2b2054;-webkit-overflow-scrolling:touch;}body{font-family:var(--font);color:var(--white);}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:500;height:var(--nav-h);background:rgba(43,32,84,.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(139,92,246,.18);display:flex;align-items:center;justify-content:space-between;padding:0 48px;}
 .nav-links{display:flex;gap:32px;list-style:none}
 .nav-links a{text-decoration:none;color:rgba(255,255,255,.8);font-size:.87rem;font-weight:600;letter-spacing:.4px;padding:4px 0;border-bottom:2px solid transparent;transition:.2s;}
 .nav-links a:hover,.nav-links a.active{color:var(--accent2);border-color:var(--accent2)}
@@ -93,13 +93,14 @@ html,body{width:100%;max-width:100%;overflow-x:hidden;overflow-y:auto;background
 .hero{position:relative;width:100%;padding-top:var(--nav-h);padding-left:0;padding-right:0;margin:0;padding-bottom:0;line-height:0;background:transparent;overflow:visible}
 section[id]{scroll-margin-top:calc(var(--nav-h) + 12px)}
 .hero-img{display:block;width:100%;max-width:100%;height:auto;vertical-align:bottom}
-.hero::before{content:'';position:absolute;top:0;left:0;right:0;height:80px;background:linear-gradient(to bottom,rgba(36,36,66,.96) 0%,rgba(36,36,66,.55) 45%,rgba(36,36,66,0) 100%);pointer-events:none;z-index:2;}
+.hero::after{content:'';position:absolute;left:0;right:0;bottom:0;height:64px;background:linear-gradient(to top,#2b2054 0%,rgba(43,32,84,.55) 40%,rgba(43,32,84,0) 100%);pointer-events:none;z-index:2;}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;height:80px;background:linear-gradient(to bottom,rgba(43,32,84,.96) 0%,rgba(43,32,84,.55) 45%,rgba(43,32,84,0) 100%);pointer-events:none;z-index:2;}
 section{padding:80px 40px}
 .inner{max-width:1140px;margin:0 auto}
 .section-title{font-size:2rem;font-weight:900;text-align:center;margin-bottom:10px;letter-spacing:1px;}
 .section-sub{text-align:center;color:rgba(255,255,255,.78);max-width:640px;margin:0 auto 48px;font-size:.97rem;line-height:1.7;}
 .accent-line{width:56px;height:3px;background:linear-gradient(90deg,var(--purple),var(--accent2));border-radius:3px;margin:10px auto 32px;}
-.services{background:linear-gradient(180deg,#2a2a54 0%,#2e2e64 100%)}
+.services{background:linear-gradient(180deg,#31256a 0%,#382a78 100%)}
 .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .svc-card{background:rgba(255,255,255,.07);border:1px solid rgba(139,92,246,.2);border-radius:var(--radius);padding:28px 24px;transition:transform .25s,box-shadow .25s,border-color .25s;position:relative;overflow:visible;}
 .svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--purple),var(--accent2));opacity:0;transition:.25s;}
@@ -119,13 +120,13 @@ border:1px solid rgba(139,92,246,.25);
 }
 .svc-card h3{font-size:1rem;font-weight:700;color:var(--accent2);margin-bottom:10px}
 .svc-card p{font-size:.875rem;color:rgba(255,255,255,.78);line-height:1.65}
-.why{background:#2a2a68}
+.why{background:#352872}
 .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
 .why-item{display:flex;gap:18px;align-items:flex-start}
 .why-icon{flex:0 0 52px;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;}
 .why-item h3{font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--white)}
 .why-item p{font-size:.875rem;color:rgba(255,255,255,.78);line-height:1.65}
-.pricing{background:linear-gradient(180deg,#2a2a54 0%,#2e2e64 100%)}
+.pricing{background:linear-gradient(180deg,#31256a 0%,#382a78 100%)}
 .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .price-card{background:rgba(255,255,255,.07);border:1px solid rgba(139,92,246,.22);border-radius:var(--radius);padding:32px 28px;text-align:center;transition:.25s;position:relative;overflow:visible;}
 .price-card.featured{border-color:var(--purple);background:rgba(124,58,237,.1);transform:scale(1.04);box-shadow:0 0 48px rgba(124,58,237,.25);}
@@ -141,11 +142,11 @@ border:1px solid rgba(139,92,246,.25);
 .price-btn:hover{opacity:.88;transform:translateY(-1px)}
 .price-custom{margin-top:40px;text-align:center;background:rgba(255,255,255,.07);border:1px solid rgba(139,92,246,.2);border-radius:var(--radius);padding:28px;}
 .price-custom p{color:rgba(255,255,255,.7);margin-bottom:16px;font-size:.95rem}
-.gallery{background:#2a2a54}
+.gallery{background:#31256a}
 .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
 .gallery-grid img{width:100%;height:220px;object-fit:cover;border-radius:8px;display:block;transition:transform .3s,filter .3s,box-shadow .3s;cursor:pointer;filter:brightness(.88) saturate(1.1);}
 .gallery-grid img:hover{transform:scale(1.03);filter:brightness(1.05) saturate(1.3);box-shadow:0 8px 28px rgba(124,58,237,.4);}
-.contact{background:linear-gradient(180deg,#2a2a54 0%,#2e2e64 100%)}
+.contact{background:linear-gradient(180deg,#31256a 0%,#382a78 100%)}
 .contact-wrap{display:grid;grid-template-columns:1fr 1.6fr;gap:60px;align-items:start}
 .contact-info h2{font-size:1.6rem;font-weight:900;margin-bottom:20px}
 .contact-info .info-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:20px;}
@@ -165,12 +166,12 @@ border:1px solid rgba(139,92,246,.25);
 .form-group input,.form-group select,.form-group textarea{width:100%;padding:11px 16px;background:rgba(255,255,255,.10);border:1px solid rgba(139,92,246,.3);border-radius:8px;color:var(--white);font-size:.9rem;font-family:var(--font);transition:.2s;outline:none;}
 .form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,.32)}
 .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--purple);background:rgba(139,92,246,.1)}
-.form-group select option{background:#1a1a50;color:#fff}
+.form-group select option{background:#24195a;color:#fff}
 .form-group textarea{min-height:110px;resize:vertical}
 .btn-send{width:100%;padding:14px;background:linear-gradient(135deg,var(--purple),var(--purple2));color:#fff;font-weight:800;font-size:1rem;letter-spacing:1px;border:none;border-radius:50px;cursor:pointer;transition:.2s;margin-top:6px;text-transform:uppercase;}
 .btn-send:hover{opacity:.88;transform:translateY(-2px);box-shadow:0 8px 24px rgba(124,58,237,.45)}
 #form-success{display:none;margin-top:14px;padding:14px;background:rgba(100,200,100,.12);border:1px solid rgba(100,200,100,.3);border-radius:8px;color:#7fff7f;text-align:center;font-size:.9rem}
-footer{background:rgba(28,28,53,.85);border-top:1px solid rgba(139,92,246,.15);padding:28px 40px;text-align:center;color:rgba(255,255,255,.4);font-size:.82rem;}
+footer{background:rgba(38,28,74,.85);border-top:1px solid rgba(139,92,246,.15);padding:28px 40px;text-align:center;color:rgba(255,255,255,.4);font-size:.82rem;}
 footer a{color:rgba(139,92,246,.7);text-decoration:none}
 .fade-in{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s}
 .fade-in.visible{opacity:1;transform:none}
@@ -185,7 +186,7 @@ footer a{color:rgba(139,92,246,.7);text-decoration:none}
   section{padding:60px 24px}
 }
 @media(max-width:600px){
-  .nav-links{display:none;position:fixed;top:var(--nav-h);left:0;right:0;background:rgba(30,30,58,.98);flex-direction:column;gap:0;padding:0;border-bottom:1px solid rgba(139,92,246,.2)}
+  .nav-links{display:none;position:fixed;top:var(--nav-h);left:0;right:0;background:rgba(40,29,80,.98);flex-direction:column;gap:0;padding:0;border-bottom:1px solid rgba(139,92,246,.2)}
   .nav-links.open{display:flex}
   .nav-links li a{display:block;padding:16px 28px;border-bottom:1px solid rgba(255,255,255,.06)}
   .hamburger{display:flex}
@@ -239,7 +240,7 @@ footer a{color:rgba(139,92,246,.7);text-decoration:none}
     line-height: 1;
     margin-bottom: 6px;
   }
-  .stat-label { font-size: 0.85rem; color: #a9b4c2; }
+  .stat-label { font-size: 0.85rem; color: #b8b2d8; }
 
   /* ===== CTA BAND ===== */
   .cta-band {
@@ -271,7 +272,7 @@ footer a{color:rgba(139,92,246,.7);text-decoration:none}
     transition: background 0.2s, transform 0.2s;
     white-space: nowrap;
   }
-  .btn-cta:hover { background: var(--accent2); color: #07071a; transform: translateY(-2px); }
+  .btn-cta:hover { background: var(--accent2); color: #1d1342; transform: translateY(-2px); }
 
   /* ===== HOW IT WORKS (HOGYAN ZAJLIK) ===== */
   .how-section { padding: 70px 0; }
@@ -311,7 +312,7 @@ footer a{color:rgba(139,92,246,.7);text-decoration:none}
   }
   .step-icon { font-size: 2rem; margin: 8px 0 12px; }
   .step-card h3 { font-size: 1rem; margin-bottom: 8px; color: var(--accent2); }
-  .step-card p { font-size: 0.88rem; color: #a9b4c2; line-height: 1.5; }
+  .step-card p { font-size: 0.88rem; color: #b8b2d8; line-height: 1.5; }
 
   /* ===== GYIK / FAQ ===== */
   .gyik-section { padding: 70px 0; }
@@ -350,7 +351,7 @@ footer a{color:rgba(139,92,246,.7);text-decoration:none}
     padding: 0 20px;
   }
   .faq-item.open .faq-a { max-height: 300px; padding: 0 20px 18px; }
-  .faq-a p { margin: 0; color: #a9b4c2; font-size: 0.92rem; line-height: 1.65; }
+  .faq-a p { margin: 0; color: #b8b2d8; font-size: 0.92rem; line-height: 1.65; }
 
 
 
@@ -482,7 +483,7 @@ overflow:visible!important;
 <section class="hero" id="hero">
   <img id="hero-banner-img" alt="Haros Electric Hungary – VBF Érintésvédelmi Felülvizsgálat" class="hero-img">
   <script>
-    document.getElementById('hero-banner-img').src = (window.innerWidth<=768) ? 'hero-mobile-hu.jpg' : 'hero_hu_new.png';
+    document.getElementById('hero-banner-img').src = (window.innerWidth<=768) ? 'hero-mobile-hu-v2.jpg' : 'hero_hu_v2.jpg';
   </script>
 </section>
 <div class="audience fade-in">
@@ -603,7 +604,7 @@ overflow:visible!important;
 </section>
 
 
-<section id="muszer" style="padding:70px 0;background:#2a2a54">
+<section id="muszer" style="padding:70px 0;background:#31256a">
   <div class="inner">
     <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center" class="muszer-grid">
       <div class="fade-in"><img src="metrel-rcd-vizsgalat.jpg" alt="Metrel EurotestXD MI 3155 műszer RCD (FI-relé) vizsgálat közben" width="1200" height="899" loading="lazy" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(139,92,246,.35);box-shadow:0 12px 36px rgba(0,0,0,.35);display:block"></div>
@@ -663,7 +664,7 @@ overflow:visible!important;
   </div>
 </section>
 
-<section id="reviews" style="padding:70px 0;background:linear-gradient(180deg,#2a2a54 0%,#2e2e64 100%);">
+<section id="reviews" style="padding:70px 0;background:linear-gradient(180deg,#31256a 0%,#382a78 100%);">
   <div class="inner">
     <h2 class="section-title fade-in" data-hu="Ügyfeleink véleménye" data-en="What Our Clients Say">Ügyfeleink véleménye</h2>
     <div class="accent-line fade-in"></div>
@@ -811,7 +812,7 @@ overflow:visible!important;
       <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:space-between;">
         <div style="flex:1;min-width:260px">
           <h3 style="margin:0 0 6px;font-size:1.1rem;" data-hu="🏢 Társasház, cég, ipari létesítmény, intézmény" data-en="🏢 Condominium, business, industrial facility, institution">🏢 Társasház, cég, ipari létesítmény, intézmény</h3>
-          <p style="margin:0;color:#a9b4c2;font-size:0.9rem;line-height:1.6" data-hu="Ezekre egyedi ajánlat készül, mert a létesítmények mérete és villamos hálózata nagyon eltérő. Az ajánlathoz kérjük megadni a létesítmény típusát, alapterületét, az elosztók és a telephelyek számát, valamint a vizsgálandó területet. Az ajánlat tartalmazza a helyszíni mérést, a mérési jegyzőkönyvet és a minősítő iratot." data-en="We prepare a custom quote, as the size and electrical installation of these facilities vary widely. Please provide the facility type, floor area, the number of distribution boards and sites, and the area to be inspected. The quote includes the on-site measurement, the measurement report and the qualification certificate.">Ezekre egyedi ajánlat készül, mert a létesítmények mérete és villamos hálózata nagyon eltérő. Az ajánlathoz kérjük megadni a létesítmény típusát, alapterületét, az elosztók és a telephelyek számát, valamint a vizsgálandó területet. Az ajánlat tartalmazza a helyszíni mérést, a mérési jegyzőkönyvet és a minősítő iratot.</p>
+          <p style="margin:0;color:#b8b2d8;font-size:0.9rem;line-height:1.6" data-hu="Ezekre egyedi ajánlat készül, mert a létesítmények mérete és villamos hálózata nagyon eltérő. Az ajánlathoz kérjük megadni a létesítmény típusát, alapterületét, az elosztók és a telephelyek számát, valamint a vizsgálandó területet. Az ajánlat tartalmazza a helyszíni mérést, a mérési jegyzőkönyvet és a minősítő iratot." data-en="We prepare a custom quote, as the size and electrical installation of these facilities vary widely. Please provide the facility type, floor area, the number of distribution boards and sites, and the area to be inspected. The quote includes the on-site measurement, the measurement report and the qualification certificate.">Ezekre egyedi ajánlat készül, mert a létesítmények mérete és villamos hálózata nagyon eltérő. Az ajánlathoz kérjük megadni a létesítmény típusát, alapterületét, az elosztók és a telephelyek számát, valamint a vizsgálandó területet. Az ajánlat tartalmazza a helyszíni mérést, a mérési jegyzőkönyvet és a minősítő iratot.</p>
         </div>
         <a href="/vbf-tarsashaz-ceg-intezmeny.html" class="price-btn" style="width:auto;padding:12px 28px;display:inline-block;white-space:nowrap" data-hu="Részletek és ajánlatkérés" data-en="Details &amp; quote">Részletek és ajánlatkérés</a>
       </div>
@@ -820,12 +821,12 @@ overflow:visible!important;
       <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:space-between;">
         <div>
           <h3 style="margin:0 0 6px;font-size:1.1rem;" data-hu="⚡ Villámvédelmi felülvizsgálat" data-en="⚡ Lightning Protection Inspection">⚡ Villámvédelmi felülvizsgálat</h3>
-          <p style="margin:0;color:#a9b4c2;font-size:0.9rem;" data-hu="Az ár az épület típusától, kockázati kategóriától és méretétől függ. Kérjen egyedi árajánlatot!" data-en="Price depends on building type, risk category and size. Request a personalised quote!">Az ár az épület típusától, kockázati kategóriától és méretétől függ. Kérjen egyedi árajánlatot!</p>
+          <p style="margin:0;color:#b8b2d8;font-size:0.9rem;" data-hu="Az ár az épület típusától, kockázati kategóriától és méretétől függ. Kérjen egyedi árajánlatot!" data-en="Price depends on building type, risk category and size. Request a personalised quote!">Az ár az épület típusától, kockázati kategóriától és méretétől függ. Kérjen egyedi árajánlatot!</p>
         </div>
         <a href="#contact" class="price-btn contact-btn" style="width:auto;padding:12px 28px;display:inline-block;white-space:nowrap" data-hu="Villámvédelmi árajánlat" data-en="Lightning Protection Quote">Villámvédelmi árajánlat</a>
       </div>
     </div>
-    <p class="price-custom fade-in" style="text-align:center;margin-top:16px;color:#a9b4c2;font-size:0.85rem;" data-hu="A fenti díjak lakóingatlanokra vonatkozó, tájékoztató jellegű árak. A végleges díj a helyszíni felmérés alapján kerül meghatározásra, mivel az azonos alapterületű ingatlanok villamos hálózatának kialakítása jelentősen eltérhet. Ipari, kereskedelmi és egyéb nem lakáscélú ingatlanok esetén minden esetben egyedi árajánlat készül." data-en="The prices above apply to residential properties and are indicative. The final price is determined after an on-site survey, as electrical layouts vary significantly even for properties of the same size. Industrial, commercial and other non-residential properties always receive a custom quote.">A fenti díjak lakóingatlanokra vonatkozó, tájékoztató jellegű árak. A végleges díj a helyszíni felmérés alapján kerül meghatározásra, mivel az azonos alapterületű ingatlanok villamos hálózatának kialakítása jelentősen eltérhet. Ipari, kereskedelmi és egyéb nem lakáscélú ingatlanok esetén minden esetben egyedi árajánlat készül.</p>
+    <p class="price-custom fade-in" style="text-align:center;margin-top:16px;color:#b8b2d8;font-size:0.85rem;" data-hu="A fenti díjak lakóingatlanokra vonatkozó, tájékoztató jellegű árak. A végleges díj a helyszíni felmérés alapján kerül meghatározásra, mivel az azonos alapterületű ingatlanok villamos hálózatának kialakítása jelentősen eltérhet. Ipari, kereskedelmi és egyéb nem lakáscélú ingatlanok esetén minden esetben egyedi árajánlat készül." data-en="The prices above apply to residential properties and are indicative. The final price is determined after an on-site survey, as electrical layouts vary significantly even for properties of the same size. Industrial, commercial and other non-residential properties always receive a custom quote.">A fenti díjak lakóingatlanokra vonatkozó, tájékoztató jellegű árak. A végleges díj a helyszíni felmérés alapján kerül meghatározásra, mivel az azonos alapterületű ingatlanok villamos hálózatának kialakítása jelentősen eltérhet. Ipari, kereskedelmi és egyéb nem lakáscélú ingatlanok esetén minden esetben egyedi árajánlat készül.</p>
   </div>
 </section>
 
@@ -1057,12 +1058,12 @@ function updateHeroBanner(){
   }
   if(mobile){
     heroImg.src=currentLang==='hu'
-      ?'hero-mobile-hu.jpg'
-      :'hero-mobile-en.jpg';
+      ?'hero-mobile-hu-v2.jpg'
+      :'hero-mobile-en-v2.jpg';
   }else{
     heroImg.src=currentLang==='hu'
-      ?'hero_hu_new.png'
-      :'hero_en_new.png';
+      ?'hero_hu_v2.jpg'
+      :'hero_en_v2.jpg';
   }
 }
 
