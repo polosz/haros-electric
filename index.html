@@ -485,9 +485,32 @@ overflow:visible!important;
     document.getElementById('hero-banner-img').src = (window.innerWidth<=768) ? 'hero-mobile-hu.jpg' : 'hero_hu_new.png';
   </script>
 </section>
+<div class="audience fade-in">
+  <h1 data-hu="Villamos biztonsági felülvizsgálat Budapesten és Pest megyében" data-en="Electrical safety inspection in Budapest and Pest County">Villamos biztonsági felülvizsgálat Budapesten és Pest megyében</h1>
+  <p class="aud-sub" data-hu="Lakásoktól és társasházaktól az ipari létesítményekig és intézményekig." data-en="From flats and condominiums to industrial facilities and institutions.">Lakásoktól és társasházaktól az ipari létesítményekig és intézményekig.</p>
+  <p class="aud-text" data-hu="Minden típusú létesítmény VBF-jét vállaljuk, mérési jegyzőkönyvvel és minősítő irattal." data-en="We inspect every type of property, with a measurement report and a qualification certificate.">Minden típusú létesítmény VBF-jét vállaljuk, mérési jegyzőkönyvvel és minősítő irattal.</p>
+  <div class="aud-paths">
+    <a href="#pricing" class="aud-card"><strong data-hu="Lakossági VBF" data-en="Residential VBF">Lakossági VBF</strong><span data-hu="Lakás, családi ház, ingatlan eladása vagy bérbeadása előtt" data-en="Flat, house, before selling or renting a property">Lakás, családi ház, ingatlan eladása vagy bérbeadása előtt</span></a>
+    <a href="/vbf-tarsashaz-ceg-intezmeny.html" class="aud-card"><strong data-hu="Céges, társasházi és intézményi VBF" data-en="Business, condominium and institutional VBF">Céges, társasházi és intézményi VBF</strong><span data-hu="Társasház, iroda, üzlet, ipari létesítmény, óvoda, iskola" data-en="Condominium, office, shop, industrial facility, kindergarten, school">Társasház, iroda, üzlet, ipari létesítmény, óvoda, iskola</span></a>
+  </div>
+</div>
+<style>
+.audience{max-width:980px;margin:0 auto;padding:44px 24px 8px;text-align:center}
+.audience h1{font-size:2rem;font-weight:900;line-height:1.25;color:#fff;margin-bottom:12px;letter-spacing:.3px}
+.audience .aud-sub{font-size:1.15rem;color:#e6e0ff;margin-bottom:8px}
+.audience .aud-text{font-size:.98rem;color:rgba(255,255,255,.78);margin-bottom:24px}
+.aud-paths{display:grid;grid-template-columns:1fr 1fr;gap:18px;text-align:left}
+.aud-card{display:block;text-decoration:none;color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(139,92,246,.4);border-radius:14px;padding:20px 22px;transition:.2s}
+.aud-card:hover{border-color:#a78bfa;background:rgba(124,58,237,.18);transform:translateY(-3px)}
+.aud-card strong{display:block;font-size:1.1rem;margin-bottom:6px;color:#fff}
+.aud-card span{font-size:.9rem;color:rgba(255,255,255,.75);line-height:1.5}
+@media(max-width:700px){.audience h1{font-size:1.5rem}.aud-paths{grid-template-columns:1fr}.audience{padding-top:30px}}
+</style>
+<div class="hero-cta-group fade-in"><a href="tel:+36708029138" class="btn btn-primary-call" data-hu="📞 Hívjon most: +36 70 802 9138" data-en="📞 Call now: +36 70 802 9138">📞 Hívjon most: +36 70 802 9138</a> <a href="#contact" class="btn btn-secondary-quote" data-hu="Ingyenes árajánlatot kérek" data-en="Request Free Quote">Ingyenes árajánlatot kérek</a></div>
+
 <div class="warning-strip fade-in">
   <span class="warning-icon">⚠️</span>
-  <span data-hu="Ingatlan adásvételekor és bérbeadáskor KÖTELEZŐ a VBF – 40/2017 NGM rendelet alapján" data-en="VBF inspection is MANDATORY for property sale &amp; rental – NGM decree 40/2017">Ingatlan adásvételekor és bérbeadáskor KÖTELEZŐ a VBF – 40/2017 NGM rendelet alapján</span>
+  <span data-hu="Lakás adásvételekor és bérbeadásakor a 40/2017. (XII. 4.) NGM rendelet alapján kötelező a VBF, ha nincs 6 évnél nem régebbi felülvizsgálati dokumentáció" data-en="Under NGM decree 40/2017 (XII. 4.), VBF is required when selling or renting a flat unless valid documentation not older than 6 years is available">Lakás adásvételekor és bérbeadásakor a 40/2017. (XII. 4.) NGM rendelet alapján kötelező a VBF, ha nincs 6 évnél nem régebbi felülvizsgálati dokumentáció</span>
 </div>
 
 
@@ -511,7 +534,7 @@ overflow:visible!important;
   </div>
 </div>
 
-<div class="hero-cta-group fade-in"><a href="tel:+36708029138" class="btn btn-primary-call" data-hu="📞 Hívjon most: +36 70 802 9138" data-en="📞 Call now: +36 70 802 9138">📞 Hívjon most: +36 70 802 9138</a> <a href="#contact" class="btn btn-secondary-quote" data-hu="Ingyenes árajánlatot kérek" data-en="Request Free Quote">Ingyenes árajánlatot kérek</a></div><section id="services" class="services">
+<section id="services" class="services">
   <div class="inner">
     <h2 class="section-title fade-in" data-hu="Szolgáltatásaink" data-en="Our Services">Szolgáltatásaink</h2>
     <div class="accent-line fade-in"></div>
@@ -644,6 +667,12 @@ overflow:visible!important;
   <div class="inner">
     <h2 class="section-title fade-in" data-hu="Ügyfeleink véleménye" data-en="What Our Clients Say">Ügyfeleink véleménye</h2>
     <div class="accent-line fade-in"></div>
+    <!-- Review CTA -->
+    <div class="fade-in" style="text-align:center;margin:0 auto 36px;padding:28px 24px;background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.25);border-radius:14px;max-width:600px;">
+      <p style="color:#ffffff;font-size:1.08rem;margin-bottom:18px;line-height:1.6;" data-hu="Elégedett volt a szolgáltatásunkkal? Segítsen másoknak is megtalálni minket — írjon egy rövid Google-véleményt!" data-en="Happy with our service? Help others find us — leave a short Google review!">Elégedett volt a szolgáltatásunkkal? Segítsen másoknak is megtalálni minket — írjon egy rövid Google-véleményt!</p>
+      <a href="https://www.google.com/search?q=Haros+Electric+Hungary&ludocid=9140340230815650493#lrd=0x4741ddb12b976515:0x7ed9030327fa92bd,3" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:linear-gradient(135deg,#7c3aed,#6d28d9);color:#ffffff;padding:15px 34px;border-radius:50px;font-weight:800;font-size:1.05rem;text-decoration:none;letter-spacing:.3px;box-shadow:0 8px 24px rgba(124,58,237,.45);" data-hu="⭐ Írjon Google-véleményt!" data-en="⭐ Write a Google Review!">⭐ Írjon Google-véleményt!</a>
+    </div>
+
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:900px;margin:0 auto;">
       <div class="fade-in" style="background:rgba(255,255,255,0.07);border:1px solid rgba(139,92,246,0.25);border-radius:14px;padding:28px 24px;">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
@@ -681,12 +710,7 @@ overflow:visible!important;
         <p style="color:rgba(255,255,255,0.78);font-size:0.92rem;line-height:1.65;margin:0;">"Csak ajánlani tudom! Pontosan érkezett, végig nagyon korrekt és segítőkész volt. A felülvizsgálat során mindent alaposan átnézett, minden kérdésemre türelmesen válaszolt. Látszott rajta, hogy nagy szakmai tapasztalata van, és nem csak letudni akarta a munkát. A jegyzőkönyvet 2 nap alatt megkaptam, az egész ügyintézés gördülékenyen ment. Jó érzés volt olyan szakembert hívni, akiben tényleg meg lehet bízni."</p>
       </div>
     </div>
-    <!-- Review CTA -->
-    <div class="fade-in" style="text-align:center;margin-top:40px;padding:28px 24px;background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.25);border-radius:14px;max-width:600px;margin-left:auto;margin-right:auto;">
-      <p style="color:#ffffff;font-size:1.08rem;margin-bottom:18px;line-height:1.6;" data-hu="Elégedett volt a szolgáltatásunkkal? Segítsen másoknak is megtalálni minket — írjon egy rövid Google-véleményt!" data-en="Happy with our service? Help others find us — leave a short Google review!">Elégedett volt a szolgáltatásunkkal? Segítsen másoknak is megtalálni minket — írjon egy rövid Google-véleményt!</p>
-      <a href="https://www.google.com/search?q=Haros+Electric+Hungary&ludocid=9140340230815650493#lrd=0x4741ddb12b976515:0x7ed9030327fa92bd,3" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:linear-gradient(135deg,#7c3aed,#6d28d9);color:#ffffff;padding:15px 34px;border-radius:50px;font-weight:800;font-size:1.05rem;text-decoration:none;letter-spacing:.3px;box-shadow:0 8px 24px rgba(124,58,237,.45);" data-hu="⭐ Írjon Google-véleményt!" data-en="⭐ Write a Google Review!">⭐ Írjon Google-véleményt!</a>
-    </div>
-  </div>
+      </div>
 </section>
 
 <section id="pricing" class="pricing">
@@ -771,6 +795,15 @@ overflow:visible!important;
     </div>
     <div class="price-custom fade-in" style="margin-top:28px;padding:28px 32px;background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.25);border-radius:14px;">
       <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:space-between;">
+        <div style="flex:1;min-width:260px">
+          <h3 style="margin:0 0 6px;font-size:1.1rem;" data-hu="🏢 Társasház, cég, ipari létesítmény, intézmény" data-en="🏢 Condominium, business, industrial facility, institution">🏢 Társasház, cég, ipari létesítmény, intézmény</h3>
+          <p style="margin:0;color:#a9b4c2;font-size:0.9rem;line-height:1.6" data-hu="Ezekre egyedi ajánlat készül, mert a létesítmények mérete és villamos hálózata nagyon eltérő. Az ajánlathoz kérjük megadni a létesítmény típusát, alapterületét, az elosztók és a telephelyek számát, valamint a vizsgálandó területet. Az ajánlat tartalmazza a helyszíni mérést, a mérési jegyzőkönyvet és a minősítő iratot." data-en="We prepare a custom quote, as the size and electrical installation of these facilities vary widely. Please provide the facility type, floor area, the number of distribution boards and sites, and the area to be inspected. The quote includes the on-site measurement, the measurement report and the qualification certificate.">Ezekre egyedi ajánlat készül, mert a létesítmények mérete és villamos hálózata nagyon eltérő. Az ajánlathoz kérjük megadni a létesítmény típusát, alapterületét, az elosztók és a telephelyek számát, valamint a vizsgálandó területet. Az ajánlat tartalmazza a helyszíni mérést, a mérési jegyzőkönyvet és a minősítő iratot.</p>
+        </div>
+        <a href="/vbf-tarsashaz-ceg-intezmeny.html" class="price-btn" style="width:auto;padding:12px 28px;display:inline-block;white-space:nowrap" data-hu="Részletek és ajánlatkérés" data-en="Details &amp; quote">Részletek és ajánlatkérés</a>
+      </div>
+    </div>
+    <div class="price-custom fade-in" style="margin-top:28px;padding:28px 32px;background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.25);border-radius:14px;">
+      <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:space-between;">
         <div>
           <h3 style="margin:0 0 6px;font-size:1.1rem;" data-hu="⚡ Villámvédelmi felülvizsgálat" data-en="⚡ Lightning Protection Inspection">⚡ Villámvédelmi felülvizsgálat</h3>
           <p style="margin:0;color:#a9b4c2;font-size:0.9rem;" data-hu="Az ár az épület típusától, kockázati kategóriától és méretétől függ. Kérjen egyedi árajánlatot!" data-en="Price depends on building type, risk category and size. Request a personalised quote!">Az ár az épület típusától, kockázati kategóriától és méretétől függ. Kérjen egyedi árajánlatot!</p>
@@ -840,6 +873,16 @@ overflow:visible!important;
             <label>Email</label>
             <input type="email" name="email" placeholder="pelda@email.com" required>
           </div>
+          <div class="form-group">
+            <label data-hu="Ügyfél típusa" data-en="Client type">Ügyfél típusa</label>
+            <select name="ugyfel" id="ugyfelSel" required>
+              <option value="" data-hu="Válasszon..." data-en="Select...">Válasszon...</option>
+              <option value="magan" data-hu="Magánszemély" data-en="Private individual">Magánszemély</option>
+              <option value="tarsashaz" data-hu="Társasház / közös képviselő" data-en="Condominium / manager">Társasház / közös képviselő</option>
+              <option value="ceg" data-hu="Cég (iroda, üzlet, ipari létesítmény)" data-en="Business (office, shop, industrial)">Cég (iroda, üzlet, ipari létesítmény)</option>
+              <option value="intezmeny" data-hu="Intézmény (óvoda, iskola, egyéb)" data-en="Institution (kindergarten, school, other)">Intézmény (óvoda, iskola, egyéb)</option>
+            </select>
+          </div>
           <div class="form-row">
             <div class="form-group">
               <label data-hu="Ingatlan típusa" data-en="Property Type">Ingatlan típusa</label>
@@ -850,12 +893,29 @@ overflow:visible!important;
                 <option value="iroda" data-hu="Iroda" data-en="Office">Iroda</option>
                 <option value="uzlet" data-hu="Üzlet / Kereskedelmi" data-en="Commercial">Üzlet / Kereskedelmi</option>
                 <option value="ipari" data-hu="Ipari létesítmény" data-en="Industrial Facility">Ipari létesítmény</option>
+                <option value="tarsashaz" data-hu="Társasház / közös terület" data-en="Condominium / common areas">Társasház / közös terület</option>
+                <option value="intezmeny" data-hu="Intézmény (óvoda, iskola stb.)" data-en="Institution (kindergarten, school, etc.)">Intézmény (óvoda, iskola stb.)</option>
               </select>
             </div>
             <div class="form-group">
               <label data-hu="Alapterület (m²)" data-en="Floor Area (m²)">Alapterület (m²)</label>
               <input type="number" name="meret" placeholder="pl. 80" min="1">
             </div>
+          </div>
+          <div class="form-group" id="teruletGroup" style="display:none">
+            <label data-hu="Létesítmény mérete, elosztók / telephelyek száma, vizsgálandó terület" data-en="Facility size, number of distribution boards / sites, area to inspect">Létesítmény mérete, elosztók / telephelyek száma, vizsgálandó terület</label>
+            <input type="text" name="terulet" placeholder="pl. 1 200 m², 3 elosztó, 1 telephely">
+          </div>
+          <div class="form-group">
+            <label data-hu="Honnan hallott rólunk?" data-en="How did you hear about us?">Honnan hallott rólunk? (nem kötelező)</label>
+            <select name="forras">
+              <option value="" data-hu="Válasszon..." data-en="Select...">Válasszon...</option>
+              <option value="google" data-hu="Google keresés vagy hirdetés" data-en="Google search or ad">Google keresés vagy hirdetés</option>
+              <option value="facebook" data-hu="Facebook" data-en="Facebook">Facebook</option>
+              <option value="ajanlas" data-hu="Ismerős, ügyfél ajánlása" data-en="Recommendation">Ismerős, ügyfél ajánlása</option>
+              <option value="szakember" data-hu="Ingatlanos vagy ügyvéd ajánlása" data-en="Estate agent or lawyer">Ingatlanos vagy ügyvéd ajánlása</option>
+              <option value="egyeb" data-hu="Egyéb" data-en="Other">Egyéb</option>
+            </select>
           </div>
           <div class="form-group">
             <label data-hu="Elvégzendő munka leírása" data-en="Description of Work">Elvégzendő munka leírása</label>
@@ -963,7 +1023,7 @@ overflow:visible!important;
 
 
 <footer>
-  <p>© 2026 <strong>Haros Electric Hungary</strong> · Háros László · Budapest · <a href="mailto:haroselectric@gmail.com">haroselectric@gmail.com</a> · <a href="/vbf-ingatlan-eladas-elott.html">VBF ingatlan eladás előtt</a></p>
+  <p>© 2026 <strong>Haros Electric Hungary</strong> · Háros László · Budapest · <a href="mailto:haroselectric@gmail.com">haroselectric@gmail.com</a> · <a href="/vbf-ingatlan-eladas-elott.html">VBF ingatlan eladás előtt</a> · <a href="/vbf-tarsashaz-ceg-intezmeny.html">Társasház, cég, intézmény</a></p>
 </footer>
 
 <script>
@@ -1089,7 +1149,10 @@ async function sendForm(e){
     name:f.nev.value,
     phone:f.telefon.value,
     email:f.email.value,
+    ugyfel_tipusa:f.ugyfel.options[f.ugyfel.selectedIndex].text,
     ingatlan_tipusa:tipus,
+    letesitmeny_adatai:(f.terulet&&f.terulet.value)||'-',
+    honnan_hallott:f.forras.options[f.forras.selectedIndex].text||'-',
     alapterulet_m2:f.meret.value||'-',
     leiras:f.leiras.value,
     _subject:'Árajánlat kérés – Haros Electric',
@@ -1102,7 +1165,7 @@ async function sendForm(e){
     if(r.ok && (j.success===true || j.success==='true')){
       ok.style.display='block';
       f.reset();
-      if(typeof gtag==='function'){ gtag('event','form_submit_contact'); }
+      if(typeof gtag==='function'){ gtag('event','form_submit_contact',{customer_type:data.ugyfel_tipusa,lead_source:data.honnan_hallott}); }
     } else { throw new Error('send failed'); }
   }catch(x){
     err.style.display='block';
@@ -1113,6 +1176,16 @@ async function sendForm(e){
 }
 
 
+
+(function(){
+  var sel=document.getElementById('ugyfelSel'), g=document.getElementById('teruletGroup');
+  if(!sel||!g) return;
+  function upd(){ g.style.display=(sel.value&&sel.value!=='magan')?'block':'none'; }
+  sel.addEventListener('change',upd);
+  var t=new URLSearchParams(location.search).get('tipus');
+  if(t){ for(var i=0;i<sel.options.length;i++){ if(sel.options[i].value===t){ sel.selectedIndex=i; break; } } }
+  upd();
+})();
 
 // CTA buttons are now plain #contact anchors — native browser jump handles them
 
