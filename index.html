@@ -456,6 +456,22 @@ overflow:visible!important;
 
 .header-phone{display:inline-flex;align-items:center;gap:6px;margin-right:16px;padding:6px 12px;font-weight:600;font-size:15px;color:#a78bfa;text-decoration:none;white-space:nowrap;}.header-phone:hover{text-decoration:underline;}.hero-cta-group{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;padding:24px 20px 4px;}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 24px;border-radius:8px;font-weight:600;font-size:1rem;text-decoration:none;transition:opacity .15s ease;}.btn-primary-call{background:var(--purple);color:#fff;}.btn-primary-call:hover{opacity:.88;}.btn-secondary-quote{background:transparent;border:2px solid var(--purple);color:#fff;}.btn-secondary-quote:hover{background:rgba(124,58,237,.15);}.mobile-sticky-call{display:none;}@media(max-width:768px){.mobile-sticky-call{display:block;position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--purple);box-shadow:0 -2px 8px rgba(0,0,0,.25);}.mobile-sticky-call-link{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px 0;color:#fff;font-weight:700;font-size:1rem;text-decoration:none;}body{padding-bottom:56px;}}@media(max-width:600px){.header-phone{display:none}}html[data-lang="hu"] .en-only{display:none}
 </style>
+<style id="rv-css">
+.rv-marquee{position:relative;overflow:hidden;margin:0 -16px;padding:6px 0 4px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.rv-track{display:flex;align-items:flex-start;gap:20px;width:max-content;max-width:none!important;animation:rv-scroll var(--rv-dur,70s) linear infinite}
+.rv-marquee:hover .rv-track,.rv-marquee.rv-paused .rv-track{animation-play-state:paused}
+@keyframes rv-scroll{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 10px))}}
+.rv-card{flex:0 0 330px;margin:0;background:rgba(255,255,255,0.07);border:1px solid rgba(139,92,246,0.25);border-radius:14px;padding:22px 22px;display:flex;flex-direction:column}
+.rv-head{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.rv-name{font-size:1.05rem;font-weight:700;color:#fff;white-space:nowrap}
+.rv-stars{margin-left:auto;color:#fbbf24;font-size:.85rem;font-weight:600;white-space:nowrap}
+.rv-card blockquote{margin:0;color:rgba(255,255,255,0.8);font-size:.92rem;line-height:1.6;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:6;overflow:hidden}
+.rv-card:hover blockquote,.rv-paused .rv-card blockquote{-webkit-line-clamp:unset;overflow:visible}
+.rv-hint{text-align:center;color:#b8b2d8;font-size:.8rem;margin:14px 0 0}
+.rv-cta{text-align:center;max-width:600px;margin:26px auto 0}
+@media(max-width:768px){.rv-card{flex-basis:280px;padding:18px}.rv-name{font-size:.98rem}.rv-stars{font-size:.78rem}.rv-track{gap:14px}@keyframes rv-scroll{to{transform:translateX(calc(-50% - 7px))}}}
+@media(prefers-reduced-motion:reduce){.rv-track{animation:none}.rv-marquee{overflow-x:auto;-webkit-mask-image:none;mask-image:none}.rv-card[aria-hidden]{display:none}.rv-hint{display:none}}
+</style>
 </head>
 <body>
 
@@ -702,72 +718,15 @@ overflow:visible!important;
   <div class="inner">
     <h2 class="section-title fade-in" data-hu="Ügyfeleink véleménye" data-en="What Our Clients Say">Ügyfeleink véleménye</h2>
     <div class="accent-line fade-in"></div>
-    <!-- Review CTA -->
-    <div class="fade-in" style="text-align:center;margin:0 auto 36px;padding:28px 24px;background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.25);border-radius:14px;max-width:600px;">
-      <p style="color:#ffffff;font-size:1.08rem;margin-bottom:18px;line-height:1.6;" data-hu="Elégedett volt a szolgáltatásunkkal? Segítsen másoknak is megtalálni minket — írjon egy rövid Google-véleményt!" data-en="Happy with our service? Help others find us — leave a short Google review!">Elégedett volt a szolgáltatásunkkal? Segítsen másoknak is megtalálni minket — írjon egy rövid Google-véleményt!</p>
-      <a href="https://www.google.com/search?q=Haros+Electric+Hungary&ludocid=9140340230815650493#lrd=0x4741ddb12b976515:0x7ed9030327fa92bd,3" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:linear-gradient(135deg,#7c3aed,#6d28d9);color:#ffffff;padding:15px 34px;border-radius:50px;font-weight:800;font-size:1.05rem;text-decoration:none;letter-spacing:.3px;box-shadow:0 8px 24px rgba(124,58,237,.45);" data-hu="⭐ Írjon Google-véleményt!" data-en="⭐ Write a Google Review!">⭐ Írjon Google-véleményt!</a>
-    </div>
 
     <p class="en-only" style="text-align:center;color:#b8b2d8;font-size:.9rem;margin:0 0 18px">Reviews are shown in their original language (Hungarian).</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:900px;margin:0 auto;">
-      <div class="fade-in" style="background:rgba(255,255,255,0.07);border:1px solid rgba(139,92,246,0.25);border-radius:14px;padding:28px 24px;">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
-          <span style="font-size:1.1rem;font-weight:700;color:#fff;">Gönczi Julianna</span>
-          <span style="margin-left:auto;color:#a78bfa;font-size:0.82rem;font-weight:600;">Google ⭐⭐⭐⭐⭐</span>
-        </div>
-        <p style="color:rgba(255,255,255,0.78);font-size:0.92rem;line-height:1.65;margin:0;">"Telefont azonnal felvette és rugalmas volt az időpont egyeztetésben, ez külön fontos volt számomra mert elég szoros az időbeosztásom. A megadott időpontban ott volt, és elvégezte precízen a munkát."</p>
-      </div>
-      <div class="fade-in" style="background:rgba(255,255,255,0.07);border:1px solid rgba(139,92,246,0.25);border-radius:14px;padding:28px 24px;">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
-          <span style="font-size:1.1rem;font-weight:700;color:#fff;">Zátrok Mónika</span>
-          <span style="margin-left:auto;color:#a78bfa;font-size:0.82rem;font-weight:600;">Google ⭐⭐⭐⭐⭐</span>
-        </div>
-        <p style="color:rgba(255,255,255,0.78);font-size:0.92rem;line-height:1.65;margin:0;">"Érintésvédelmi vizsgálatokhoz ajánlom ezt a céget!"</p>
-      </div>
-      <div class="fade-in" style="background:rgba(255,255,255,0.07);border:1px solid rgba(139,92,246,0.25);border-radius:14px;padding:28px 24px;">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
-          <span style="font-size:1.1rem;font-weight:700;color:#fff;">Tábori Ármin</span>
-          <span style="margin-left:auto;color:#a78bfa;font-size:0.82rem;font-weight:600;">Google ⭐⭐⭐⭐⭐</span>
-        </div>
-        <p style="color:rgba(255,255,255,0.78);font-size:0.92rem;line-height:1.65;margin:0;">"Adásvételhez volt szükségünk érintésvédelmi felülvizsgálatra. Flottul ment az időpontegyeztetés, minden a megbeszéltek szerint zajlott. Pontosan érkezett, alapos munkát végzett, és az összes felmerülő kérdésünkre készségesen válaszolt. A bizonyítványt gyorsan elkészítette. Nagyon korrekt ár, profi hozzáállás. Bátran ajánlom!"</p>
-      </div>
-      <div class="fade-in" style="background:rgba(255,255,255,0.07);border:1px solid rgba(139,92,246,0.25);border-radius:14px;padding:28px 24px;">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
-          <span style="font-size:1.1rem;font-weight:700;color:#fff;">Szarka Mónika</span>
-          <span style="margin-left:auto;color:#a78bfa;font-size:0.82rem;font-weight:600;">Google ⭐⭐⭐⭐⭐</span>
-        </div>
-        <p style="color:rgba(255,255,255,0.78);font-size:0.92rem;line-height:1.65;margin:0;">"A szolgáltatás minősége megfelelő volt, a VBF munkát a megbeszélt időben elvégezték. Csak ajánlani tudom őket, aki megbízható és profi szolgáltatást keres."</p>
-      </div>
-      <div class="fade-in" style="background:rgba(255,255,255,0.07);border:1px solid rgba(139,92,246,0.25);border-radius:14px;padding:28px 24px;">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
-          <span style="font-size:1.1rem;font-weight:700;color:#fff;">Polónyi Szabolcs</span>
-          <span style="margin-left:auto;color:#a78bfa;font-size:0.82rem;font-weight:600;">Google ⭐⭐⭐⭐⭐</span>
-        </div>
-        <p style="color:rgba(255,255,255,0.78);font-size:0.92rem;line-height:1.65;margin:0;">"Csak ajánlani tudom! Pontosan érkezett, végig nagyon korrekt és segítőkész volt. A felülvizsgálat során mindent alaposan átnézett, minden kérdésemre türelmesen válaszolt. Látszott rajta, hogy nagy szakmai tapasztalata van, és nem csak letudni akarta a munkát. A jegyzőkönyvet 2 nap alatt megkaptam, az egész ügyintézés gördülékenyen ment. Jó érzés volt olyan szakembert hívni, akiben tényleg meg lehet bízni."</p>
-      </div>
-      <div class="fade-in" style="background:rgba(255,255,255,0.07);border:1px solid rgba(139,92,246,0.25);border-radius:14px;padding:28px 24px;">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
-          <span style="font-size:1.1rem;font-weight:700;color:#fff;">Kecskeméty Péter</span>
-          <span style="margin-left:auto;color:#a78bfa;font-size:0.82rem;font-weight:600;">Google ⭐⭐⭐⭐⭐</span>
-        </div>
-        <p style="color:rgba(255,255,255,0.78);font-size:0.92rem;line-height:1.65;margin:0;">"Köszönöm a munkát!"</p>
-      </div>
-      <div class="fade-in" style="background:rgba(255,255,255,0.07);border:1px solid rgba(139,92,246,0.25);border-radius:14px;padding:28px 24px;">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
-          <span style="font-size:1.1rem;font-weight:700;color:#fff;">Ped Ram</span>
-          <span style="margin-left:auto;color:#a78bfa;font-size:0.82rem;font-weight:600;">Google ⭐⭐⭐⭐⭐</span>
-        </div>
-        <p style="color:rgba(255,255,255,0.78);font-size:0.92rem;line-height:1.65;margin:0;">"Megbízható és professzionális. Ajánlott."</p>
-      </div>
-      <div class="fade-in" style="background:rgba(255,255,255,0.07);border:1px solid rgba(139,92,246,0.25);border-radius:14px;padding:28px 24px;">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
-          <span style="font-size:1.1rem;font-weight:700;color:#fff;">Brigitta Balázs</span>
-          <span style="margin-left:auto;color:#a78bfa;font-size:0.82rem;font-weight:600;">Google ⭐⭐⭐⭐⭐</span>
-        </div>
-        <p style="color:rgba(255,255,255,0.78);font-size:0.92rem;line-height:1.65;margin:0;">"A VBF-et szakszerűen és gördülékenyen végezte el nálunk. Köszönöm a megbízható munkát!"</p>
-      </div>
+    <div class="rv-marquee fade-in" aria-label="Google-vélemények">
+      <div class="rv-track" style="--rv-dur:70s"><figure class="rv-card"><div class="rv-head"><span class="rv-name">Kovács Róbert</span><span class="rv-stars" aria-label="5/5">Google ★★★★★</span></div><blockquote>"A lakáshoz tartozó villamosság biztonsági felülvizsgálatot végezte el László. A megbeszélt időpontban megjelent, elvégezte a vizsgálatot és még a régi nem szabványos kismegszakítókat is helyben kicserélte, így megkaphatta a lakás a bizonyítványt. Köszönöm a gyors és segítőkész munkát!"</blockquote></figure><figure class="rv-card"><div class="rv-head"><span class="rv-name">Kovács István</span><span class="rv-stars" aria-label="5/5">Google ★★★★★</span></div><blockquote>"Üzlethelyiség VBF felülvizsgálatát kértem Lászlótól. Minden az előre megbeszéltek szerint történt időben, precizitásban és minőségben! :) Ajánlom mindenkinek!"</blockquote></figure><figure class="rv-card"><div class="rv-head"><span class="rv-name">Gönczi Julianna</span><span class="rv-stars" aria-label="5/5">Google ★★★★★</span></div><blockquote>"Telefont azonnal felvette és rugalmas volt az időpont egyeztetésben, ez külön fontos volt számomra mert elég szoros az időbeosztásom. A megadott időpontban ott volt, és elvégezte precízen a munkát."</blockquote></figure><figure class="rv-card"><div class="rv-head"><span class="rv-name">Zátrok Mónika</span><span class="rv-stars" aria-label="5/5">Google ★★★★★</span></div><blockquote>"Érintésvédelmi vizsgálatokhoz ajánlom ezt a céget!"</blockquote></figure><figure class="rv-card"><div class="rv-head"><span class="rv-name">Tábori Ármin</span><span class="rv-stars" aria-label="5/5">Google ★★★★★</span></div><blockquote>"Adásvételhez volt szükségünk érintésvédelmi felülvizsgálatra. Flottul ment az időpontegyeztetés, minden a megbeszéltek szerint zajlott. Pontosan érkezett, alapos munkát végzett, és az összes felmerülő kérdésünkre készségesen válaszolt. A bizonyítványt gyorsan elkészítette. Nagyon korrekt ár, profi hozzáállás. Bátran ajánlom!"</blockquote></figure><figure class="rv-card"><div class="rv-head"><span class="rv-name">Szarka Mónika</span><span class="rv-stars" aria-label="5/5">Google ★★★★★</span></div><blockquote>"A szolgáltatás minősége megfelelő volt, a VBF munkát a megbeszélt időben elvégezték. Csak ajánlani tudom őket, aki megbízható és profi szolgáltatást keres."</blockquote></figure><figure class="rv-card"><div class="rv-head"><span class="rv-name">Polónyi Szabolcs</span><span class="rv-stars" aria-label="5/5">Google ★★★★★</span></div><blockquote>"Csak ajánlani tudom! Pontosan érkezett, végig nagyon korrekt és segítőkész volt. A felülvizsgálat során mindent alaposan átnézett, minden kérdésemre türelmesen válaszolt. Látszott rajta, hogy nagy szakmai tapasztalata van, és nem csak letudni akarta a munkát. A jegyzőkönyvet 2 nap alatt megkaptam, az egész ügyintézés gördülékenyen ment. Jó érzés volt olyan szakembert hívni, akiben tényleg meg lehet bízni."</blockquote></figure><figure class="rv-card"><div class="rv-head"><span class="rv-name">Kecskeméty Péter</span><span class="rv-stars" aria-label="5/5">Google ★★★★★</span></div><blockquote>"Köszönöm a munkát!"</blockquote></figure><figure class="rv-card"><div class="rv-head"><span class="rv-name">Ped Ram</span><span class="rv-stars" aria-label="5/5">Google ★★★★★</span></div><blockquote>"Megbízható és professzionális. Ajánlott."</blockquote></figure><figure class="rv-card"><div class="rv-head"><span class="rv-name">Brigitta Balázs</span><span class="rv-stars" aria-label="5/5">Google ★★★★★</span></div><blockquote>"A VBF-et szakszerűen és gördülékenyen végezte el nálunk. Köszönöm a megbízható munkát!"</blockquote></figure><figure class="rv-card" aria-hidden="true"><div class="rv-head"><span class="rv-name">Kovács Róbert</span><span class="rv-stars" aria-label="5/5">Google ★★★★★</span></div><blockquote>"A lakáshoz tartozó villamosság biztonsági felülvizsgálatot végezte el Lászó. A megbeszélt időpontban megjelent, elvégezte a vizsgálatot és még a régi nem szabványos kismegszakítókat is helyben kicserélte, így megkaphatta a lakás a bizonyítványt. Köszönöm a gyors és segítőkész munkát!"</blockquote></figure><figure class="rv-card" aria-hidden="true"><div class="rv-head"><span class="rv-name">Kovács István</span><span class="rv-stars" aria-label="5/5">Google ★★★★★</span></div><blockquote>"Üzlethelyiség VBF felülvizsgálatát kértem Lászlótól. Minden az előre megbeszéltek szerint történt időben, precizitásban és minőségben! :) Ajánlom mindenkinek!"</blockquote></figure><figure class="rv-card" aria-hidden="true"><div class="rv-head"><span class="rv-name">Gönczi Julianna</span><span class="rv-stars" aria-label="5/5">Google ★★★★★</span></div><blockquote>"Telefont azonnal felvette és rugalmas volt az időpont egyeztetésben, ez külön fontos volt számomra mert elég szoros az időbeosztásom. A megadott időpontban ott volt, és elvégezte precízen a munkát."</blockquote></figure><figure class="rv-card" aria-hidden="true"><div class="rv-head"><span class="rv-name">Zátrok Mónika</span><span class="rv-stars" aria-label="5/5">Google ★★★★★</span></div><blockquote>"Érintésvédelmi vizsgálatokhoz ajánlom ezt a céget!"</blockquote></figure><figure class="rv-card" aria-hidden="true"><div class="rv-head"><span class="rv-name">Tábori Ármin</span><span class="rv-stars" aria-label="5/5">Google ★★★★★</span></div><blockquote>"Adásvételhez volt szükségünk érintésvédelmi felülvizsgálatra. Flottul ment az időpontegyeztetés, minden a megbeszéltek szerint zajlott. Pontosan érkezett, alapos munkát végzett, és az összes felmerülő kérdésünkre készségesen válaszolt. A bizonyítványt gyorsan elkészítette. Nagyon korrekt ár, profi hozzáállás. Bátran ajánlom!"</blockquote></figure><figure class="rv-card" aria-hidden="true"><div class="rv-head"><span class="rv-name">Szarka Mónika</span><span class="rv-stars" aria-label="5/5">Google ★★★★★</span></div><blockquote>"A szolgáltatás minősége megfelelő volt, a VBF munkát a megbeszélt időben elvégezték. Csak ajánlani tudom őket, aki megbízható és profi szolgáltatást keres."</blockquote></figure><figure class="rv-card" aria-hidden="true"><div class="rv-head"><span class="rv-name">Polónyi Szabolcs</span><span class="rv-stars" aria-label="5/5">Google ★★★★★</span></div><blockquote>"Csak ajánlani tudom! Pontosan érkezett, végig nagyon korrekt és segítőkész volt. A felülvizsgálat során mindent alaposan átnézett, minden kérdésemre türelmesen válaszolt. Látszott rajta, hogy nagy szakmai tapasztalata van, és nem csak letudni akarta a munkát. A jegyzőkönyvet 2 nap alatt megkaptam, az egész ügyintézés gördülékenyen ment. Jó érzés volt olyan szakembert hívni, akiben tényleg meg lehet bízni."</blockquote></figure><figure class="rv-card" aria-hidden="true"><div class="rv-head"><span class="rv-name">Kecskeméty Péter</span><span class="rv-stars" aria-label="5/5">Google ★★★★★</span></div><blockquote>"Köszönöm a munkát!"</blockquote></figure><figure class="rv-card" aria-hidden="true"><div class="rv-head"><span class="rv-name">Ped Ram</span><span class="rv-stars" aria-label="5/5">Google ★★★★★</span></div><blockquote>"Megbízható és professzionális. Ajánlott."</blockquote></figure><figure class="rv-card" aria-hidden="true"><div class="rv-head"><span class="rv-name">Brigitta Balázs</span><span class="rv-stars" aria-label="5/5">Google ★★★★★</span></div><blockquote>"A VBF-et szakszerűen és gördülékenyen végezte el nálunk. Köszönöm a megbízható munkát!"</blockquote></figure></div>
     </div>
-      </div>
+    <p class="rv-hint" data-hu="Vigye rá az egeret vagy érintse meg a teljes vélemény olvasásához" data-en="Hover or tap to pause and read the full review">Vigye rá az egeret vagy érintse meg a teljes vélemény olvasásához</p>
+    <!-- Review CTA -->
+    <div class="rv-cta"><p style="color:#fff;font-size:.98rem;margin:0 0 12px;line-height:1.5;" data-hu="Elégedett volt a szolgáltatásunkkal? Segítsen másoknak is megtalálni minket — írjon egy rövid Google-véleményt!" data-en="Happy with our service? Help others find us — leave a short Google review!">Elégedett volt a szolgáltatásunkkal? Segítsen másoknak is megtalálni minket — írjon egy rövid Google-véleményt!</p><a href="https://www.google.com/search?q=Haros+Electric+Hungary&ludocid=9140340230815650493#lrd=0x4741ddb12b976515:0x7ed9030327fa92bd,3" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:linear-gradient(135deg,#7c3aed,#6d28d9);color:#ffffff;padding:12px 28px;border-radius:50px;font-weight:800;font-size:.98rem;text-decoration:none;letter-spacing:.3px;box-shadow:0 8px 24px rgba(124,58,237,.45);" data-hu="⭐ Írjon Google-véleményt!" data-en="⭐ Write a Google Review!">⭐ Írjon Google-véleményt!</a></div>
+  </div>
 </section>
 
 <section id="pricing" class="pricing">
@@ -1248,5 +1207,6 @@ async function sendForm(e){
 // CTA buttons are now plain #contact anchors — native browser jump handles them
 
 </script>
-<div class="mobile-sticky-call"><a href="tel:+36708029138" class="mobile-sticky-call-link" data-hu="📞 Hívjon most" data-en="📞 Call now">📞 Hívjon most</a></div></body>
+<div class="mobile-sticky-call"><a href="tel:+36708029138" class="mobile-sticky-call-link" data-hu="📞 Hívjon most" data-en="📞 Call now">📞 Hívjon most</a></div><script>(function(){var m=document.querySelector('.rv-marquee');if(!m)return;m.addEventListener('touchstart',function(){m.classList.toggle('rv-paused')},{passive:true});})();</script>
+</body>
 </html>
