@@ -1214,7 +1214,7 @@ async function sendForm(e){
     if(r.ok && (j.success===true || j.success==='true')){
       ok.style.display='block';
       f.reset();
-      if(typeof gtag==='function'){ gtag('event','form_submit_contact',{customer_type:data.ugyfel_tipusa,lead_source:data.honnan_hallott}); }
+      if(typeof gtag==='function'){ gtag('event','form_submit_contact',{customer_type:data.ugyfel_tipusa,lead_source:data.honnan_hallott,calc_used:window.__pcUsed?'igen':'nem'}); }
     } else { throw new Error('send failed'); }
   }catch(x){
     err.style.display='block';
@@ -1276,7 +1276,7 @@ async function sendForm(e){
       var d=f.querySelector('[name=leiras]');
       if(d&&!d.value.trim()){var en=L()==='en';d.value=last.price?(en?'Price calculator: '+Math.round(last.m2)+' m², fixed price '+fmt(last.price)+'. ':'Árkalkulátor: '+Math.round(last.m2)+' m², fix ár '+fmt(last.price)+'. '):(en?'Price calculator: '+Math.round(last.m2)+' m², custom quote requested. ':'Árkalkulátor: '+Math.round(last.m2)+' m², egyedi ajánlatot kérek. ');}
     }
-    try{if(typeof gtag==='function')gtag('event','price_calc_click',{area_m2:Math.round(last.m2)});}catch(e){}
+    window.__pcUsed=true;try{if(typeof gtag==='function')gtag('event','price_calc_click',{area_m2:Math.round(last.m2)});}catch(e){}
     var c=document.getElementById('contact');if(c)c.scrollIntoView({behavior:'smooth'});
   });
 })();
