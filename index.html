@@ -37,7 +37,7 @@
 
     <!-- GA4 event tracking: contact form submission -->
     <script>
-        /* form_submit_contact a FormSubmit ?sent=1 redirect utan fut le, lasd a prepFormSubmit/sent-check scriptet a lap aljan */
+        /* form_submit_contact a handleFormSubmit AJAX hivas sikeres valasza utan fut le (Web3Forms), lasd a lap aljan */
     </script>
   
   <!-- Meta Pixel Code -->
@@ -941,12 +941,12 @@ section.bp-band{padding:56px 0!important;background:linear-gradient(180deg,#2b20
       <div class="form-box">
         <h3 data-hu="Küldjön árajánlat-kérést!" data-en="Send a Quote Request!">Küldjön árajánlat-kérést!</h3>
         <p class="form-desc" data-hu="Töltse ki az alábbi adatlapot és hamarosan felvesszük Önnel a kapcsolatot a pontos árajánlattal." data-en="Fill in the form below and we will contact you soon with an exact quote.">Töltse ki az alábbi adatlapot és hamarosan felvesszük Önnel a kapcsolatot a pontos árajánlattal.</p>
-        <form id="contactForm" action="https://formsubmit.co/haroselectric@gmail.com" method="POST" onsubmit="prepFormSubmit(event)">
-          <input type="hidden" name="_subject" value="Árajánlat kérés – Haros Electric">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://haroselectric.hu/?sent=1#contact">
-          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" onsubmit="return handleFormSubmit(event)">
+          <input type="hidden" name="access_key" value="36f1c340-ed7a-4e06-a08f-79b2c74a7a24">
+          <input type="hidden" name="subject" value="Árajánlat kérés – Haros Electric">
+          <input type="hidden" name="from_name" value="Haros Electric weboldal">
+          <input type="hidden" name="redirect" value="https://haroselectric.hu/?sent=1#contact">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
           <div class="form-row">
             <div class="form-group">
               <label data-hu="Neve" data-en="Your Name">Neve</label>
@@ -1010,7 +1010,7 @@ section.bp-band{padding:56px 0!important;background:linear-gradient(180deg,#2b20
             <textarea name="leiras" placeholder="Kérem írja le röviden, milyen munkát szeretne elvégeztetni, mikor lenne szüksége rá, van-e különleges igény..." data-ph-hu="Kérem írja le röviden, milyen munkát szeretne elvégeztetni, mikor lenne szüksége rá, van-e különleges igény..." data-ph-en="Please briefly describe the work you need, when you'd need it, and any special requirements..."></textarea>
           </div>
           <button type="submit" class="btn-send" data-hu="📨  Ajánlatot kérek" data-en="📨  Request a Quote">📨  Ajánlatot kérek</button>
-          <p style="margin-top:12px;font-size:.85rem;opacity:.75;line-height:1.5" data-hu="Az adatait kizárólag az árajánlat elkészítéséhez és a kapcsolatfelvételhez használjuk. Az űrlap adatait a FormSubmit szolgáltatás továbbítja e-mailben hozzánk; más célra nem használjuk fel, és nem adjuk el." data-en="We use your details only to prepare the quote and contact you. The form data is forwarded to us by e-mail through the FormSubmit service; we do not use it for any other purpose and do not sell it.">Az adatait kizárólag az árajánlat elkészítéséhez és a kapcsolatfelvételhez használjuk. Az űrlap adatait a FormSubmit szolgáltatás továbbítja e-mailben hozzánk; más célra nem használjuk fel, és nem adjuk el.</p>
+          <p style="margin-top:12px;font-size:.85rem;opacity:.75;line-height:1.5" data-hu="Az adatait kizárólag az árajánlat elkészítéséhez és a kapcsolatfelvételhez használjuk. Az űrlap adatait egy biztonságos űrlap-továbbító szolgáltatás juttatja el hozzánk e-mailben; más célra nem használjuk fel, és nem adjuk el." data-en="We use your details only to prepare the quote and contact you. The form data is forwarded to us by e-mail through a secure form-delivery service; we do not use it for any other purpose and do not sell it.">Az adatait kizárólag az árajánlat elkészítéséhez és a kapcsolatfelvételhez használjuk. Az űrlap adatait egy biztonságos űrlap-továbbító szolgáltatás juttatja el hozzánk e-mailben; más célra nem használjuk fel, és nem adjuk el.</p>
           <div id="form-success">✅ <span data-hu="Üzenetét megkaptuk! Hamarosan felvesszük Önnel a kapcsolatot." data-en="We received your message! We will contact you shortly.">Üzenetét megkaptuk! Hamarosan felvesszük Önnel a kapcsolatot.</span></div>
           <div id="form-error" style="display:none;margin-top:16px;padding:14px 16px;border-radius:10px;background:rgba(220,60,60,.15);border:1px solid rgba(220,60,60,.5);color:#ffb4b4;font-size:.95rem;line-height:1.5">⚠️ <span data-hu="Sajnos nem sikerült elküldeni az üzenetet. Kérjük, hívjon a +36 70 802 9138 telefonszámon, vagy írjon a haroselectric@gmail.com címre." data-en="Sorry, we could not send your message. Please call +36 70 802 9138 or email haroselectric@gmail.com.">Sajnos nem sikerült elküldeni az üzenetet. Kérjük, hívjon a +36 70 802 9138 telefonszámon, vagy írjon a haroselectric@gmail.com címre.</span></div>
         </form>
@@ -1223,42 +1223,51 @@ secs.forEach(s=>navObs.observe(s));
 const fadeObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');fadeObs.unobserve(e.target);}});},{threshold:.12});
 document.querySelectorAll('.fade-in').forEach(el=>fadeObs.observe(el));
 
-function prepFormSubmit(e){
+function handleFormSubmit(e){
+  e.preventDefault();
   var f=e.target;
+  var btn=f.querySelector('.btn-send');
+  var errorDiv=document.getElementById('form-error');
+  var okDiv=document.getElementById('form-success');
+  if(errorDiv) errorDiv.style.display='none';
+  if(okDiv) okDiv.style.display='none';
+  var meta={};
   try{
-    var meta={
+    meta={
       ugyfel_tipusa:f.ugyfel.options[f.ugyfel.selectedIndex].text,
       ingatlan_tipusa:f.tipus.options[f.tipus.selectedIndex].text,
       honnan_hallott:f.forras.options[f.forras.selectedIndex].text||'-',
       calc_used:window.__pcUsed?'igen':'nem'
     };
-    sessionStorage.setItem('hc_lead_meta',JSON.stringify(meta));
-    var addHidden=function(name,val){var i=document.createElement('input');i.type='hidden';i.name=name;i.value=val;f.appendChild(i);};
-    addHidden('ugyfel_tipusa_szoveg',meta.ugyfel_tipusa);
-    addHidden('ingatlan_tipusa_szoveg',meta.ingatlan_tipusa);
-    addHidden('honnan_hallott_szoveg',meta.honnan_hallott);
   }catch(err){}
-  // no preventDefault: the browser submits the form normally to FormSubmit, which redirects back with ?sent=1
-}
-
-(function(){
-  if(new URLSearchParams(location.search).get('sent')==='1'){
-    var ok=document.getElementById('form-success');
-    if(ok) ok.style.display='block';
-    try{
-      var raw=sessionStorage.getItem('hc_lead_meta');
-      if(raw && typeof gtag==='function'){
-        var meta=JSON.parse(raw);
-        gtag('event','form_submit_contact',meta);
-      }
-      sessionStorage.removeItem('hc_lead_meta');
-    }catch(err){}
-    try{
-      var cleanUrl=location.pathname+location.hash;
-      history.replaceState(null,'',cleanUrl);
-    }catch(err){}
+  var origText=btn?btn.textContent:null;
+  if(btn){
+    btn.disabled=true;
+    btn.textContent=(document.documentElement.getAttribute('data-lang')==='en')?'Sending...':'Küldés...';
   }
-})();
+  var fd=new FormData(f);
+  fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:fd})
+    .then(function(r){return r.json();})
+    .then(function(data){
+      if(data && data.success){
+        if(okDiv) okDiv.style.display='block';
+        f.reset();
+        try{ if(typeof gtag==='function'){ gtag('event','form_submit_contact',meta); } }catch(err){}
+      }else{
+        if(errorDiv) errorDiv.style.display='block';
+      }
+    })
+    .catch(function(){
+      if(errorDiv) errorDiv.style.display='block';
+    })
+    .finally(function(){
+      if(btn){
+        btn.disabled=false;
+        if(origText!==null) btn.textContent=origText;
+      }
+    });
+  return false;
+}
 
 (function(){
   var sel=document.getElementById('ugyfelSel'), g=document.getElementById('teruletGroup');
