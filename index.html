@@ -37,7 +37,7 @@
 
     <!-- GA4 event tracking: contact form submission -->
     <script>
-        /* form_submit_contact most csak sikeres kuldes utan fut le (lasd sendForm) */
+        /* form_submit_contact a FormSubmit ?sent=1 redirect utan fut le, lasd a prepFormSubmit/sent-check scriptet a lap aljan */
     </script>
   
   <!-- Meta Pixel Code -->
@@ -790,7 +790,7 @@ section.bp-band{padding:56px 0!important;background:linear-gradient(180deg,#2b20
     </div>
     <p class="rv-hint" data-hu="Vigye rá az egeret vagy érintse meg a teljes vélemény olvasásához" data-en="Hover or tap to pause and read the full review">Vigye rá az egeret vagy érintse meg a teljes vélemény olvasásához</p>
     <!-- Review CTA -->
-    <div class="rv-cta"><p style="color:#fff;font-size:.98rem;margin:0 0 12px;line-height:1.5;" data-hu="Elégedett volt a szolgáltatásunkkal? Segítsen másoknak is megtalálni minket — írjon egy rövid Google-véleményt!" data-en="Happy with our service? Help others find us — leave a short Google review!">Elégedett volt a szolgáltatásunkkal? Segítsen másoknak is megtalálni minket — írjon egy rövid Google-véleményt!</p><a href="https://www.google.com/search?q=Haros+Electric+Hungary&ludocid=9140340230815650493#lrd=0x4741ddb12b976515:0x7ed9030327fa92bd,3" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:linear-gradient(135deg,#7c3aed,#6d28d9);color:#ffffff;padding:12px 28px;border-radius:50px;font-weight:800;font-size:.98rem;text-decoration:none;letter-spacing:.3px;box-shadow:0 8px 24px rgba(124,58,237,.45);" data-hu="⭐ Írjon Google-véleményt!" data-en="⭐ Write a Google Review!">⭐ Írjon Google-véleményt!</a></div>
+    <div class="rv-cta"><p style="color:#fff;font-size:.98rem;margin:0 0 12px;line-height:1.5;" data-hu="Elégedett volt a szolgáltatásunkkal? Segítsen másoknak is megtalálni minket — írjon egy rövid Google-véleményt!" data-en="Happy with our service? Help others find us — leave a short Google review!">Elégedett volt a szolgáltatásunkkal? Segítsen másoknak is megtalálni minket — írjon egy rövid Google-véleményt!</p><a href="https://search.google.com/local/writereview?placeid=ChIJFWWXK7HdQUcRvZL6JwMD2X4" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:linear-gradient(135deg,#7c3aed,#6d28d9);color:#ffffff;padding:12px 28px;border-radius:50px;font-weight:800;font-size:.98rem;text-decoration:none;letter-spacing:.3px;box-shadow:0 8px 24px rgba(124,58,237,.45);" data-hu="⭐ Írjon Google-véleményt!" data-en="⭐ Write a Google Review!">⭐ Írjon Google-véleményt!</a></div>
   </div>
 </section>
 
@@ -941,7 +941,12 @@ section.bp-band{padding:56px 0!important;background:linear-gradient(180deg,#2b20
       <div class="form-box">
         <h3 data-hu="Küldjön árajánlat-kérést!" data-en="Send a Quote Request!">Küldjön árajánlat-kérést!</h3>
         <p class="form-desc" data-hu="Töltse ki az alábbi adatlapot és hamarosan felvesszük Önnel a kapcsolatot a pontos árajánlattal." data-en="Fill in the form below and we will contact you soon with an exact quote.">Töltse ki az alábbi adatlapot és hamarosan felvesszük Önnel a kapcsolatot a pontos árajánlattal.</p>
-        <form id="contactForm" onsubmit="sendForm(event)">
+        <form id="contactForm" action="https://formsubmit.co/haroselectric@gmail.com" method="POST" onsubmit="prepFormSubmit(event)">
+          <input type="hidden" name="_subject" value="Árajánlat kérés – Haros Electric">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://haroselectric.hu/?sent=1#contact">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
           <div class="form-row">
             <div class="form-group">
               <label data-hu="Neve" data-en="Your Name">Neve</label>
@@ -1217,48 +1222,43 @@ const navObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isInter
 secs.forEach(s=>navObs.observe(s));
 const fadeObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');fadeObs.unobserve(e.target);}});},{threshold:.12});
 document.querySelectorAll('.fade-in').forEach(el=>fadeObs.observe(el));
-async function sendForm(e){
-  e.preventDefault();
-  const f=e.target;
-  const btn=f.querySelector('button[type="submit"]');
-  const ok=document.getElementById('form-success');
-  const err=document.getElementById('form-error');
-  ok.style.display='none'; err.style.display='none';
-  const origBtn=btn.innerHTML;
-  btn.disabled=true;
-  btn.textContent=(currentLang==='en')?'Sending...':'Küldés...';
-  const tipus=f.tipus.options[f.tipus.selectedIndex].text;
-  const data={
-    name:f.nev.value,
-    phone:f.telefon.value,
-    email:f.email.value,
-    ugyfel_tipusa:f.ugyfel.options[f.ugyfel.selectedIndex].text,
-    ingatlan_tipusa:tipus,
-    letesitmeny_adatai:(f.terulet&&f.terulet.value)||'-',
-    honnan_hallott:f.forras.options[f.forras.selectedIndex].text||'-',
-    alapterulet_m2:f.meret.value||'-',
-    leiras:f.leiras.value,
-    _subject:'Árajánlat kérés – Haros Electric',
-    _template:'table',
-    _captcha:'false'
-  };
+
+function prepFormSubmit(e){
+  var f=e.target;
   try{
-    const r=await fetch('https://formsubmit.co/ajax/haroselectric@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)});
-    const j=await r.json();
-    if(r.ok && (j.success===true || j.success==='true')){
-      ok.style.display='block';
-      f.reset();
-      if(typeof gtag==='function'){ gtag('event','form_submit_contact',{customer_type:data.ugyfel_tipusa,lead_source:data.honnan_hallott,calc_used:window.__pcUsed?'igen':'nem'}); }
-    } else { throw new Error('send failed'); }
-  }catch(x){
-    err.style.display='block';
-  }finally{
-    btn.disabled=false;
-    btn.innerHTML=origBtn;
-  }
+    var meta={
+      ugyfel_tipusa:f.ugyfel.options[f.ugyfel.selectedIndex].text,
+      ingatlan_tipusa:f.tipus.options[f.tipus.selectedIndex].text,
+      honnan_hallott:f.forras.options[f.forras.selectedIndex].text||'-',
+      calc_used:window.__pcUsed?'igen':'nem'
+    };
+    sessionStorage.setItem('hc_lead_meta',JSON.stringify(meta));
+    var addHidden=function(name,val){var i=document.createElement('input');i.type='hidden';i.name=name;i.value=val;f.appendChild(i);};
+    addHidden('ugyfel_tipusa_szoveg',meta.ugyfel_tipusa);
+    addHidden('ingatlan_tipusa_szoveg',meta.ingatlan_tipusa);
+    addHidden('honnan_hallott_szoveg',meta.honnan_hallott);
+  }catch(err){}
+  // no preventDefault: the browser submits the form normally to FormSubmit, which redirects back with ?sent=1
 }
 
-
+(function(){
+  if(new URLSearchParams(location.search).get('sent')==='1'){
+    var ok=document.getElementById('form-success');
+    if(ok) ok.style.display='block';
+    try{
+      var raw=sessionStorage.getItem('hc_lead_meta');
+      if(raw && typeof gtag==='function'){
+        var meta=JSON.parse(raw);
+        gtag('event','form_submit_contact',meta);
+      }
+      sessionStorage.removeItem('hc_lead_meta');
+    }catch(err){}
+    try{
+      var cleanUrl=location.pathname+location.hash;
+      history.replaceState(null,'',cleanUrl);
+    }catch(err){}
+  }
+})();
 
 (function(){
   var sel=document.getElementById('ugyfelSel'), g=document.getElementById('teruletGroup');
