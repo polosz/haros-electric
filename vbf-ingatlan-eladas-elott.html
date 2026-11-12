@@ -13,46 +13,24 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Service","name":"VBF felülvizsgálat ingatlan eladás előtt","provider":{"@type":"Electrician","name":"Haros Electric Hungary","url":"https://haroselectric.hu/","telephone":"+36708029138"},"areaServed":["Budapest","Pest megye"],"description":"Villamos biztonsági felülvizsgálat (VBF) ingatlan eladása előtt, minősítő irattal és mérési jegyzőkönyvvel."}
 </script>
-<!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P6WGN8X6SC"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-P6WGN8X6SC');
-  </script>
-    <!-- GA4 event tracking: phone and email link clicks -->
-    <script>
-        document.addEventListener('click', function(e) {
-              var link = e.target.closest('a');
-              if (!link) return;
-                    var href = link.getAttribute('href') || '';
-              if (href.indexOf('tel:') === 0) {
-                      gtag('event', 'phone_click', { 'link_url': href });
-              } else if (href.indexOf('mailto:') === 0) {
-                      gtag('event', 'email_click', { 'link_url': href });
-              }
-        });
-    </script>
-
-  
-  <!-- Meta Pixel Code -->
+<!-- Meresi kodok: csak a latogato hozzajarulasa utan toltodnek be (he-consent) -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1612418367298697');
-fbq('track', 'PageView');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','functionality_storage':'granted','security_storage':'granted'});
+  gtag('js', new Date());
+  window.HE_TAGS = { ga4:'G-P6WGN8X6SC', ads:'AW-18425319272', adsCall:'AW-18425319272/KJUfCK6g2ZQdEOie8NFE', fb:'1612418367298697' };
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1612418367298697&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+<script>
+  document.addEventListener('click', function(e){
+    var link = e.target.closest ? e.target.closest('a') : null;
+    if(!link) return;
+    var href = link.getAttribute('href') || '';
+    if(href.indexOf('tel:')===0){ gtag('event','phone_click',{'link_url':href}); }
+    else if(href.indexOf('mailto:')===0){ gtag('event','email_click',{'link_url':href}); }
+  });
+</script>
+
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
@@ -193,8 +171,57 @@ footer{background:rgba(38,28,74,.85);border-top:1px solid rgba(139,92,246,.15);p
   </div>
 </div>
 
-<footer>© 2026 <strong>Haros Electric Hungary</strong> · Háros László · Budapest · <a href="mailto:haroselectric@gmail.com">haroselectric@gmail.com</a> · <a href="/">Főoldal</a> · <a href="/vbf-budapest.html">VBF Budapest – kerületek</a> · <a href="/vbf-berbeadas-elott.html">VBF bérbeadás előtt</a></footer>
+<footer>© 2026 <strong>Haros Electric Hungary</strong> · Háros László · Budapest · <a href="mailto:haroselectric@gmail.com">haroselectric@gmail.com</a> · <a href="/">Főoldal</a> · <a href="/vbf-budapest.html">VBF Budapest – kerületek</a> · <a href="/vbf-berbeadas-elott.html">VBF bérbeadás előtt</a> · <a href="/adatkezelesi-tajekoztato.html">Adatkezelési tájékoztató</a></footer>
 
 <div class="mobile-sticky-phone"><a href="tel:+36708029138">📞 Hívjon most</a></div>
+
+<div id="he-consent" class="he-consent" role="dialog" aria-label="Adatkezelesi beallitasok" hidden>
+  <div class="he-consent-in">
+    <p class="he-consent-txt">Ez a weboldal a működéshez szükséges sütiken túl mérési és hirdetési sütiket is használna (Google Analytics, Google Ads, Meta). Ezek csak az Ön hozzájárulásával indulnak el.</p>
+    <p class="he-consent-link"><a href="/adatkezelesi-tajekoztato.html">Adatkezelési tájékoztató</a></p>
+    <div class="he-consent-btns">
+      <button type="button" id="heConsentNo" class="he-btn-ghost">Csak a szükségesek</button>
+      <button type="button" id="heConsentYes" class="he-btn-ok">Elfogadom</button>
+    </div>
+  </div>
+</div>
+<style>
+.he-consent{position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#140d22;color:#fff;border-top:1px solid rgba(255,255,255,.16);box-shadow:0 -8px 30px rgba(0,0,0,.45);}
+.he-consent[hidden]{display:none;}
+.he-consent-in{max-width:1100px;margin:0 auto;padding:16px 20px;display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;}
+.he-consent-txt{margin:0;font-size:.92rem;line-height:1.5;flex:1 1 420px;}
+.he-consent-link{margin:0;font-size:.85rem;}
+.he-consent-link a{color:#fff;text-decoration:underline;}
+.he-consent-btns{display:flex;gap:10px;flex:0 0 auto;}
+.he-consent-btns button{min-height:44px;padding:10px 20px;border-radius:8px;font-weight:700;font-size:.92rem;cursor:pointer;border:1px solid rgba(255,255,255,.25);}
+.he-btn-ghost{background:transparent;color:#fff;}
+.he-btn-ok{background:#7b3fe4;color:#fff;border-color:transparent;}
+@media(max-width:600px){.he-consent-in{padding:14px 16px;}.he-consent-btns{width:100%;}.he-consent-btns button{flex:1;}}
+</style>
+<script>
+(function(){
+  var KEY='he_consent_v1', box=document.getElementById('he-consent');
+  function load(){
+    var T=window.HE_TAGS||{};
+    gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});
+    var g=document.createElement('script'); g.async=true; g.src='https://www.googletagmanager.com/gtag/js?id='+T.ga4; document.head.appendChild(g);
+    gtag('config',T.ga4); gtag('config',T.ads);
+    if(T.adsCall) gtag('config',T.adsCall,{'phone_conversion_number':'+36 70 802 9138'});
+    if(T.fb){
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
+      s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init',T.fb); fbq('track','PageView');
+    }
+  }
+  function hide(){ if(box) box.hidden=true; }
+  var saved=null; try{ saved=localStorage.getItem(KEY); }catch(e){}
+  if(saved==='yes'){ load(); hide(); } else if(saved==='no'){ hide(); } else if(box){ box.hidden=false; }
+  var y=document.getElementById('heConsentYes'), n2=document.getElementById('heConsentNo');
+  if(y) y.addEventListener('click',function(){ try{localStorage.setItem(KEY,'yes');}catch(e){} load(); hide(); });
+  if(n2) n2.addEventListener('click',function(){ try{localStorage.setItem(KEY,'no');}catch(e){} hide(); });
+  window.heResetConsent=function(){ try{localStorage.removeItem(KEY);}catch(e){} if(box) box.hidden=false; };
+})();
+</script>
 </body>
 </html>
