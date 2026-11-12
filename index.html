@@ -187,6 +187,23 @@ border:1px solid rgba(139,92,246,.25);
 .btn-send{width:100%;padding:14px;background:linear-gradient(135deg,var(--purple),var(--purple2));color:#fff;font-weight:800;font-size:1rem;letter-spacing:1px;border:none;border-radius:50px;cursor:pointer;transition:.2s;margin-top:6px;text-transform:uppercase;}
 .btn-send:hover{opacity:.88;transform:translateY(-2px);box-shadow:0 8px 24px rgba(124,58,237,.45)}
 #form-success{display:none;margin-top:14px;padding:14px;background:rgba(100,200,100,.12);border:1px solid rgba(100,200,100,.3);border-radius:8px;color:#7fff7f;text-align:center;font-size:.9rem}
+.form-hint{font-size:.82rem;color:rgba(255,255,255,.55);margin:-14px 0 18px;line-height:1.5}
+.form-sec{font-size:.78rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--accent2);margin:22px 0 12px;padding-top:16px;border-top:1px solid rgba(139,92,246,.2)}
+.form-sec-first{margin-top:6px;border-top:none;padding-top:0}
+.form-row.fr-zip{grid-template-columns:120px 1fr}
+.form-row.fr-street{grid-template-columns:1fr 110px}
+.form-check{display:flex;gap:10px;align-items:flex-start;margin:6px 0 16px;font-size:.85rem;line-height:1.5;color:rgba(255,255,255,.82)}
+.form-check input{margin-top:3px;flex:0 0 auto;width:18px;height:18px;accent-color:var(--purple);cursor:pointer}
+.form-check label{cursor:pointer}
+.form-group input[type=date]{color-scheme:dark}
+.was-validated .form-group input:invalid,.was-validated .form-group select:invalid{border-color:#e06666}
+.was-validated .form-check input:invalid{outline:2px solid #e06666;outline-offset:2px}
+@media(max-width:600px){
+  .form-row.fr-zip{grid-template-columns:112px 1fr}
+  .form-row.fr-street{grid-template-columns:1fr 96px}
+  .form-box{padding:28px 20px}
+}
+#form-success{font-size:1rem;font-weight:700;line-height:1.5;padding:18px 16px!important;margin-top:18px!important}
 footer{background:rgba(38,28,74,.85);border-top:1px solid rgba(139,92,246,.15);padding:28px 40px;text-align:center;color:rgba(255,255,255,.4);font-size:.82rem;}
 footer a{color:rgba(139,92,246,.7);text-decoration:none}
 .fade-in{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s}
@@ -956,29 +973,34 @@ section.bp-band{padding:56px 0!important;background:linear-gradient(180deg,#2b20
       </div>
       <div class="form-box">
         <h3 data-hu="Küldjön árajánlat-kérést!" data-en="Send a Quote Request!">Küldjön árajánlat-kérést!</h3>
-        <p class="form-desc" data-hu="Töltse ki az alábbi adatlapot és hamarosan felvesszük Önnel a kapcsolatot a pontos árajánlattal." data-en="Fill in the form below and we will contact you soon with an exact quote.">Töltse ki az alábbi adatlapot és hamarosan felvesszük Önnel a kapcsolatot a pontos árajánlattal.</p>
+        <p class="form-desc" data-hu="Töltse ki az alábbi adatlapot, és a megadott adatokkal árajánlattal és időponttal tudunk visszajelezni. Kérjük, a telefonszámot, az e-mail címet és az ingatlan címét pontosan adja meg: ezekre a felülvizsgálati jegyzőkönyvhöz is szükség van." data-en="Fill in the form below and we will get back to you with a quote and an appointment. Please enter your phone number, e-mail address and the property address exactly: they are also needed for the inspection report.">Töltse ki az alábbi adatlapot, és a megadott adatokkal árajánlattal és időponttal tudunk visszajelezni. Kérjük, a telefonszámot, az e-mail címet és az ingatlan címét pontosan adja meg: ezekre a felülvizsgálati jegyzőkönyvhöz is szükség van.</p>
+        <p class="form-hint" data-hu="Csak kérdése van? Hívjon a +36 70 802 9138 számon, vagy írjon a haroselectric@gmail.com címre." data-en="Just have a question? Call +36 70 802 9138 or write to haroselectric@gmail.com.">Csak kérdése van? Hívjon a +36 70 802 9138 számon, vagy írjon a haroselectric@gmail.com címre.</p>
         <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" onsubmit="return handleFormSubmit(event)">
           <input type="hidden" name="access_key" value="36f1c340-ed7a-4e06-a08f-79b2c74a7a24">
-          <input type="hidden" name="subject" value="Árajánlat kérés – Haros Electric">
+          <input type="hidden" name="subject" value="Árajánlat / időpont – Haros Electric">
           <input type="hidden" name="from_name" value="Haros Electric weboldal">
           <input type="hidden" name="redirect" value="https://haroselectric.hu/?sent=1#contact">
+          <input type="hidden" name="osszefoglalo" value="">
+          <input type="hidden" name="nyelv" value="hu">
           <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+          <p class="form-sec form-sec-first" data-hu="Az Ön adatai" data-en="Your details">Az Ön adatai</p>
           <div class="form-row">
             <div class="form-group">
-              <label data-hu="Neve" data-en="Your Name">Neve</label>
-              <input type="text" name="nev" placeholder="pl. Kovács János" data-ph-hu="pl. Kovács János" data-ph-en="e.g. John Smith" required>
+              <label data-hu="Teljes név *" data-en="Full name *">Teljes név *</label>
+              <input type="text" name="nev" autocomplete="name" placeholder="pl. Kovács János" data-ph-hu="pl. Kovács János" data-ph-en="e.g. John Smith" pattern=".*\S+\s+\S+.*" data-err-hu="Kérjük, a teljes nevét adja meg (vezeték- és keresztnév)." data-err-en="Please enter your full name (first and last name)." required>
             </div>
             <div class="form-group">
-              <label data-hu="Telefonszám" data-en="Phone number (with country code)">Telefonszám</label>
-              <input type="tel" name="telefon" inputmode="tel" autocomplete="tel" placeholder="+36 30 000 0000" data-ph-hu="+36 30 000 0000" data-ph-en="+44 20 1234 5678" required>
+              <label data-hu="Telefonszám *" data-en="Phone number (with country code) *">Telefonszám *</label>
+              <input type="tel" name="telefon" data-phone inputmode="tel" autocomplete="tel" placeholder="+36 30 000 0000" data-ph-hu="+36 30 000 0000" data-ph-en="+44 20 1234 5678" required>
             </div>
           </div>
           <div class="form-group">
-            <label>Email</label>
-            <input type="email" name="email" placeholder="pelda@email.com" data-ph-hu="pelda@email.com" data-ph-en="name@example.com" required>
+            <label data-hu="E-mail cím * (ide küldjük a jegyzőkönyvet)" data-en="E-mail address * (we send the report here)">E-mail cím * (ide küldjük a jegyzőkönyvet)</label>
+            <input type="email" name="email" autocomplete="email" placeholder="pelda@email.com" data-ph-hu="pelda@email.com" data-ph-en="name@example.com" pattern="[^@\s]+@[^@\s]+\.[^@\s]{2,}" data-err-hu="Kérjük, érvényes e-mail címet adjon meg (pl. nev@pelda.hu)." data-err-en="Please enter a valid e-mail address (e.g. name@example.com)." required>
           </div>
           <div class="form-group">
-            <label data-hu="Ügyfél típusa" data-en="Client type">Ügyfél típusa</label>
+            <label data-hu="Ügyfél típusa *" data-en="Client type *">Ügyfél típusa *</label>
             <select name="ugyfel" id="ugyfelSel" required>
               <option value="" data-hu="Válasszon..." data-en="Select...">Válasszon...</option>
               <option value="magan" data-hu="Magánszemély" data-en="Private individual">Magánszemély</option>
@@ -987,9 +1009,11 @@ section.bp-band{padding:56px 0!important;background:linear-gradient(180deg,#2b20
               <option value="intezmeny" data-hu="Intézmény (óvoda, iskola, egyéb)" data-en="Institution (kindergarten, school, other)">Intézmény (óvoda, iskola, egyéb)</option>
             </select>
           </div>
+
+          <p class="form-sec" data-hu="Az ingatlan adatai" data-en="Property details">Az ingatlan adatai</p>
           <div class="form-row">
             <div class="form-group">
-              <label data-hu="Ingatlan típusa" data-en="Property Type">Ingatlan típusa</label>
+              <label data-hu="Ingatlan típusa *" data-en="Property type *">Ingatlan típusa *</label>
               <select name="tipus" required>
                 <option value="" data-hu="Válasszon..." data-en="Select...">Válasszon...</option>
                 <option value="lakas" data-hu="Lakás" data-en="Apartment">Lakás</option>
@@ -1002,16 +1026,79 @@ section.bp-band{padding:56px 0!important;background:linear-gradient(180deg,#2b20
               </select>
             </div>
             <div class="form-group">
-              <label data-hu="Alapterület (m²)" data-en="Floor Area (m²)">Alapterület (m²)</label>
-              <input type="number" name="meret" placeholder="pl. 80" data-ph-hu="pl. 80" data-ph-en="e.g. 80" min="1">
+              <label data-hu="Alapterület (m²) *" data-en="Floor area (m²) *">Alapterület (m²) *</label>
+              <input type="number" name="meret" inputmode="numeric" placeholder="pl. 80" data-ph-hu="pl. 80" data-ph-en="e.g. 80" min="1" step="any" data-err-hu="Kérjük, adja meg az alapterületet m²-ben (pozitív szám)." data-err-en="Please enter the floor area in m² (a positive number)." required>
             </div>
           </div>
           <div class="form-group" id="teruletGroup" style="display:none">
-            <label data-hu="Létesítmény mérete, elosztók / telephelyek száma, vizsgálandó terület" data-en="Facility size, number of distribution boards / sites, area to inspect">Létesítmény mérete, elosztók / telephelyek száma, vizsgálandó terület</label>
+            <label data-hu="Létesítmény mérete, elosztók / telephelyek száma, vizsgálandó terület (nem kötelező)" data-en="Facility size, number of distribution boards / sites, area to inspect (optional)">Létesítmény mérete, elosztók / telephelyek száma, vizsgálandó terület (nem kötelező)</label>
             <input type="text" name="terulet" placeholder="pl. 1 200 m², 3 elosztó, 1 telephely" data-ph-hu="pl. 1 200 m², 3 elosztó, 1 telephely" data-ph-en="e.g. 1,200 m², 3 distribution boards, 1 site">
           </div>
+          <div class="form-row fr-zip">
+            <div class="form-group">
+              <label data-hu="Irsz. *" data-en="Postcode *">Irsz. *</label>
+              <input type="text" name="iranyitoszam" inputmode="numeric" autocomplete="postal-code" maxlength="4" pattern="[0-9]{4}" placeholder="1075" data-ph-hu="1075" data-ph-en="1075" data-err-hu="Az irányítószám 4 számjegyű (pl. 1075)." data-err-en="The postal code has 4 digits (e.g. 1075)." required>
+            </div>
+            <div class="form-group">
+              <label data-hu="Város *" data-en="City *">Város *</label>
+              <input type="text" name="varos" autocomplete="address-level2" placeholder="pl. Budapest" data-ph-hu="pl. Budapest" data-ph-en="e.g. Budapest" required>
+            </div>
+          </div>
+          <div class="form-row fr-street">
+            <div class="form-group">
+              <label data-hu="Utca, közterület *" data-en="Street *">Utca, közterület *</label>
+              <input type="text" name="utca" autocomplete="address-line1" placeholder="pl. Kazinczy utca" data-ph-hu="pl. Kazinczy utca" data-ph-en="e.g. Kazinczy utca" required>
+            </div>
+            <div class="form-group">
+              <label data-hu="Házszám *" data-en="No. *">Házszám *</label>
+              <input type="text" name="hazszam" placeholder="pl. 12/A" data-ph-hu="pl. 12/A" data-ph-en="e.g. 12/A" required>
+            </div>
+          </div>
           <div class="form-group">
-            <label data-hu="Honnan hallott rólunk?" data-en="How did you hear about us?">Honnan hallott rólunk? (nem kötelező)</label>
+            <label data-hu="Emelet / ajtó (lakásnál kötelező)" data-en="Floor / door (required for apartments)">Emelet / ajtó (lakásnál kötelező)</label>
+            <input type="text" name="emelet_ajto" placeholder="pl. 3. emelet 12. ajtó" data-ph-hu="pl. 3. emelet 12. ajtó" data-ph-en="e.g. 3rd floor, door 12">
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" name="tulajdonos_mas" id="ownerChk">
+            <label for="ownerChk"><span data-hu="Az ingatlan tulajdonosa más személy, mint aki az ajánlatot kéri" data-en="The property owner is a different person from the one requesting the quote">Az ingatlan tulajdonosa más személy, mint aki az ajánlatot kéri</span></label>
+          </div>
+          <div id="ownerGroup" style="display:none">
+            <div class="form-group">
+              <label data-hu="Tulajdonos teljes neve *" data-en="Owner's full name *">Tulajdonos teljes neve *</label>
+              <input type="text" name="tulajdonos_nev" autocomplete="off" pattern=".*\S+\s+\S+.*" data-err-hu="Kérjük, a tulajdonos teljes nevét adja meg (vezeték- és keresztnév)." data-err-en="Please enter the owner's full name (first and last name)." disabled>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label data-hu="Tulajdonos telefonszáma *" data-en="Owner's phone number *">Tulajdonos telefonszáma *</label>
+                <input type="tel" name="tulajdonos_telefon" data-phone inputmode="tel" autocomplete="off" placeholder="+36 30 000 0000" data-ph-hu="+36 30 000 0000" data-ph-en="+44 20 1234 5678" disabled>
+              </div>
+              <div class="form-group">
+                <label data-hu="Tulajdonos e-mail címe *" data-en="Owner's e-mail address *">Tulajdonos e-mail címe *</label>
+                <input type="email" name="tulajdonos_email" autocomplete="off" placeholder="pelda@email.com" data-ph-hu="pelda@email.com" data-ph-en="name@example.com" pattern="[^@\s]+@[^@\s]+\.[^@\s]{2,}" data-err-hu="Kérjük, érvényes e-mail címet adjon meg (pl. nev@pelda.hu)." data-err-en="Please enter a valid e-mail address (e.g. name@example.com)." disabled>
+              </div>
+            </div>
+          </div>
+
+          <p class="form-sec" data-hu="Időpont és egyéb" data-en="Appointment and other">Időpont és egyéb</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label data-hu="Kért időpont (nem kötelező)" data-en="Preferred date (optional)">Kért időpont (nem kötelező)</label>
+              <input type="date" name="idopont_datum" data-err-hu="Kérjük, mai vagy későbbi dátumot adjon meg." data-err-en="Please enter today's date or a later one.">
+            </div>
+            <div class="form-group">
+              <label data-hu="Napszak (nem kötelező)" data-en="Time of day (optional)">Napszak (nem kötelező)</label>
+              <select name="idopont_napszak">
+                <option value="" data-hu="Válasszon..." data-en="Select...">Válasszon...</option>
+                <option value="delelott" data-hu="Délelőtt" data-en="Morning">Délelőtt</option>
+                <option value="delutan" data-hu="Délután" data-en="Afternoon">Délután</option>
+                <option value="este" data-hu="Este" data-en="Evening">Este</option>
+                <option value="barmikor" data-hu="Rugalmas, bármikor" data-en="Flexible, any time">Rugalmas, bármikor</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label data-hu="Honnan hallott rólunk? (nem kötelező)" data-en="How did you hear about us? (optional)">Honnan hallott rólunk? (nem kötelező)</label>
             <select name="forras">
               <option value="" data-hu="Válasszon..." data-en="Select...">Válasszon...</option>
               <option value="google" data-hu="Google keresés vagy hirdetés" data-en="Google search or ad">Google keresés vagy hirdetés</option>
@@ -1022,12 +1109,18 @@ section.bp-band{padding:56px 0!important;background:linear-gradient(180deg,#2b20
             </select>
           </div>
           <div class="form-group">
-            <label data-hu="Elvégzendő munka leírása" data-en="Description of Work">Elvégzendő munka leírása</label>
+            <label data-hu="Elvégzendő munka leírása (nem kötelező)" data-en="Description of work (optional)">Elvégzendő munka leírása (nem kötelező)</label>
             <textarea name="leiras" placeholder="Kérem írja le röviden, milyen munkát szeretne elvégeztetni, mikor lenne szüksége rá, van-e különleges igény..." data-ph-hu="Kérem írja le röviden, milyen munkát szeretne elvégeztetni, mikor lenne szüksége rá, van-e különleges igény..." data-ph-en="Please briefly describe the work you need, when you'd need it, and any special requirements..."></textarea>
           </div>
+
+          <div class="form-check">
+            <input type="checkbox" name="hozzajarulas" id="consentChk" required>
+            <label for="consentChk"><span data-hu="Hozzájárulok, hogy a megadott adataimat Háros László (Haros Electric Hungary) az árajánlat elkészítéséhez, a kapcsolatfelvételhez és a megrendelt felülvizsgálat dokumentálásához kezelje. *" data-en="I agree that Háros László (Haros Electric Hungary) processes the details I provide to prepare the quote, to contact me and to document the inspection I order. *">Hozzájárulok, hogy a megadott adataimat Háros László (Haros Electric Hungary) az árajánlat elkészítéséhez, a kapcsolatfelvételhez és a megrendelt felülvizsgálat dokumentálásához kezelje. *</span></label>
+          </div>
           <button type="submit" class="btn-send" data-hu="📨  Ajánlatot kérek" data-en="📨  Request a Quote">📨  Ajánlatot kérek</button>
-          <p style="margin-top:12px;font-size:.85rem;opacity:.75;line-height:1.5" data-hu="Az adatait kizárólag az árajánlat elkészítéséhez és a kapcsolatfelvételhez használjuk. Az űrlap adatait egy biztonságos űrlap-továbbító szolgáltatás juttatja el hozzánk e-mailben; más célra nem használjuk fel, és nem adjuk el." data-en="We use your details only to prepare the quote and contact you. The form data is forwarded to us by e-mail through a secure form-delivery service; we do not use it for any other purpose and do not sell it.">Az adatait kizárólag az árajánlat elkészítéséhez és a kapcsolatfelvételhez használjuk. Az űrlap adatait egy biztonságos űrlap-továbbító szolgáltatás juttatja el hozzánk e-mailben; más célra nem használjuk fel, és nem adjuk el.</p>
-          <div id="form-success">✅ <span data-hu="Üzenetét megkaptuk! Hamarosan felvesszük Önnel a kapcsolatot." data-en="We received your message! We will contact you shortly.">Üzenetét megkaptuk! Hamarosan felvesszük Önnel a kapcsolatot.</span></div>
+          <p class="form-hint" style="margin-top:10px" data-hu="* kötelező mező" data-en="* required field">* kötelező mező</p>
+          <p style="margin-top:12px;font-size:.85rem;opacity:.75;line-height:1.5" data-hu="Az adatait kizárólag az árajánlat elkészítéséhez, a kapcsolatfelvételhez és a megrendelt felülvizsgálat dokumentálásához használjuk. Az űrlap adatait egy biztonságos űrlap-továbbító szolgáltatás juttatja el hozzánk e-mailben; más célra nem használjuk fel, és nem adjuk el." data-en="We use your details only to prepare the quote, to contact you and to document the inspection you order. The form data is forwarded to us by e-mail through a secure form-delivery service; we do not use it for any other purpose and do not sell it.">Az adatait kizárólag az árajánlat elkészítéséhez, a kapcsolatfelvételhez és a megrendelt felülvizsgálat dokumentálásához használjuk. Az űrlap adatait egy biztonságos űrlap-továbbító szolgáltatás juttatja el hozzánk e-mailben; más célra nem használjuk fel, és nem adjuk el.</p>
+          <div id="form-success" role="status" aria-live="polite">✅ <span data-hu="Köszönjük szépen az üzenetet! Megkaptuk az ajánlatkérését, és hamarosan felvesszük Önnel a kapcsolatot a megadott telefonszámon." data-en="Thank you very much for your message! We have received your quote request and will contact you shortly on the phone number you provided.">Köszönjük szépen az üzenetet! Megkaptuk az ajánlatkérését, és hamarosan felvesszük Önnel a kapcsolatot a megadott telefonszámon.</span></div>
           <div id="form-error" style="display:none;margin-top:16px;padding:14px 16px;border-radius:10px;background:rgba(220,60,60,.15);border:1px solid rgba(220,60,60,.5);color:#ffb4b4;font-size:.95rem;line-height:1.5">⚠️ <span data-hu="Sajnos nem sikerült elküldeni az üzenetet. Kérjük, hívjon a +36 70 802 9138 telefonszámon, vagy írjon a haroselectric@gmail.com címre." data-en="Sorry, we could not send your message. Please call +36 70 802 9138 or email haroselectric@gmail.com.">Sajnos nem sikerült elküldeni az üzenetet. Kérjük, hívjon a +36 70 802 9138 telefonszámon, vagy írjon a haroselectric@gmail.com címre.</span></div>
         </form>
       </div>
@@ -1239,6 +1332,60 @@ secs.forEach(s=>navObs.observe(s));
 const fadeObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');fadeObs.unobserve(e.target);}});},{threshold:.12});
 document.querySelectorAll('.fade-in').forEach(el=>fadeObs.observe(el));
 
+/* ===== Ajanlatkero urlap: validacio, osszefoglalo, kuldes (Web3Forms) ===== */
+function formLang(){return document.documentElement.getAttribute('data-lang')==='en'?'en':'hu';}
+
+var FORM_MSG={
+  required:{hu:'Kérjük, töltse ki ezt a mezőt.',en:'Please fill in this field.'},
+  select:{hu:'Kérjük, válasszon a listából.',en:'Please select an option.'},
+  check:{hu:'A küldéshez jelölje be ezt a négyzetet.',en:'Please tick this box to continue.'},
+  email:{hu:'Kérjük, érvényes e-mail címet adjon meg (pl. nev@pelda.hu).',en:'Please enter a valid e-mail address (e.g. name@example.com).'},
+  phone:{hu:'Kérjük, a telefonszámot teljes egészében adja meg, körzetszámmal (pl. +36 30 123 4567).',en:'Please enter the full phone number with country code (e.g. +44 20 1234 5678).'}
+};
+
+function phoneOk(v){
+  v=String(v||'').trim();
+  if(!/^[+0-9()\s\-\/.]+$/.test(v)) return false;
+  var d=v.replace(/[^0-9]/g,'');
+  return d.length>=9&&d.length<=15;
+}
+
+/* a telefonszam egyedi ellenorzese (a bongeszo ezt nem tudja alapbol) */
+function formCustomCheck(el){
+  if(el.hasAttribute&&el.hasAttribute('data-phone')){
+    var v=el.value.trim();
+    el.setCustomValidity((v===''||phoneOk(v))?'':FORM_MSG.phone[formLang()]);
+  }
+}
+
+function formMsgFor(el){
+  var l=formLang();
+  if(el.validity.valueMissing){
+    if(el.type==='checkbox') return FORM_MSG.check[l];
+    if(el.tagName==='SELECT') return FORM_MSG.select[l];
+    return FORM_MSG.required[l];
+  }
+  var d=el.getAttribute('data-err-'+l);
+  if(d) return d;
+  if(el.validity.typeMismatch&&el.type==='email') return FORM_MSG.email[l];
+  return '';
+}
+
+/* az urlap dinamikus allapota: tulajdonos blokk, terulet mezo, emelet/ajto kotelezo lakasnal */
+function syncFormState(){
+  var f=document.getElementById('contactForm'); if(!f) return;
+  var oc=f.elements['tulajdonos_mas'], og=document.getElementById('ownerGroup');
+  var on=!!(oc&&oc.checked);
+  if(og){
+    og.style.display=on?'block':'none';
+    Array.prototype.forEach.call(og.querySelectorAll('input'),function(i){i.disabled=!on;i.required=on;if(!on)i.setCustomValidity('');});
+  }
+  var tg=document.getElementById('teruletGroup'), us=document.getElementById('ugyfelSel');
+  if(tg&&us) tg.style.display=(us.value&&us.value!=='magan')?'block':'none';
+  var em=f.elements['emelet_ajto'], tp=f.elements['tipus'];
+  if(em&&tp) em.required=(tp.value==='lakas');
+}
+
 function handleFormSubmit(e){
   e.preventDefault();
   var f=e.target;
@@ -1247,27 +1394,56 @@ function handleFormSubmit(e){
   var okDiv=document.getElementById('form-success');
   if(errorDiv) errorDiv.style.display='none';
   if(okDiv) okDiv.style.display='none';
+
+  function v(n){var el=f.elements[n];return(el&&!el.disabled)?String(el.value).trim():'';}
+  function optHu(n){var el=f.elements[n];if(!el||el.selectedIndex<0)return '';var o=el.options[el.selectedIndex];return(o.getAttribute('data-hu')||o.text||'').trim();}
+
+  /* kesz, naptarba masolhato osszefoglalo (mindig magyarul, hogy Laci egyben at tudja masolni) */
+  var lang=formLang();
+  var cim=v('iranyitoszam')+' '+v('varos')+', '+v('utca')+' '+v('hazszam')+(v('emelet_ajto')?', '+v('emelet_ajto'):'');
+  var parts=[
+    'NÉV: '+v('nev'),
+    'TEL: '+v('telefon'),
+    'E-MAIL: '+v('email'),
+    'CÍM: '+cim,
+    'INGATLAN: '+optHu('tipus')+', '+v('meret')+' m²',
+    'ÜGYFÉL: '+optHu('ugyfel')
+  ];
+  if(v('terulet')) parts.push('TERÜLET: '+v('terulet'));
+  if(f.elements['tulajdonos_mas']&&f.elements['tulajdonos_mas'].checked){
+    parts.push('TULAJDONOS: '+v('tulajdonos_nev')+', '+v('tulajdonos_telefon')+', '+v('tulajdonos_email'));
+  }
+  var ido=[v('idopont_datum'),optHu('idopont_napszak')].filter(function(x){return x&&x!=='Válasszon...';}).join(', ');
+  if(ido) parts.push('KÉRT IDŐPONT: '+ido);
+  if(lang==='en') parts.push('NYELV: angol oldal');
+  f.elements['osszefoglalo'].value=parts.join(' | ');
+  f.elements['nyelv'].value=lang;
+  f.elements['subject'].value='Árajánlat / időpont – '+v('nev')+(v('varos')?', '+v('varos'):'')+(lang==='en'?' (EN)':'');
+
   var meta={};
   try{
     meta={
-      ugyfel_tipusa:f.ugyfel.options[f.ugyfel.selectedIndex].text,
-      ingatlan_tipusa:f.tipus.options[f.tipus.selectedIndex].text,
-      honnan_hallott:f.forras.options[f.forras.selectedIndex].text||'-',
+      ugyfel_tipusa:optHu('ugyfel'),
+      ingatlan_tipusa:optHu('tipus'),
+      honnan_hallott:optHu('forras')||'-',
+      tulajdonos_mas:(f.elements['tulajdonos_mas']&&f.elements['tulajdonos_mas'].checked)?'igen':'nem',
+      nyelv:lang,
       calc_used:window.__pcUsed?'igen':'nem'
     };
   }catch(err){}
   var origText=btn?btn.textContent:null;
   if(btn){
     btn.disabled=true;
-    btn.textContent=(document.documentElement.getAttribute('data-lang')==='en')?'Sending...':'Küldés...';
+    btn.textContent=(lang==='en')?'Sending...':'Küldés...';
   }
   var fd=new FormData(f);
   fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:fd})
     .then(function(r){return r.json();})
     .then(function(data){
       if(data && data.success){
-        if(okDiv) okDiv.style.display='block';
+        if(okDiv){ okDiv.style.display='block'; try{ okDiv.scrollIntoView({behavior:'smooth',block:'center'}); }catch(err){} }
         f.reset();
+        f.classList.remove('was-validated');
         try{ if(typeof gtag==='function'){ gtag('event','form_submit_contact',meta); } }catch(err){}
       }else{
         if(errorDiv) errorDiv.style.display='block';
@@ -1286,13 +1462,44 @@ function handleFormSubmit(e){
 }
 
 (function(){
-  var sel=document.getElementById('ugyfelSel'), g=document.getElementById('teruletGroup');
-  if(!sel||!g) return;
-  function upd(){ g.style.display=(sel.value&&sel.value!=='magan')?'block':'none'; }
-  sel.addEventListener('change',upd);
+  var f=document.getElementById('contactForm'); if(!f) return;
+  var sel=document.getElementById('ugyfelSel');
+
+  /* ?tipus= elovalasztas az aloldalakrol */
   var t=new URLSearchParams(location.search).get('tipus');
-  if(t){ for(var i=0;i<sel.options.length;i++){ if(sel.options[i].value===t){ sel.selectedIndex=i; break; } } }
-  upd();
+  if(t&&sel){ for(var i=0;i<sel.options.length;i++){ if(sel.options[i].value===t){ sel.selectedIndex=i; break; } } }
+
+  /* kert datum: ma vagy kesobbi */
+  var dt=f.elements['idopont_datum'];
+  if(dt){ var n=new Date(); dt.min=n.getFullYear()+'-'+('0'+(n.getMonth()+1)).slice(-2)+'-'+('0'+n.getDate()).slice(-2); }
+
+  /* hibauzenetek a kivalasztott nyelven */
+  f.addEventListener('invalid',function(ev){
+    var el=ev.target; f.classList.add('was-validated');
+    if(!el.setCustomValidity) return;
+    el.setCustomValidity('');
+    formCustomCheck(el);
+    if(el.validity.customError) return;
+    if(!el.validity.valid){ var m=formMsgFor(el); if(m) el.setCustomValidity(m); }
+  },true);
+  function clearMsg(ev){
+    var el=ev.target; if(!el||!el.setCustomValidity) return;
+    el.setCustomValidity('');
+    formCustomCheck(el);
+  }
+  f.addEventListener('input',clearMsg,true);
+  f.addEventListener('change',clearMsg,true);
+  /* kuldes elott a telefonmezok ellenorzese (az invalid esemeny csak mar hibas mezore fut) */
+  var sb=f.querySelector('.btn-send');
+  if(sb) sb.addEventListener('click',function(){
+    Array.prototype.forEach.call(f.querySelectorAll('[data-phone]'),formCustomCheck);
+  });
+
+  if(sel) sel.addEventListener('change',syncFormState);
+  var tp=f.elements['tipus']; if(tp) tp.addEventListener('change',syncFormState);
+  var oc=f.elements['tulajdonos_mas']; if(oc) oc.addEventListener('change',syncFormState);
+  f.addEventListener('reset',function(){ setTimeout(syncFormState,0); });
+  syncFormState();
 })();
 
 // CTA buttons are now plain #contact anchors — native browser jump handles them
