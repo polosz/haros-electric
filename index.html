@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title data-hu="Villamos biztonsági felülvizsgálat (VBF) Budapest és Pest megye | Haros Electric" data-en="Haros Electric Hungary – Electrical Inspection &amp; Testing">Villamos biztonsági felülvizsgálat (VBF) Budapest és Pest megye | Haros Electric</title>
-<meta name="description" content="VBF és érintésvédelmi felülvizsgálat Budapesten, minősítő irattal ingatlan eladáshoz, bérbeadáshoz. Átlátható árak, előre egyeztetett időpont. Hívjon: +36 70 802 9138.">
+<meta name="description" content="Villamos biztonsági felülvizsgálat (VBF), korábbi nevén érintésvédelmi felülvizsgálat Budapesten és Pest megyében, minősítő irattal eladáshoz, bérbeadáshoz. Fix ár. +36 70 802 9138">
 <link rel="canonical" href="https://haroselectric.hu/">
 <meta property="og:title" content="VBF felülvizsgálat Budapest – Haros Electric Hungary">
-<meta property="og:description" content="VBF és érintésvédelmi felülvizsgálat Budapesten, minősítő irattal. Átlátható árak, előre egyeztetett időpont.">
+<meta property="og:description" content="Villamos biztonsági felülvizsgálat (VBF), korábbi nevén érintésvédelmi felülvizsgálat Budapesten és Pest megyében, minősítő irattal. Fix ár, előre egyeztetett időpont.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://haroselectric.hu/">
 <script type="application/ld+json">
@@ -540,11 +540,11 @@ section.bp-band{padding:56px 0!important;background:linear-gradient(180deg,#2b20
 </nav>
 
 <section class="hero" id="hero">
-  <img id="hero-banner-img" alt="Haros Electric Hungary – VBF, villamos biztonsági felülvizsgálat" class="hero-img">
+  <picture>
+    <source id="hero-banner-src" media="(max-width:768px)" srcset="hero-mobile-hu-v2.jpg" width="941" height="1672">
+    <img id="hero-banner-img" src="hero_hu_v2.jpg" width="2172" height="724" fetchpriority="high" decoding="async" alt="Haros Electric Hungary – VBF, villamos biztonsági felülvizsgálat" class="hero-img">
+  </picture>
   <a href="#contact" class="hero-quote-m" data-hu="Ingyenes árajánlatot kérek" data-en="Request a free quote">Ingyenes árajánlatot kérek</a>
-  <script>
-    document.getElementById('hero-banner-img').src = (window.innerWidth<=768) ? 'hero-mobile-hu-v2.jpg' : 'hero_hu_v2.jpg';
-  </script>
 </section>
 <div class="hero-key">
   <p class="hk-line" data-hu="Lakás és családi ház VBF-je <strong>60 000 Ft-tól</strong> — kiszállással, minősítő irattal, 48 órán belül." data-en="VBF for flats and houses <strong>from 60,000 HUF</strong> — call-out and certificate included, within 48 hours.">Lakás és családi ház VBF-je <strong>60 000 Ft-tól</strong> — kiszállással, minősítő irattal, 48 órán belül.</p>
@@ -959,7 +959,7 @@ section.bp-band{padding:56px 0!important;background:linear-gradient(180deg,#2b20
       </div>
       <div class="form-box">
         <h3 data-hu="Küldjön árajánlat-kérést!" data-en="Send a Quote Request!">Küldjön árajánlat-kérést!</h3>
-        <p class="form-desc" data-hu="Néhány adat elég az árajánlathoz: ingatlan típusa, hozzávetőleges mérete és helyszíne. Munkanapokon 24 órán belül visszajelzünk a díjjal és a szabad időpontokkal. A pontos címet és a jegyzőkönyvhöz szükséges további adatokat csak a megrendeléskor kérjük." data-en="Fill in the form below and we will get back to you with a quote and an appointment. Please enter your phone number, e-mail address and the property address exactly: they are also needed for the inspection report.">Töltse ki az alábbi adatlapot, és a megadott adatokkal árajánlattal és időponttal tudunk visszajelezni. Kérjük, a telefonszámot, az e-mail címet és az ingatlan címét pontosan adja meg: ezekre a felülvizsgálati jegyzőkönyvhöz is szükség van.</p>
+        <p class="form-desc" data-hu="Néhány adat elég az árajánlathoz: ingatlan típusa, hozzávetőleges mérete és helyszíne. Munkanapokon 24 órán belül visszajelzünk a díjjal és a szabad időpontokkal. A pontos címet és a jegyzőkönyvhöz szükséges további adatokat csak a megrendeléskor kérjük." data-en="A few details are enough for a quote: property type, approximate size and location. On working days we reply within 24 hours with the fee and available appointments. We only ask for the exact address and the other details needed for the report when you place the order.">Néhány adat elég az árajánlathoz: ingatlan típusa, hozzávetőleges mérete és helyszíne. Munkanapokon 24 órán belül visszajelzünk a díjjal és a szabad időpontokkal. A pontos címet és a jegyzőkönyvhöz szükséges további adatokat csak a megrendeléskor kérjük.</p>
         <p class="form-hint" data-hu="Csak kérdése van? Hívjon a +36 70 802 9138 számon, vagy írjon a haroselectric@gmail.com címre." data-en="Just have a question? Call +36 70 802 9138 or write to haroselectric@gmail.com.">Csak kérdése van? Hívjon a +36 70 802 9138 számon, vagy írjon a haroselectric@gmail.com címre.</p>
         <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" onsubmit="return handleFormSubmit(event)">
           <input type="hidden" name="access_key" value="36f1c340-ed7a-4e06-a08f-79b2c74a7a24">
@@ -1228,15 +1228,11 @@ function updateHeroBanner(){
     heroImg.style.aspectRatio='';
     heroImg.dataset.arLocked='';
   }
-  if(mobile){
-    heroImg.src=currentLang==='hu'
-      ?'hero-mobile-hu-v2.jpg'
-      :'hero-mobile-en-v2.jpg';
-  }else{
-    heroImg.src=currentLang==='hu'
-      ?'hero_hu_v2.jpg'
-      :'hero_en_v2.jpg';
-  }
+  var heroSrc=document.getElementById('hero-banner-src');
+  var mSrc=currentLang==='hu'?'hero-mobile-hu-v2.jpg':'hero-mobile-en-v2.jpg';
+  var dSrc=currentLang==='hu'?'hero_hu_v2.jpg':'hero_en_v2.jpg';
+  if(heroSrc && heroSrc.getAttribute('srcset')!==mSrc) heroSrc.setAttribute('srcset',mSrc);
+  if(heroImg.getAttribute('src')!==dSrc) heroImg.setAttribute('src',dSrc);
 }
 
 (function(){
