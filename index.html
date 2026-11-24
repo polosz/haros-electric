@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://haroselectric.hu/">
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "Electrician", "name": "Haros Electric Hungary", "url": "https://haroselectric.hu/", "telephone": "+36708029138", "email": "haroselectric@gmail.com", "description": "VBF (villamos biztonsági felülvizsgálat) és érintésvédelmi felülvizsgálat Budapesten és Pest megyében, lakásokban, házakban, társasházakban és irodákban.", "address": {"@type": "PostalAddress", "streetAddress": "Garay tér", "postalCode": "1076", "addressLocality": "Budapest", "addressCountry": "HU"}, "areaServed": ["Budapest", "Pest megye"], "sameAs": ["https://www.facebook.com/profile.php?id=100064488827755", "https://www.linkedin.com/in/laszlo-haros-53323683", "https://www.google.com/maps?cid=9140340230815650493"], "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "08:00", "closes": "18:30"}], "priceRange": "60 000 – 115 000 Ft", "hasMap": "https://www.google.com/maps?cid=9140340230815650493"}
+{"@context": "https://schema.org", "@type": "Electrician", "name": "Haros Electric Hungary", "url": "https://haroselectric.hu/", "telephone": "+36708029138", "email": "haroselectric@gmail.com", "description": "VBF (villamos biztonsági felülvizsgálat) és érintésvédelmi felülvizsgálat Budapesten és Pest megyében, lakásokban, házakban, társasházakban és irodákban.", "address": {"@type": "PostalAddress", "streetAddress": "Garay tér", "postalCode": "1076", "addressLocality": "Budapest", "addressCountry": "HU"}, "areaServed": ["Budapest", "Pest megye"], "sameAs": ["https://www.facebook.com/profile.php?id=100064488827755", "https://www.linkedin.com/in/laszlo-haros-53323683", "https://www.google.com/maps?cid=9140340230815650493"], "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "08:00", "closes": "18:30"}], "priceRange": "50 000 – 100 000 Ft", "hasMap": "https://www.google.com/maps?cid=9140340230815650493"}
 </script>
 <!-- Meresi kodok: csak a latogato hozzajarulasa utan toltodnek be (lasd a lap aljan: he-consent) -->
 <script>
@@ -547,7 +547,7 @@ section.bp-band{padding:56px 0!important;background:linear-gradient(180deg,#2b20
   <a href="#contact" class="hero-quote-m" data-hu="Ingyenes árajánlatot kérek" data-en="Request a free quote">Ingyenes árajánlatot kérek</a>
 </section>
 <div class="hero-key">
-  <p class="hk-line" data-hu="Lakás és családi ház VBF-je <strong>60 000 Ft-tól</strong> — kiszállással, minősítő irattal, 48 órán belül." data-en="VBF for flats and houses <strong>from 60,000 HUF</strong> — call-out and certificate included, within 48 hours.">Lakás és családi ház VBF-je <strong>60 000 Ft-tól</strong> — kiszállással, minősítő irattal, 48 órán belül.</p>
+  <p class="hk-line" data-hu="Lakás és családi ház VBF-je <strong>50 000 Ft-tól</strong> — kiszállással, minősítő irattal, 48 órán belül." data-en="VBF for flats and houses <strong>from 50,000 HUF</strong> — call-out and certificate included, within 48 hours.">Lakás és családi ház VBF-je <strong>50 000 Ft-tól</strong> — kiszállással, minősítő irattal, 48 órán belül.</p>
   <p class="hk-area" data-hu="Budapest és Pest megye · magánszemélyeknek és cégeknek" data-en="Budapest and Pest County · for private clients and companies">Budapest és Pest megye · magánszemélyeknek és cégeknek</p>
   <div class="hk-btns">
     <a href="#pricing" class="hk-btn hk-ghost" data-hu="Árak megnézése" data-en="See prices">Árak megnézése</a>
@@ -813,6 +813,7 @@ section.bp-band{padding:56px 0!important;background:linear-gradient(180deg,#2b20
  .founder-sign{justify-content:center;flex-direction:column;gap:10px}
  .founder-sign::before{flex:0 0 3px}
 }
+@media(min-width:961px){.price-grid>.price-card:last-child:nth-child(3n+1){grid-column:2}}
 </style>
 <section id="founder" class="founder" aria-label="Az ügyvezetőtől">
   <div class="founder-grid">
@@ -847,44 +848,55 @@ section.bp-band{padding:56px 0!important;background:linear-gradient(180deg,#2b20
     <section class="price-calc fade-in" id="arkalkulator" aria-label="Árkalkulátor"><h3 data-hu="Számolja ki az árat" data-en="Calculate your price">Számolja ki az árat</h3><p class="pc-lead" data-hu="Írja be az ingatlan alapterületét, és azonnal látja a fix árat." data-en="Enter the floor area of the property to see the fixed price instantly.">Írja be az ingatlan alapterületét, és azonnal látja a fix árat.</p><div class="pc-row"><label for="pcM2" data-hu="Alapterület (m²):" data-en="Floor area (m²):">Alapterület (m²):</label><input id="pcM2" type="number" inputmode="numeric" min="1" step="1" placeholder="pl. 65" data-ph-hu="pl. 65" data-ph-en="e.g. 65"></div><div class="pc-result" id="pcResult" aria-live="polite"></div><button type="button" class="pc-btn" id="pcBtn"></button></section>
     <div class="price-grid">
       <div class="price-card fade-in">
-        <h3 data-hu="Kis lakás" data-en="Small Apartment">Kis lakás</h3>
-        <p class="price-sub" data-hu="VBF · 1–69 m²" data-en="VBF · 1–69 m²">VBF · 1–69 m²</p>
-        <div class="price-amount">60 000 Ft</div>
+        <h3 data-hu="Garzon / mini ingatlan" data-en="Studio / micro unit">Garzon / mini ingatlan</h3>
+        <p class="price-sub" data-hu="VBF · 1–30 m²" data-en="VBF · 1–30 m²">VBF · 1–30 m²</p>
+        <div class="price-amount">50 000 Ft</div>
         <p class="price-note" data-hu="Fix ár, kiszállással" data-en="Fixed price, call-out included">Fix ár, kiszállással</p>
         <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
       </div>
+      
       <div class="price-card fade-in">
-        <h3 data-hu="Közepes lakás" data-en="Medium Apartment">Közepes lakás</h3>
-        <p class="price-sub" data-hu="VBF · 70–89 m²" data-en="VBF · 70–89 m²">VBF · 70–89 m²</p>
+        <h3 data-hu="Kis lakás" data-en="Small apartment">Kis lakás</h3>
+        <p class="price-sub" data-hu="VBF · 31–50 m²" data-en="VBF · 31–50 m²">VBF · 31–50 m²</p>
+        <div class="price-amount">55 000 Ft</div>
+        <p class="price-note" data-hu="Fix ár, kiszállással" data-en="Fixed price, call-out included">Fix ár, kiszállással</p>
+        <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
+      </div>
+      
+      <div class="price-card featured fade-in">
+        <h3 data-hu="Közepes lakás" data-en="Medium apartment">Közepes lakás</h3>
+        <p class="price-sub" data-hu="VBF · 51–80 m²" data-en="VBF · 51–80 m²">VBF · 51–80 m²</p>
+        <div class="price-amount">65 000 Ft</div>
+        <p class="price-note" data-hu="Fix ár, kiszállással" data-en="Fixed price, call-out included">Fix ár, kiszállással</p>
+        <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
+      </div>
+      
+      <div class="price-card fade-in">
+        <h3 data-hu="Nagy lakás / kisebb ház" data-en="Large apartment / small house">Nagy lakás / kisebb ház</h3>
+        <p class="price-sub" data-hu="VBF · 81–120 m²" data-en="VBF · 81–120 m²">VBF · 81–120 m²</p>
         <div class="price-amount">75 000 Ft</div>
         <p class="price-note" data-hu="Fix ár, kiszállással" data-en="Fixed price, call-out included">Fix ár, kiszállással</p>
         <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
       </div>
-      <div class="price-card featured fade-in">
-        
-        <h3 data-hu="Nagy lakás" data-en="Large apartment">Nagy lakás</h3>
-        <p class="price-sub" data-hu="VBF · 90–99 m²" data-en="VBF · 90–99 m²">VBF · 90–99 m²</p>
-        <div class="price-amount">80 000 Ft</div>
-        <p class="price-note" data-hu="Fix ár, kiszállással" data-en="Fixed price, call-out included">Fix ár, kiszállással</p>
-        <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
-      </div>
+      
       <div class="price-card fade-in">
-        <h3 data-hu="Nagyobb lakás / kisebb ház" data-en="Larger apartment / small house">Nagyobb lakás / kisebb ház</h3>
-        <p class="price-sub" data-hu="VBF · 100–149 m²" data-en="VBF · 100–149 m²">VBF · 100–149 m²</p>
+        <h3 data-hu="Családi ház" data-en="Family house">Családi ház</h3>
+        <p class="price-sub" data-hu="VBF · 121–160 m²" data-en="VBF · 121–160 m²">VBF · 121–160 m²</p>
         <div class="price-amount">90 000 Ft</div>
         <p class="price-note" data-hu="Fix ár, kiszállással" data-en="Fixed price, call-out included">Fix ár, kiszállással</p>
         <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
       </div>
+      
       <div class="price-card fade-in">
-        <h3 data-hu="Nagy családi ház" data-en="Large House">Nagy családi ház</h3>
-        <p class="price-sub" data-hu="VBF · 150–199 m²" data-en="VBF · 150–199 m²">VBF · 150–199 m²</p>
-        <div class="price-amount">115 000 Ft</div>
+        <h3 data-hu="Nagy családi ház" data-en="Large house">Nagy családi ház</h3>
+        <p class="price-sub" data-hu="VBF · 161–200 m²" data-en="VBF · 161–200 m²">VBF · 161–200 m²</p>
+        <div class="price-amount">100 000 Ft</div>
         <p class="price-note" data-hu="Fix ár, kiszállással" data-en="Fixed price, call-out included">Fix ár, kiszállással</p>
         <a href="#contact" class="price-btn contact-btn" data-hu="Időpontot kérek" data-en="Book Inspection">Időpontot kérek</a>
       </div>
       <div class="price-card fade-in">
         <h3 data-hu="Ipari / Nagy ingatlan" data-en="Industrial / Large Property">Ipari / Nagy ingatlan</h3>
-        <p class="price-sub" data-hu="VBF · 200 m²-től" data-en="VBF · From 200 m²">VBF · 200 m²-től</p>
+        <p class="price-sub" data-hu="VBF · 200 m² felett" data-en="VBF · Over 200 m²">VBF · 200 m² felett</p>
         <div class="price-amount" data-hu="Egyedi árajánlat" data-en="Custom Quote">Egyedi árajánlat</div>
         <p class="price-note" data-hu="Helyszíni felmérés alapján" data-en="Based on on-site survey">Helyszíni felmérés alapján</p>
         <ul class="price-list">
@@ -1179,11 +1191,11 @@ section.bp-band{padding:56px 0!important;background:linear-gradient(180deg,#2b20
       </div>
       <div class="faq-item fade-in">
         <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span data-hu="Mennyibe kerül a felülvizsgálat 100 m² feletti ingatlanoknál?" data-en="How much does the inspection cost for properties over 100 m²?">Mennyibe kerül a felülvizsgálat 100 m² feletti ingatlanoknál?</span>
+          <span data-hu="Mennyibe kerül a felülvizsgálat 80 m² feletti ingatlanoknál?" data-en="How much does the inspection cost for properties over 80 m²?">Mennyibe kerül a felülvizsgálat 80 m² feletti ingatlanoknál?</span>
           <span class="faq-arrow">▼</span>
         </button>
         <div class="faq-a">
-          <p data-hu="100–149 m² között 90 000 Ft, 150–199 m² között 115 000 Ft az ár. 200 m²-től a díj egyedi megítélés alapján kerül meghatározásra, mivel a vizsgálandó körök száma, az elosztók elhelyezkedése és a mérési pontok mennyisége ingatlanonként jelentősen eltérhet — minden esetben előzetes egyeztetés szükséges." data-en="Between 100–149 m² the price is 90,000 HUF, between 150–199 m² it is 115,000 HUF. From 200 m², the fee is determined individually, as the number of circuits, distribution board locations and measurement points vary significantly by property — prior consultation is required in every case.">100–149 m² között 90 000 Ft, 150–199 m² között 115 000 Ft az ár. 200 m²-től a díj egyedi megítélés alapján kerül meghatározásra, mivel a vizsgálandó körök száma, az elosztók elhelyezkedése és a mérési pontok mennyisége ingatlanonként jelentősen eltérhet — minden esetben előzetes egyeztetés szükséges.</p>
+          <p data-hu="81–120 m² között 75 000 Ft, 121–160 m² között 90 000 Ft, 161–200 m² között 100 000 Ft az ár. 200 m² felett a díj egyedi megítélés alapján kerül meghatározásra, mivel a vizsgálandó körök száma, az elosztók elhelyezkedése és a mérési pontok mennyisége ingatlanonként jelentősen eltérhet — minden esetben előzetes egyeztetés szükséges." data-en="Between 81–120 m² the price is 75,000 HUF, between 121–160 m² it is 90,000 HUF, and between 161–200 m² it is 100,000 HUF. Above 200 m², the fee is determined individually, as the number of circuits, distribution board locations and measurement points vary significantly by property — prior consultation is required in every case.">81–120 m² között 75 000 Ft, 121–160 m² között 90 000 Ft, 161–200 m² között 100 000 Ft az ár. 200 m² felett a díj egyedi megítélés alapján kerül meghatározásra, mivel a vizsgálandó körök száma, az elosztók elhelyezkedése és a mérési pontok mennyisége ingatlanonként jelentősen eltérhet — minden esetben előzetes egyeztetés szükséges.</p>
         </div>
       </div>
       <div class="faq-item fade-in">
@@ -1503,7 +1515,7 @@ function handleFormSubmit(e){
 (function(){
   var inp=document.getElementById('pcM2'),out=document.getElementById('pcResult'),btn=document.getElementById('pcBtn');
   if(!inp)return;
-  var bands=[[70,60000,'1–69 m²'],[90,75000,'70–89 m²'],[100,80000,'90–99 m²'],[150,90000,'100–149 m²'],[200,115000,'150–199 m²']];
+  var bands=[[31,50000,'1–30 m²'],[51,55000,'31–50 m²'],[81,65000,'51–80 m²'],[121,75000,'81–120 m²'],[161,90000,'121–160 m²'],[201,100000,'161–200 m²']];
   function L(){return document.documentElement.getAttribute('data-lang')==='en'?'en':'hu';}
   function fmt(n){return n.toLocaleString('hu-HU').replace(/\u00a0/g,' ')+' Ft';}
   var last=null;
@@ -1520,7 +1532,7 @@ function handleFormSubmit(e){
       btn.textContent=en?'Book with this price':'Ezzel az árral kérek időpontot';
     }else{
       last={m2:v,price:null};
-      out.innerHTML=(en?'From 200 m² we give a <strong style="font-size:1.1rem">custom quote</strong>':'200 m²-től <strong style="font-size:1.1rem">egyedi árajánlatot</strong> adunk')+
+      out.innerHTML=(en?'Above 200 m² we give a <strong style="font-size:1.1rem">custom quote</strong>':'200 m² felett <strong style="font-size:1.1rem">egyedi árajánlatot</strong> adunk')+
         '<p class="pc-note">'+(en?'The fee depends on the number of circuits, distribution boards and measurement points.':'A díj a vizsgálandó körök, elosztók és mérési pontok számától függ.')+'</p>';
       btn.textContent=en?'Request a custom quote':'Egyedi ajánlatot kérek';
     }
